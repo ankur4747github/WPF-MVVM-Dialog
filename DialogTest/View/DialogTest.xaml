@@ -1,0 +1,196 @@
+﻿<Window x:Class="DialogTest.DialogTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogTest"
+        mc:Ignorable="d"
+        Background="White"
+        MinWidth="500"
+        SizeToContent="WidthAndHeight">
+    <Grid Background="White"
+          Margin="20"
+          VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TabControl VerticalAlignment="Stretch">
+            <TabItem Header="Attributes"
+                     VerticalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Numbering Series"
+                              Margin="0,10"
+                              VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Vertical">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Prefix:"
+                                       Grid.Column="1">
+                                </TextBlock>
+                                <TextBlock Text="Start number:"
+                                       Grid.Column="2">
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="30*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Part"
+                                          IsChecked="{Binding IsPartPrefixEnable, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         IsEnabled="{Binding IsPartPrefixEnable, Mode=OneWay}"
+                                         Text="{Binding NumberingPartPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                                <CheckBox Grid.Column="2"
+                                          Margin="3,0"
+                                          IsChecked="{Binding IsPartStartNumberEnable, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="3"
+                                         IsEnabled="{Binding IsPartStartNumberEnable, Mode=OneWay}"
+                                         Text="{Binding NumberingPartStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="30*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Assembly"
+                                          IsChecked="{Binding IsAssemblyPrefixNumberEnable, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         IsEnabled="{Binding IsAssemblyPrefixNumberEnable, Mode=OneWay}"
+                                         Text="{Binding NumberingAssemblyPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                                <CheckBox Grid.Column="2"
+                                          Margin="3,0"
+                                          IsChecked="{Binding IsAssemblyStartNumberEnable, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="3"
+                                         IsEnabled="{Binding IsAssemblyStartNumberEnable, Mode=OneWay}"
+                                         Text="{Binding NumberingAssemblyStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1"
+                              Header="Attributes">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Name"
+                                          IsChecked="{Binding IsEnableName, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesNameText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         IsEnabled="{Binding IsEnableName, Mode=OneWay}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Profile"
+                                          IsChecked="{Binding IsEnableProfile, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesProfileText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,0,0"
+                                         IsEnabled="{Binding IsEnableProfile, Mode=OneWay}"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                        </StackPanel>
+                        
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Position" />
+            <TabItem Header="Deforming" />
+        </TabControl>
+
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Center"
+              Margin="0,10"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="70*"></ColumnDefinition>
+                <ColumnDefinition Width="70*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="60*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="OK" 
+                    Command="{Binding ButtonCommand}">
+            </Button>
+            <Button Content="Apply"
+                    Command="{Binding ApplyButtonCommand}"
+                    Grid.Column="1"
+                    Margin="5,0">
+            </Button>
+            <Button Content="Modify"
+                    Grid.Column="2"
+                    Margin="5,0">
+            </Button>
+            <Button Content="Get"
+                    Grid.Column="3">
+            </Button>
+            <CheckBox Margin="5,0"
+                      Grid.Column="4"
+                      IsChecked="{Binding IsToggelCheckBoxFirst, Mode=TwoWay}"
+                      VerticalAlignment="Center">
+            </CheckBox>
+            <TextBlock Text="/" 
+                       Grid.Column="5"
+                       VerticalAlignment="Center">
+            </TextBlock>
+            <CheckBox Margin="0,0" 
+                      Grid.Column="6"
+                      IsChecked="{Binding IsToggelCheckBoxSecond, Mode=TwoWay}"
+                      VerticalAlignment="Center">
+            </CheckBox>
+            <Button Content="Cancel"
+                    Grid.Column="7"
+                    Command="{Binding ButtonCommand}"
+                    Margin="5,0">
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
