@@ -1,4 +1,5 @@
 ﻿using DialogBeamProperties.Constants;
+using DialogBeamProperties.Model;
 using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
@@ -24,11 +25,17 @@ namespace DialogBeamProperties
     public partial class DialogBeamProperties : Window
     {
         public DialogBeamPropertiesViewModel ViewModel = new DialogBeamPropertiesViewModel();
-        public DialogBeamProperties()
+        public DialogBeamProperties(IProperties iproperties)
         {
             InitializeComponent();
             InitMessenger();
             this.DataContext = ViewModel;
+            ViewModel.SetProtertiesData(iproperties);
+        }
+
+        public IProperties GetPropertiesData()
+        {
+           return ViewModel.GetPropertiesData();
         }
 
         private void InitMessenger()

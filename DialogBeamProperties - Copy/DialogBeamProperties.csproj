@@ -75,6 +75,8 @@
     </Page>
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Constants\MessengerToken.cs" />
+    <Compile Include="Model\Properties\IProperties.cs" />
+    <Compile Include="Model\Properties\Properties.cs" />
     <Compile Include="ViewModel\BeamPropertytViewModel.cs" />
     <Compile Include="View\BeamProperty.xaml.cs">
       <DependentUpon>BeamProperty.xaml</DependentUpon>
@@ -108,8 +110,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

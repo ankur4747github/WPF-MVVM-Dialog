@@ -1,18 +1,6 @@
-﻿using DialogBeamProperties;
+﻿using DialogBeamProperties.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Test
 {
@@ -24,16 +12,14 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
-            DialogBeamProperties.DialogBeamProperties test = new DialogBeamProperties.DialogBeamProperties();
+            IProperties prop = new DialogBeamProperties.Model.Properties();
+            DialogBeamProperties.DialogBeamProperties test = new DialogBeamProperties.DialogBeamProperties(prop);
             test.Show();
             this.Hide();
         }
 
-        
-
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
     }
 }

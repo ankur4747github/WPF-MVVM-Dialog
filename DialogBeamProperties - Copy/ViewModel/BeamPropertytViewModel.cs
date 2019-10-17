@@ -1,5 +1,6 @@
 ﻿using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
+using DialogBeamProperties.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using System;
@@ -12,15 +13,8 @@ namespace DialogBeamProperties.ViewModel
     public class DialogBeamPropertiesViewModel : ViewModelBase, INotifyPropertyChanged
     {
         #region Fields
-
-        public string AttributesName { get; set; }
-        public string AttributesProfile { get; set; }
-        public string NumberingPartPrefix { get; set; }
-        public string NumberingPartStartNumber { get; set; }
-        public string NumberingAssemblyPrefix { get; set; }
-        public string NumberingAssemblyStartNumber { get; set; }
-
-        #endregion Fields
+        private IProperties iproperties { get; set; }
+        #endregion
 
         #region Button Command
 
@@ -330,7 +324,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion NumberingAssemblyStartNumberText
 
-
         #endregion INotifyPropertyChange Member
 
         #region PropertyChanged
@@ -354,25 +347,56 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion PropertyChanged
 
+        #region Constructor
+
         public DialogBeamPropertiesViewModel()
         {
             ButtonCommand = new RelayCommand(new Action<object>(CloseWindow));
             ApplyButtonCommand = new RelayCommand(new Action<object>(ApplyButtonClick));
         }
 
+        #endregion Constructor
+
+        #region Public Methods
+        public void SetProtertiesData(IProperties iproperties)
+        {
+            this.iproperties = iproperties;
+            UpdateData(iproperties);
+        }
+
+       
+        public IProperties GetPropertiesData()
+        {
+            return iproperties;
+        }
+        #endregion
+
+        #region Private Methods
         private void ApplyButtonClick(object obj)
         {
-            AttributesName = AttributesNameText;
-            AttributesProfile = AttributesProfileText;
-            NumberingPartPrefix = NumberingPartPrefixText;
-            NumberingPartStartNumber = NumberingPartStartNumberText;
-            NumberingAssemblyPrefix = NumberingAssemblyPrefixText;
-            NumberingAssemblyStartNumber = NumberingAssemblyStartNumberText;
+            iproperties.AttributesName = AttributesNameText;
+            iproperties.AttributesProfile = AttributesProfileText;
+            iproperties.NumberingPartPrefix = NumberingPartPrefixText;
+            iproperties.NumberingPartStartNumber = NumberingPartStartNumberText;
+            iproperties.NumberingAssemblyPrefix = NumberingAssemblyPrefixText;
+            iproperties.NumberingAssemblyStartNumber = NumberingAssemblyStartNumberText;
         }
 
         private void CloseWindow(object obj)
         {
             Messenger.Default.Send(true, MessengerToken.CLOSEWINDOW);
         }
+
+        private void UpdateData(IProperties iproperties)
+        {
+            AttributesNameText = iproperties.AttributesName;
+            AttributesProfileText = iproperties.AttributesProfile;
+            NumberingPartPrefixText = iproperties.NumberingPartPrefix;
+            NumberingPartStartNumberText = iproperties.NumberingPartStartNumber;
+            NumberingAssemblyPrefixText = iproperties.NumberingAssemblyPrefix;
+            NumberingAssemblyStartNumberText = iproperties.NumberingAssemblyStartNumber;
+        }
+
+        #endregion
     }
 }
