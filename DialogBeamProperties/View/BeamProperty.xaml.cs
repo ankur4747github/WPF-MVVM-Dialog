@@ -22,7 +22,7 @@ namespace DialogBeamProperties
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class DialogBeamProperties : Window
+    public partial class DialogBeamProperties : Window, IDisposable   
     {
         public DialogBeamPropertiesViewModel ViewModel = new DialogBeamPropertiesViewModel();
         public DialogBeamProperties(IProperties iproperties)
@@ -49,6 +49,12 @@ namespace DialogBeamProperties
         private void CloseWindow(bool obj)
         {
             this.Close();
+        }
+
+        public void Dispose()
+        {
+            Messenger.Default.Unregister<bool>(this,
+                    MessengerToken.CLOSEWINDOW, CloseWindow);
         }
     }
 }

@@ -19,15 +19,15 @@ namespace DialogBeamProperties.Model
         public bool IsNumberingSeriesAssemblyStartumberChecked {get;set;}
         public string NumberingSeriesAssemblyStartNumberText {get;set;}
         public bool IsAttributesNameChecked {get;set;}
-        public string AttributesName {get;set;}
+        public string AttributesNameText {get;set;}
         public bool IsAttributesProfileChecked {get;set;}
-        public string AttributesProfile { get; set; }
+        public string AttributesProfileText { get; set; }
         public bool IsAttributesMaterialChecked { get; set; }
-        public string AttributesMaterial { get; set; }
+        public string AttributesMaterialText { get; set; }
         public bool IsAttributesFinishChecked { get; set; }
-        public string AttributesFinish { get; set; }
+        public string AttributesFinishText { get; set; }
         public bool IsAttributesClassChecked { get; set; }
-        public string AttributesClass { get; set; }
+        public string AttributesClassText { get; set; }
         public bool IsPositionOnPlaneChecked { get; set; }
         public List<string> PositionOnPlaneComboBox { get; set; }
         public string SelectedDataInPositionOnPlaneComboBox { get; set; }

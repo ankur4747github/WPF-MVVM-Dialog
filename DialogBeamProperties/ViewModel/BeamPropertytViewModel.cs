@@ -4,6 +4,7 @@ using DialogBeamProperties.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -13,8 +14,10 @@ namespace DialogBeamProperties.ViewModel
     public class DialogBeamPropertiesViewModel : ViewModelBase, INotifyPropertyChanged
     {
         #region Fields
+
         private IProperties iproperties { get; set; }
-        #endregion
+
+        #endregion Fields
 
         #region Button Command
 
@@ -50,165 +53,214 @@ namespace DialogBeamProperties.ViewModel
 
         #region INotifyPropertyChange Member
 
-        #region IsEnableName
+        #region LoadDataComboBox
 
-        public bool IsEnableName
+        public List<string> LoadDataComboBox
         {
-            get { return _isEnableName; }
+            get { return _loadDataComboBox; }
             set
             {
-                if (value == _isEnableName)
+                if (value == _loadDataComboBox)
                     return;
 
-                _isEnableName = value;
-                OnPropertyChangedAsync(nameof(IsEnableName));
+                _loadDataComboBox = value;
+                OnPropertyChangedAsync(nameof(LoadDataComboBox));
             }
         }
 
-        private bool _isEnableName;
+        private List<string> _loadDataComboBox { get; set; }
 
-        #endregion IsEnableName
+        #endregion LoadDataComboBox
 
-        #region IsEnableProfile
+        #region SelectedDataInLoadDataComboBox
 
-        public bool IsEnableProfile
+        public string SelectedDataInLoadDataComboBox
         {
-            get { return _isEnableProfile; }
+            get { return _selectedDataInLoadDataComboBox; }
             set
             {
-                if (value == _isEnableProfile)
+                if (value == _selectedDataInLoadDataComboBox)
                     return;
 
-                _isEnableProfile = value;
-                OnPropertyChangedAsync(nameof(IsEnableProfile));
+                _selectedDataInLoadDataComboBox = value;
+                OnPropertyChangedAsync(nameof(SelectedDataInLoadDataComboBox));
             }
         }
 
-        private bool _isEnableProfile;
+        private string _selectedDataInLoadDataComboBox { get; set; }
 
-        #endregion IsEnableProfile
+        #endregion SelectedDataInLoadDataComboBox
 
-        #region IsPartPrefixEnable
+        #region IsNumberingSeriesPartPrefixChecked
 
-        public bool IsPartPrefixEnable
+        public bool IsNumberingSeriesPartPrefixChecked
         {
-            get { return _isPartPrefixEnable; }
+            get { return _isNumberingSeriesPartPrefixChecked; }
             set
             {
-                if (value == _isPartPrefixEnable)
+                if (value == _isNumberingSeriesPartPrefixChecked)
                     return;
 
-                _isPartPrefixEnable = value;
-                OnPropertyChangedAsync(nameof(IsPartPrefixEnable));
+                _isNumberingSeriesPartPrefixChecked = value;
+                OnPropertyChangedAsync(nameof(IsNumberingSeriesPartPrefixChecked));
             }
         }
 
-        private bool _isPartPrefixEnable;
+        private bool _isNumberingSeriesPartPrefixChecked { get; set; }
 
-        #endregion IsPartPrefixEnable
+        #endregion IsNumberingSeriesPartPrefixChecked
 
-        #region IsPartStartNumberEnable
+        #region NumberingSeriesPartPrefixText
 
-        public bool IsPartStartNumberEnable
+        public string NumberingSeriesPartPrefixText
         {
-            get { return _isPartStartNumberEnable; }
+            get { return _numberingSeriesPartPrefixText; }
             set
             {
-                if (value == _isPartStartNumberEnable)
+                if (value == _numberingSeriesPartPrefixText)
                     return;
 
-                _isPartStartNumberEnable = value;
-                OnPropertyChangedAsync(nameof(IsPartStartNumberEnable));
+                _numberingSeriesPartPrefixText = value;
+                OnPropertyChangedAsync(nameof(NumberingSeriesPartPrefixText));
             }
         }
 
-        private bool _isPartStartNumberEnable;
+        private string _numberingSeriesPartPrefixText { get; set; }
 
-        #endregion IsPartStartNumberEnable
+        #endregion NumberingSeriesPartPrefixText
 
-        #region IsAssemblyPrefixNumberEnable
+        #region IsNumberingSeriesPartStartumberChecked
 
-        public bool IsAssemblyPrefixNumberEnable
+        public bool IsNumberingSeriesPartStartumberChecked
         {
-            get { return _isAssemblyPrefixNumberEnable; }
+            get { return _isNumberingSeriesPartStartumberChecked; }
             set
             {
-                if (value == _isAssemblyPrefixNumberEnable)
+                if (value == _isNumberingSeriesPartStartumberChecked)
                     return;
 
-                _isAssemblyPrefixNumberEnable = value;
-                OnPropertyChangedAsync(nameof(IsAssemblyPrefixNumberEnable));
+                _isNumberingSeriesPartStartumberChecked = value;
+                OnPropertyChangedAsync(nameof(IsNumberingSeriesPartStartumberChecked));
             }
         }
 
-        private bool _isAssemblyPrefixNumberEnable;
+        private bool _isNumberingSeriesPartStartumberChecked { get; set; }
 
-        #endregion IsAssemblyPrefixNumberEnable
+        #endregion IsNumberingSeriesPartStartumberChecked
 
-        #region IsAssemblyStartNumberEnable
+        #region NumberingSeriesPartStartNumberText
 
-        public bool IsAssemblyStartNumberEnable
+        public string NumberingSeriesPartStartNumberText
         {
-            get { return _isAssemblyStartNumberEnable; }
+            get { return _numberingSeriesPartStartNumberText; }
             set
             {
-                if (value == _isAssemblyStartNumberEnable)
+                if (value == _numberingSeriesPartStartNumberText)
                     return;
 
-                _isAssemblyStartNumberEnable = value;
-                OnPropertyChangedAsync(nameof(IsAssemblyStartNumberEnable));
+                _numberingSeriesPartStartNumberText = value;
+                OnPropertyChangedAsync(nameof(NumberingSeriesPartStartNumberText));
             }
         }
 
-        private bool _isAssemblyStartNumberEnable;
+        private string _numberingSeriesPartStartNumberText { get; set; }
 
-        #endregion IsAssemblyStartNumberEnable
+        #endregion NumberingSeriesPartStartNumberText
 
-        #region IsToggelCheckBoxFirst
+        #region IsNumberingSeriesAssemblyPrefixChecked
 
-        public bool IsToggelCheckBoxFirst
+        public bool IsNumberingSeriesAssemblyPrefixChecked
         {
-            get { return _isToggelCheckBoxFirst; }
+            get { return _isNumberingSeriesAssemblyPrefixChecked; }
             set
             {
-                if (value == _isToggelCheckBoxFirst)
+                if (value == _isNumberingSeriesAssemblyPrefixChecked)
                     return;
 
-                _isToggelCheckBoxFirst = value;
-                if (IsToggelCheckBoxFirst)
-                {
-                    IsToggelCheckBoxSecond = false;
-                }
-                OnPropertyChangedAsync(nameof(IsToggelCheckBoxFirst));
+                _isNumberingSeriesAssemblyPrefixChecked = value;
+                OnPropertyChangedAsync(nameof(IsNumberingSeriesAssemblyPrefixChecked));
             }
         }
 
-        private bool _isToggelCheckBoxFirst = true;
+        private bool _isNumberingSeriesAssemblyPrefixChecked { get; set; }
 
-        #endregion IsToggelCheckBoxFirst
+        #endregion IsNumberingSeriesAssemblyPrefixChecked
 
-        #region IsToggelCheckBoxSecond
+        #region NumberingSeriesAssemblyPrefixText
 
-        public bool IsToggelCheckBoxSecond
+        public string NumberingSeriesAssemblyPrefixText
         {
-            get { return _isToggelCheckBoxSecond; }
+            get { return _numberingSeriesAssemblyPrefixText; }
             set
             {
-                if (value == _isToggelCheckBoxSecond)
+                if (value == _numberingSeriesAssemblyPrefixText)
                     return;
 
-                _isToggelCheckBoxSecond = value;
-                if (IsToggelCheckBoxSecond)
-                {
-                    IsToggelCheckBoxFirst = false;
-                }
-                OnPropertyChangedAsync(nameof(IsToggelCheckBoxSecond));
+                _numberingSeriesAssemblyPrefixText = value;
+                OnPropertyChangedAsync(nameof(NumberingSeriesAssemblyPrefixText));
             }
         }
 
-        private bool _isToggelCheckBoxSecond;
+        private string _numberingSeriesAssemblyPrefixText { get; set; }
 
-        #endregion IsToggelCheckBoxSecond
+        #endregion NumberingSeriesAssemblyPrefixText
+
+        #region IsNumberingSeriesAssemblyStartumberChecked
+
+        public bool IsNumberingSeriesAssemblyStartumberChecked
+        {
+            get { return _isNumberingSeriesAssemblyStartumberChecked; }
+            set
+            {
+                if (value == _isNumberingSeriesAssemblyStartumberChecked)
+                    return;
+
+                _isNumberingSeriesAssemblyStartumberChecked = value;
+                OnPropertyChangedAsync(nameof(IsNumberingSeriesAssemblyStartumberChecked));
+            }
+        }
+
+        private bool _isNumberingSeriesAssemblyStartumberChecked { get; set; }
+
+        #endregion IsNumberingSeriesAssemblyStartumberChecked
+
+        #region NumberingSeriesAssemblyStartNumberText
+
+        public string NumberingSeriesAssemblyStartNumberText
+        {
+            get { return _numberingSeriesAssemblyStartNumberText; }
+            set
+            {
+                if (value == _numberingSeriesAssemblyStartNumberText)
+                    return;
+
+                _numberingSeriesAssemblyStartNumberText = value;
+                OnPropertyChangedAsync(nameof(NumberingSeriesAssemblyStartNumberText));
+            }
+        }
+
+        private string _numberingSeriesAssemblyStartNumberText { get; set; }
+
+        #endregion NumberingSeriesAssemblyStartNumberText
+
+        #region IsAttributesNameChecked
+
+        public bool IsAttributesNameChecked
+        {
+            get { return _isAttributesNameChecked; }
+            set
+            {
+                if (value == _isAttributesNameChecked)
+                    return;
+
+                _isAttributesNameChecked = value;
+                OnPropertyChangedAsync(nameof(IsAttributesNameChecked));
+            }
+        }
+
+        private bool _isAttributesNameChecked { get; set; }
+
+        #endregion IsAttributesNameChecked
 
         #region AttributesNameText
 
@@ -225,9 +277,28 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _attributesNameText;
+        private string _attributesNameText { get; set; }
 
         #endregion AttributesNameText
+
+        #region IsAttributesProfileChecked
+
+        public bool IsAttributesProfileChecked
+        {
+            get { return _isAttributesProfileChecked; }
+            set
+            {
+                if (value == _isAttributesProfileChecked)
+                    return;
+
+                _isAttributesProfileChecked = value;
+                OnPropertyChangedAsync(nameof(IsAttributesProfileChecked));
+            }
+        }
+
+        private bool _isAttributesProfileChecked { get; set; }
+
+        #endregion IsAttributesProfileChecked
 
         #region AttributesProfileText
 
@@ -244,85 +315,351 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _attributesProfileText;
+        private string _attributesProfileText { get; set; }
 
         #endregion AttributesProfileText
 
-        #region NumberingPartPrefixText
+        #region IsAttributesMaterialChecked
 
-        public string NumberingPartPrefixText
+        public bool IsAttributesMaterialChecked
         {
-            get { return _numberingPartPrefixText; }
+            get { return _isAttributesMaterialChecked; }
             set
             {
-                if (value == _numberingPartPrefixText)
+                if (value == _isAttributesMaterialChecked)
                     return;
 
-                _numberingPartPrefixText = value;
-                OnPropertyChangedAsync(nameof(NumberingPartPrefixText));
+                _isAttributesMaterialChecked = value;
+                OnPropertyChangedAsync(nameof(IsAttributesMaterialChecked));
             }
         }
 
-        private string _numberingPartPrefixText;
+        private bool _isAttributesMaterialChecked { get; set; }
 
-        #endregion NumberingPartPrefixText
+        #endregion IsAttributesMaterialChecked
 
-        #region NumberingPartStartNumberText
+        #region AttributesMaterialText
 
-        public string NumberingPartStartNumberText
+        public string AttributesMaterialText
         {
-            get { return _numberingPartStartNumberText; }
+            get { return _attributesMaterialText; }
             set
             {
-                if (value == _numberingPartStartNumberText)
+                if (value == _attributesMaterialText)
                     return;
 
-                _numberingPartStartNumberText = value;
-                OnPropertyChangedAsync(nameof(NumberingPartStartNumberText));
+                _attributesMaterialText = value;
+                OnPropertyChangedAsync(nameof(AttributesMaterialText));
             }
         }
 
-        private string _numberingPartStartNumberText;
+        private string _attributesMaterialText { get; set; }
 
-        #endregion NumberingPartStartNumberText
+        #endregion AttributesMaterialText
 
-        #region NumberingAssemblyPrefixText
+        #region IsAttributesFinishChecked
 
-        public string NumberingAssemblyPrefixText
+        public bool IsAttributesFinishChecked
         {
-            get { return _numberingAssemblyPrefixText; }
+            get { return _isAttributesFinishChecked; }
             set
             {
-                if (value == _numberingAssemblyPrefixText)
+                if (value == _isAttributesFinishChecked)
                     return;
 
-                _numberingAssemblyPrefixText = value;
-                OnPropertyChangedAsync(nameof(NumberingAssemblyPrefixText));
+                _isAttributesFinishChecked = value;
+                OnPropertyChangedAsync(nameof(IsAttributesFinishChecked));
             }
         }
 
-        private string _numberingAssemblyPrefixText;
+        private bool _isAttributesFinishChecked { get; set; }
 
-        #endregion NumberingAssemblyPrefixText
+        #endregion IsAttributesFinishChecked
 
-        #region NumberingAssemblyStartNumberText
+        #region AttributesFinishText
 
-        public string NumberingAssemblyStartNumberText
+        public string AttributesFinishText
         {
-            get { return _numberingAssemblyStartNumberText; }
+            get { return _attributesFinishText; }
             set
             {
-                if (value == _numberingAssemblyStartNumberText)
+                if (value == _attributesFinishText)
                     return;
 
-                _numberingAssemblyStartNumberText = value;
-                OnPropertyChangedAsync(nameof(NumberingAssemblyStartNumberText));
+                _attributesFinishText = value;
+                OnPropertyChangedAsync(nameof(AttributesFinishText));
             }
         }
 
-        private string _numberingAssemblyStartNumberText;
+        private string _attributesFinishText { get; set; }
 
-        #endregion NumberingAssemblyStartNumberText
+        #endregion AttributesFinishText
+
+        #region IsAttributesClassChecked
+
+        public bool IsAttributesClassChecked
+        {
+            get { return _isAttributesClassChecked; }
+            set
+            {
+                if (value == _isAttributesClassChecked)
+                    return;
+
+                _isAttributesClassChecked = value;
+                OnPropertyChangedAsync(nameof(IsAttributesClassChecked));
+            }
+        }
+
+        private bool _isAttributesClassChecked { get; set; }
+
+        #endregion IsAttributesClassChecked
+
+        #region AttributesClassText
+
+        public string AttributesClassText
+        {
+            get { return _attributesClassText; }
+            set
+            {
+                if (value == _attributesClassText)
+                    return;
+
+                _attributesClassText = value;
+                OnPropertyChangedAsync(nameof(AttributesClassText));
+            }
+        }
+
+        private string _attributesClassText { get; set; }
+
+        #endregion AttributesClassText
+
+        #region IsPositionOnPlaneChecked
+
+        public bool IsPositionOnPlaneChecked
+        {
+            get { return _isPositionOnPlaneChecked; }
+            set
+            {
+                if (value == _isPositionOnPlaneChecked)
+                    return;
+
+                _isPositionOnPlaneChecked = value;
+                OnPropertyChangedAsync(nameof(IsPositionOnPlaneChecked));
+            }
+        }
+
+        private bool _isPositionOnPlaneChecked { get; set; }
+
+        #endregion IsPositionOnPlaneChecked
+
+        #region PositionOnPlaneComboBox
+
+        public List<string> PositionOnPlaneComboBox
+        {
+            get { return _positionOnPlaneComboBox; }
+            set
+            {
+                if (value == _positionOnPlaneComboBox)
+                    return;
+
+                _positionOnPlaneComboBox = value;
+                OnPropertyChangedAsync(nameof(PositionOnPlaneComboBox));
+            }
+        }
+
+        private List<string> _positionOnPlaneComboBox { get; set; }
+
+        #endregion PositionOnPlaneComboBox
+
+        #region SelectedDataInPositionOnPlaneComboBox
+
+        public string SelectedDataInPositionOnPlaneComboBox
+        {
+            get { return _selectedDataInPositionOnPlaneComboBox; }
+            set
+            {
+                if (value == _selectedDataInPositionOnPlaneComboBox)
+                    return;
+
+                _selectedDataInPositionOnPlaneComboBox = value;
+                OnPropertyChangedAsync(nameof(SelectedDataInPositionOnPlaneComboBox));
+            }
+        }
+
+        private string _selectedDataInPositionOnPlaneComboBox { get; set; }
+
+        #endregion SelectedDataInPositionOnPlaneComboBox
+
+        #region PositionOnPlaneText
+
+        public string PositionOnPlaneText
+        {
+            get { return _positionOnPlaneText; }
+            set
+            {
+                if (value == _positionOnPlaneText)
+                    return;
+
+                _positionOnPlaneText = value;
+                OnPropertyChangedAsync(nameof(PositionOnPlaneText));
+            }
+        }
+
+        private string _positionOnPlaneText { get; set; }
+
+        #endregion PositionOnPlaneText
+
+        #region IsPositionRotationChecked
+
+        public bool IsPositionRotationChecked
+        {
+            get { return _isPositionRotationChecked; }
+            set
+            {
+                if (value == _isPositionRotationChecked)
+                    return;
+
+                _isPositionRotationChecked = value;
+                OnPropertyChangedAsync(nameof(IsPositionRotationChecked));
+            }
+        }
+
+        private bool _isPositionRotationChecked { get; set; }
+
+        #endregion IsPositionRotationChecked
+
+        #region PositionRotationComboBox
+
+        public List<string> PositionRotationComboBox
+        {
+            get { return _positionRotationComboBox; }
+            set
+            {
+                if (value == _positionRotationComboBox)
+                    return;
+
+                _positionRotationComboBox = value;
+                OnPropertyChangedAsync(nameof(PositionRotationComboBox));
+            }
+        }
+
+        private List<string> _positionRotationComboBox { get; set; }
+
+        #endregion PositionRotationComboBox
+
+        #region SelectedDataInPositionRotationComboBox
+
+        public string SelectedDataInPositionRotationComboBox
+        {
+            get { return _selectedDataInPositionRotationComboBox; }
+            set
+            {
+                if (value == _selectedDataInPositionRotationComboBox)
+                    return;
+
+                _selectedDataInPositionRotationComboBox = value;
+                OnPropertyChangedAsync(nameof(SelectedDataInPositionRotationComboBox));
+            }
+        }
+
+        private string _selectedDataInPositionRotationComboBox { get; set; }
+
+        #endregion SelectedDataInPositionRotationComboBox
+
+        #region PositionRotationText
+
+        public string PositionRotationText
+        {
+            get { return _positionRotationText; }
+            set
+            {
+                if (value == _positionRotationText)
+                    return;
+
+                _positionRotationText = value;
+                OnPropertyChangedAsync(nameof(PositionRotationText));
+            }
+        }
+
+        private string _positionRotationText { get; set; }
+
+        #endregion PositionRotationText
+
+        #region IsPositionAtDepthChecked
+
+        public bool IsPositionAtDepthChecked
+        {
+            get { return _isPositionAtDepthChecked; }
+            set
+            {
+                if (value == _isPositionAtDepthChecked)
+                    return;
+
+                _isPositionAtDepthChecked = value;
+                OnPropertyChangedAsync(nameof(IsPositionAtDepthChecked));
+            }
+        }
+
+        private bool _isPositionAtDepthChecked { get; set; }
+
+        #endregion IsPositionAtDepthChecked
+
+        #region PositionAtDepthComboBox
+
+        public List<string> PositionAtDepthComboBox
+        {
+            get { return _positionAtDepthComboBox; }
+            set
+            {
+                if (value == _positionAtDepthComboBox)
+                    return;
+
+                _positionAtDepthComboBox = value;
+                OnPropertyChangedAsync(nameof(PositionAtDepthComboBox));
+            }
+        }
+
+        private List<string> _positionAtDepthComboBox { get; set; }
+
+        #endregion PositionAtDepthComboBox
+
+        #region SelectedDataInPositionAtDepthComboBox
+
+        public string SelectedDataInPositionAtDepthComboBox
+        {
+            get { return _selectedDataInPositionAtDepthComboBox; }
+            set
+            {
+                if (value == _selectedDataInPositionAtDepthComboBox)
+                    return;
+
+                _selectedDataInPositionAtDepthComboBox = value;
+                OnPropertyChangedAsync(nameof(SelectedDataInPositionAtDepthComboBox));
+            }
+        }
+
+        private string _selectedDataInPositionAtDepthComboBox { get; set; }
+
+        #endregion SelectedDataInPositionAtDepthComboBox
+
+        #region PositionAtDepthText
+
+        public string PositionAtDepthText
+        {
+            get { return _positionAtDepthText; }
+            set
+            {
+                if (value == _positionAtDepthText)
+                    return;
+
+                _positionAtDepthText = value;
+                OnPropertyChangedAsync(nameof(PositionAtDepthText));
+            }
+        }
+
+        private string _positionAtDepthText { get; set; }
+
+        #endregion PositionAtDepthText
 
         #endregion INotifyPropertyChange Member
 
@@ -351,6 +688,12 @@ namespace DialogBeamProperties.ViewModel
 
         public DialogBeamPropertiesViewModel()
         {
+            LoadDataComboBox = new List<string>();
+            InitCommand();
+        }
+
+        private void InitCommand()
+        {
             ButtonCommand = new RelayCommand(new Action<object>(CloseWindow));
             ApplyButtonCommand = new RelayCommand(new Action<object>(ApplyButtonClick));
         }
@@ -358,45 +701,141 @@ namespace DialogBeamProperties.ViewModel
         #endregion Constructor
 
         #region Public Methods
+
         public void SetProtertiesData(IProperties iproperties)
         {
             this.iproperties = iproperties;
             UpdateData(iproperties);
         }
 
-       
         public IProperties GetPropertiesData()
         {
             return iproperties;
         }
-        #endregion
+
+        #endregion Public Methods
 
         #region Private Methods
+
+        #region Save Data
+
         private void ApplyButtonClick(object obj)
         {
-            iproperties.AttributesName = AttributesNameText;
-            iproperties.AttributesProfile = AttributesProfileText;
-            iproperties.NumberingPartPrefix = NumberingPartPrefixText;
-            iproperties.NumberingPartStartNumber = NumberingPartStartNumberText;
-            iproperties.NumberingAssemblyPrefix = NumberingAssemblyPrefixText;
-            iproperties.NumberingAssemblyStartNumber = NumberingAssemblyStartNumberText;
+            iproperties.LoadDataComboBox = LoadDataComboBox;
+            iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
         }
+
+        private void SavePositionData()
+        {
+            iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
+            iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
+            iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+            iproperties.PositionOnPlaneText = PositionOnPlaneText;
+
+            iproperties.IsPositionRotationChecked = IsPositionRotationChecked;
+            iproperties.PositionRotationComboBox = PositionRotationComboBox;
+            iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+            iproperties.PositionRotationText = PositionRotationText;
+
+            iproperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
+            iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
+            iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+            iproperties.PositionAtDepthText = PositionAtDepthText;
+        }
+
+        private void SaveAttributesData()
+        {
+            iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
+            iproperties.AttributesNameText = AttributesNameText;
+            iproperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
+            iproperties.AttributesProfileText = AttributesProfileText;
+            iproperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
+            iproperties.AttributesMaterialText = AttributesMaterialText;
+            iproperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
+            iproperties.AttributesFinishText = AttributesFinishText;
+            iproperties.IsAttributesClassChecked = IsAttributesClassChecked;
+            iproperties.AttributesClassText = AttributesClassText;
+        }
+
+        private void SaveNumberingData()
+        {
+            iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
+            iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+            iproperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
+            iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+            iproperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
+            iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+            iproperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
+            iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+        }
+
+        #endregion Save Data
 
         private void CloseWindow(object obj)
         {
             Messenger.Default.Send(true, MessengerToken.CLOSEWINDOW);
         }
 
+        #region Update Data
+
         private void UpdateData(IProperties iproperties)
         {
-            AttributesNameText = iproperties.AttributesName;
-            AttributesProfileText = iproperties.AttributesProfile;
-            NumberingPartPrefixText = iproperties.NumberingPartPrefix;
-            NumberingPartStartNumberText = iproperties.NumberingPartStartNumber;
-            NumberingAssemblyPrefixText = iproperties.NumberingAssemblyPrefix;
-            NumberingAssemblyStartNumberText = iproperties.NumberingAssemblyStartNumber;
+            LoadDataComboBox = iproperties.LoadDataComboBox;
+            SelectedDataInLoadDataComboBox = iproperties.SelectedDataInLoadDataComboBox;
+            UpdatePositionData();
+            UpdateAttributesData();
+            UpdateNumberingData();
         }
 
-        #endregion
+        private void UpdatePositionData()
+        {
+            IsPositionOnPlaneChecked = iproperties.IsPositionOnPlaneChecked;
+            PositionOnPlaneComboBox = iproperties.PositionOnPlaneComboBox;
+            SelectedDataInPositionOnPlaneComboBox = iproperties.SelectedDataInPositionOnPlaneComboBox;
+            PositionOnPlaneText = iproperties.PositionOnPlaneText;
+
+            IsPositionRotationChecked = iproperties.IsPositionRotationChecked;
+            PositionRotationComboBox = iproperties.PositionRotationComboBox;
+            SelectedDataInPositionRotationComboBox = iproperties.SelectedDataInPositionRotationComboBox;
+            PositionRotationText = iproperties.PositionRotationText;
+
+            IsPositionAtDepthChecked = iproperties.IsPositionAtDepthChecked;
+            PositionAtDepthComboBox = iproperties.PositionAtDepthComboBox;
+            SelectedDataInPositionAtDepthComboBox = iproperties.SelectedDataInPositionAtDepthComboBox;
+            PositionAtDepthText = iproperties.PositionAtDepthText;
+        }
+
+        private void UpdateAttributesData()
+        {
+            IsAttributesNameChecked = iproperties.IsAttributesNameChecked;
+            AttributesNameText = iproperties.AttributesNameText;
+            IsAttributesProfileChecked = iproperties.IsAttributesProfileChecked;
+            AttributesProfileText = iproperties.AttributesProfileText;
+            IsAttributesMaterialChecked = iproperties.IsAttributesMaterialChecked;
+            AttributesMaterialText = iproperties.AttributesMaterialText;
+            IsAttributesFinishChecked = iproperties.IsAttributesFinishChecked;
+            AttributesFinishText = iproperties.AttributesFinishText;
+            IsAttributesClassChecked = iproperties.IsAttributesClassChecked;
+            AttributesClassText = iproperties.AttributesClassText;
+        }
+
+        private void UpdateNumberingData()
+        {
+            IsNumberingSeriesPartPrefixChecked = iproperties.IsNumberingSeriesPartPrefixChecked;
+            NumberingSeriesPartPrefixText = iproperties.NumberingSeriesPartPrefixText;
+            IsNumberingSeriesPartStartumberChecked = iproperties.IsNumberingSeriesPartStartumberChecked;
+            NumberingSeriesPartStartNumberText = iproperties.NumberingSeriesPartStartNumberText;
+            IsNumberingSeriesAssemblyPrefixChecked = iproperties.IsNumberingSeriesAssemblyPrefixChecked;
+            NumberingSeriesAssemblyPrefixText = iproperties.NumberingSeriesAssemblyPrefixText;
+            IsNumberingSeriesAssemblyStartumberChecked = iproperties.IsNumberingSeriesAssemblyStartumberChecked;
+            NumberingSeriesAssemblyStartNumberText = iproperties.NumberingSeriesAssemblyStartNumberText;
+        }
+
+        #endregion Update Data
+
+        #endregion Private Methods
     }
 }

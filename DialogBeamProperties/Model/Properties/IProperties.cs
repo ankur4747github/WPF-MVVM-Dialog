@@ -17,15 +17,15 @@ namespace DialogBeamProperties.Model
         string NumberingSeriesAssemblyStartNumberText { get; set; }
 
         bool IsAttributesNameChecked { get; set; }
-        string AttributesName { get; set; }
+        string AttributesNameText { get; set; }
         bool IsAttributesProfileChecked { get; set; }
-        string AttributesProfile { get; set; }
+        string AttributesProfileText { get; set; }
         bool IsAttributesMaterialChecked { get; set; }
-        string AttributesMaterial { get; set; }
+        string AttributesMaterialText { get; set; }
         bool IsAttributesFinishChecked { get; set; }
-        string AttributesFinish { get; set; }
+        string AttributesFinishText { get; set; }
         bool IsAttributesClassChecked { get; set; }
-        string AttributesClass { get; set; }
+        string AttributesClassText { get; set; }
 
         //Position Tab Data
         bool IsPositionOnPlaneChecked { get; set; }
