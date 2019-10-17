@@ -1,5 +1,5 @@
-﻿using DialogTest.Command;
-using DialogTest.Constants;
+﻿using DialogBeamProperties.Command;
+using DialogBeamProperties.Constants;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using System;
@@ -7,9 +7,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace DialogTest.ViewModel
+namespace DialogBeamProperties.ViewModel
 {
-    public class DialogTestViewModel : ViewModelBase, INotifyPropertyChanged
+    public class DialogBeamPropertiesViewModel : ViewModelBase, INotifyPropertyChanged
     {
         #region Fields
 
@@ -354,7 +354,7 @@ namespace DialogTest.ViewModel
 
         #endregion PropertyChanged
 
-        public DialogTestViewModel()
+        public DialogBeamPropertiesViewModel()
         {
             ButtonCommand = new RelayCommand(new Action<object>(CloseWindow));
             ApplyButtonCommand = new RelayCommand(new Action<object>(ApplyButtonClick));

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DialogTest.Command
+namespace DialogBeamProperties.Command
 {
     public class RelayCommand : ICommand
     {

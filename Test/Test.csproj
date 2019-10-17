@@ -95,9 +95,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DialogTest\DialogTest.csproj">
+    <ProjectReference Include="..\DialogTest\DialogBeamProperties.csproj">
       <Project>{208df9b0-8510-4682-9f94-17bc9820350b}</Project>
-      <Name>DialogTest</Name>
+      <Name>DialogBeamProperties</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DialogTest.Constants
+namespace DialogBeamProperties.Constants
 {
     public static class MessengerToken
     {

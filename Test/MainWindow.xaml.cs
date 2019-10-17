@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DialogBeamProperties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,9 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
-            DialogTest.DialogTest test = new DialogTest.DialogTest();
+            DialogBeamProperties.DialogBeamProperties test = new DialogBeamProperties.DialogBeamProperties();
             test.Show();
+            this.Hide();
         }
 
         

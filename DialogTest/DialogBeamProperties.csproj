@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{208DF9B0-8510-4682-9F94-17BC9820350B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DialogTest</RootNamespace>
-    <AssemblyName>DialogTest</AssemblyName>
+    <RootNamespace>DialogBeamProperties</RootNamespace>
+    <AssemblyName>DialogBeamProperties</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -69,15 +69,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\DialogTest.xaml">
+    <Page Include="View\BeamProperty.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Constants\MessengerToken.cs" />
-    <Compile Include="ViewModel\DialogTestViewModel.cs" />
-    <Compile Include="View\DialogTest.xaml.cs">
-      <DependentUpon>DialogTest.xaml</DependentUpon>
+    <Compile Include="ViewModel\BeamPropertytViewModel.cs" />
+    <Compile Include="View\BeamProperty.xaml.cs">
+      <DependentUpon>BeamProperty.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

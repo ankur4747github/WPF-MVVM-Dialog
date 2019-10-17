@@ -1,5 +1,5 @@
-﻿using DialogTest.Constants;
-using DialogTest.ViewModel;
+﻿using DialogBeamProperties.Constants;
+using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
@@ -16,15 +16,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DialogTest
+namespace DialogBeamProperties
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class DialogTest : Window
+    public partial class DialogBeamProperties : Window
     {
-        public DialogTestViewModel ViewModel = new DialogTestViewModel();
-        public DialogTest()
+        public DialogBeamPropertiesViewModel ViewModel = new DialogBeamPropertiesViewModel();
+        public DialogBeamProperties()
         {
             InitializeComponent();
             InitMessenger();
