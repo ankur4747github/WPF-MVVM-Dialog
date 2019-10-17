@@ -21,6 +21,8 @@ namespace DialogBeamProperties.ViewModel
 
         #region Button Command
 
+        #region Close Button Command
+
         private ICommand m_ButtonCommand;
 
         public ICommand ButtonCommand
@@ -35,6 +37,10 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        #endregion Close Button Command
+
+        #region Apply Buttom Command
+
         private ICommand _applyButtonCommand;
 
         public ICommand ApplyButtonCommand
@@ -48,6 +54,116 @@ namespace DialogBeamProperties.ViewModel
                 _applyButtonCommand = value;
             }
         }
+
+        #endregion Apply Buttom Command
+
+        #region Modify Buttom Command
+
+        private ICommand _modifyButtonCommand;
+
+        public ICommand ModifyButtonCommand
+        {
+            get
+            {
+                return _modifyButtonCommand;
+            }
+            set
+            {
+                _modifyButtonCommand = value;
+            }
+        }
+
+        #endregion Modify Buttom Command
+
+        #region Get Buttom Command
+
+        private ICommand _getButtonCommand;
+
+        public ICommand GetButtonCommand
+        {
+            get
+            {
+                return _getButtonCommand;
+            }
+            set
+            {
+                _getButtonCommand = value;
+            }
+        }
+
+        #endregion Get Buttom Command
+
+        #region SelectAllCheckBox Buttom Command
+
+        private ICommand _selectAllCheckButtonCommand;
+
+        public ICommand SelectAllCheckBoxButtonCommand
+        {
+            get
+            {
+                return _selectAllCheckButtonCommand;
+            }
+            set
+            {
+                _selectAllCheckButtonCommand = value;
+            }
+        }
+
+        #endregion SelectAllCheckBox Buttom Command
+
+        #region Save Buttom Command
+
+        private ICommand _saveButtonCommand;
+
+        public ICommand SaveButtonCommand
+        {
+            get
+            {
+                return _saveButtonCommand;
+            }
+            set
+            {
+                _saveButtonCommand = value;
+            }
+        }
+
+        #endregion Save Buttom Command
+
+        #region Load Buttom Command
+
+        private ICommand _loadButtonCommand;
+
+        public ICommand LoadButtonCommand
+        {
+            get
+            {
+                return _loadButtonCommand;
+            }
+            set
+            {
+                _loadButtonCommand = value;
+            }
+        }
+
+        #endregion Load Buttom Command
+
+        #region SelectProfile Buttom Command
+
+        private ICommand _selectButtonCommand;
+
+        public ICommand SelectProfileButtonCommand
+        {
+            get
+            {
+                return _selectButtonCommand;
+            }
+            set
+            {
+                _selectButtonCommand = value;
+            }
+        }
+
+        #endregion Select Buttom Command
 
         #endregion Button Command
 
@@ -696,6 +812,12 @@ namespace DialogBeamProperties.ViewModel
         {
             ButtonCommand = new RelayCommand(new Action<object>(CloseWindow));
             ApplyButtonCommand = new RelayCommand(new Action<object>(ApplyButtonClick));
+            ModifyButtonCommand = new RelayCommand(new Action<object>(ModifyButtonClick));
+            GetButtonCommand = new RelayCommand(new Action<object>(GetButtonClick));
+            SelectAllCheckBoxButtonCommand = new RelayCommand(new Action<object>(SelectAllCheckBoxButtonClick));
+            SaveButtonCommand = new RelayCommand(new Action<object>(SaveButtonClick));
+            LoadButtonCommand = new RelayCommand(new Action<object>(LoadButtonClick));
+            SelectProfileButtonCommand = new RelayCommand(new Action<object>(SelectProfileButtonClick));
         }
 
         #endregion Constructor
@@ -717,7 +839,12 @@ namespace DialogBeamProperties.ViewModel
 
         #region Private Methods
 
-        #region Save Data
+        #region Button Click
+
+        private void CloseWindow(object obj)
+        {
+            Messenger.Default.Send(true, MessengerToken.CLOSEWINDOW);
+        }
 
         private void ApplyButtonClick(object obj)
         {
@@ -727,6 +854,44 @@ namespace DialogBeamProperties.ViewModel
             SaveAttributesData();
             SavePositionData();
         }
+
+        private void ModifyButtonClick(object obj)
+        {
+        }
+
+        private void GetButtonClick(object obj)
+        {
+        }
+
+        private void SelectAllCheckBoxButtonClick(object obj)
+        {
+            IsNumberingSeriesPartPrefixChecked = !IsNumberingSeriesPartPrefixChecked;
+            IsNumberingSeriesPartStartumberChecked = !IsNumberingSeriesPartStartumberChecked;
+            IsNumberingSeriesAssemblyPrefixChecked = !IsNumberingSeriesAssemblyPrefixChecked;
+            IsNumberingSeriesAssemblyStartumberChecked = !IsNumberingSeriesAssemblyStartumberChecked;
+            IsAttributesNameChecked = !IsAttributesNameChecked;
+            IsAttributesProfileChecked = !IsAttributesProfileChecked;
+            IsAttributesMaterialChecked = !IsAttributesMaterialChecked;
+            IsAttributesFinishChecked = !IsAttributesFinishChecked;
+            IsAttributesClassChecked = !IsAttributesClassChecked;
+            IsPositionOnPlaneChecked = !IsPositionOnPlaneChecked;
+            IsPositionRotationChecked = !IsPositionRotationChecked;
+            IsPositionAtDepthChecked = !IsPositionAtDepthChecked;
+        }
+        private void SaveButtonClick(object obj)
+        {
+        }
+
+        private void LoadButtonClick(object obj)
+        {
+        }
+
+        private void SelectProfileButtonClick(object obj)
+        {
+        }
+        #endregion Button Click
+
+        #region Save Data
 
         private void SavePositionData()
         {
@@ -773,11 +938,6 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Save Data
-
-        private void CloseWindow(object obj)
-        {
-            Messenger.Default.Send(true, MessengerToken.CLOSEWINDOW);
-        }
 
         #region Update Data
 
