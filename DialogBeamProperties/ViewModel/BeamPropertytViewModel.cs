@@ -427,6 +427,8 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _attributesProfileText = value;
+
+                IsSelectProfileButtonEnable = AttributesProfileText.Trim().Length > 1;
                 OnPropertyChangedAsync(nameof(AttributesProfileText));
             }
         }
@@ -776,6 +778,25 @@ namespace DialogBeamProperties.ViewModel
         private string _positionAtDepthText { get; set; }
 
         #endregion PositionAtDepthText
+
+        #region IsSelectProfileButtonEnable
+
+        public bool IsSelectProfileButtonEnable
+        {
+            get { return _isSelectProfileButtonEnable; }
+            set
+            {
+                if (value == _isSelectProfileButtonEnable)
+                    return;
+
+                _isSelectProfileButtonEnable = value;
+                OnPropertyChangedAsync(nameof(IsSelectProfileButtonEnable));
+            }
+        }
+
+        private bool _isSelectProfileButtonEnable { get; set; }
+
+        #endregion IsSelectProfileButtonEnable
 
         #endregion INotifyPropertyChange Member
 

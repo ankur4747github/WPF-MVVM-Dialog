@@ -163,6 +163,7 @@
                                 </TextBox>
                                 <Button Grid.Column="2"
                                         Content="Select"
+                                        IsEnabled="{Binding IsSelectProfileButtonEnable, Mode=OneWay}"
                                         Command="{Binding SelectProfileButtonCommand}">
                                 </Button>
                             </Grid>
