@@ -23,7 +23,8 @@ namespace DialogBeamProperties.ViewModel
     {
         #region Fields
 
-        private IProperties iproperties { get; set; }
+        private IProperties _iproperties { get; set; }
+        private bool _selectAll = false;
         public ProfileFileData AllProfileFileData { get; set; }
 
         #endregion Fields
@@ -869,13 +870,13 @@ namespace DialogBeamProperties.ViewModel
 
         public void SetProtertiesData(IProperties iproperties)
         {
-            this.iproperties = iproperties;
+            this._iproperties = iproperties;
             UpdateData(iproperties);
         }
 
         public IProperties GetPropertiesData()
         {
-            return iproperties;
+            return _iproperties;
         }
 
         #endregion Public Methods
@@ -891,8 +892,8 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            iproperties.LoadDataComboBox = LoadDataComboBox;
-            iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            _iproperties.LoadDataComboBox = LoadDataComboBox;
+            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
@@ -908,18 +909,19 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectAllCheckBoxButtonClick(object obj)
         {
-            IsNumberingSeriesPartPrefixChecked = !IsNumberingSeriesPartPrefixChecked;
-            IsNumberingSeriesPartStartumberChecked = !IsNumberingSeriesPartStartumberChecked;
-            IsNumberingSeriesAssemblyPrefixChecked = !IsNumberingSeriesAssemblyPrefixChecked;
-            IsNumberingSeriesAssemblyStartumberChecked = !IsNumberingSeriesAssemblyStartumberChecked;
-            IsAttributesNameChecked = !IsAttributesNameChecked;
-            IsAttributesProfileChecked = !IsAttributesProfileChecked;
-            IsAttributesMaterialChecked = !IsAttributesMaterialChecked;
-            IsAttributesFinishChecked = !IsAttributesFinishChecked;
-            IsAttributesClassChecked = !IsAttributesClassChecked;
-            IsPositionOnPlaneChecked = !IsPositionOnPlaneChecked;
-            IsPositionRotationChecked = !IsPositionRotationChecked;
-            IsPositionAtDepthChecked = !IsPositionAtDepthChecked;
+            IsNumberingSeriesPartPrefixChecked = !_selectAll;
+            IsNumberingSeriesPartStartumberChecked = !_selectAll;
+            IsNumberingSeriesAssemblyPrefixChecked = !_selectAll;
+            IsNumberingSeriesAssemblyStartumberChecked = !_selectAll;
+            IsAttributesNameChecked = !_selectAll;
+            IsAttributesProfileChecked = !_selectAll;
+            IsAttributesMaterialChecked = !_selectAll;
+            IsAttributesFinishChecked = !_selectAll;
+            IsAttributesClassChecked = !_selectAll;
+            IsPositionOnPlaneChecked = !_selectAll;
+            IsPositionRotationChecked = !_selectAll;
+            IsPositionAtDepthChecked = !_selectAll;
+            _selectAll = !_selectAll;
         }
 
         private void SaveButtonClick(object obj)
@@ -944,46 +946,46 @@ namespace DialogBeamProperties.ViewModel
 
         private void SavePositionData()
         {
-            iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
-            iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
-            iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-            iproperties.PositionOnPlaneText = PositionOnPlaneText;
+            _iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
+            _iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
+            _iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+            _iproperties.PositionOnPlaneText = PositionOnPlaneText;
 
-            iproperties.IsPositionRotationChecked = IsPositionRotationChecked;
-            iproperties.PositionRotationComboBox = PositionRotationComboBox;
-            iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-            iproperties.PositionRotationText = PositionRotationText;
+            _iproperties.IsPositionRotationChecked = IsPositionRotationChecked;
+            _iproperties.PositionRotationComboBox = PositionRotationComboBox;
+            _iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+            _iproperties.PositionRotationText = PositionRotationText;
 
-            iproperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
-            iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
-            iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-            iproperties.PositionAtDepthText = PositionAtDepthText;
+            _iproperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
+            _iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
+            _iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+            _iproperties.PositionAtDepthText = PositionAtDepthText;
         }
 
         private void SaveAttributesData()
         {
-            iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
-            iproperties.AttributesNameText = AttributesNameText;
-            iproperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
-            iproperties.AttributesProfileText = AttributesProfileText;
-            iproperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
-            iproperties.AttributesMaterialText = AttributesMaterialText;
-            iproperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
-            iproperties.AttributesFinishText = AttributesFinishText;
-            iproperties.IsAttributesClassChecked = IsAttributesClassChecked;
-            iproperties.AttributesClassText = AttributesClassText;
+            _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
+            _iproperties.AttributesNameText = AttributesNameText;
+            _iproperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
+            _iproperties.AttributesProfileText = AttributesProfileText;
+            _iproperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
+            _iproperties.AttributesMaterialText = AttributesMaterialText;
+            _iproperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
+            _iproperties.AttributesFinishText = AttributesFinishText;
+            _iproperties.IsAttributesClassChecked = IsAttributesClassChecked;
+            _iproperties.AttributesClassText = AttributesClassText;
         }
 
         private void SaveNumberingData()
         {
-            iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
-            iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
-            iproperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
-            iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
-            iproperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
-            iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
-            iproperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
-            iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+            _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
+            _iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+            _iproperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
+            _iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+            _iproperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
+            _iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+            _iproperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
+            _iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
         }
 
         #endregion Save Data
@@ -1001,46 +1003,46 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            IsPositionOnPlaneChecked = iproperties.IsPositionOnPlaneChecked;
-            PositionOnPlaneComboBox = iproperties.PositionOnPlaneComboBox;
-            SelectedDataInPositionOnPlaneComboBox = iproperties.SelectedDataInPositionOnPlaneComboBox;
-            PositionOnPlaneText = iproperties.PositionOnPlaneText;
+            IsPositionOnPlaneChecked = _iproperties.IsPositionOnPlaneChecked;
+            PositionOnPlaneComboBox = _iproperties.PositionOnPlaneComboBox;
+            SelectedDataInPositionOnPlaneComboBox = _iproperties.SelectedDataInPositionOnPlaneComboBox;
+            PositionOnPlaneText = _iproperties.PositionOnPlaneText;
 
-            IsPositionRotationChecked = iproperties.IsPositionRotationChecked;
-            PositionRotationComboBox = iproperties.PositionRotationComboBox;
-            SelectedDataInPositionRotationComboBox = iproperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = iproperties.PositionRotationText;
+            IsPositionRotationChecked = _iproperties.IsPositionRotationChecked;
+            PositionRotationComboBox = _iproperties.PositionRotationComboBox;
+            SelectedDataInPositionRotationComboBox = _iproperties.SelectedDataInPositionRotationComboBox;
+            PositionRotationText = _iproperties.PositionRotationText;
 
-            IsPositionAtDepthChecked = iproperties.IsPositionAtDepthChecked;
-            PositionAtDepthComboBox = iproperties.PositionAtDepthComboBox;
-            SelectedDataInPositionAtDepthComboBox = iproperties.SelectedDataInPositionAtDepthComboBox;
-            PositionAtDepthText = iproperties.PositionAtDepthText;
+            IsPositionAtDepthChecked = _iproperties.IsPositionAtDepthChecked;
+            PositionAtDepthComboBox = _iproperties.PositionAtDepthComboBox;
+            SelectedDataInPositionAtDepthComboBox = _iproperties.SelectedDataInPositionAtDepthComboBox;
+            PositionAtDepthText = _iproperties.PositionAtDepthText;
         }
 
         private void UpdateAttributesData()
         {
-            IsAttributesNameChecked = iproperties.IsAttributesNameChecked;
-            AttributesNameText = iproperties.AttributesNameText;
-            IsAttributesProfileChecked = iproperties.IsAttributesProfileChecked;
-            AttributesProfileText = iproperties.AttributesProfileText;
-            IsAttributesMaterialChecked = iproperties.IsAttributesMaterialChecked;
-            AttributesMaterialText = iproperties.AttributesMaterialText;
-            IsAttributesFinishChecked = iproperties.IsAttributesFinishChecked;
-            AttributesFinishText = iproperties.AttributesFinishText;
-            IsAttributesClassChecked = iproperties.IsAttributesClassChecked;
-            AttributesClassText = iproperties.AttributesClassText;
+            IsAttributesNameChecked = _iproperties.IsAttributesNameChecked;
+            AttributesNameText = _iproperties.AttributesNameText;
+            IsAttributesProfileChecked = _iproperties.IsAttributesProfileChecked;
+            AttributesProfileText = _iproperties.AttributesProfileText;
+            IsAttributesMaterialChecked = _iproperties.IsAttributesMaterialChecked;
+            AttributesMaterialText = _iproperties.AttributesMaterialText;
+            IsAttributesFinishChecked = _iproperties.IsAttributesFinishChecked;
+            AttributesFinishText = _iproperties.AttributesFinishText;
+            IsAttributesClassChecked = _iproperties.IsAttributesClassChecked;
+            AttributesClassText = _iproperties.AttributesClassText;
         }
 
         private void UpdateNumberingData()
         {
-            IsNumberingSeriesPartPrefixChecked = iproperties.IsNumberingSeriesPartPrefixChecked;
-            NumberingSeriesPartPrefixText = iproperties.NumberingSeriesPartPrefixText;
-            IsNumberingSeriesPartStartumberChecked = iproperties.IsNumberingSeriesPartStartumberChecked;
-            NumberingSeriesPartStartNumberText = iproperties.NumberingSeriesPartStartNumberText;
-            IsNumberingSeriesAssemblyPrefixChecked = iproperties.IsNumberingSeriesAssemblyPrefixChecked;
-            NumberingSeriesAssemblyPrefixText = iproperties.NumberingSeriesAssemblyPrefixText;
-            IsNumberingSeriesAssemblyStartumberChecked = iproperties.IsNumberingSeriesAssemblyStartumberChecked;
-            NumberingSeriesAssemblyStartNumberText = iproperties.NumberingSeriesAssemblyStartNumberText;
+            IsNumberingSeriesPartPrefixChecked = _iproperties.IsNumberingSeriesPartPrefixChecked;
+            NumberingSeriesPartPrefixText = _iproperties.NumberingSeriesPartPrefixText;
+            IsNumberingSeriesPartStartumberChecked = _iproperties.IsNumberingSeriesPartStartumberChecked;
+            NumberingSeriesPartStartNumberText = _iproperties.NumberingSeriesPartStartNumberText;
+            IsNumberingSeriesAssemblyPrefixChecked = _iproperties.IsNumberingSeriesAssemblyPrefixChecked;
+            NumberingSeriesAssemblyPrefixText = _iproperties.NumberingSeriesAssemblyPrefixText;
+            IsNumberingSeriesAssemblyStartumberChecked = _iproperties.IsNumberingSeriesAssemblyStartumberChecked;
+            NumberingSeriesAssemblyStartNumberText = _iproperties.NumberingSeriesAssemblyStartNumberText;
         }
 
         #endregion Update Data

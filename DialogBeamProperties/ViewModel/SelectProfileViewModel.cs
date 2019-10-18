@@ -164,6 +164,7 @@ namespace DialogBeamProperties.ViewModel
         private void OkButtonClick(object obj)
         {
             Messenger.Default.Send(SelectedProfile, MessengerToken.SELECTEDPROFILE);
+            Messenger.Default.Send(true, MessengerToken.CLOSESELECTPROFILEWINDOW);
         }
         #endregion
     }
