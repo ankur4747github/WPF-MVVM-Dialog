@@ -1,0 +1,8330 @@
+[
+  {
+    "Profile": "H100*50*5*7",
+    "Height": 100.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H100*100*6*8",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H125*60*6*8",
+    "Height": 125.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H125*125*6.5*9",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H148*100*6*9",
+    "Height": 148.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H150*75*5*7",
+    "Height": 150.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H150*150*7*10",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H175*90*5*8",
+    "Height": 175.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H175*175*7.5*11",
+    "Height": 175.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H194*150*6*9",
+    "Height": 194.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H198*99*4.5*7",
+    "Height": 198.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H200*100*5.5*8",
+    "Height": 200.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H200*200*8*12",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H200*204*12*12",
+    "Height": 200.0,
+    "Width": 204.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.2,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H244*175*7*11",
+    "Height": 244.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H244*252*11*11",
+    "Height": 244.0,
+    "Width": 252.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 63.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H248*124*5*8",
+    "Height": 248.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H250*125*6*9",
+    "Height": 250.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H250*250*9*14",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H250*255*14*14",
+    "Height": 250.0,
+    "Width": 255.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 81.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H294*200*8*12",
+    "Height": 294.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H294*302*12*12",
+    "Height": 294.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 83.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H298*149*5.5*8",
+    "Height": 298.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H300*150*6.5*9",
+    "Height": 300.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H300*300*10*15",
+    "Height": 300.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 93.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H300*305*15*15",
+    "Height": 300.0,
+    "Width": 305.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H338*351*13*13",
+    "Height": 338.0,
+    "Width": 351.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H340*250*9*14",
+    "Height": 340.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 78.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H344*348*10*16",
+    "Height": 344.0,
+    "Width": 348.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 113.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H344*354*16*16",
+    "Height": 344.0,
+    "Width": 354.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 129.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H346*174*6*9",
+    "Height": 346.0,
+    "Width": 174.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.2,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H350*175*6*10",
+    "Height": 350.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H350*175*7*11",
+    "Height": 350.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H350*350*12*19",
+    "Height": 350.0,
+    "Width": 350.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 134.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H350*357*19*19",
+    "Height": 350.0,
+    "Width": 357.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 156.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H388*402*15*15",
+    "Height": 388.0,
+    "Width": 402.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 140.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H390*300*10*16",
+    "Height": 390.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H394*398*11*18",
+    "Height": 394.0,
+    "Width": 398.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 146.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H394*405*18*18",
+    "Height": 394.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 168.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H396*199*7*11",
+    "Height": 396.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H400*150*8*13",
+    "Height": 400.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.2,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H400*200*8*13",
+    "Height": 400.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 66.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H400*400*13*21",
+    "Height": 400.0,
+    "Width": 400.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 254.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H400*408*21*21",
+    "Height": 400.0,
+    "Width": 408.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 196.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H414*405*18*28",
+    "Height": 414.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 231.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H428*407*20*35",
+    "Height": 428.0,
+    "Width": 407.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 283.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H440*300*11*18",
+    "Height": 440.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H446*199*8*12",
+    "Height": 446.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H450*200*9*14",
+    "Height": 450.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 74.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H482*300*11*15",
+    "Height": 482.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 110.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H488*300*11*18",
+    "Height": 488.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 124.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H492*465*15*20",
+    "Height": 492.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 202.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H496*199*9*14",
+    "Height": 496.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 79.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H498*432*45*70",
+    "Height": 498.0,
+    "Width": 432.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 604.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H500*200*10*16",
+    "Height": 500.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 88.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H502*465*15*25",
+    "Height": 502.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 239.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H502*470*20*25",
+    "Height": 502.0,
+    "Width": 470.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 258.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H506*201*11*19",
+    "Height": 506.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 101.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H544*300*11*15",
+    "Height": 544.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 116.2,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H546*199*9*14",
+    "Height": 546.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 81.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H550*200*10*16",
+    "Height": 550.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 92.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H550*300*11*18",
+    "Height": 550.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 130.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H582*300*12*17",
+    "Height": 582.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 132.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H588*300*12*20",
+    "Height": 588.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 147.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H594*302*14*23",
+    "Height": 594.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 170.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H596*199*10*15",
+    "Height": 596.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 92.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H600*200*11*17",
+    "Height": 600.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 103.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H606*201*12*20",
+    "Height": 606.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H646*299*10*15",
+    "Height": 646.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 119.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H650*300*11*17",
+    "Height": 650.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 134.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H656*301*12*20",
+    "Height": 656.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 153.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H692*300*13*20",
+    "Height": 692.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 161.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H700*300*13*24",
+    "Height": 700.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 180.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H734*299*12*16",
+    "Height": 734.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 143.4,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H742*300*13*20",
+    "Height": 742.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 168.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H750*300*13*24",
+    "Height": 750.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 186.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H758*303*16*28",
+    "Height": 758.0,
+    "Width": 303.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 223.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H792*300*14*22",
+    "Height": 792.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 188.0,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H800*300*14*26",
+    "Height": 800.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 206.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H834*298*14*19",
+    "Height": 834.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 178.6,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H842*299*15*23",
+    "Height": 842.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 203.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H850*300*16*27",
+    "Height": 850.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 229.3,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H858*301*17*31",
+    "Height": 858.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 254.9,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H890*299*15*23",
+    "Height": 890.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 209.5,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H900*300*16*28",
+    "Height": 900.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 240.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H912*302*18*34",
+    "Height": 912.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 282.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H970*297*16*21",
+    "Height": 970.0,
+    "Width": 297.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 216.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H980*298*17*26",
+    "Height": 980.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 247.7,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H990*298*17*31",
+    "Height": 990.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 271.1,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H1000*300*19*36",
+    "Height": 1000.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 310.2,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "H1008*302*21*40",
+    "Height": 1008.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 344.8,
+    "ProfileType": "H"
+  },
+  {
+    "Profile": "HP200*204*12*12 ",
+    "Height": 200.0,
+    "Width": 204.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.7,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP244*252*11*11",
+    "Height": 244.0,
+    "Width": 252.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 64.4,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP250*255*14*14",
+    "Height": 250.0,
+    "Width": 255.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 82.2,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP294*302*12*12",
+    "Height": 294.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 85.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP300*300*10*15",
+    "Height": 300.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 94.5,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP300*305*15*15",
+    "Height": 300.0,
+    "Width": 305.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 106.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP338*351*13*13",
+    "Height": 338.0,
+    "Width": 351.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 106.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP344*354*16*16",
+    "Height": 344.0,
+    "Width": 354.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 131.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP350*350*12*19",
+    "Height": 350.0,
+    "Width": 350.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 137.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP350*357*19*19",
+    "Height": 350.0,
+    "Width": 357.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 156.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP388*402*15*15",
+    "Height": 388.0,
+    "Width": 402.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP394*405*18*18",
+    "Height": 394.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 169.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP400*400*13*21",
+    "Height": 400.0,
+    "Width": 400.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 172.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP400*408*21*21",
+    "Height": 400.0,
+    "Width": 408.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 197.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP414*405*18*28",
+    "Height": 414.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 233.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP428*407*20*35",
+    "Height": 428.0,
+    "Width": 407.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 284.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP492*465*15*20",
+    "Height": 492.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 204.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP502*465*15*25",
+    "Height": 502.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 241.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HP502*470*20*25",
+    "Height": 502.0,
+    "Width": 470.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 261.0,
+    "ProfileType": "HP"
+  },
+  {
+    "Profile": "HN100*50*5*7",
+    "Height": 100.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.3,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN125*60*6*8",
+    "Height": 125.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN150*75*5*7",
+    "Height": 150.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN175*90*5*8",
+    "Height": 175.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN198*99*4.5*7",
+    "Height": 198.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.8,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN200*100*5.5*8",
+    "Height": 200.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN248*124*5*8",
+    "Height": 248.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN250*125*6*9",
+    "Height": 250.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN298*149*5.5*8",
+    "Height": 298.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN300*150*6.5*9",
+    "Height": 300.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN346*174*6*9",
+    "Height": 346.0,
+    "Width": 174.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.2,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN350*175*7*11",
+    "Height": 350.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.4,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN396*199*7*11",
+    "Height": 396.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN400*150*8*13",
+    "Height": 400.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.2,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN400*200*8*13",
+    "Height": 400.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 66.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN446*199*8*12",
+    "Height": 446.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN450*200*9*14",
+    "Height": 450.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 74.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN496*199*9*14",
+    "Height": 496.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 77.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN500*200*10*16",
+    "Height": 500.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 88.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN506*201*11*19",
+    "Height": 506.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 101.5,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN546*199*9*14",
+    "Height": 546.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 81.5,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN550*200*10*16",
+    "Height": 550.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 92.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN596*199*10*15",
+    "Height": 596.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 92.4,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN600*200*11*17",
+    "Height": 600.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 103.4,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN606*201*12*20",
+    "Height": 606.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 117.6,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN646*299*10*15",
+    "Height": 646.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 119.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN650*300*11*17",
+    "Height": 650.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 134.4,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN656*301*12*20",
+    "Height": 656.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 153.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN692*300*13*20",
+    "Height": 692.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 162.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN700*300*13*24",
+    "Height": 700.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 180.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN734*299*12*16",
+    "Height": 734.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 143.4,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN742*300*13*20",
+    "Height": 742.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 168.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN750*300*13*24",
+    "Height": 750.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 186.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN758*303*16*28",
+    "Height": 758.0,
+    "Width": 303.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 223.6,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN792*300*14*22",
+    "Height": 792.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 188.0,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN800*300*14*26",
+    "Height": 800.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 206.8,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN834*298*14*19",
+    "Height": 834.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 178.6,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN842*299*15*23",
+    "Height": 842.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 203.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN850*300*16*27",
+    "Height": 850.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 229.3,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN858*301*17*31",
+    "Height": 858.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 254.9,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN890*299*15*23",
+    "Height": 890.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 209.5,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN900*300*16*28",
+    "Height": 900.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 240.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN912*302*18*34",
+    "Height": 912.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 282.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN970*297*16*21",
+    "Height": 970.0,
+    "Width": 297.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 216.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN980*298*17*26",
+    "Height": 980.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 247.7,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN990*298*17*31",
+    "Height": 990.0,
+    "Width": 298.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 271.1,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN1000*300*19*36",
+    "Height": 1000.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 310.2,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HN1008*302*21*40",
+    "Height": 1008.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 344.8,
+    "ProfileType": "HN"
+  },
+  {
+    "Profile": "HM148*100*6*9",
+    "Height": 148.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.7,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM194*150*6*9",
+    "Height": 194.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.9,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM244*175*7*11",
+    "Height": 244.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.6,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM294*200*8*12",
+    "Height": 294.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.8,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM340*250*9*14",
+    "Height": 340.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 78.1,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM390*300*10*16",
+    "Height": 390.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.6,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM440*300*11*18",
+    "Height": 440.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.8,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM482*300*11*15",
+    "Height": 482.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 110.8,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM488*300*11*18",
+    "Height": 488.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 124.9,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM544*300*11*15",
+    "Height": 544.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 116.2,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM550*300*11*18",
+    "Height": 550.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 130.3,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM582*300*12*17",
+    "Height": 582.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 132.8,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM588*300*12*20",
+    "Height": 588.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 147.0,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HM594*302*14*23",
+    "Height": 594.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 170.4,
+    "ProfileType": "HM"
+  },
+  {
+    "Profile": "HW100*100*6*8",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.9,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW125*125*6.5*9",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.6,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW150*150*7*10",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.1,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW175*175*7.5*11",
+    "Height": 175.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.4,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW200*200*8*12",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.9,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW200*204*12*12",
+    "Height": 200.0,
+    "Width": 204.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.2,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW244*252*11*11",
+    "Height": 244.0,
+    "Width": 252.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 63.8,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW250*250*9*14",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.8,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW250*255*14*14",
+    "Height": 250.0,
+    "Width": 255.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 81.6,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW294*302*12*12",
+    "Height": 294.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 83.5,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW300*300*10*15",
+    "Height": 300.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 93.0,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW300*305*15*15",
+    "Height": 300.0,
+    "Width": 305.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.8,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW338*351*13*13",
+    "Height": 338.0,
+    "Width": 351.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.6,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW344*348*10*16",
+    "Height": 344.0,
+    "Width": 348.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 113.0,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW344*354*16*16",
+    "Height": 344.0,
+    "Width": 354.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 129.3,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW350*350*12*19",
+    "Height": 350.0,
+    "Width": 350.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 134.9,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW350*357*19*19",
+    "Height": 350.0,
+    "Width": 357.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 154.2,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW388*402*15*15",
+    "Height": 388.0,
+    "Width": 402.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 140.1,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW394*398*11*18",
+    "Height": 394.0,
+    "Width": 398.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 146.6,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW394*405*18*18",
+    "Height": 394.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 168.3,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW400*400*13*21",
+    "Height": 400.0,
+    "Width": 400.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 171.7,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW400*408*21*21",
+    "Height": 400.0,
+    "Width": 408.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 196.8,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW414*405*18*28",
+    "Height": 414.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 231.9,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW428*407*20*35",
+    "Height": 428.0,
+    "Width": 407.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 283.1,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW458*417*30*50",
+    "Height": 458.0,
+    "Width": 417.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 414.9,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW492*465*15*20",
+    "Height": 492.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 202.5,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW498*432*45*70",
+    "Height": 498.0,
+    "Width": 432.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 604.5,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW502*465*15*25",
+    "Height": 502.0,
+    "Width": 465.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 239.0,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HW502*470*20*25",
+    "Height": 502.0,
+    "Width": 470.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 258.7,
+    "ProfileType": "HW"
+  },
+  {
+    "Profile": "HT95*48*3.2*4.5",
+    "Height": 95.0,
+    "Width": 48.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT96*99*4.5*6",
+    "Height": 96.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.7,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT97*49*4*5.5",
+    "Height": 97.0,
+    "Width": 49.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.4,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT118*58*3.2*4.5",
+    "Height": 118.0,
+    "Width": 58.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.3,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT119*123*4.5*6",
+    "Height": 119.0,
+    "Width": 123.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.8,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT120*59*4*5.5",
+    "Height": 120.0,
+    "Width": 59.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.9,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT139*97*3.2*4.5",
+    "Height": 139.0,
+    "Width": 97.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.5,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT142*99*4.5*6",
+    "Height": 142.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.3,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT144*148*5*7",
+    "Height": 144.0,
+    "Width": 148.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.8,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT145*73*3.2*4.5",
+    "Height": 145.0,
+    "Width": 73.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT147*74*4*5.5",
+    "Height": 147.0,
+    "Width": 74.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.1,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT147*149*6*8.5",
+    "Height": 147.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.4,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT167*173*5*7",
+    "Height": 167.0,
+    "Width": 173.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.2,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT168*88*3.2*4.5",
+    "Height": 168.0,
+    "Width": 88.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.6,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT171*89*4*6",
+    "Height": 171.0,
+    "Width": 89.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.8,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT172*175*6.5*9.5",
+    "Height": 172.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT188*149*4.5*6",
+    "Height": 188.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.7,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT192*198*6*8",
+    "Height": 192.0,
+    "Width": 198.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.3,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT193*98*3.2*4.5",
+    "Height": 193.0,
+    "Width": 98.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT196*99*4*6",
+    "Height": 196.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.5,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT238*173*4.5*8",
+    "Height": 238.0,
+    "Width": 173.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.7,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT244*124*4.5*6",
+    "Height": 244.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.3,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT286*198*6*8",
+    "Height": 286.0,
+    "Width": 198.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.7,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT294*148*4.5*6",
+    "Height": 294.0,
+    "Width": 148.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT340*173*4.5*6",
+    "Height": 340.0,
+    "Width": 173.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.0,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT390*148*6*8",
+    "Height": 390.0,
+    "Width": 148.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 37.3,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "HT390*198*6*8",
+    "Height": 390.0,
+    "Width": 198.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.6,
+    "ProfileType": "HT"
+  },
+  {
+    "Profile": "I10",
+    "Height": 100.0,
+    "Width": 68.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.261,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I12",
+    "Height": 120.0,
+    "Width": 74.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.987,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I12.6",
+    "Height": 126.0,
+    "Width": 74.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.223,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I14",
+    "Height": 140.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.88999939,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I16",
+    "Height": 160.0,
+    "Width": 88.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.513,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I18",
+    "Height": 180.0,
+    "Width": 94.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.143,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I20A",
+    "Height": 200.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.929,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I20B",
+    "Height": 200.0,
+    "Width": 102.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.069,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I22A",
+    "Height": 220.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.07,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I22B",
+    "Height": 220.0,
+    "Width": 112.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.524,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I24A",
+    "Height": 240.0,
+    "Width": 116.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 37.477,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I24B",
+    "Height": 240.0,
+    "Width": 118.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.245,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I25A",
+    "Height": 250.0,
+    "Width": 116.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.105,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I25B",
+    "Height": 250.0,
+    "Width": 118.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 42.02999878,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I27A",
+    "Height": 270.0,
+    "Width": 122.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 42.825,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I27B",
+    "Height": 270.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 47.064,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I28A",
+    "Height": 280.0,
+    "Width": 122.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.492,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I28B",
+    "Height": 280.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 47.888,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I30A",
+    "Height": 300.0,
+    "Width": 126.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 48.084,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I30B",
+    "Height": 300.0,
+    "Width": 128.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.794,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I30C",
+    "Height": 300.0,
+    "Width": 130.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 57.504,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I32A",
+    "Height": 320.0,
+    "Width": 130.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.717,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I32B",
+    "Height": 320.0,
+    "Width": 132.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 57.741,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I32C",
+    "Height": 320.0,
+    "Width": 134.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 62.765,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I36A",
+    "Height": 360.0,
+    "Width": 136.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 60.037,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I36B",
+    "Height": 360.0,
+    "Width": 138.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.689,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I36C",
+    "Height": 360.0,
+    "Width": 140.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.341,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I40A",
+    "Height": 400.0,
+    "Width": 142.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.598,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I40B",
+    "Height": 400.0,
+    "Width": 144.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 73.878,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I40C",
+    "Height": 400.0,
+    "Width": 146.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 80.158,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I45A",
+    "Height": 450.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 80.41999817,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I45B",
+    "Height": 450.0,
+    "Width": 152.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 87.485,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I45C",
+    "Height": 450.0,
+    "Width": 154.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 94.55,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I50A",
+    "Height": 500.0,
+    "Width": 158.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 93.654,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I50B",
+    "Height": 500.0,
+    "Width": 160.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 101.504,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I50C",
+    "Height": 500.0,
+    "Width": 162.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 109.354,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I55A",
+    "Height": 550.0,
+    "Width": 166.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 105.335,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I55B",
+    "Height": 550.0,
+    "Width": 168.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 113.97,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I55C",
+    "Height": 550.0,
+    "Width": 170.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 122.605,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I56A",
+    "Height": 560.0,
+    "Width": 166.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 106.316,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I56B",
+    "Height": 560.0,
+    "Width": 168.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.108,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I56C",
+    "Height": 560.0,
+    "Width": 170.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 123.9000015,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I63A",
+    "Height": 630.0,
+    "Width": 176.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 121.407,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I63B",
+    "Height": 630.0,
+    "Width": 178.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 131.298,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "I63C",
+    "Height": 630.0,
+    "Width": 180.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.189,
+    "ProfileType": "I"
+  },
+  {
+    "Profile": "L20*3",
+    "Height": 20.0,
+    "Width": 20.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 0.889,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L20*4",
+    "Height": 20.0,
+    "Width": 20.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.145,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L25*3",
+    "Height": 25.0,
+    "Width": 25.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.124,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L25*4",
+    "Height": 25.0,
+    "Width": 25.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.459,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L25*16*3",
+    "Height": 25.0,
+    "Width": 16.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 0.912,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L25*16*4",
+    "Height": 25.0,
+    "Width": 16.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.176,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L30*3",
+    "Height": 30.0,
+    "Width": 30.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.373,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L30*4",
+    "Height": 30.0,
+    "Width": 30.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.786,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L32*20*3",
+    "Height": 32.0,
+    "Width": 20.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.171,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L32*20*4",
+    "Height": 32.0,
+    "Width": 20.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.522,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L36*3",
+    "Height": 36.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.656,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L36*4",
+    "Height": 36.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.163,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L36*5",
+    "Height": 36.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.654,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L40*3",
+    "Height": 40.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.852,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L40*4",
+    "Height": 40.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.422,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L40*5",
+    "Height": 40.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.976,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L40*25*3",
+    "Height": 40.0,
+    "Width": 25.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.484,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L40*25*4",
+    "Height": 40.0,
+    "Width": 25.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.936,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*3",
+    "Height": 45.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.088,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*4",
+    "Height": 45.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.736,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*5",
+    "Height": 45.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.369,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*6",
+    "Height": 45.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.985,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*28*3",
+    "Height": 45.0,
+    "Width": 28.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.687,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L45*28*4",
+    "Height": 45.0,
+    "Width": 28.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.203,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*3",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.329999924,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*4",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.049999952,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*5",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.769999981,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*6",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.460000038,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*32*3",
+    "Height": 50.0,
+    "Width": 32.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.908,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L50*32*4",
+    "Height": 50.0,
+    "Width": 32.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.494,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*3",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.619999886,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*4",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.440000057,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*5",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.25,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*6",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.04,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*7",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.812,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*8",
+    "Height": 56.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.559999943,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*36*3",
+    "Height": 56.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.153,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*36*4",
+    "Height": 56.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.818,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L56*36*5",
+    "Height": 56.0,
+    "Width": 36.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.466,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L60*5",
+    "Height": 60.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.58,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L60*6",
+    "Height": 60.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.43,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L60*7",
+    "Height": 60.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.26,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L60*8",
+    "Height": 60.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.08,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*4",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.900000095,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*5",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.820000172,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*6",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.71999979,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*7",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.603,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*8",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.460000038,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*10",
+    "Height": 63.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.149999619,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*40*4",
+    "Height": 63.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.185,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*40*5",
+    "Height": 63.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.92,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*40*6",
+    "Height": 63.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.638,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L63*40*7",
+    "Height": 63.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.339,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*4",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.369999886,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*5",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.389999866,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*6",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.400000095,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*7",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.389999866,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*8",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.369999886,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*45*4",
+    "Height": 70.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.57,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*45*5",
+    "Height": 70.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.403,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*45*6",
+    "Height": 70.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.218,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L70*45*7",
+    "Height": 70.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.011,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*5",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.81000042,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*6",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.900000095,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*7",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.96999979,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*8",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.029999733,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*9",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.068,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*10",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.07999992,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*50*5",
+    "Height": 75.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.808,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*50*6",
+    "Height": 75.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.699,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*50*8",
+    "Height": 75.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.431,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L75*50*10",
+    "Height": 75.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.098,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*5",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.210000038,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*6",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.37,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*7",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.520000458,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*8",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.649999619,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*9",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.774,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*10",
+    "Height": 80.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.86999989,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*50*5",
+    "Height": 80.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.005,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*50*6",
+    "Height": 80.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.935,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*50*7",
+    "Height": 80.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.848,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L80*50*8",
+    "Height": 80.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.745,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*6",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.350000381,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*7",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.649999619,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*8",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.93999958,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*9",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.219,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*10",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.47000027,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*12",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.93999958,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*56*5",
+    "Height": 90.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.661,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*56*6",
+    "Height": 90.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.717,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*56*7",
+    "Height": 90.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.756,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L90*56*8",
+    "Height": 90.0,
+    "Width": 56.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.779,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*6",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.366,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*7",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.82999992,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*8",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.276,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*9",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.708,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*10",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.11999989,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*12",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.898,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*14",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.611,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*16",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.257,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*63*6",
+    "Height": 100.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.55,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*63*7",
+    "Height": 100.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.722,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*63*8",
+    "Height": 100.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.878,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*63*10",
+    "Height": 100.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.142,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*80*6",
+    "Height": 100.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.35,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*80*7",
+    "Height": 100.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.656,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*80*8",
+    "Height": 100.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.946,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L100*80*10",
+    "Height": 100.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.476,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*7",
+    "Height": 110.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.928,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*8",
+    "Height": 110.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.52999973,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*10",
+    "Height": 110.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.69000053,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*12",
+    "Height": 110.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.782,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*14",
+    "Height": 110.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.809,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*70*6",
+    "Height": 110.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.35,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*70*7",
+    "Height": 110.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.656,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*70*8",
+    "Height": 110.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.946,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L110*70*10",
+    "Height": 110.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.476,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*8",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.504,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*10",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.133,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*12",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.696,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*14",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.193,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*16",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.625,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*80*7",
+    "Height": 125.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.066,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*80*8",
+    "Height": 125.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.551,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*80*10",
+    "Height": 125.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.474,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L125*80*12",
+    "Height": 125.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.33,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*10",
+    "Height": 140.0,
+    "Width": 140.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.488,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*12",
+    "Height": 140.0,
+    "Width": 140.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.522,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*14",
+    "Height": 140.0,
+    "Width": 140.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.49,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*16",
+    "Height": 140.0,
+    "Width": 140.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.393,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*90*8",
+    "Height": 140.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.16,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*90*10",
+    "Height": 140.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.475,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*90*12",
+    "Height": 140.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.724,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L140*90*14",
+    "Height": 140.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.908,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*8",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.644,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*10",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.058,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*12",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.406,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*14",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.688,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*15",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.804,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*16",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.905,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*8",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.788,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*10",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.26,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*12",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.666,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*14",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.007,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*15",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.652,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L150*90*16",
+    "Height": 150.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.281,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*10",
+    "Height": 160.0,
+    "Width": 160.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.729,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*12",
+    "Height": 160.0,
+    "Width": 160.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.391,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*14",
+    "Height": 160.0,
+    "Width": 160.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.987,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*16",
+    "Height": 160.0,
+    "Width": 160.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.518,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*100*10",
+    "Height": 160.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.872,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*100*12",
+    "Height": 160.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.592,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*100*14",
+    "Height": 160.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.247,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L160*100*16",
+    "Height": 160.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.835,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*12",
+    "Height": 180.0,
+    "Width": 180.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.159,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*14",
+    "Height": 180.0,
+    "Width": 180.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.383,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*16",
+    "Height": 180.0,
+    "Width": 180.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.542,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*18",
+    "Height": 180.0,
+    "Width": 180.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 48.634,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*110*10",
+    "Height": 180.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.273,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*110*12",
+    "Height": 180.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.44,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*110*14",
+    "Height": 180.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.589,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L180*110*16",
+    "Height": 180.0,
+    "Width": 110.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.649,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*14",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 42.894,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*16",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 48.68000031,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*18",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 54.401,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*20",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 60.056,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*24",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.168,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*125*12",
+    "Height": 200.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.761,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*125*14",
+    "Height": 200.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.436,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*125*16",
+    "Height": 200.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.045,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L200*125*18",
+    "Height": 200.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.588,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*16",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 53.901,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*18",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 60.25,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*20",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 66.533,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*22",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 72.751,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*24",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 78.902,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L220*26",
+    "Height": 220.0,
+    "Width": 220.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 84.987,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*18",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 68.956,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*20",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 76.18,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*24",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 90.433,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*26",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 97.461,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*28",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.422,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*30",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 111.318,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*32",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 118.149,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*35",
+    "Height": 250.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 128.271,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*90*9*13",
+    "Height": 250.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.20000076,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*90*10.5*15",
+    "Height": 250.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.3,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L250*90*11.5*16",
+    "Height": 250.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.70000076,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L300*100*10.5*15",
+    "Height": 300.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.59999847,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L300*100*11.5*16",
+    "Height": 300.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.5,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L350*120*10.5*16",
+    "Height": 350.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.09999847,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L350*120*11.5*18",
+    "Height": 350.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 47.40000153,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L400*120*11.5*23",
+    "Height": 400.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.20000076,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L450*120*11.5*25",
+    "Height": 450.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 62.40000153,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L500*120*12.5*33",
+    "Height": 500.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 77.40000153,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "L500*120*13.5*35",
+    "Height": 500.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 82.80000305,
+    "ProfileType": "L"
+  },
+  {
+    "Profile": "PIP32*2.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.820000052,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP32*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.150000095,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP32*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.460000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP32*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.75999999,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP38*2.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.190000057,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP38*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.589999914,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP38*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.980000019,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP38*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.349999905,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP42*2.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.440000057,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP42*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.890000105,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP42*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.319999933,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP42*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP45*2.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.619999886,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP45*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.109999895,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP45*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.579999924,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP45*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.039999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*2.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.930000067,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.480000019,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.010000229,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.539999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.050000191,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP50*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.550000191,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 3.769999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.360000134,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.929999828,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.489999771,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.039999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.579999924,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP54*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.099999905,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.0,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.619999886,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.21999979,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.829999924,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.409999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.989999771,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP57*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.550000191,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.21999979,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.880000114,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.519999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.159999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.78000021,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.389999866,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP60*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.989999771,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.480000019,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.179999828,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.869999886,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.550000191,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.210000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.869999886,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP63.5*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.510000229,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.809999943,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.570000172,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.309999943,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.050000191,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.769999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.479999542,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP68*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.170000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.960000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.739999771,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.510000229,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.269999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.010000229,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP70*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.470000267,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.179999828,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.0,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.809999943,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.599999905,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.380000114,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.159999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP73*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.909999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*3",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.400000095,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.260000229,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.099999905,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.929999828,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.56000042,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP76*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.35999966,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.860000134,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.789999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.710000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.619999886,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.51000023,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.39000034,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.26000023,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP83*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.11999989,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.380000114,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.380000114,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.380000114,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.35999966,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.32999992,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.27999973,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.22000027,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP89*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.15999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.900000095,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.979999542,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.03999996,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.10000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.14000034,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.17000008,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.18999958,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP95*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.18999958,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*3.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.670000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.81999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.96000004,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.09000015,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.21000004,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.31000042,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP102*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.39999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.26000023,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.48999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.69999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.89999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.09000015,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.27000046,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.44000053,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.59000015,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP108*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.72999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.85000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.14999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.43999958,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.72000027,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.97999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.22999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.46999931,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.70000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP114*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.90999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.53999996,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.93000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.30000019,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.67000008,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.02,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.35000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.68000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.98999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP121*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.29000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.13000011,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 13.59000015,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.03999996,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.47999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.89999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.31999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.71999931,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.10000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP127*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.47999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*4",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.72999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.26000023,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.77999973,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.29000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.79000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.28000069,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.20999908,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP133*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.65999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.03999996,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.64999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.23999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.82999992,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.39999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.95999908,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.51000023,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.04000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.07999992,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP140*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.06000137,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.69999981,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.38999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.05999947,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.72999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.36000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.0,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.62000084,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.22999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.40999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP146*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.54000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.37000084,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.12999916,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.87000084,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.60000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.31999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.03000069,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.72999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.40999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.73999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP152*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.02000046,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.14999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.98999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.81999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.63999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.45000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.23999977,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.02000046,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.79000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.29000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP159*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*4.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.13999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.10000038,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.04000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.96999931,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.88999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.79000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.69000053,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.56999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.29000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP168*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.97000122,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.57999992,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.67000008,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.80999947,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.87000084,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.90999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.93000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 37.95000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.91999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP180*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.72000122,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.30999947,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*5.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.56999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.81999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.05999947,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.27999878,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.70000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.06000137,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 45.38000107,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP194*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 53.86000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.14999962,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 33.84000015,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.15999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.47000122,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.06000137,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 47.59999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.52000046,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.25,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP203*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 73.79000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*6",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.52000046,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.06000137,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 36.59999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.11999893,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.63000107,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.61000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 51.54000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 61.25999832,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 70.77999878,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP219*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 80.09999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.22999954,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.08000183,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.93000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.75999832,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.38000107,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 57.95000076,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 68.94999695,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 79.76000214,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP245*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 90.36000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*6.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 42.72000122,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*7",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 45.91999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 49.11000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.27999878,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.59999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 64.86000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 77.23999786,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 89.41999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP273*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 101.4100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 53.91999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 57.40999985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 64.37000275,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.26999664,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 84.93000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 98.40000153,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP299*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 111.6699982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*7.5",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.72000122,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 62.54000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 70.13999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 77.68000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 92.62999725,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 107.3799973,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP325*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 121.9300003,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*8",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.66999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 75.91000366,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 84.09999847,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 100.3199997,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 116.3499985,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP351*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 132.1900024,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 81.68000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 90.51000214,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 99.29000092,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 108.0199966,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 116.6999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 125.3300018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 133.9100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP377*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 142.45,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 96.66999817,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 106.0699997,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.4199982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 124.7099991,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 133.9600067,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 143.1600037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP402*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 152.3099976,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 93.0,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 112.5800018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 122.5199966,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 132.4100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 142.25,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 152.0399933,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP426*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 161.7799988,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 97.87999725,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 108.5100021,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 119.0899963,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 129.6199951,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 140.1000061,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 150.5299988,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 160.9199982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP450*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 171.25,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 101.2099991,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 112.4599991,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 123.1600037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 134.0599976,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 144.8099976,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 155.7100067,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 166.4700012,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP465*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 172.2200012,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.9100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 127.2300034,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 138.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 149.0800018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 160.1999969,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 172.0099945,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP480*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 183.0800018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 108.9800034,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.8399963,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 132.6499939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 144.4199982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 156.1300049,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 167.8000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 179.4100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP500*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 190.9799957,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.6399994,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 128.2400055,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 140.7899933,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 153.3000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 165.75,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 178.1499939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 190.5099945,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP530*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 202.8200073,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.0800018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 133.1699982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 146.2200012,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 159.2200012,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 172.1600037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 185.0599976,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 197.9100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP550*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 210.7100067,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 122.3000031,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 135.6399994,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 148.9299927,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 162.1699982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 175.3699951,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 188.5099945,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 201.6100006,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP560*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 214.6499939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 131.1699982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 145.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 159.7799988,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 174.0099945,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 188.1900024,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 202.3200073,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 216.4100037,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP600*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 230.4400024,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*9",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 137.8300018,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*10",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 152.8999939,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*11",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 167.9199982,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*12",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 182.8899994,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*13",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 197.8099976,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*14",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 212.6799927,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*15",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 227.5,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "PIP630*16",
+    "Height": 0.0,
+    "Width": 0.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 242.2700043,
+    "ProfileType": "PIP"
+  },
+  {
+    "Profile": "TUB20*1.6",
+    "Height": 20.0,
+    "Width": 20.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 0.8700000048,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB25*1.5",
+    "Height": 25.0,
+    "Width": 25.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 1.059999943,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB30*3.25",
+    "Height": 30.0,
+    "Width": 30.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 2.50999999,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB40*4",
+    "Height": 40.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.190000057,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB50*5",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.650000095,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB70*4",
+    "Height": 70.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.960000038,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB90*5",
+    "Height": 90.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.82999992,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TUB120*4",
+    "Height": 120.0,
+    "Width": 120.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.23999977,
+    "ProfileType": "TUB"
+  },
+  {
+    "Profile": "TN50*50*5*7",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN62.5*60*6*8",
+    "Height": 62.5,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.6,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN75*75*5*7",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN85.5*89*4*6",
+    "Height": 85.5,
+    "Width": 89.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.9,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN87.5*90*5*8",
+    "Height": 87.5,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN99*99*4.5*7",
+    "Height": 99.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.9,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN100*100*5.5*8",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.8,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN124*124*5*8",
+    "Height": 124.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.6,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN125*125*6*9",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.5,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN149*149*5.5*8",
+    "Height": 149.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN150*150*6.5*9",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.4,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN173*174*6*9",
+    "Height": 173.0,
+    "Width": 174.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.6,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN175*175*7*11",
+    "Height": 175.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN198*199*7*11",
+    "Height": 198.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN200*200*8*13",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN223*199*8*12",
+    "Height": 223.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.6,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN225*200*9*14",
+    "Height": 225.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.2,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN248*199*9*14",
+    "Height": 248.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN250*200*10*16",
+    "Height": 250.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 44.1,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN253*201*11*19",
+    "Height": 253.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 50.8,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN273*199*9*14",
+    "Height": 273.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN275*200*10*16",
+    "Height": 275.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN298*199*10*15",
+    "Height": 298.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.2,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN300*200*11*17",
+    "Height": 300.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 51.7,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN303*201*12*20",
+    "Height": 303.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.8,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN323*299*10*15",
+    "Height": 323.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 59.9,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN325*300*11*17",
+    "Height": 325.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.2,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN328*301*12*20",
+    "Height": 328.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 76.8,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN346*300*13*20",
+    "Height": 346.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 80.9,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN350*300*13*24",
+    "Height": 350.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 90.4,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN396*300*14*22",
+    "Height": 396.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 94.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN400*300*14*26",
+    "Height": 400.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 103.4,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN445*299*15*23",
+    "Height": 445.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.8,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN450*300*16*28",
+    "Height": 450.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.0,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TN456*302*18*34",
+    "Height": 456.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.3,
+    "ProfileType": "TN"
+  },
+  {
+    "Profile": "TM74*100*6*9",
+    "Height": 74.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.3,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM97*150*6*9",
+    "Height": 97.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.0,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM122*175*7*11",
+    "Height": 122.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.8,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM147*200*8*12",
+    "Height": 147.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.9,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM170*250*9*14",
+    "Height": 170.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.1,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM195*300*10*16",
+    "Height": 195.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.3,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM220*300*11*18",
+    "Height": 220.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 60.4,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM241*300*11*15",
+    "Height": 241.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.4,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM244*300*11*18",
+    "Height": 244.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 62.5,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM272*300*11*15",
+    "Height": 272.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.1,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM275*300*11*18",
+    "Height": 275.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.2,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM291*300*12*17",
+    "Height": 291.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 68.5,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM294*300*12*20",
+    "Height": 294.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 73.5,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TM297*302*14*23",
+    "Height": 297.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 85.2,
+    "ProfileType": "TM"
+  },
+  {
+    "Profile": "TW50*100*6*8",
+    "Height": 50.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.47,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW62.5*125*6.5*9",
+    "Height": 62.5,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.8,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW75*150*7*10",
+    "Height": 75.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.6,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW87.5*175*7.5*11",
+    "Height": 87.5,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.2,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW100*200*8*12",
+    "Height": 100.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.9,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW100*204*12*12",
+    "Height": 100.0,
+    "Width": 204.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.1,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW125*250*9*14",
+    "Height": 125.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.9,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW125*255*14*14",
+    "Height": 125.0,
+    "Width": 255.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.8,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW147*302*12*12",
+    "Height": 147.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.7,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW150*300*10*15",
+    "Height": 150.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.5,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW150*305*15*15",
+    "Height": 150.0,
+    "Width": 305.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.4,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW172*348*10*16",
+    "Height": 172.0,
+    "Width": 348.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.5,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW175*350*12*19",
+    "Height": 175.0,
+    "Width": 350.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.5,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW194*402*15*15",
+    "Height": 194.0,
+    "Width": 402.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 70.0,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW197*398*11*18",
+    "Height": 197.0,
+    "Width": 398.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 73.3,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW200*400*13*21",
+    "Height": 200.0,
+    "Width": 400.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 85.8,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW200*408*21*21",
+    "Height": 200.0,
+    "Width": 408.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 98.4,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW207*405*18*28",
+    "Height": 207.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.9,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "TW214*407*20*35",
+    "Height": 214.0,
+    "Width": 407.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.6,
+    "ProfileType": "TW"
+  },
+  {
+    "Profile": "T50*50*5*7",
+    "Height": 50.0,
+    "Width": 50.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 4.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T50*100*6*8",
+    "Height": 50.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.47,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T62.5*60*6*8",
+    "Height": 62.5,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T62.5*125*6.5*9",
+    "Height": 62.5,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 11.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T74*100*6*9",
+    "Height": 74.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.3,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T75*75*5*7",
+    "Height": 75.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 7.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T75*150*7*10",
+    "Height": 75.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T85.5*89*4*6",
+    "Height": 85.5,
+    "Width": 89.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T87.5*90*5*8",
+    "Height": 87.5,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 9.11,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T87.5*175*7.5*11",
+    "Height": 87.5,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.2,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T97*150*6*9",
+    "Height": 97.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 15.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T99*99*4.5*7",
+    "Height": 99.0,
+    "Width": 99.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T100*100*5.5*8",
+    "Height": 100.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T100*200*8*12",
+    "Height": 100.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T100*204*12*12",
+    "Height": 100.0,
+    "Width": 204.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.1,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T122*175*7*11",
+    "Height": 122.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 21.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T124*124*5*8",
+    "Height": 124.0,
+    "Width": 124.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T125*125*6*9",
+    "Height": 125.0,
+    "Width": 125.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T125*250*9*14",
+    "Height": 125.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T125*255*14*14",
+    "Height": 125.0,
+    "Width": 255.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T147*200*8*12",
+    "Height": 147.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T147*302*12*12",
+    "Height": 147.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 41.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T149*149*5.5*8",
+    "Height": 149.0,
+    "Width": 149.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T150*150*6.5*9",
+    "Height": 150.0,
+    "Width": 150.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 18.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T150*300*10*15",
+    "Height": 150.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T150*305*15*15",
+    "Height": 150.0,
+    "Width": 305.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T170*250*9*14",
+    "Height": 170.0,
+    "Width": 250.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.1,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T172*348*10*16",
+    "Height": 172.0,
+    "Width": 348.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 56.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T173*174*6*9",
+    "Height": 173.0,
+    "Width": 174.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T175*175*7*11",
+    "Height": 175.0,
+    "Width": 175.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T175*350*12*19",
+    "Height": 175.0,
+    "Width": 350.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T194*402*15*15",
+    "Height": 194.0,
+    "Width": 402.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 70.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T195*300*10*16",
+    "Height": 195.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 52.3,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T198*199*7*11",
+    "Height": 198.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T200*200*8*13",
+    "Height": 200.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T200*400*13*21",
+    "Height": 200.0,
+    "Width": 400.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 85.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T200*408*21*21",
+    "Height": 200.0,
+    "Width": 408.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 98.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T207*405*18*28",
+    "Height": 207.0,
+    "Width": 405.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 115.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T214*407*20*35",
+    "Height": 214.0,
+    "Width": 407.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T220*300*11*18",
+    "Height": 220.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 60.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T223*199*8*12",
+    "Height": 223.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 32.6,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T225*200*9*14",
+    "Height": 225.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 37.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T241*300*11*15",
+    "Height": 241.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 55.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T244*300*11*18",
+    "Height": 244.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 62.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T248*199*9*14",
+    "Height": 248.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T250*200*10*16",
+    "Height": 250.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 44.1,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T253*201*11*19",
+    "Height": 253.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 50.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T272*300*11*15",
+    "Height": 272.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.1,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T273*199*9*14",
+    "Height": 273.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T275*200*10*16",
+    "Height": 275.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T275*300*11*18",
+    "Height": 275.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.2,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T291*300*12*17",
+    "Height": 291.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 68.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T294*300*12*20",
+    "Height": 294.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 73.5,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T297*302*14*23",
+    "Height": 297.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 85.2,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T298*199*10*15",
+    "Height": 298.0,
+    "Width": 199.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 46.2,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T300*200*11*17",
+    "Height": 300.0,
+    "Width": 200.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 51.7,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T303*201*12*20",
+    "Height": 303.0,
+    "Width": 201.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T323*299*10*15",
+    "Height": 323.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 59.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T325*300*11*17",
+    "Height": 325.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 67.2,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T328*301*12*20",
+    "Height": 328.0,
+    "Width": 301.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 76.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T346*300*13*20",
+    "Height": 346.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 80.9,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T350*300*13*24",
+    "Height": 350.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 90.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T396*300*14*22",
+    "Height": 396.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 94.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T400*300*14*26",
+    "Height": 396.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 103.4,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T445*299*15*23",
+    "Height": 445.0,
+    "Width": 299.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 104.8,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T450*300*16*28",
+    "Height": 450.0,
+    "Width": 300.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 120.0,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "T456*302*18*34",
+    "Height": 456.0,
+    "Width": 302.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 141.3,
+    "ProfileType": "T"
+  },
+  {
+    "Profile": "C5",
+    "Height": 50.0,
+    "Width": 37.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 5.438,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C6.3",
+    "Height": 63.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.634,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C6.5",
+    "Height": 65.0,
+    "Width": 40.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 6.709,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C8",
+    "Height": 80.0,
+    "Width": 43.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 8.045,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C10",
+    "Height": 100.0,
+    "Width": 48.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 10.007,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C12",
+    "Height": 120.0,
+    "Width": 53.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.059,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C12.6",
+    "Height": 126.0,
+    "Width": 53.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 12.318,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C14A",
+    "Height": 140.0,
+    "Width": 58.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 14.535,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C14B",
+    "Height": 140.0,
+    "Width": 60.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.733,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C16",
+    "Height": 160.0,
+    "Width": 65.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.75,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C16A",
+    "Height": 160.0,
+    "Width": 63.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 17.23999977,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C16B",
+    "Height": 160.0,
+    "Width": 65.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.752,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C18",
+    "Height": 180.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.0,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C18A",
+    "Height": 180.0,
+    "Width": 68.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 20.174,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C18B",
+    "Height": 180.0,
+    "Width": 70.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 23.0,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C20",
+    "Height": 200.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.77000046,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C20A",
+    "Height": 200.0,
+    "Width": 73.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 22.637,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C20B",
+    "Height": 200.0,
+    "Width": 75.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.777,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C22",
+    "Height": 220.0,
+    "Width": 79.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.45000076,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C22A",
+    "Height": 220.0,
+    "Width": 77.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 24.999,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C22B",
+    "Height": 220.0,
+    "Width": 79.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 28.453,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C24A",
+    "Height": 240.0,
+    "Width": 78.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 26.86,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C24B",
+    "Height": 240.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.628,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C24C",
+    "Height": 240.0,
+    "Width": 82.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.396,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C25A",
+    "Height": 250.0,
+    "Width": 78.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 27.40999985,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C25B",
+    "Height": 250.0,
+    "Width": 80.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.335,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C25C",
+    "Height": 250.0,
+    "Width": 82.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.26,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C27A",
+    "Height": 270.0,
+    "Width": 82.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 30.838,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C27B",
+    "Height": 270.0,
+    "Width": 84.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.077,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C27C",
+    "Height": 270.0,
+    "Width": 86.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.316,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C28A",
+    "Height": 280.0,
+    "Width": 82.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 31.427,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C28B",
+    "Height": 280.0,
+    "Width": 84.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 35.823,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C28C",
+    "Height": 280.0,
+    "Width": 86.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 40.219,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C30A",
+    "Height": 300.0,
+    "Width": 85.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 34.463,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C30B",
+    "Height": 300.0,
+    "Width": 87.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 39.173,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C30C",
+    "Height": 300.0,
+    "Width": 89.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.883,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C32A",
+    "Height": 320.0,
+    "Width": 88.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 38.083,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C32B",
+    "Height": 320.0,
+    "Width": 90.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 43.107,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C32C",
+    "Height": 320.0,
+    "Width": 92.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 48.131,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C36A",
+    "Height": 360.0,
+    "Width": 96.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 47.814,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C36B",
+    "Height": 360.0,
+    "Width": 98.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 53.466,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C36C",
+    "Height": 360.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 59.118,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C40A",
+    "Height": 400.0,
+    "Width": 100.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 58.928,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C40B",
+    "Height": 400.0,
+    "Width": 102.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 65.208,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "C40C",
+    "Height": 400.0,
+    "Width": 104.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 71.488,
+    "ProfileType": "C"
+  },
+  {
+    "Profile": "BP-180X9.5",
+    "Height": 180.0,
+    "Width": 32.5,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.5,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP-200X10",
+    "Height": 200.0,
+    "Width": 36.5,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.8,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP-230X11",
+    "Height": 230.0,
+    "Width": 41.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.1,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP-250X12",
+    "Height": 250.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.9,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP180*9.5",
+    "Height": 180.0,
+    "Width": 32.5,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 16.5,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP200*10",
+    "Height": 200.0,
+    "Width": 36.5,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 19.8,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP230*11",
+    "Height": 230.0,
+    "Width": 41.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 25.1,
+    "ProfileType": "BP"
+  },
+  {
+    "Profile": "BP250*12",
+    "Height": 250.0,
+    "Width": 45.0,
+    "FlangeThickness": 0.0,
+    "WeightPerUnitLength": 29.9,
+    "ProfileType": "BP"
+  }
+]

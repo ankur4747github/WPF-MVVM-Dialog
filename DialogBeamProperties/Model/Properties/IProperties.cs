@@ -6,6 +6,7 @@ namespace DialogBeamProperties.Model
     {
         //Attributes Tab Data
         List<string> LoadDataComboBox { get; set; }
+
         string SelectedDataInLoadDataComboBox { get; set; }
         bool IsNumberingSeriesPartPrefixChecked { get; set; }
         string NumberingSeriesPartPrefixText { get; set; }
@@ -29,6 +30,7 @@ namespace DialogBeamProperties.Model
 
         //Position Tab Data
         bool IsPositionOnPlaneChecked { get; set; }
+
         List<string> PositionOnPlaneComboBox { get; set; }
         string SelectedDataInPositionOnPlaneComboBox { get; set; }
         string PositionOnPlaneText { get; set; }
@@ -42,8 +44,5 @@ namespace DialogBeamProperties.Model
         List<string> PositionAtDepthComboBox { get; set; }
         string SelectedDataInPositionAtDepthComboBox { get; set; }
         string PositionAtDepthText { get; set; }
-
-
-
     }
 }

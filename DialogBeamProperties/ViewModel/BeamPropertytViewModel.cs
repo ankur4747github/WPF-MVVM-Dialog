@@ -1,12 +1,19 @@
 ﻿using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
+using DialogBeamProperties.Model.ProfileFileData;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace DialogBeamProperties.ViewModel
@@ -16,6 +23,7 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private IProperties iproperties { get; set; }
+        public ProfileFileData AllProfileFileData { get; set; }
 
         #endregion Fields
 
@@ -163,7 +171,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        #endregion Select Buttom Command
+        #endregion SelectProfile Buttom Command
 
         #endregion Button Command
 
@@ -826,7 +834,9 @@ namespace DialogBeamProperties.ViewModel
         public DialogBeamPropertiesViewModel()
         {
             LoadDataComboBox = new List<string>();
+            AllProfileFileData = new ProfileFileData();
             InitCommand();
+            Task.Factory.StartNew(() => LoadProfileFiles());
         }
 
         private void InitCommand()
@@ -899,6 +909,7 @@ namespace DialogBeamProperties.ViewModel
             IsPositionRotationChecked = !IsPositionRotationChecked;
             IsPositionAtDepthChecked = !IsPositionAtDepthChecked;
         }
+
         private void SaveButtonClick(object obj)
         {
         }
@@ -909,7 +920,14 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectProfileButtonClick(object obj)
         {
+            var beamdata = AllProfileFileData.Beams.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
+            var chinadata = AllProfileFileData.ChinaProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
+            var usimperialdata = AllProfileFileData.UsimperialProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
+            var usmetricdata = AllProfileFileData.UsmetricProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
+
+            MessageBox.Show(beamdata.Count() + " = " + chinadata.Count() + " = " + usimperialdata.Count() + " = " + usmetricdata.Count());
         }
+
         #endregion Button Click
 
         #region Save Data
@@ -1016,6 +1034,48 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Update Data
+
+        #region Load Profile Files Into List
+
+        private void LoadProfileFiles()
+        {
+            string temp = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            if (File.Exists(Path.Combine(temp, "Files", "Profile", "beams.json")))
+            {
+                LoadFiles(Path.Combine(temp, "Files", "Profile", "beams.json"), ref AllProfileFileData.Beams);
+            }
+
+            if (File.Exists(Path.Combine(temp, "Files", "Profile", "china-profiles.json")))
+            {
+                LoadFiles(Path.Combine(temp, "Files", "Profile", "china-profiles.json"), ref AllProfileFileData.ChinaProfiles);
+            }
+
+            if (File.Exists(Path.Combine(temp, "Files", "Profile", "usimperial-profiles.json")))
+            {
+                LoadFiles(Path.Combine(temp, "Files", "Profile", "usimperial-profiles.json"), ref AllProfileFileData.UsimperialProfiles);
+            }
+
+            if (File.Exists(Path.Combine(temp, "Files", "Profile", "usmetric-profiles.json")))
+            {
+                LoadFiles(Path.Combine(temp, "Files", "Profile", "usmetric-profiles.json"), ref AllProfileFileData.UsmetricProfiles);
+            }
+        }
+
+        private void LoadFiles(string filePath, ref List<ProfileData> list)
+        {
+            try
+            {
+                string json = File.ReadAllText(filePath);
+                JArray jsonArray = JArray.Parse(json);
+                list = jsonArray.ToObject<List<ProfileData>>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion Load Profile Files Into List
 
         #endregion Private Methods
     }
