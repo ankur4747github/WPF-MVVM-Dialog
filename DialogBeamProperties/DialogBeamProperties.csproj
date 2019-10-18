@@ -72,6 +72,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModel\SelectProfileViewModel.cs" />
+    <Compile Include="View\SelectProfile.xaml.cs">
+      <DependentUpon>SelectProfile.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\BeamProperty.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +90,10 @@
       <DependentUpon>BeamProperty.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\SelectProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

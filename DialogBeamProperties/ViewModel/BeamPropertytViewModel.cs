@@ -2,6 +2,7 @@
 using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
 using DialogBeamProperties.Model.ProfileFileData;
+using DialogBeamProperties.View;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using Newtonsoft.Json.Linq;
@@ -920,12 +921,10 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectProfileButtonClick(object obj)
         {
-            var beamdata = AllProfileFileData.Beams.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
-            var chinadata = AllProfileFileData.ChinaProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
-            var usimperialdata = AllProfileFileData.UsimperialProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
-            var usmetricdata = AllProfileFileData.UsmetricProfiles.Where(i => i.Profile.ToUpper().StartsWith(AttributesProfileText.ToUpper()));
-
-            MessageBox.Show(beamdata.Count() + " = " + chinadata.Count() + " = " + usimperialdata.Count() + " = " + usmetricdata.Count());
+            
+            SelectProfile selectProfile = new SelectProfile();
+            selectProfile.SetData(AllProfileFileData, AttributesProfileText);
+            selectProfile.ShowDialog();
         }
 
         #endregion Button Click
