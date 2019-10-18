@@ -8,6 +8,7 @@
         Background="White"
         MinWidth="500"
         WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="Beam Properties"
         SizeToContent="WidthAndHeight">

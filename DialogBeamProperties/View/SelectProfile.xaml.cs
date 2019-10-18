@@ -1,5 +1,7 @@
-﻿using DialogBeamProperties.Model.ProfileFileData;
+﻿using DialogBeamProperties.Constants;
+using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.ViewModel;
+using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,18 +21,37 @@ namespace DialogBeamProperties.View
     /// <summary>
     /// Interaction logic for SelectProfile.xaml
     /// </summary>
-    public partial class SelectProfile : Window
+    public partial class SelectProfile : Window, IDisposable
     {
         public SelectProfileViewModel ViewModel = new SelectProfileViewModel();
         public SelectProfile()
         {
             InitializeComponent();
+            InitMessenger();
             this.DataContext = ViewModel;
+        }
+        private void InitMessenger()
+        {
+            Messenger.Default.Unregister<bool>(this,
+                    MessengerToken.CLOSESELECTPROFILEWINDOW, CloseWindow);
+            Messenger.Default.Register<bool>(this,
+                MessengerToken.CLOSESELECTPROFILEWINDOW, CloseWindow);
+        }
+
+        private void CloseWindow(bool obj)
+        {
+            this.Close();
         }
 
         internal void SetData(ProfileFileData allProfileFileData, string attributesProfileText)
         {
             ViewModel.SetData(allProfileFileData, attributesProfileText);
+        }
+
+        public void Dispose()
+        {
+            Messenger.Default.Unregister<bool>(this,
+                    MessengerToken.CLOSESELECTPROFILEWINDOW, CloseWindow);
         }
     }
 }

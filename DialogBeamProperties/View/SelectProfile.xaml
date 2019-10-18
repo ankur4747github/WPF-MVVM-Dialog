@@ -5,13 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DialogBeamProperties.View"
         SizeToContent="WidthAndHeight"
-        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         Topmost="True"
         mc:Ignorable="d"
-        Title="SelectProfile" MinHeight="550" Width="400" Height="550">
+        Title="SelectProfile" MinHeight="550" MinWidth="450" Width="450" MaxHeight="550">
     <Grid>
-        <ListView ItemsSource="{Binding ProfileList,Mode=OneWay}">
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView ItemsSource="{Binding ProfileList,Mode=OneWay}"
+                  SelectedItem="{Binding SelectedProfile,Mode=TwoWay}"
+                  Margin="5">
         </ListView>
+
+        <Grid Grid.Row="1" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="OK"
+                    Margin="5,0"
+                    Command="{Binding OKCommand}">
+            </Button>
+            <Button Content="Close"
+                    Grid.Column="1"
+                    Command="{Binding CancelButtonCommand}"
+                    Margin="5,0">
+            </Button>
+        </Grid>
     </Grid>
 </Window>

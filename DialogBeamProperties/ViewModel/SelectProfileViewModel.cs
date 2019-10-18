@@ -1,11 +1,15 @@
-﻿using DialogBeamProperties.Model.ProfileFileData;
+﻿using DialogBeamProperties.Command;
+using DialogBeamProperties.Constants;
+using DialogBeamProperties.Model.ProfileFileData;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace DialogBeamProperties.ViewModel
 {
@@ -32,7 +36,65 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion ProfileList
 
+        #region SelectedProfile
+
+        public string SelectedProfile
+        {
+            get { return _selectedProfile; }
+            set
+            {
+                if (value == _selectedProfile)
+                    return;
+
+                _selectedProfile = value;
+                OnPropertyChangedAsync(nameof(SelectedProfile));
+            }
+        }
+
+        private string _selectedProfile { get; set; }
+
+        #endregion SelectedProfile
         #endregion INotifyPropertyChange Member
+
+        #region Button Command
+
+        #region Close Button Command
+
+        private ICommand okCommand;
+
+        public ICommand OKCommand
+        {
+            get
+            {
+                return okCommand;
+            }
+            set
+            {
+                okCommand = value;
+            }
+        }
+
+        #endregion Close Button Command
+
+        #region Apply Buttom Command
+
+        private ICommand _cancelButtonCommand;
+
+        public ICommand CancelButtonCommand
+        {
+            get
+            {
+                return _cancelButtonCommand;
+            }
+            set
+            {
+                _cancelButtonCommand = value;
+            }
+        }
+
+        #endregion Apply Buttom Command
+
+        #endregion Button Command
 
         #region PropertyChanged
 
@@ -60,7 +122,11 @@ namespace DialogBeamProperties.ViewModel
         public SelectProfileViewModel()
         {
             ProfileList = new ObservableCollection<string>();
+            OKCommand = new RelayCommand(new Action<object>(OkButtonClick));
+            CancelButtonCommand = new RelayCommand(new Action<object>(CancelButtonClick));
         }
+
+      
 
         #endregion Constructor
 
@@ -88,5 +154,17 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Public Methods
+
+        #region Private Methods
+        private void CancelButtonClick(object obj)
+        {
+            Messenger.Default.Send(true, MessengerToken.CLOSESELECTPROFILEWINDOW);
+        }
+
+        private void OkButtonClick(object obj)
+        {
+            Messenger.Default.Send(SelectedProfile, MessengerToken.SELECTEDPROFILE);
+        }
+        #endregion
     }
 }

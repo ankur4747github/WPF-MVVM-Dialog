@@ -837,6 +837,7 @@ namespace DialogBeamProperties.ViewModel
             LoadDataComboBox = new List<string>();
             AllProfileFileData = new ProfileFileData();
             InitCommand();
+            InitMessenger();
             Task.Factory.StartNew(() => LoadProfileFiles());
         }
 
@@ -851,6 +852,16 @@ namespace DialogBeamProperties.ViewModel
             LoadButtonCommand = new RelayCommand(new Action<object>(LoadButtonClick));
             SelectProfileButtonCommand = new RelayCommand(new Action<object>(SelectProfileButtonClick));
         }
+
+        private void InitMessenger()
+        {
+            Messenger.Default.Unregister<string>(this,
+                    MessengerToken.SELECTEDPROFILE, SelectedProfile);
+            Messenger.Default.Register<string>(this,
+                MessengerToken.SELECTEDPROFILE, SelectedProfile);
+        }
+
+       
 
         #endregion Constructor
 
@@ -1075,6 +1086,11 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Load Profile Files Into List
+        private void SelectedProfile(string obj)
+        {
+            AttributesProfileText = obj;
+        }
+
 
         #endregion Private Methods
     }
