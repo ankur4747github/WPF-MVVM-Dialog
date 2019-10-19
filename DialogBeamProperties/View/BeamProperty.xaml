@@ -81,7 +81,6 @@
                                           VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                         IsEnabled="{Binding IsNumberingSeriesPartPrefixChecked, Mode=OneWay}"
                                          Text="{Binding NumberingSeriesPartPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          VerticalAlignment="Center">
                                 </TextBox>
@@ -91,7 +90,6 @@
                                           VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="3"
-                                         IsEnabled="{Binding IsNumberingSeriesPartStartumberChecked, Mode=OneWay}"
                                          Text="{Binding NumberingSeriesPartStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          VerticalAlignment="Center">
                                 </TextBox>
@@ -108,7 +106,6 @@
                                           VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                         IsEnabled="{Binding IsNumberingSeriesAssemblyPrefixChecked, Mode=OneWay}"
                                          Text="{Binding NumberingSeriesAssemblyPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          VerticalAlignment="Center">
                                 </TextBox>
@@ -118,7 +115,6 @@
                                           VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="3"
-                                         IsEnabled="{Binding IsNumberingSeriesAssemblyStartumberChecked, Mode=OneWay}"
                                          Text="{Binding NumberingSeriesAssemblyStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          VerticalAlignment="Center">
                                 </TextBox>
@@ -139,7 +135,6 @@
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesNameText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                         IsEnabled="{Binding IsAttributesNameChecked, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -158,13 +153,11 @@
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesProfileText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          Margin="15,0,5,0"
-                                         IsEnabled="{Binding IsAttributesProfileChecked, Mode=OneWay}"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
                                 </TextBox>
                                 <Button Grid.Column="2"
                                         Content="Select"
-                                        IsEnabled="{Binding IsSelectProfileButtonEnable, Mode=OneWay}"
                                         Command="{Binding SelectProfileButtonCommand}">
                                 </Button>
                             </Grid>
@@ -179,7 +172,6 @@
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesMaterialText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                         IsEnabled="{Binding IsAttributesMaterialChecked, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -196,7 +188,6 @@
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesFinishText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                         IsEnabled="{Binding IsAttributesFinishChecked, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -213,7 +204,6 @@
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesClassText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                         IsEnabled="{Binding IsAttributesClassChecked, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -241,11 +231,10 @@
                             <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionOnPlaneComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}"
-                                      IsEnabled="{Binding IsPositionOnPlaneChecked, Mode=OneWay}">
+                                      >
                             </ComboBox>
                             <TextBox Grid.Column="2"
                                      Text="{Binding PositionOnPlaneText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                     IsEnabled="{Binding IsPositionOnPlaneChecked, Mode=OneWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -263,12 +252,10 @@
                             </CheckBox>
                             <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}"
-                                      IsEnabled="{Binding IsPositionRotationChecked, Mode=OneWay}">
+                                      SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
                             </ComboBox>
                             <TextBox Grid.Column="2"
                                      Text="{Binding PositionRotationText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                     IsEnabled="{Binding IsPositionRotationChecked, Mode=OneWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -286,12 +273,10 @@
                             </CheckBox>
                             <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionAtDepthComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionAtDepthComboBox,Mode=TwoWay}"
-                                      IsEnabled="{Binding IsPositionAtDepthChecked, Mode=OneWay}">
+                                      SelectedItem="{Binding SelectedDataInPositionAtDepthComboBox,Mode=TwoWay}">
                             </ComboBox>
                             <TextBox Grid.Column="2"
                                      Text="{Binding PositionAtDepthText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                                     IsEnabled="{Binding IsPositionAtDepthChecked, Mode=OneWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">

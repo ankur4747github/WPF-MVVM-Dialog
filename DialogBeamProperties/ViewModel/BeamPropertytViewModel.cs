@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -25,6 +24,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private IProperties _iproperties { get; set; }
+
+        private readonly XDataWriter xDataWriter;
         private bool _selectAll = false;
         public ProfileFileData AllProfileFileData { get; set; }
 
@@ -161,7 +162,6 @@ namespace DialogBeamProperties.ViewModel
         #region SelectProfile Buttom Command
 
         private ICommand _selectButtonCommand;
-        private readonly XDataWriter xDataWriter;
 
         public ICommand SelectProfileButtonCommand
         {
@@ -865,8 +865,6 @@ namespace DialogBeamProperties.ViewModel
                 MessengerToken.SELECTEDPROFILE, SelectedProfile);
         }
 
-       
-
         #endregion Constructor
 
         #region Public Methods
@@ -899,10 +897,9 @@ namespace DialogBeamProperties.ViewModel
             _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
-            SavePositionData();            
-                       
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0); 
-            
+            SavePositionData();
+
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
         }
 
         private void ModifyButtonClick(object obj)
@@ -940,7 +937,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectProfileButtonClick(object obj)
         {
-            
             SelectProfile selectProfile = new SelectProfile();
             selectProfile.SetData(AllProfileFileData, AttributesProfileText);
             selectProfile.ShowDialog();
@@ -953,45 +949,89 @@ namespace DialogBeamProperties.ViewModel
         private void SavePositionData()
         {
             _iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
-            _iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
-            _iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-            _iproperties.PositionOnPlaneText = PositionOnPlaneText;
+            if (_iproperties.IsPositionOnPlaneChecked)
+            {
+                _iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
+                _iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+                _iproperties.PositionOnPlaneText = PositionOnPlaneText;
+            }
 
             _iproperties.IsPositionRotationChecked = IsPositionRotationChecked;
-            _iproperties.PositionRotationComboBox = PositionRotationComboBox;
-            _iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-            _iproperties.PositionRotationText = PositionRotationText;
+            if (_iproperties.IsPositionRotationChecked)
+            {
+                _iproperties.PositionRotationComboBox = PositionRotationComboBox;
+                _iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                _iproperties.PositionRotationText = PositionRotationText;
+            }
 
             _iproperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
-            _iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
-            _iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-            _iproperties.PositionAtDepthText = PositionAtDepthText;
+            if (_iproperties.IsPositionAtDepthChecked)
+            {
+                _iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
+                _iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+                _iproperties.PositionAtDepthText = PositionAtDepthText;
+            }
         }
 
         private void SaveAttributesData()
         {
             _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
-            _iproperties.AttributesNameText = AttributesNameText;
+            if (_iproperties.IsAttributesNameChecked)
+            {
+                _iproperties.AttributesNameText = AttributesNameText;
+            }
+
             _iproperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
-            _iproperties.AttributesProfileText = AttributesProfileText;
+            if (_iproperties.IsAttributesProfileChecked)
+            {
+                _iproperties.AttributesProfileText = AttributesProfileText;
+            }
+
             _iproperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
-            _iproperties.AttributesMaterialText = AttributesMaterialText;
+            if (_iproperties.IsAttributesMaterialChecked)
+            {
+                _iproperties.AttributesMaterialText = AttributesMaterialText;
+            }
+
             _iproperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
-            _iproperties.AttributesFinishText = AttributesFinishText;
+            if (_iproperties.IsAttributesFinishChecked)
+            {
+                _iproperties.AttributesFinishText = AttributesFinishText;
+            }
+
             _iproperties.IsAttributesClassChecked = IsAttributesClassChecked;
-            _iproperties.AttributesClassText = AttributesClassText;
+            if (_iproperties.IsAttributesClassChecked)
+            {
+                
+                _iproperties.AttributesClassText = AttributesClassText;
+            }
         }
 
         private void SaveNumberingData()
         {
             _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
-            _iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+            if (_iproperties.IsNumberingSeriesPartPrefixChecked)
+            {
+                _iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+            }
+
             _iproperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
-            _iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+            if (_iproperties.IsNumberingSeriesPartStartumberChecked)
+            {
+                _iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+            }
+
             _iproperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
-            _iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+            if (_iproperties.IsNumberingSeriesAssemblyPrefixChecked)
+            {
+                _iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+            }
+
             _iproperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
-            _iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+            if (_iproperties.IsNumberingSeriesAssemblyStartumberChecked)
+            {
+                _iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+            }
         }
 
         #endregion Save Data
@@ -1094,11 +1134,11 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Load Profile Files Into List
+
         private void SelectedProfile(string obj)
         {
             AttributesProfileText = obj;
         }
-
 
         #endregion Private Methods
     }
