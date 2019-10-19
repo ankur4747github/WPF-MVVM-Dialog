@@ -1,4 +1,5 @@
-﻿using DialogBeamProperties.Command;
+﻿using DialogBeamProperties.CadInterfaces;
+using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
 using DialogBeamProperties.Model.ProfileFileData;
@@ -160,6 +161,7 @@ namespace DialogBeamProperties.ViewModel
         #region SelectProfile Buttom Command
 
         private ICommand _selectButtonCommand;
+        private readonly XDataWriter xDataWriter;
 
         public ICommand SelectProfileButtonCommand
         {
@@ -833,13 +835,14 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel()
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
         {
             LoadDataComboBox = new List<string>();
             AllProfileFileData = new ProfileFileData();
             InitCommand();
             InitMessenger();
             Task.Factory.StartNew(() => LoadProfileFiles());
+            this.xDataWriter = xDataWriter;
         }
 
         private void InitCommand()
@@ -896,7 +899,10 @@ namespace DialogBeamProperties.ViewModel
             _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
-            SavePositionData();
+            SavePositionData();            
+                       
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0); 
+            
         }
 
         private void ModifyButtonClick(object obj)
