@@ -1,4 +1,5 @@
-﻿using DialogBeamProperties.Constants;
+﻿using DialogBeamProperties.CadInterfaces;
+using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
 using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
@@ -12,12 +13,13 @@ namespace DialogBeamProperties
     /// </summary>
     public partial class DialogBeamProperties : Window, IDisposable
     {
-        public DialogBeamPropertiesViewModel ViewModel = new DialogBeamPropertiesViewModel();
+        public DialogBeamPropertiesViewModel ViewModel;
 
-        public DialogBeamProperties(IProperties iproperties)
-        {
+        public DialogBeamProperties(IProperties iproperties, DialogBeamPropertiesViewModel viewModel)
+        {            
             InitializeComponent();
             InitMessenger();
+            this.ViewModel = viewModel;
             this.DataContext = ViewModel;
             ViewModel.SetProtertiesData(iproperties);
         }

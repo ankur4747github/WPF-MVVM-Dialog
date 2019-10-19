@@ -1,4 +1,6 @@
-﻿using DialogBeamProperties.Model;
+﻿using DialogBeamProperties.CadInterfaces;
+using DialogBeamProperties.Model;
+using DialogBeamProperties.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -17,7 +19,8 @@ namespace Test
             InitializeComponent();
             IProperties prop = new DialogBeamProperties.Model.Properties();
             SetTestDataIntoProperties(ref prop);
-            test = new DialogBeamProperties.DialogBeamProperties(prop);
+            DialogBeamPropertiesViewModel viewModel =  new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation());
+            test = new DialogBeamProperties.DialogBeamProperties(prop, viewModel);
             test.Closing += Test_Closing;
             test.Show();
             this.Hide();
