@@ -23,12 +23,12 @@ namespace DialogBeamProperties.View
     /// </summary>
     public partial class SelectProfile : Window, IDisposable
     {
-        public SelectProfileViewModel ViewModel = new SelectProfileViewModel();
+        private SelectProfileViewModel viewModel = new SelectProfileViewModel();
         public SelectProfile()
         {
             InitializeComponent();
             InitMessenger();
-            this.DataContext = ViewModel;
+            this.DataContext = viewModel;
         }
         private void InitMessenger()
         {
@@ -45,7 +45,7 @@ namespace DialogBeamProperties.View
 
         internal void SetData(ProfileFileData allProfileFileData, string attributesProfileText)
         {
-            ViewModel.SetData(allProfileFileData, attributesProfileText);
+            viewModel.SetData(allProfileFileData, attributesProfileText);
         }
 
         public void Dispose()
