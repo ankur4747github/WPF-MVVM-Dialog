@@ -422,6 +422,8 @@ namespace DialogBeamProperties.ViewModel
             IsPositionVerticalChecked = !_selectAll;
             IsPositionRotationChecked = !_selectAll;
             IsPositionHorizontalChecked = !_selectAll;
+            IsPositionLevelsTopChecked = !_selectAll;
+            IsPositionLevelsBottomChecked = !_selectAll;
             _selectAll = !_selectAll;
         }
 
