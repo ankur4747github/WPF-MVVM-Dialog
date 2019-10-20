@@ -13,20 +13,20 @@ namespace DialogBeamProperties
     /// </summary>
     public partial class DialogBeamProperties : Window, IDisposable
     {
-        public DialogBeamPropertiesViewModel ViewModel;
+        private DialogBeamPropertiesViewModel viewModel;
 
         public DialogBeamProperties(IProperties iproperties, DialogBeamPropertiesViewModel viewModel)
-        {            
+        {
             InitializeComponent();
             InitMessenger();
-            this.ViewModel = viewModel;
-            this.DataContext = ViewModel;
-            ViewModel.SetProtertiesData(iproperties);
+            this.viewModel = viewModel;
+            this.DataContext = viewModel;
+            this.viewModel.SetProtertiesData(iproperties);
         }
 
         public IProperties GetPropertiesData()
         {
-            return ViewModel.GetPropertiesData();
+            return viewModel.GetPropertiesData();
         }
 
         private void InitMessenger()
