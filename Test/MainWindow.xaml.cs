@@ -24,14 +24,12 @@ namespace Test
 
             IBeamProperties prop = new DialogBeamProperties.Model.BeamProperties();
             SetTestDataIntoProperties(ref prop);
-            DummyBeamProprtyData(prop);
+            DummyBeamPropertyData(prop);
 
             IColumnProperties propColumn = new ColumnProperties();
             SetTestDataIntoColumnProperties(ref propColumn);
             DummyColumnProprtyData(propColumn);
         }
-
-       
 
         private void DummyColumnProprtyData(IColumnProperties prop)
         {
@@ -47,7 +45,7 @@ namespace Test
             IColumnProperties prop = testColumn.GetPropertiesData();
         }
 
-        private void DummyBeamProprtyData(IBeamProperties prop)
+        private void DummyBeamPropertyData(IBeamProperties prop)
         {
             DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation());
             testBeam = new DialogBeamProperties.DialogBeamProperties(prop, viewModel);
@@ -60,6 +58,7 @@ namespace Test
         {
             IBeamProperties prop = testBeam.GetPropertiesData();
         }
+
         private void SetTestDataIntoColumnProperties(ref IColumnProperties prop)
         {
             List<string> list = new List<string>() { "a", "b", "c", "d" };
@@ -107,6 +106,7 @@ namespace Test
             prop.IsPositionLevelsBottomChecked = true;
             prop.PositionLevelsBottomText = "Bottom";
         }
+
         private void SetTestDataIntoProperties(ref IBeamProperties prop)
         {
             List<string> list = new List<string>() { "a", "b", "c", "d" };
