@@ -74,7 +74,11 @@
   <ItemGroup>
     <Compile Include="CadInterfaces\XDataWriter.cs" />
     <Compile Include="CadInterfaces\XDataWriterDummyImplementation.cs" />
+    <Compile Include="ViewModel\ColumnPropertyViewModel.cs" />
     <Compile Include="ViewModel\SelectProfileViewModel.cs" />
+    <Compile Include="View\ColumnProperties.xaml.cs">
+      <DependentUpon>ColumnProperties.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SelectProfile.xaml.cs">
       <DependentUpon>SelectProfile.xaml</DependentUpon>
     </Compile>
@@ -92,6 +96,10 @@
       <DependentUpon>BeamProperty.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\ColumnProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SelectProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

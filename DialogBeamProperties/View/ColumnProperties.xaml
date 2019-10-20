@@ -1,0 +1,342 @@
+﻿<Window x:Class="DialogBeamProperties.View.ColumnProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogBeamProperties"
+        mc:Ignorable="d"
+        Background="White"
+        MinWidth="500"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Beam Properties"
+        SizeToContent="WidthAndHeight">
+    <Grid Background="White"
+          Margin="20"
+          MinHeight="390"
+          VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="Save"
+                    Width="70"
+                    Command="{Binding SaveButtonCommand}">
+            </Button>
+            <Button Content="Load"
+                    Width="70"
+                    Margin="5,0"
+                    Grid.Column="1"
+                    Command="{Binding LoadButtonCommand}">
+            </Button>
+            <ComboBox Width="120"
+                      Grid.Column="2"
+                      SelectedItem="{Binding SelectedDataInLoadDataComboBox, Mode=TwoWay}"
+                      ItemsSource="{Binding LoadDataComboBox, Mode=OneWay}">
+            </ComboBox>
+        </Grid>
+        <TabControl VerticalAlignment="Stretch"
+                    Grid.Row="1">
+            <TabItem Header="Attributes"
+                     VerticalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Numbering Series"
+                              Margin="0,10"
+                              VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Vertical">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Prefix:"
+                                       Grid.Column="1">
+                                </TextBlock>
+                                <TextBlock Text="Start number:"
+                                       Grid.Column="2">
+                                </TextBlock>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="30*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Part"
+                                          IsChecked="{Binding IsNumberingSeriesPartPrefixChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding NumberingSeriesPartPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                                <CheckBox Grid.Column="2"
+                                          Margin="3,0"
+                                          IsChecked="{Binding IsNumberingSeriesPartStartumberChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="3"
+                                         Text="{Binding NumberingSeriesPartStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="100*"></ColumnDefinition>
+                                    <ColumnDefinition Width="30*"></ColumnDefinition>
+                                    <ColumnDefinition Width="250*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Assembly"
+                                          IsChecked="{Binding IsNumberingSeriesAssemblyPrefixChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding NumberingSeriesAssemblyPrefixText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                                <CheckBox Grid.Column="2"
+                                          Margin="3,0"
+                                          IsChecked="{Binding IsNumberingSeriesAssemblyStartumberChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="3"
+                                         Text="{Binding NumberingSeriesAssemblyStartNumberText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1"
+                              Header="Attributes">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Name:"
+                                          IsChecked="{Binding IsAttributesNameChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesNameText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Profile:"
+                                          IsChecked="{Binding IsAttributesProfileChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesProfileText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,5,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                                <Button Grid.Column="2"
+                                        Content="Select"
+                                        Command="{Binding SelectProfileButtonCommand}">
+                                </Button>
+                            </Grid>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Material:"
+                                          IsChecked="{Binding IsAttributesMaterialChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesMaterialText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Finish:"
+                                          IsChecked="{Binding IsAttributesFinishChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesFinishText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"></ColumnDefinition>
+                                    <ColumnDefinition Width="150*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Class:"
+                                          IsChecked="{Binding IsAttributesClassChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
+                                </CheckBox>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding AttributesClassText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
+                                </TextBox>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Position">
+                <GroupBox Header="Position"
+                              Margin="0,10"
+                              VerticalAlignment="Stretch">
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Content="On plane:"
+                                      IsChecked="{Binding IsPositionOnPlaneChecked, Mode=TwoWay}"
+                                      VerticalAlignment="Center">
+                            </CheckBox>
+                            <ComboBox Grid.Column="1"
+                                      ItemsSource="{Binding PositionOnPlaneComboBox, Mode=OneWay}"
+                                      SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}"
+                                      >
+                            </ComboBox>
+                            <TextBox Grid.Column="2"
+                                     Text="{Binding PositionOnPlaneText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Margin="15,0,0,0"
+                                     HorizontalAlignment="Stretch"
+                                     VerticalAlignment="Center">
+                            </TextBox>
+                        </Grid>
+                        <Grid Margin="0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Content="Rotation:"
+                                      IsChecked="{Binding IsPositionRotationChecked, Mode=TwoWay}"
+                                      VerticalAlignment="Center">
+                            </CheckBox>
+                            <ComboBox Grid.Column="1"
+                                      ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
+                                      SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
+                            </ComboBox>
+                            <TextBox Grid.Column="2"
+                                     Text="{Binding PositionRotationText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Margin="15,0,0,0"
+                                     HorizontalAlignment="Stretch"
+                                     VerticalAlignment="Center">
+                            </TextBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="120*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Content="At depth:"
+                                      IsChecked="{Binding IsPositionAtDepthChecked, Mode=TwoWay}"
+                                      VerticalAlignment="Center">
+                            </CheckBox>
+                            <ComboBox Grid.Column="1"
+                                      ItemsSource="{Binding PositionAtDepthComboBox, Mode=OneWay}"
+                                      SelectedItem="{Binding SelectedDataInPositionAtDepthComboBox,Mode=TwoWay}">
+                            </ComboBox>
+                            <TextBox Grid.Column="2"
+                                     Text="{Binding PositionAtDepthText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Margin="15,0,0,0"
+                                     HorizontalAlignment="Stretch"
+                                     VerticalAlignment="Center">
+                            </TextBox>
+                        </Grid>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+        </TabControl>
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Bottom"
+              Margin="0,10"
+              Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="70*"></ColumnDefinition>
+                <ColumnDefinition Width="70*"></ColumnDefinition>
+                <ColumnDefinition Width="50*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="60*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="OK"
+                    Command="{Binding ButtonCommand}">
+            </Button>
+            <Button Content="Apply"
+                    Command="{Binding ApplyButtonCommand}"
+                    Grid.Column="1"
+                    Margin="5,0">
+            </Button>
+            <Button Content="Modify"
+                    Grid.Column="2"
+                    Margin="5,0">
+            </Button>
+            <Button Content="Get"
+                    Grid.Column="3">
+            </Button>
+            <Button Grid.Column="4"
+                    Margin="5,0,0,0"
+                    Command="{Binding SelectAllCheckBoxButtonCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Margin="5,0"
+                              IsChecked="True"
+                              VerticalAlignment="Center">
+                    </CheckBox>
+                    <TextBlock Text="/"
+                               Grid.Column="5"
+                               VerticalAlignment="Center">
+                    </TextBlock>
+                    <CheckBox Margin="5,0"
+                              Grid.Column="6"
+                              IsChecked="False"
+                              VerticalAlignment="Center">
+                    </CheckBox>
+                </StackPanel>
+            </Button>
+            <Button Content="Cancel"
+                    Grid.Column="5"
+                    Command="{Binding ButtonCommand}"
+                    Margin="5,0">
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

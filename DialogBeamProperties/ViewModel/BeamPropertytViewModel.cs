@@ -888,7 +888,7 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
-            Messenger.Default.Send(true, MessengerToken.CLOSEWINDOW);
+            Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
         }
 
         private void ApplyButtonClick(object obj)
