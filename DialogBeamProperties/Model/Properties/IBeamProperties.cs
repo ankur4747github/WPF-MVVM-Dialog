@@ -2,7 +2,7 @@
 
 namespace DialogBeamProperties.Model
 {
-    public interface IProperties
+    public interface IBeamProperties
     {
         //Attributes Tab Data
         List<string> LoadDataComboBox { get; set; }

@@ -1,5 +1,6 @@
 ﻿using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
+using DialogBeamProperties.Model.Properties;
 using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
@@ -21,11 +22,11 @@ namespace DialogBeamProperties.View
     /// <summary>
     /// Interaction logic for Column_Properties.xaml
     /// </summary>
-    public partial class ColumnProperties : Window
+    public partial class DialogColumnProperties : Window
     {
-        private DialogBeamPropertiesViewModel viewModel;
+        private DialogColumnPropertiesViewModel viewModel;
 
-        public ColumnProperties(IProperties iproperties, DialogBeamPropertiesViewModel viewModel)
+        public DialogColumnProperties(IColumnProperties iproperties, DialogColumnPropertiesViewModel viewModel)
         {
             InitializeComponent();
             InitMessenger();
@@ -34,7 +35,7 @@ namespace DialogBeamProperties.View
             this.viewModel.SetProtertiesData(iproperties);
         }
 
-        public IProperties GetPropertiesData()
+        public IBeamProperties GetPropertiesData()
         {
             return viewModel.GetPropertiesData();
         }

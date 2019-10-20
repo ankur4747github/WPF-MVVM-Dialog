@@ -15,7 +15,7 @@ namespace DialogBeamProperties
     {
         private DialogBeamPropertiesViewModel viewModel;
 
-        public DialogBeamProperties(IProperties iproperties, DialogBeamPropertiesViewModel viewModel)
+        public DialogBeamProperties(IBeamProperties iproperties, DialogBeamPropertiesViewModel viewModel)
         {
             InitializeComponent();
             InitMessenger();
@@ -24,7 +24,7 @@ namespace DialogBeamProperties
             this.viewModel.SetProtertiesData(iproperties);
         }
 
-        public IProperties GetPropertiesData()
+        public IBeamProperties GetPropertiesData()
         {
             return viewModel.GetPropertiesData();
         }

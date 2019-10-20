@@ -2,7 +2,7 @@
 
 namespace DialogBeamProperties.Model
 {
-    public class Properties : IProperties
+    public class BeamProperties : IBeamProperties
     {
         public List<string> LoadDataComboBox { get; set; }
         public string SelectedDataInLoadDataComboBox { get; set; }

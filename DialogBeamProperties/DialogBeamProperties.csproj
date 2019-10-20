@@ -74,6 +74,9 @@
   <ItemGroup>
     <Compile Include="CadInterfaces\XDataWriter.cs" />
     <Compile Include="CadInterfaces\XDataWriterDummyImplementation.cs" />
+    <Compile Include="Model\Properties\ColumnProperties.cs" />
+    <Compile Include="Model\Properties\IColumnProperties.cs" />
+    <Compile Include="ViewModel\AbstractViewModel\AbstractPropertyViewModel.cs" />
     <Compile Include="ViewModel\ColumnPropertyViewModel.cs" />
     <Compile Include="ViewModel\SelectProfileViewModel.cs" />
     <Compile Include="View\ColumnProperties.xaml.cs">
@@ -89,8 +92,8 @@
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Constants\MessengerToken.cs" />
     <Compile Include="Model\ProfileFileData\ProfileFileData.cs" />
-    <Compile Include="Model\Properties\IProperties.cs" />
-    <Compile Include="Model\Properties\Properties.cs" />
+    <Compile Include="Model\Properties\IBeamProperties.cs" />
+    <Compile Include="Model\Properties\BeamProperties.cs" />
     <Compile Include="ViewModel\BeamPropertytViewModel.cs" />
     <Compile Include="View\BeamProperty.xaml.cs">
       <DependentUpon>BeamProperty.xaml</DependentUpon>
