@@ -35,7 +35,7 @@ namespace DialogBeamProperties.View
             this.viewModel.SetProtertiesData(iproperties);
         }
 
-        public IBeamProperties GetPropertiesData()
+        public IColumnProperties GetPropertiesData()
         {
             return viewModel.GetPropertiesData();
         }

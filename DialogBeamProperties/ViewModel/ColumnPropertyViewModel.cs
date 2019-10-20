@@ -327,24 +327,7 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion PositionLevelBottomText
 
-        #region IsSelectProfileButtonEnable
-
-        public bool IsSelectProfileButtonEnable
-        {
-            get { return _isSelectProfileButtonEnable; }
-            set
-            {
-                if (value == _isSelectProfileButtonEnable)
-                    return;
-
-                _isSelectProfileButtonEnable = value;
-                OnPropertyChangedAsync(nameof(IsSelectProfileButtonEnable));
-            }
-        }
-
-        private bool _isSelectProfileButtonEnable { get; set; }
-
-        #endregion IsSelectProfileButtonEnable
+        
 
         #endregion INotifyPropertyChange Member
 

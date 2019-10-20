@@ -44,7 +44,7 @@ namespace Test
 
         private void TestColumn_Closing(object sender, CancelEventArgs e)
         {
-            IBeamProperties prop = testColumn.GetPropertiesData();
+            IColumnProperties prop = testColumn.GetPropertiesData();
         }
 
         private void DummyBeamProprtyData(IBeamProperties prop)
@@ -70,8 +70,8 @@ namespace Test
             prop.AttributesProfileText = "H100";
 
             List<string> verticleList = new List<string>() { "Middle", "Right", "Left" };
-            prop.PositionVerticleComboBox = verticleList;
-            prop.SelectedDataInPositionVerticleComboBox = verticleList[0];
+            prop.PositionVerticalComboBox = verticleList;
+            prop.SelectedDataInPositionVerticalComboBox = verticleList[0];
 
             List<string> rotationList = new List<string>() { "Front", "Top", "Back", "Below" };
             prop.PositionRotationComboBox = rotationList;
@@ -99,13 +99,13 @@ namespace Test
             prop.AttributesFinishText = "AttributesFinish";
             prop.IsAttributesClassChecked = true;
             prop.AttributesClassText = "AttributesClass";
-            prop.PositionVerticleText = "PositionVerticle";
+            prop.PositionVerticalText = "PositionVerticle";
             prop.PositionRotationText = "PositionRotation";
             prop.PositionHorizontalText = "PositionHorizontal";
             prop.IsPositionLevelsTopChecked = true;
-            prop.IsPositionLevelsTopText = "Top";
+            prop.PositionLevelsTopText = "Top";
             prop.IsPositionLevelsBottomChecked = true;
-            prop.IsPositionLevelsBottomText = "Bottom";
+            prop.PositionLevelsBottomText = "Bottom";
         }
         private void SetTestDataIntoProperties(ref IBeamProperties prop)
         {

@@ -1,48 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DialogBeamProperties.Model.Properties
 {
     public class ColumnProperties : IColumnProperties
     {
-        public List<string> LoadDataComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SelectedDataInLoadDataComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsNumberingSeriesPartPrefixChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string NumberingSeriesPartPrefixText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsNumberingSeriesPartStartumberChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string NumberingSeriesPartStartNumberText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsNumberingSeriesAssemblyPrefixChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string NumberingSeriesAssemblyPrefixText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsNumberingSeriesAssemblyStartumberChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string NumberingSeriesAssemblyStartNumberText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsAttributesNameChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AttributesNameText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsAttributesProfileChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AttributesProfileText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsAttributesMaterialChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AttributesMaterialText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsAttributesFinishChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AttributesFinishText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsAttributesClassChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AttributesClassText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPositionVerticleChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<string> PositionVerticleComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SelectedDataInPositionVerticleComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PositionVerticleText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPositionRotationChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<string> PositionRotationComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SelectedDataInPositionRotationComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PositionRotationText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPositionHorizontalChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<string> PositionHorizontalComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string SelectedDataInPositionHorizontalComboBox { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PositionHorizontalText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPositionLevelsTopChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string IsPositionLevelsTopText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPositionLevelsBottomChecked { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string IsPositionLevelsBottomText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<string> LoadDataComboBox { get; set; }
+        public string SelectedDataInLoadDataComboBox { get; set; }
+        public bool IsNumberingSeriesPartPrefixChecked { get; set; }
+        public string NumberingSeriesPartPrefixText { get; set; }
+        public bool IsNumberingSeriesPartStartumberChecked { get; set; }
+        public string NumberingSeriesPartStartNumberText { get; set; }
+        public bool IsNumberingSeriesAssemblyPrefixChecked { get; set; }
+        public string NumberingSeriesAssemblyPrefixText { get; set; }
+        public bool IsNumberingSeriesAssemblyStartumberChecked { get; set; }
+        public string NumberingSeriesAssemblyStartNumberText { get; set; }
+        public bool IsAttributesNameChecked { get; set; }
+        public string AttributesNameText { get; set; }
+        public bool IsAttributesProfileChecked { get; set; }
+        public string AttributesProfileText { get; set; }
+        public bool IsAttributesMaterialChecked { get; set; }
+        public string AttributesMaterialText { get; set; }
+        public bool IsAttributesFinishChecked { get; set; }
+        public string AttributesFinishText { get; set; }
+        public bool IsAttributesClassChecked { get; set; }
+        public string AttributesClassText { get; set; }
+        public bool IsPositionVerticalChecked { get; set; }
+        public List<string> PositionVerticalComboBox { get; set; }
+        public string SelectedDataInPositionVerticalComboBox { get; set; }
+        public string PositionVerticalText { get; set; }
+        public bool IsPositionRotationChecked { get; set; }
+        public List<string> PositionRotationComboBox { get; set; }
+        public string SelectedDataInPositionRotationComboBox { get; set; }
+        public string PositionRotationText { get; set; }
+        public bool IsPositionHorizontalChecked { get; set; }
+        public List<string> PositionHorizontalComboBox { get; set; }
+        public string SelectedDataInPositionHorizontalComboBox { get; set; }
+        public string PositionHorizontalText { get; set; }
+        public bool IsPositionLevelsTopChecked { get; set; }
+        public string PositionLevelsTopText { get; set; }
+        public bool IsPositionLevelsBottomChecked { get; set; }
+        public string PositionLevelsBottomText { get; set; }
     }
 }
