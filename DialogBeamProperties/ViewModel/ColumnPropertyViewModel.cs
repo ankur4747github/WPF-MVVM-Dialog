@@ -82,7 +82,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionVerticalText
 
-        public string PositionVerticalText
+        public double PositionVerticalText
         {
             get { return _positionVerticalText; }
             set
@@ -95,7 +95,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionVerticalText { get; set; }
+        private double _positionVerticalText { get; set; }
 
         #endregion PositionVerticalText
 
@@ -158,7 +158,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionRotationText
 
-        public string PositionRotationText
+        public double PositionRotationText
         {
             get { return _positionRotationText; }
             set
@@ -171,7 +171,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionRotationText { get; set; }
+        private double _positionRotationText { get; set; }
 
         #endregion PositionRotationText
 
@@ -234,7 +234,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionHorizontalText
 
-        public string PositionHorizontalText
+        public double PositionHorizontalText
         {
             get { return _positionHorizontalText; }
             set
@@ -247,7 +247,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionHorizontalText { get; set; }
+        private double _positionHorizontalText { get; set; }
 
         #endregion PositionHorizontalText
 
@@ -272,7 +272,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionLevelTopText
 
-        public string PositionLevelsTopText
+        public double PositionLevelsTopText
         {
             get { return _positionLevelTopText; }
             set
@@ -285,7 +285,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionLevelTopText { get; set; }
+        private double _positionLevelTopText { get; set; }
 
         #endregion PositionLevelTopText
 
@@ -310,7 +310,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionLevelBottomText
 
-        public string PositionLevelsBottomText
+        public double PositionLevelsBottomText
         {
             get { return _positionLevelBottomText; }
             set
@@ -323,7 +323,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionLevelBottomText { get; set; }
+        private double _positionLevelBottomText { get; set; }
 
         #endregion PositionLevelBottomText
 
@@ -423,7 +423,7 @@ namespace DialogBeamProperties.ViewModel
             IsPositionRotationChecked = !_selectAll;
             IsPositionHorizontalChecked = !_selectAll;
             IsPositionLevelsTopChecked = !_selectAll;
-            IsPositionLevelsBottomChecked = !_selectAll;
+            IsPositionLevelsBottomChecked =  !_selectAll;
             _selectAll = !_selectAll;
         }
 

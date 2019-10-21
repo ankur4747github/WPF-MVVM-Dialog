@@ -27,14 +27,14 @@ namespace DialogBeamProperties.Model
         public bool IsPositionOnPlaneChecked { get; set; }
         public List<string> PositionOnPlaneComboBox { get; set; }
         public string SelectedDataInPositionOnPlaneComboBox { get; set; }
-        public string PositionOnPlaneText { get; set; }
+        public double PositionOnPlaneText { get; set; }
         public bool IsPositionRotationChecked { get; set; }
         public List<string> PositionRotationComboBox { get; set; }
         public string SelectedDataInPositionRotationComboBox { get; set; }
-        public string PositionRotationText { get; set; }
+        public double PositionRotationText { get; set; }
         public bool IsPositionAtDepthChecked { get; set; }
         public List<string> PositionAtDepthComboBox { get; set; }
         public string SelectedDataInPositionAtDepthComboBox { get; set; }
-        public string PositionAtDepthText { get; set; }
+        public double PositionAtDepthText { get; set; }
     }
 }

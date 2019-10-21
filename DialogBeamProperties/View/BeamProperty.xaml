@@ -234,7 +234,7 @@
                                       >
                             </ComboBox>
                             <TextBox Grid.Column="2"
-                                     Text="{Binding PositionOnPlaneText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Text="{Binding PositionOnPlaneText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -255,7 +255,7 @@
                                       SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
                             </ComboBox>
                             <TextBox Grid.Column="2"
-                                     Text="{Binding PositionRotationText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Text="{Binding PositionRotationText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -276,7 +276,7 @@
                                       SelectedItem="{Binding SelectedDataInPositionAtDepthComboBox,Mode=TwoWay}">
                             </ComboBox>
                             <TextBox Grid.Column="2"
-                                     Text="{Binding PositionAtDepthText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     Text="{Binding PositionAtDepthText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">

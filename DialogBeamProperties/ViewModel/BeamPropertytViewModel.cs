@@ -82,7 +82,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionOnPlaneText
 
-        public string PositionOnPlaneText
+        public double PositionOnPlaneText
         {
             get { return _positionOnPlaneText; }
             set
@@ -95,7 +95,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionOnPlaneText { get; set; }
+        private double _positionOnPlaneText { get; set; }
 
         #endregion PositionOnPlaneText
 
@@ -158,7 +158,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionRotationText
 
-        public string PositionRotationText
+        public double PositionRotationText
         {
             get { return _positionRotationText; }
             set
@@ -171,7 +171,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionRotationText { get; set; }
+        private double _positionRotationText { get; set; }
 
         #endregion PositionRotationText
 
@@ -234,7 +234,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionAtDepthText
 
-        public string PositionAtDepthText
+        public double PositionAtDepthText
         {
             get { return _positionAtDepthText; }
             set
@@ -247,7 +247,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        private string _positionAtDepthText { get; set; }
+        private double _positionAtDepthText { get; set; }
 
         #endregion PositionAtDepthText
 

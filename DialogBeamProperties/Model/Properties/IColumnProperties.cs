@@ -36,21 +36,21 @@ namespace DialogBeamProperties.Model.Properties
         bool IsPositionVerticalChecked { get; set; }
         List<string> PositionVerticalComboBox { get; set; }
         string SelectedDataInPositionVerticalComboBox { get; set; }
-        string PositionVerticalText { get; set; }
+        double PositionVerticalText { get; set; }
 
         bool IsPositionRotationChecked { get; set; }
         List<string> PositionRotationComboBox { get; set; }
         string SelectedDataInPositionRotationComboBox { get; set; }
-        string PositionRotationText { get; set; }
+        double PositionRotationText { get; set; }
 
         bool IsPositionHorizontalChecked { get; set; }
         List<string> PositionHorizontalComboBox { get; set; }
         string SelectedDataInPositionHorizontalComboBox { get; set; }
-        string PositionHorizontalText { get; set; }
+        double PositionHorizontalText { get; set; }
 
         bool IsPositionLevelsTopChecked { get; set; }
-        string PositionLevelsTopText { get; set; }
+        double PositionLevelsTopText { get; set; }
         bool IsPositionLevelsBottomChecked { get; set; }
-        string PositionLevelsBottomText { get; set; }
+        double PositionLevelsBottomText { get; set; }
     }
 }

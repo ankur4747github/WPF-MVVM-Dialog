@@ -98,13 +98,13 @@ namespace Test
             prop.AttributesFinishText = "AttributesFinish";
             prop.IsAttributesClassChecked = true;
             prop.AttributesClassText = "AttributesClass";
-            prop.PositionVerticalText = "PositionVerticle";
-            prop.PositionRotationText = "PositionRotation";
-            prop.PositionHorizontalText = "PositionHorizontal";
+            prop.PositionVerticalText = 121;
+            prop.PositionRotationText = 121;
+            prop.PositionHorizontalText = 121;
             prop.IsPositionLevelsTopChecked = true;
-            prop.PositionLevelsTopText = "Top";
+            prop.PositionLevelsTopText = 121;
             prop.IsPositionLevelsBottomChecked = true;
-            prop.PositionLevelsBottomText = "Bottom";
+            prop.PositionLevelsBottomText = 121;
         }
 
         private void SetTestDataIntoProperties(ref IBeamProperties prop)
@@ -146,9 +146,9 @@ namespace Test
             prop.AttributesFinishText = "AttributesFinish";
             prop.IsAttributesClassChecked = true;
             prop.AttributesClassText = "AttributesClass";
-            prop.PositionOnPlaneText = "PositionOnPlane";
-            prop.PositionRotationText = "PositionRotation";
-            prop.PositionAtDepthText = "PositionAtDepth";
+            prop.PositionOnPlaneText = 121;
+            prop.PositionRotationText = 121;
+            prop.PositionAtDepthText = 121;
         }
 
         public void Dispose()
