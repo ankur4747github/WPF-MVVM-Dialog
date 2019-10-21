@@ -215,80 +215,79 @@
             </TabItem>
             <TabItem Header="Position">
                 <StackPanel Orientation="Vertical">
-                <GroupBox Header="Position"
+                    <GroupBox Header="Position"
                               Margin="0,10"
                               VerticalAlignment="Stretch">
-                    <StackPanel Orientation="Vertical" Margin="0,5">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox Content="Vertical:"
+                        <StackPanel Orientation="Vertical" Margin="0,5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Vertical:"
                                       IsChecked="{Binding IsPositionVerticalChecked, Mode=TwoWay}"
                                       VerticalAlignment="Center">
-                            </CheckBox>
-                            <ComboBox Grid.Column="1"
+                                </CheckBox>
+                                <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionVerticalComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionVerticalComboBox,Mode=TwoWay}"
-                                      >
-                            </ComboBox>
-                            <TextBox Grid.Column="2"
+                                      SelectedItem="{Binding SelectedDataInPositionVerticalComboBox,Mode=TwoWay}">
+                                </ComboBox>
+                                <TextBox Grid.Column="2"
                                      Text="{Binding PositionVerticalText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
-                            </TextBox>
-                        </Grid>
-                        <Grid Margin="0,5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox Content="Rotation:"
+                                </TextBox>
+                            </Grid>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Rotation:"
                                       IsChecked="{Binding IsPositionRotationChecked, Mode=TwoWay}"
                                       VerticalAlignment="Center">
-                            </CheckBox>
-                            <ComboBox Grid.Column="1"
+                                </CheckBox>
+                                <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
-                            </ComboBox>
-                            <TextBox Grid.Column="2"
+                                </ComboBox>
+                                <TextBox Grid.Column="2"
                                      Text="{Binding PositionRotationText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
-                            </TextBox>
-                        </Grid>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="120*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox Content="Horizontal:"
+                                </TextBox>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="120*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Content="Horizontal:"
                                       IsChecked="{Binding IsPositionHorizontalChecked, Mode=TwoWay}"
                                       VerticalAlignment="Center">
-                            </CheckBox>
-                            <ComboBox Grid.Column="1"
+                                </CheckBox>
+                                <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionHorizontalComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionHorizontalComboBox,Mode=TwoWay}">
-                            </ComboBox>
-                            <TextBox Grid.Column="2"
+                                </ComboBox>
+                                <TextBox Grid.Column="2"
                                      Text="{Binding PositionHorizontalText,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
-                            </TextBox>
-                        </Grid>
-                    </StackPanel>
-                </GroupBox>
+                                </TextBox>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
                     <GroupBox Header="Levels"
                               Margin="0,10"
                               VerticalAlignment="Stretch">
-                        <StackPanel Orientation="Vertical" 
+                        <StackPanel Orientation="Vertical"
                                     Margin="0,5">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -300,7 +299,7 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                     Text="{Binding PositionLevelsTopText,Mode=TwoWay}"
+                                     Text="{Binding PositionLevelsTop,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -316,7 +315,7 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                     Text="{Binding PositionLevelsBottomText,Mode=TwoWay}"
+                                     Text="{Binding PositionLevelsBottom,Mode=TwoWay}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -325,7 +324,6 @@
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
-                
             </TabItem>
         </TabControl>
         <Grid HorizontalAlignment="Stretch"

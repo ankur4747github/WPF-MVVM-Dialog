@@ -270,24 +270,24 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion IsPositionLevelsTopChecked
 
-        #region PositionLevelTopText
+        #region PositionLevelTop
 
-        public double PositionLevelsTopText
+        public double PositionLevelTop
         {
-            get { return _positionLevelTopText; }
+            get { return _positionLevelTop; }
             set
             {
-                if (value == _positionLevelTopText)
+                if (value == _positionLevelTop)
                     return;
 
-                _positionLevelTopText = value;
-                OnPropertyChangedAsync(nameof(PositionLevelsTopText));
+                _positionLevelTop = value;
+                OnPropertyChangedAsync(nameof(PositionLevelTop));
             }
         }
 
-        private double _positionLevelTopText { get; set; }
+        private double _positionLevelTop { get; set; }
 
-        #endregion PositionLevelTopText
+        #endregion PositionLevelTop
 
         #region IsPositionLevelsBottomChecked
 
@@ -308,26 +308,24 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion IsPositionLevelsBottomChecked
 
-        #region PositionLevelBottomText
+        #region PositionLevelBottom
 
-        public double PositionLevelsBottomText
+        public double PositionLevelsBottom
         {
-            get { return _positionLevelBottomText; }
+            get { return _positionLevelBottom; }
             set
             {
-                if (value == _positionLevelBottomText)
+                if (value == _positionLevelBottom)
                     return;
 
-                _positionLevelBottomText = value;
-                OnPropertyChangedAsync(nameof(PositionLevelsBottomText));
+                _positionLevelBottom = value;
+                OnPropertyChangedAsync(nameof(PositionLevelsBottom));
             }
         }
 
-        private double _positionLevelBottomText { get; set; }
+        private double _positionLevelBottom { get; set; }
 
-        #endregion PositionLevelBottomText
-
-        
+        #endregion PositionLevelBottom
 
         #endregion INotifyPropertyChange Member
 
@@ -423,7 +421,7 @@ namespace DialogBeamProperties.ViewModel
             IsPositionRotationChecked = !_selectAll;
             IsPositionHorizontalChecked = !_selectAll;
             IsPositionLevelsTopChecked = !_selectAll;
-            IsPositionLevelsBottomChecked =  !_selectAll;
+            IsPositionLevelsBottomChecked = !_selectAll;
             _selectAll = !_selectAll;
         }
 
@@ -475,15 +473,16 @@ namespace DialogBeamProperties.ViewModel
             _iproperties.IsPositionLevelsTopChecked = IsPositionLevelsTopChecked;
             if (_iproperties.IsPositionLevelsTopChecked)
             {
-                _iproperties.PositionLevelsTopText = PositionLevelsTopText;
+                _iproperties.PositionLevelsTopText = PositionLevelTop;
             }
 
             _iproperties.IsPositionLevelsBottomChecked = IsPositionLevelsBottomChecked;
             if (_iproperties.IsPositionLevelsBottomChecked)
             {
-                _iproperties.PositionLevelsBottomText = PositionLevelsBottomText;
+                _iproperties.PositionLevelsBottomText = PositionLevelsBottom;
             }
         }
+
         private void SaveAttributesData()
         {
             _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
@@ -543,6 +542,7 @@ namespace DialogBeamProperties.ViewModel
                 _iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
+
         #endregion Save Data
 
         #region Update Data
@@ -573,10 +573,10 @@ namespace DialogBeamProperties.ViewModel
             PositionHorizontalText = _iproperties.PositionHorizontalText;
 
             IsPositionLevelsTopChecked = _iproperties.IsPositionLevelsTopChecked;
-            PositionLevelsTopText = _iproperties.PositionLevelsTopText;
+            PositionLevelTop = _iproperties.PositionLevelsTopText;
 
             IsPositionLevelsBottomChecked = _iproperties.IsPositionLevelsBottomChecked;
-            PositionLevelsBottomText = _iproperties.PositionLevelsBottomText;
+            PositionLevelsBottom = _iproperties.PositionLevelsBottomText;
         }
 
         private void SelectedProfile(string obj)
@@ -617,7 +617,6 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Update Data
-
 
         #endregion Private Methods
     }
