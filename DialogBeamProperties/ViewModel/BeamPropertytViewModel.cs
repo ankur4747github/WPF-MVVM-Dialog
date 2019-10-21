@@ -289,7 +289,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Public Methods
 
-        public void SetProtertiesData(IBeamProperties iproperties)
+        public void SetPropertiesData(IBeamProperties iproperties)
         {
             this._iproperties = iproperties;
             UpdateData(iproperties);

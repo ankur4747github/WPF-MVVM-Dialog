@@ -33,16 +33,16 @@ namespace DialogBeamProperties.Model
 
         List<string> PositionOnPlaneComboBox { get; set; }
         string SelectedDataInPositionOnPlaneComboBox { get; set; }
-        string PositionOnPlaneText { get; set; }
+        string PositionOnPlaneText { get; set; } // Hi ankur, this needs to be updated to a double.
 
         bool IsPositionRotationChecked { get; set; }
         List<string> PositionRotationComboBox { get; set; }
         string SelectedDataInPositionRotationComboBox { get; set; }
-        string PositionRotationText { get; set; }
+        string PositionRotationText { get; set; } // Hi ankur, this needs to be updated to a double.
 
         bool IsPositionAtDepthChecked { get; set; }
         List<string> PositionAtDepthComboBox { get; set; }
         string SelectedDataInPositionAtDepthComboBox { get; set; }
-        string PositionAtDepthText { get; set; }
+        string PositionAtDepthText { get; set; } // Hi ankur, this needs to be updated to a double.
     }
 }

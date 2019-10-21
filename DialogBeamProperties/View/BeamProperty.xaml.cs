@@ -21,7 +21,7 @@ namespace DialogBeamProperties
             InitMessenger();
             this.viewModel = viewModel;
             this.DataContext = viewModel;
-            this.viewModel.SetProtertiesData(iproperties);
+            this.viewModel.SetPropertiesData(iproperties);
         }
 
         public IBeamProperties GetPropertiesData()
