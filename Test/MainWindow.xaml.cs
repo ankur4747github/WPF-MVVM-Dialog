@@ -28,12 +28,21 @@ namespace Test
 
             IColumnProperties propColumn = new ColumnProperties();
             SetTestDataIntoColumnProperties(ref propColumn);
+
+            // Hi Ankur, I would like these values (i.e. the column and beam properties)
+            // to be automatically populated from inside the constructor, unless
+            // I pass in a value through the constructor, please
+
+            // Lastly, from a CAD point of view, I am not particularly interested in
+            // whether an item was checked or not. Unless you have a need for it
+            // then can it be removed?
+
             DummyColumnProprtyData(propColumn);
         }
 
         private void DummyColumnProprtyData(IColumnProperties prop)
         {
-            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation());
+            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), new ColumnCreatorDummyImplementation());
             testColumn = new DialogColumnProperties(prop, viewModel);
             testColumn.Closing += TestColumn_Closing;
             testColumn.Show();
@@ -47,7 +56,7 @@ namespace Test
 
         private void DummyBeamPropertyData(IBeamProperties prop)
         {
-            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation());
+            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), new BeamCreatorDummyImplementation());
             testBeam = new DialogBeamProperties.DialogBeamProperties(prop, viewModel);
             testBeam.Closing += TestBeam_Closing;
             testBeam.Show();
@@ -146,9 +155,9 @@ namespace Test
             prop.AttributesFinishText = "AttributesFinish";
             prop.IsAttributesClassChecked = true;
             prop.AttributesClassText = "AttributesClass";
-            prop.PositionOnPlaneText = 121;
-            prop.PositionRotationText = 121;
-            prop.PositionAtDepthText = 121;
+            prop.PositionOnPlaneText = 0;
+            prop.PositionRotationText = 0;
+            prop.PositionAtDepthText = 0;
         }
 
         public void Dispose()
