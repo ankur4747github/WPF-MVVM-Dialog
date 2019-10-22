@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DialogBeamProperties.ViewModel
 {
-    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel
+    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel,IDisposable
     {
         #region Fields
 
@@ -338,7 +338,6 @@ namespace DialogBeamProperties.ViewModel
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
             InitCommand();
-            InitMessenger();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
             this.columnCreator = columnCreator;
@@ -356,13 +355,6 @@ namespace DialogBeamProperties.ViewModel
             SelectProfileButtonCommand = new RelayCommand(new Action<object>(SelectProfileButtonClick));
         }
 
-        private void InitMessenger()
-        {
-            Messenger.Default.Unregister<string>(this,
-                    MessengerToken.SELECTEDPROFILE, SelectedProfile);
-            Messenger.Default.Register<string>(this,
-                MessengerToken.SELECTEDPROFILE, SelectedProfile);
-        }
 
         #endregion Constructor
 
@@ -446,10 +438,20 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectProfileButtonClick(object obj)
         {
+            Messenger.Default.Unregister<string>(this,
+                    MessengerToken.SELECTEDPROFILE, SelectedProfile);
+            Messenger.Default.Register<string>(this,
+                MessengerToken.SELECTEDPROFILE, SelectedProfile);
+
             SelectProfile selectProfile = new SelectProfile();
             selectProfile.SetData(_allProfileFileData, AttributesProfileText);
             selectProfile.ShowDialog();
+
+            Messenger.Default.Unregister<string>(this,
+                    MessengerToken.SELECTEDPROFILE, SelectedProfile);
         }
+
+      
 
         #endregion Button Click
 
@@ -627,8 +629,15 @@ namespace DialogBeamProperties.ViewModel
             NumberingSeriesAssemblyStartNumberText = _iproperties.NumberingSeriesAssemblyStartNumberText;
         }
 
+
+
         #endregion Update Data
 
         #endregion Private Methods
+
+        public void Dispose()
+        {
+            base.Cleanup();
+        }
     }
 }

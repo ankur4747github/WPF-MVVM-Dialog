@@ -133,13 +133,6 @@ namespace DialogBeamProperties.ViewModel
 
         public void SetData(ProfileFileData allProfileFileData, string attributesProfileText)
         {
-            // Hi Ankur
-            // Can you please handle the edge cases where: the attributesProfileText is null or empty?
-            // And also the situation where, if no profile is selected AND ok is pressed, that
-            // something appropriate happens?
-
-            // See this video for the situations we wish to avoid: https://vimeo.com/367950576
-
             var beamdata = allProfileFileData.Beams.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
             var chinadata = allProfileFileData.ChinaProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
             var usimperialdata = allProfileFileData.UsimperialProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
@@ -170,8 +163,11 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            Messenger.Default.Send(SelectedProfile, MessengerToken.SELECTEDPROFILE);
-            Messenger.Default.Send(true, MessengerToken.CLOSESELECTPROFILEWINDOW);
+            if (!string.IsNullOrEmpty(SelectedProfile))
+            {
+                Messenger.Default.Send(SelectedProfile, MessengerToken.SELECTEDPROFILE);
+                Messenger.Default.Send(true, MessengerToken.CLOSESELECTPROFILEWINDOW);
+            }
         }
 
         #endregion Private Methods
