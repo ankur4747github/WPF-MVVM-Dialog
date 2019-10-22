@@ -28,6 +28,15 @@ namespace Test
 
             IColumnProperties propColumn = new ColumnProperties();
             SetTestDataIntoColumnProperties(ref propColumn);
+
+            // Hi Ankur, I would like these values (i.e. the column and beam properties)
+            // to be automatically populated from inside the constructor, unless
+            // I pass in a value through the constructor, please
+
+            // Lastly, from a CAD point of view, I am not particularly interested in
+            // whether an item was checked or not. Unless you have a need for it
+            // then can it be removed?
+
             DummyColumnProprtyData(propColumn);
         }
 
