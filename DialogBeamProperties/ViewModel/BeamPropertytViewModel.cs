@@ -17,6 +17,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly BeamCreator beamCreator;
+
         private IBeamProperties _iproperties { get; set; }
 
         #endregion Fields
@@ -34,6 +36,7 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _isPositionOnPlaneChecked = value;
+
                 OnPropertyChangedAsync(nameof(IsPositionOnPlaneChecked));
             }
         }
@@ -255,7 +258,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter, BeamCreator beamCreator)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
@@ -263,6 +266,7 @@ namespace DialogBeamProperties.ViewModel
             InitMessenger();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
+            this.beamCreator = beamCreator;
         }
 
         private void InitCommand()
@@ -308,7 +312,13 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
+            _iproperties.LoadDataComboBox = LoadDataComboBox;
+            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
             Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
+            beamCreator.CreateBeam(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void ApplyButtonClick(object obj)
@@ -319,7 +329,7 @@ namespace DialogBeamProperties.ViewModel
             SaveAttributesData();
             SavePositionData();
 
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void ModifyButtonClick(object obj)

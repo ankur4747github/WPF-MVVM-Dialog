@@ -17,6 +17,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly ColumnCreator columnCreator;
+
         private IColumnProperties _iproperties { get; set; }
 
         #endregion Fields
@@ -331,7 +333,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, ColumnCreator columnCreator)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
@@ -339,6 +341,7 @@ namespace DialogBeamProperties.ViewModel
             InitMessenger();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
+            this.columnCreator = columnCreator;
         }
 
         private void InitCommand()
@@ -385,6 +388,14 @@ namespace DialogBeamProperties.ViewModel
         private void CloseWindow(object obj)
         {
             Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
+
+            _iproperties.LoadDataComboBox = LoadDataComboBox;
+            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
+
+            columnCreator.CreateColumn(_iproperties.AttributesProfileText, _iproperties.PositionRotationText, _iproperties.PositionLevelsBottomText, _iproperties.PositionLevelsTopText);
         }
 
         private void ApplyButtonClick(object obj)
