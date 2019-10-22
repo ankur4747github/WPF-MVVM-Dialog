@@ -79,7 +79,9 @@
     <Compile Include="CadInterfaces\XDataWriter.cs" />
     <Compile Include="CadInterfaces\XDataWriterDummyImplementation.cs" />
     <Compile Include="Model\Properties\ColumnProperties.cs" />
+    <Compile Include="Model\Properties\StandardColumnPropertiesFactory.cs" />
     <Compile Include="Model\Properties\IColumnProperties.cs" />
+    <Compile Include="Model\Properties\StandardBeamPropertiesFactory.cs" />
     <Compile Include="ViewModel\AbstractViewModel\AbstractPropertyViewModel.cs" />
     <Compile Include="ViewModel\ColumnPropertyViewModel.cs" />
     <Compile Include="ViewModel\SelectProfileViewModel.cs" />
