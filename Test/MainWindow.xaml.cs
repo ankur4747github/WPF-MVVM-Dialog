@@ -146,9 +146,9 @@ namespace Test
             prop.AttributesFinishText = "AttributesFinish";
             prop.IsAttributesClassChecked = true;
             prop.AttributesClassText = "AttributesClass";
-            prop.PositionOnPlaneText = 121;
-            prop.PositionRotationText = 121;
-            prop.PositionAtDepthText = 121;
+            prop.PositionOnPlaneText = 0;
+            prop.PositionRotationText = 0;
+            prop.PositionAtDepthText = 0;
         }
 
         public void Dispose()
