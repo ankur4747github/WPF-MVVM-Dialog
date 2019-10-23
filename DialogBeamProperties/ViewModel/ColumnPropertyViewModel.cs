@@ -700,10 +700,6 @@ namespace DialogBeamProperties.ViewModel
             {
                 SelectedTabIndex = 1;
             }
-            else
-            {
-                SelectedTabIndex = 0;
-            }
         }
 
         private bool IsProfileLevelsValid()
