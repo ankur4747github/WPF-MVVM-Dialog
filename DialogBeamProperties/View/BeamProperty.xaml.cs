@@ -24,11 +24,6 @@ namespace DialogBeamProperties
             this.viewModel.SetPropertiesData(iproperties);
         }
 
-        public IBeamProperties GetPropertiesData()
-        {
-            return viewModel.GetPropertiesData();
-        }
-
         private void InitMessenger()
         {
             Messenger.Default.Unregister<bool>(this,
