@@ -323,8 +323,6 @@ namespace DialogBeamProperties.ViewModel
                 SaveNumberingData();
                 SaveAttributesData();
                 SavePositionData();
-
-                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
             }
         }
 
