@@ -12,12 +12,11 @@ using System.Threading.Tasks;
 
 namespace DialogBeamProperties.ViewModel
 {
-    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel,IDisposable
+    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
         #region Fields
 
         private readonly XDataWriter xDataWriter;
-        private readonly ColumnCreator columnCreator;
 
         private IColumnProperties _iproperties { get; set; }
 
@@ -333,14 +332,13 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, ColumnCreator columnCreator)
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
             InitCommand();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
-            this.columnCreator = columnCreator;
         }
 
         private void InitCommand()
@@ -385,8 +383,6 @@ namespace DialogBeamProperties.ViewModel
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
-
-            columnCreator.CreateColumn(_iproperties.AttributesProfileText, _iproperties.PositionRotationText, _iproperties.PositionLevelsBottomText, _iproperties.PositionLevelsTopText);
         }
 
         private void ApplyButtonClick(object obj)
@@ -396,12 +392,11 @@ namespace DialogBeamProperties.ViewModel
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
-
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
         }
 
         private void ModifyButtonClick(object obj)
         {
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void GetButtonClick(object obj)

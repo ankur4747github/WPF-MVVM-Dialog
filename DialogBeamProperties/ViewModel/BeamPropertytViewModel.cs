@@ -12,12 +12,11 @@ using System.Threading.Tasks;
 
 namespace DialogBeamProperties.ViewModel
 {
-    public class DialogBeamPropertiesViewModel : AbstractPropertyViewModel,IDisposable
+    public class DialogBeamPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
         #region Fields
 
         private readonly XDataWriter xDataWriter;
-        private readonly BeamCreator beamCreator;
 
         private IBeamProperties _iproperties { get; set; }
 
@@ -258,14 +257,13 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter, BeamCreator beamCreator)
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
             InitCommand();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
-            this.beamCreator = beamCreator;
         }
 
         private void InitCommand()
@@ -279,8 +277,6 @@ namespace DialogBeamProperties.ViewModel
             LoadButtonCommand = new RelayCommand(new Action<object>(LoadButtonClick));
             SelectProfileButtonCommand = new RelayCommand(new Action<object>(SelectProfileButtonClick));
         }
-
-
 
         #endregion Constructor
 
@@ -311,7 +307,6 @@ namespace DialogBeamProperties.ViewModel
             SaveAttributesData();
             SavePositionData();
             Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
-            beamCreator.CreateBeam(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void ApplyButtonClick(object obj)
@@ -321,12 +316,11 @@ namespace DialogBeamProperties.ViewModel
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
-
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void ModifyButtonClick(object obj)
         {
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void GetButtonClick(object obj)
@@ -530,8 +524,6 @@ namespace DialogBeamProperties.ViewModel
                 _iproperties.PositionAtDepthText = PositionAtDepthText;
             }
         }
-
-
 
         #endregion Save Data
 
