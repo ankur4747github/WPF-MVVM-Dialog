@@ -700,7 +700,7 @@ namespace DialogBeamProperties.ViewModel
 
         private bool IsProfileLevelsValid()
         {
-            bool valid = new Validations().IsPositionLevelsTopBottomValid(PositionLevelsTop, PositionLevelsBottom);
+            bool valid = new Validator().AreTopAndBottomPositionsValid(PositionLevelsTop, PositionLevelsBottom);
             if (!valid)
             {
                 SetErrorText(PositionLevelErrors);

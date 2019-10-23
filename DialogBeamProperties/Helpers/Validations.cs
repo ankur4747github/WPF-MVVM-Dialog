@@ -1,4 +1,6 @@
-﻿using DialogBeamProperties.Model.ProfileFileData;
+﻿using DialogBeamProperties.Model;
+using DialogBeamProperties.Model.ProfileFileData;
+using DialogBeamProperties.Model.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,7 +74,7 @@ namespace DialogBeamProperties.Helpers
             return false;
         }
 
-        public bool IsPositionLevelsTopBottomValid(double positionLevelsTop, double positionLevelsBottom)
+        public bool AreTopAndBottomPositionsValid(double positionLevelsTop, double positionLevelsBottom)
         {
             return positionLevelsBottom != positionLevelsTop;
         }

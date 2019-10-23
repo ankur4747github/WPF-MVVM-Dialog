@@ -15,8 +15,8 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 {
     public abstract class AbstractPropertyViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        
         #region Fields
+
         protected const string ErrorProfileMessage = "Please enter valid profile.";
         protected const string DefaultBorderColor = "#ABADB3";
         protected const string ErrorBorderColor = "Red";
@@ -426,7 +426,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         private string _attributesClassText { get; set; }
 
-        #endregion
+        #endregion AttributesClassText
 
         #region SelectedTabIndex
 
@@ -719,16 +719,16 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         #endregion Load Profile Files Into List
 
         #region Check Is Data Valid
+
         protected bool IsProfileValid()
         {
-            bool validProfile = false; 
+            bool validProfile = false;
             try
             {
-                
-                validProfile = new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
-                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
-                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
-                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
+                validProfile = new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
+                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
+                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
+                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
                 SetErrorOnScreenIfProfileError(validProfile);
             }
             catch (Exception ex)
@@ -761,9 +761,8 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
             {
                 ErrorText = ErrorText + "\r\n" + error;
             }
-            
         }
-        #endregion
 
+        #endregion Check Is Data Valid
     }
 }
