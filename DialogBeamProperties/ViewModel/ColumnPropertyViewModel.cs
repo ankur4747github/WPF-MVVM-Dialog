@@ -461,6 +461,7 @@ namespace DialogBeamProperties.ViewModel
                 SavePositionData();
 
                 xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+                xDataWriter.ChangeLineRL(_iproperties.PositionLevelsTopText, PositionLevelsBottom);
             }
         }
 

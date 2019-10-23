@@ -8,6 +8,8 @@ namespace DialogBeamProperties.CadInterfaces
 {
     public interface XDataWriter
     {
-        void WriteXDataToLine(string profile, double rotation);     
+        void WriteXDataToLine(string profile, double rotation);
+
+        void ChangeLineRL(double topRL, double bottomRL);
     }
 }
