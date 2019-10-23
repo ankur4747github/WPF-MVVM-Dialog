@@ -316,6 +316,7 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
+
             _iproperties.LoadDataComboBox = LoadDataComboBox;
             _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();

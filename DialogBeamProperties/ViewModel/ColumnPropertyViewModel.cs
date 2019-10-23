@@ -329,6 +329,44 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion PositionLevelsBottom
 
+        #region PositionLevelsBottomBorderColor
+
+        public string PositionLevelsBottomBorderColor
+        {
+            get { return _positionLevelsBottomBorderColor; }
+            set
+            {
+                if (value == _positionLevelsBottomBorderColor)
+                    return;
+
+                _positionLevelsBottomBorderColor = value;
+                OnPropertyChangedAsync(nameof(PositionLevelsBottomBorderColor));
+            }
+        }
+
+        private string _positionLevelsBottomBorderColor = "#ABADB3";
+
+        #endregion PositionLevelsBottomBorderColor
+
+        #region PositionLevelsTopBorderColor
+
+        public string PositionLevelsTopBorderColor
+        {
+            get { return _positionLevelsTopBorderColor; }
+            set
+            {
+                if (value == _positionLevelsTopBorderColor)
+                    return;
+
+                _positionLevelsTopBorderColor = value;
+                OnPropertyChangedAsync(nameof(PositionLevelsTopBorderColor));
+            }
+        }
+
+        private string _positionLevelsTopBorderColor = "#ABADB3";
+
+        #endregion PositionLevelsTopBorderColor
+
         #endregion INotifyPropertyChange Member
 
         #region Constructor

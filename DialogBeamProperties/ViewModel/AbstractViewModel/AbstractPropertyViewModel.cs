@@ -427,6 +427,25 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion AttributesClassText
 
+        #region ProfileBorderColor
+
+        public string ProfileBorderColor
+        {
+            get { return _profileBorderColor; }
+            set
+            {
+                if (value == _profileBorderColor)
+                    return;
+
+                _profileBorderColor = value;
+                OnPropertyChangedAsync(nameof(ProfileBorderColor));
+            }
+        }
+
+        private string _profileBorderColor = "#ABADB3";
+
+        #endregion ProfileBorderColor
+
         #endregion INotifyPropertyChange Member
 
         #region Button Command
