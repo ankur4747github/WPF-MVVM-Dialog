@@ -412,11 +412,6 @@ namespace DialogBeamProperties.ViewModel
             UpdateData(iproperties);
         }
 
-        public IColumnProperties GetPropertiesData()
-        {
-            return _iproperties;
-        }
-
         #endregion Public Methods
 
         #region Private Methods
