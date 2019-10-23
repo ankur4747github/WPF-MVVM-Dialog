@@ -1,6 +1,7 @@
 ﻿using DialogBeamProperties.CadInterfaces;
 using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
+using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.Model.Properties;
 using DialogBeamProperties.View;
@@ -12,8 +13,10 @@ using System.Threading.Tasks;
 
 namespace DialogBeamProperties.ViewModel
 {
-    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel,IDisposable
+    public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
+        private const string PositionLevelErrors = "Position Levels should not be equals.";
+
         #region Fields
 
         private readonly XDataWriter xDataWriter;
@@ -283,6 +286,10 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionLevelTop = value;
+                if (PositionLevelsTop.ToString().Length > 0)
+                {
+                    PositionLevelsTopBorderColor = DefaultBorderColor;
+                }
                 OnPropertyChangedAsync(nameof(PositionLevelsTop));
             }
         }
@@ -321,6 +328,10 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionLevelBottom = value;
+                if (PositionLevelsBottom.ToString().Length > 0)
+                {
+                    PositionLevelsTopBorderColor = DefaultBorderColor;
+                }
                 OnPropertyChangedAsync(nameof(PositionLevelsBottom));
             }
         }
@@ -671,6 +682,48 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Update Data
+
+        #region Validation
+
+        private bool IsAllDataValid()
+        {
+            ErrorText = string.Empty;
+            bool isProfileValid = IsProfileValid();
+            bool isProfileLevelsValid = IsProfileLevelsValid();
+            SelectTab(isProfileValid, isProfileLevelsValid);
+            return isProfileValid && isProfileLevelsValid;
+        }
+
+        private void SelectTab(bool isProfileValid, bool isProfileLevelsValid)
+        {
+            if(isProfileValid && !isProfileLevelsValid)
+            {
+                SelectedTabIndex = 1;
+            }
+            else
+            {
+                SelectedTabIndex = 0;
+            }
+        }
+
+        private bool IsProfileLevelsValid()
+        {
+            bool valid = new Validations().IsPositionLevelsTopBottomValid(PositionLevelsTop, PositionLevelsBottom);
+            if (!valid)
+            {
+                SetErrorText(PositionLevelErrors);
+                PositionLevelsTopBorderColor = ErrorBorderColor;
+                PositionLevelsBottomBorderColor = ErrorBorderColor;
+            }
+            else
+            {
+                PositionLevelsTopBorderColor = DefaultBorderColor;
+                PositionLevelsBottomBorderColor = DefaultBorderColor;
+            }
+            return valid;
+        }
+
+        #endregion Validation
 
         #endregion Private Methods
 

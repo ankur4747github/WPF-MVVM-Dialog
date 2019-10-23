@@ -335,7 +335,7 @@ namespace DialogBeamProperties.ViewModel
             
         }
 
-        
+      
 
         private void ModifyButtonClick(object obj)
         {
@@ -547,7 +547,13 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion Save Data
 
-        
+        #region Validation
+        private bool IsAllDataValid()
+        {
+            ErrorText = string.Empty;
+            return IsProfileValid();
+        }
+        #endregion
 
         #endregion Private Methods
 

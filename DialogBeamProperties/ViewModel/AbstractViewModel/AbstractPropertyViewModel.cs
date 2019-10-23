@@ -17,7 +17,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
     {
         
         #region Fields
-        protected const string ErrorProfileMessage = "Profile is invalid, Please select valid profile";
+        protected const string ErrorProfileMessage = "Please enter valid profile.";
         protected const string DefaultBorderColor = "#ABADB3";
         protected const string ErrorBorderColor = "Red";
         protected bool _selectAll = false;
@@ -426,7 +426,26 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         private string _attributesClassText { get; set; }
 
-        #endregion AttributesClassText
+        #endregion
+
+        #region SelectedTabIndex
+
+        public int SelectedTabIndex
+        {
+            get { return _selectedTabIndex; }
+            set
+            {
+                if (value == _selectedTabIndex)
+                    return;
+
+                _selectedTabIndex = value;
+                OnPropertyChangedAsync(nameof(SelectedTabIndex));
+            }
+        }
+
+        private int _selectedTabIndex = 0;
+
+        #endregion SelectedTabIndex
 
         #region ErrorText
 
@@ -700,38 +719,49 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         #endregion Load Profile Files Into List
 
         #region Check Is Data Valid
-        protected bool IsAllDataValid()
+        protected bool IsProfileValid()
         {
+            bool validProfile = false; 
             try
             {
-                ErrorText = string.Empty;
-                bool validProfile = new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
-                                    new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
-                                    new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
-                                    new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
+                
+                validProfile = new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
                 SetErrorOnScreenIfProfileError(validProfile);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            return false;
+            return validProfile;
         }
 
         protected void SetErrorOnScreenIfProfileError(bool validProfile)
         {
             if (!validProfile)
             {
-                if (string.IsNullOrEmpty(ErrorText))
-                {
-                    ErrorText = ErrorProfileMessage;
-                }
-                else
-                {
-                    ErrorText = ErrorText + "\r\n" + "Profile is invalid, Please select valid profile";
-                }
+                SetErrorText(ErrorProfileMessage);
                 ProfileBorderColor = ErrorBorderColor;
             }
+            else
+            {
+                ProfileBorderColor = DefaultBorderColor;
+            }
+        }
+
+        protected void SetErrorText(string error)
+        {
+            if (string.IsNullOrEmpty(ErrorText))
+            {
+                ErrorText = error;
+            }
+            else
+            {
+                ErrorText = ErrorText + "\r\n" + error;
+            }
+            
         }
         #endregion
 

@@ -45,6 +45,7 @@
             </ComboBox>
         </Grid>
         <TabControl VerticalAlignment="Stretch"
+                    SelectedIndex="{Binding SelectedTabIndex, Mode=OneWay}"
                     Grid.Row="1">
             <TabItem Header="Attributes"
                      VerticalAlignment="Stretch">

@@ -15,11 +15,13 @@ namespace DialogBeamProperties.Helpers
         {
             try
             {
-                var beamdata = profiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
-
-                if (beamdata.Count() > 0 )
+                if (!string.IsNullOrEmpty(attributesProfileText))
                 {
-                    return true;
+                    var beamdata = profiles.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
+                    if (beamdata.Count() > 0)
+                    {
+                        return true;
+                    }
                 }
             }
             catch (Exception ex)
@@ -27,6 +29,11 @@ namespace DialogBeamProperties.Helpers
                 MessageBox.Show(ex.Message);
             }
             return false;
+        }
+
+        public bool IsPositionLevelsTopBottomValid(double positionLevelsTop, double positionLevelsBottom)
+        {
+            return positionLevelsBottom != positionLevelsTop;
         }
     }
 }
