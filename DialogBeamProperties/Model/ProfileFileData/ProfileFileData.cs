@@ -12,29 +12,6 @@ namespace DialogBeamProperties.Model.ProfileFileData
         public List<ProfileData> UsimperialProfiles = new List<ProfileData>();
         public List<ProfileData> UsmetricProfiles = new List<ProfileData>();
 
-        public bool IsValidProfile(string attributesProfileText)
-        {
-            try
-            {
-                var beamdata = Beams.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
-                var chinadata = ChinaProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
-                var usimperialdata = UsimperialProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
-                var usmetricdata = UsmetricProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
-
-                if (beamdata.Count() > 0 ||
-                    chinadata.Count() > 0 ||
-                    usimperialdata.Count() > 0 ||
-                    usmetricdata.Count() > 0)
-                {
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return false;
-        }
     }
 
     public class ProfileData

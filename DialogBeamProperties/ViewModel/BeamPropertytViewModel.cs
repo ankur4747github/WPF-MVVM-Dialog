@@ -1,6 +1,7 @@
 ﻿using DialogBeamProperties.CadInterfaces;
 using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
+using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model;
 using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.View;
@@ -9,11 +10,13 @@ using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DialogBeamProperties.ViewModel
 {
     public class DialogBeamPropertiesViewModel : AbstractPropertyViewModel,IDisposable
     {
+        
         #region Fields
 
         private readonly XDataWriter xDataWriter;
@@ -305,26 +308,34 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
-            Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
-            beamCreator.CreateBeam(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+                Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
+                beamCreator.CreateBeam(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            }
         }
 
         private void ApplyButtonClick(object obj)
         {
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
 
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
-
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            }
+            
         }
+
+        
 
         private void ModifyButtonClick(object obj)
         {
@@ -535,6 +546,8 @@ namespace DialogBeamProperties.ViewModel
 
 
         #endregion Save Data
+
+        
 
         #endregion Private Methods
 

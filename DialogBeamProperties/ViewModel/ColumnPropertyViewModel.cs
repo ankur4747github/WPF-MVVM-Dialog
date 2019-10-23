@@ -416,26 +416,32 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
-            Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
+            if (IsAllDataValid())
+            {
+                Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
 
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
 
-            columnCreator.CreateColumn(_iproperties.AttributesProfileText, _iproperties.PositionRotationText, _iproperties.PositionLevelsBottomText, _iproperties.PositionLevelsTopText);
+                columnCreator.CreateColumn(_iproperties.AttributesProfileText, _iproperties.PositionRotationText, _iproperties.PositionLevelsBottomText, _iproperties.PositionLevelsTopText);
+            }
         }
 
         private void ApplyButtonClick(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
 
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+            }
         }
 
         private void ModifyButtonClick(object obj)

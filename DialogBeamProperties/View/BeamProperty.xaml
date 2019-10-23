@@ -292,7 +292,7 @@
         </TabControl>
         <Grid Grid.Row="2"
               Margin="0,5">
-            <TextBlock Text="Error - Profile is not valid. Please select valid profile"
+            <TextBlock Text="{Binding ErrorText}"
                        Foreground="Red"
                        FontSize="14">
             </TextBlock>
