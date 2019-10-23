@@ -361,6 +361,7 @@
                     Margin="5,0">
             </Button>
             <Button Content="Modify"
+                    Command="{Binding ModifyButtonCommand}"
                     Grid.Column="2"
                     Margin="5,0">
             </Button>

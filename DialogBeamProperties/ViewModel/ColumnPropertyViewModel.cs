@@ -446,13 +446,22 @@ namespace DialogBeamProperties.ViewModel
                 SaveAttributesData();
                 SavePositionData();
 
-                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
             }
         }
 
         private void ModifyButtonClick(object obj)
         {
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            }
         }
 
         private void GetButtonClick(object obj)
