@@ -1,6 +1,7 @@
 ﻿using DialogBeamProperties.CadInterfaces;
 using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
+using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.Model.Properties;
 using DialogBeamProperties.View;
@@ -14,6 +15,8 @@ namespace DialogBeamProperties.ViewModel
 {
     public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
+        private const string PositionLevelErrors = "Position Levels should not be equals.";
+
         #region Fields
 
         private readonly XDataWriter xDataWriter;
@@ -282,6 +285,10 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionLevelTop = value;
+                if (PositionLevelsTop.ToString().Length > 0)
+                {
+                    PositionLevelsTopBorderColor = DefaultBorderColor;
+                }
                 OnPropertyChangedAsync(nameof(PositionLevelsTop));
             }
         }
@@ -320,6 +327,10 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionLevelBottom = value;
+                if (PositionLevelsBottom.ToString().Length > 0)
+                {
+                    PositionLevelsTopBorderColor = DefaultBorderColor;
+                }
                 OnPropertyChangedAsync(nameof(PositionLevelsBottom));
             }
         }
@@ -327,6 +338,44 @@ namespace DialogBeamProperties.ViewModel
         private double _positionLevelBottom { get; set; }
 
         #endregion PositionLevelsBottom
+
+        #region PositionLevelsBottomBorderColor
+
+        public string PositionLevelsBottomBorderColor
+        {
+            get { return _positionLevelsBottomBorderColor; }
+            set
+            {
+                if (value == _positionLevelsBottomBorderColor)
+                    return;
+
+                _positionLevelsBottomBorderColor = value;
+                OnPropertyChangedAsync(nameof(PositionLevelsBottomBorderColor));
+            }
+        }
+
+        private string _positionLevelsBottomBorderColor = "#ABADB3";
+
+        #endregion PositionLevelsBottomBorderColor
+
+        #region PositionLevelsTopBorderColor
+
+        public string PositionLevelsTopBorderColor
+        {
+            get { return _positionLevelsTopBorderColor; }
+            set
+            {
+                if (value == _positionLevelsTopBorderColor)
+                    return;
+
+                _positionLevelsTopBorderColor = value;
+                OnPropertyChangedAsync(nameof(PositionLevelsTopBorderColor));
+            }
+        }
+
+        private string _positionLevelsTopBorderColor = "#ABADB3";
+
+        #endregion PositionLevelsTopBorderColor
 
         #endregion INotifyPropertyChange Member
 
@@ -376,22 +425,29 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
-            Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
-
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
+            if (IsAllDataValid())
+            {
+                Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+            }
         }
 
         private void ApplyButtonClick(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+            }
         }
 
         private void ModifyButtonClick(object obj)
@@ -622,6 +678,44 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Update Data
+
+        #region Validation
+
+        private bool IsAllDataValid()
+        {
+            ErrorText = string.Empty;
+            bool isProfileValid = IsProfileValid();
+            bool isProfileLevelsValid = IsProfileLevelsValid();
+            SelectTab(isProfileValid, isProfileLevelsValid);
+            return isProfileValid && isProfileLevelsValid;
+        }
+
+        private void SelectTab(bool isProfileValid, bool isProfileLevelsValid)
+        {
+            if (isProfileValid && !isProfileLevelsValid)
+            {
+                SelectedTabIndex = 1;
+            }
+        }
+
+        private bool IsProfileLevelsValid()
+        {
+            bool valid = new Validations().IsPositionLevelsTopBottomValid(PositionLevelsTop, PositionLevelsBottom);
+            if (!valid)
+            {
+                SetErrorText(PositionLevelErrors);
+                PositionLevelsTopBorderColor = ErrorBorderColor;
+                PositionLevelsBottomBorderColor = ErrorBorderColor;
+            }
+            else
+            {
+                PositionLevelsTopBorderColor = DefaultBorderColor;
+                PositionLevelsBottomBorderColor = DefaultBorderColor;
+            }
+            return valid;
+        }
+
+        #endregion Validation
 
         #endregion Private Methods
 

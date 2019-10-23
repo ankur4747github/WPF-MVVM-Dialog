@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 
 namespace DialogBeamProperties.Model.ProfileFileData
 {
@@ -8,6 +11,7 @@ namespace DialogBeamProperties.Model.ProfileFileData
         public List<ProfileData> ChinaProfiles = new List<ProfileData>();
         public List<ProfileData> UsimperialProfiles = new List<ProfileData>();
         public List<ProfileData> UsmetricProfiles = new List<ProfileData>();
+
     }
 
     public class ProfileData

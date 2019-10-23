@@ -19,6 +19,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Margin="0,0,0,10">
@@ -44,6 +45,7 @@
             </ComboBox>
         </Grid>
         <TabControl VerticalAlignment="Stretch"
+                    SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}"
                     Grid.Row="1">
             <TabItem Header="Attributes"
                      VerticalAlignment="Stretch">
@@ -153,6 +155,7 @@
                                 <TextBox Grid.Column="1"
                                          ToolTip="Need At Least 2 Character"
                                          Text="{Binding AttributesProfileText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                         BorderBrush="{Binding ProfileBorderColor, Mode=OneWay}"
                                          Margin="15,0,5,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -301,10 +304,11 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                     Text="{Binding PositionLevelsTop,Mode=TwoWay}"
-                                     Margin="15,0,0,0"
-                                     HorizontalAlignment="Stretch"
-                                     VerticalAlignment="Center">
+                                         Text="{Binding PositionLevelsTop,Mode=TwoWay}"
+                                         BorderBrush="{Binding PositionLevelsTopBorderColor, Mode=OneWay}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
                                 </TextBox>
                             </Grid>
                             <Grid Margin="0,5">
@@ -317,10 +321,11 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                     Text="{Binding PositionLevelsBottom,Mode=TwoWay}"
-                                     Margin="15,0,0,0"
-                                     HorizontalAlignment="Stretch"
-                                     VerticalAlignment="Center">
+                                         Text="{Binding PositionLevelsBottom,Mode=TwoWay}"
+                                         BorderBrush="{Binding PositionLevelsBottomBorderColor, Mode=OneWay}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
                                 </TextBox>
                             </Grid>
                         </StackPanel>
@@ -328,10 +333,17 @@
                 </StackPanel>
             </TabItem>
         </TabControl>
+        <Grid Grid.Row="2"
+              Margin="0,5">
+            <TextBlock Text="{Binding ErrorText}"
+                       Foreground="Red"
+                       FontSize="14">
+            </TextBlock>
+        </Grid>
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Bottom"
               Margin="0,10"
-              Grid.Row="2">
+              Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40*"></ColumnDefinition>
                 <ColumnDefinition Width="70*"></ColumnDefinition>

@@ -19,6 +19,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Margin="0,0,0,10">
@@ -153,6 +154,7 @@
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesProfileText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          Margin="15,0,5,0"
+                                         BorderBrush="{Binding ProfileBorderColor, Mode=OneWay}"
                                          ToolTip="Need At Least 2 Character"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -288,10 +290,17 @@
                 </GroupBox>
             </TabItem>
         </TabControl>
+        <Grid Grid.Row="2"
+              Margin="0,5">
+            <TextBlock Text="{Binding ErrorText}"
+                       Foreground="Red"
+                       FontSize="14">
+            </TextBlock>
+        </Grid>
         <Grid HorizontalAlignment="Stretch"
               VerticalAlignment="Bottom"
               Margin="0,10"
-              Grid.Row="2">
+              Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40*"></ColumnDefinition>
                 <ColumnDefinition Width="70*"></ColumnDefinition>

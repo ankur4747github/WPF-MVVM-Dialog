@@ -28,7 +28,7 @@ namespace Test
 
         private void DummyColumnProprtyData(IColumnProperties prop)
         {
-            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), new ColumnCreatorDummyImplementation());
+            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation());
             testColumn = new DialogColumnProperties(prop, viewModel);
             testColumn.Closing += TestColumn_Closing;
             testColumn.Show();
@@ -42,7 +42,7 @@ namespace Test
 
         private void DummyBeamPropertyData(IBeamProperties prop)
         {
-            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), new BeamCreatorDummyImplementation());
+            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation());
             testBeam = new DialogBeamProperties.DialogBeamProperties(prop, viewModel);
             testBeam.Closing += TestBeam_Closing;
             testBeam.Show();

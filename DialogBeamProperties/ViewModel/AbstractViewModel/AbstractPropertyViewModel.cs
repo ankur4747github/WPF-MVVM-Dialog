@@ -1,4 +1,4 @@
-﻿using DialogBeamProperties.Model;
+﻿using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model.ProfileFileData;
 using GalaSoft.MvvmLight;
 using Newtonsoft.Json.Linq;
@@ -15,10 +15,11 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 {
     public abstract class AbstractPropertyViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        #region Fields
-
         
-
+        #region Fields
+        protected const string ErrorProfileMessage = "Please enter valid profile.";
+        protected const string DefaultBorderColor = "#ABADB3";
+        protected const string ErrorBorderColor = "Red";
         protected bool _selectAll = false;
         protected ProfileFileData _allProfileFileData { get; set; }
 
@@ -303,7 +304,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesProfileText = value;
-
+                ProfileBorderColor = DefaultBorderColor;
                 IsSelectProfileButtonEnable = AttributesProfileText.Trim().Length > 1;
                 OnPropertyChangedAsync(nameof(AttributesProfileText));
             }
@@ -425,7 +426,84 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         private string _attributesClassText { get; set; }
 
-        #endregion AttributesClassText
+        #endregion
+
+        #region SelectedTabIndex
+
+        public int SelectedTabIndex
+        {
+            get { return _selectedTabIndex; }
+            set
+            {
+                if (value == _selectedTabIndex)
+                    return;
+
+                _selectedTabIndex = value;
+                OnPropertyChangedAsync(nameof(SelectedTabIndex));
+            }
+        }
+
+        private int _selectedTabIndex = 0;
+
+        #endregion SelectedTabIndex
+
+        #region ErrorText
+
+        public string ErrorText
+        {
+            get { return _errorText; }
+            set
+            {
+                if (value == _errorText)
+                    return;
+
+                _errorText = value;
+                IsErrorVisible = ErrorText.Trim().Length > 0;
+                OnPropertyChangedAsync(nameof(ErrorText));
+            }
+        }
+
+        private string _errorText { get; set; }
+
+        #endregion ErrorText
+
+        #region IsErrorVisible
+
+        public bool IsErrorVisible
+        {
+            get { return _isErrorVisible; }
+            set
+            {
+                if (value == _isErrorVisible)
+                    return;
+
+                _isErrorVisible = value;
+                OnPropertyChangedAsync(nameof(IsErrorVisible));
+            }
+        }
+
+        private bool _isErrorVisible { get; set; }
+
+        #endregion IsErrorVisible
+
+        #region ProfileBorderColor
+
+        public string ProfileBorderColor
+        {
+            get { return _profileBorderColor; }
+            set
+            {
+                if (value == _profileBorderColor)
+                    return;
+
+                _profileBorderColor = value;
+                OnPropertyChangedAsync(nameof(ProfileBorderColor));
+            }
+        }
+
+        private string _profileBorderColor = DefaultBorderColor;
+
+        #endregion ProfileBorderColor
 
         #endregion INotifyPropertyChange Member
 
@@ -640,6 +718,52 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion Load Profile Files Into List
 
-       
+        #region Check Is Data Valid
+        protected bool IsProfileValid()
+        {
+            bool validProfile = false; 
+            try
+            {
+                
+                validProfile = new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
+                               new Validations().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
+                SetErrorOnScreenIfProfileError(validProfile);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return validProfile;
+        }
+
+        protected void SetErrorOnScreenIfProfileError(bool validProfile)
+        {
+            if (!validProfile)
+            {
+                SetErrorText(ErrorProfileMessage);
+                ProfileBorderColor = ErrorBorderColor;
+            }
+            else
+            {
+                ProfileBorderColor = DefaultBorderColor;
+            }
+        }
+
+        protected void SetErrorText(string error)
+        {
+            if (string.IsNullOrEmpty(ErrorText))
+            {
+                ErrorText = error;
+            }
+            else
+            {
+                ErrorText = ErrorText + "\r\n" + error;
+            }
+            
+        }
+        #endregion
+
     }
 }

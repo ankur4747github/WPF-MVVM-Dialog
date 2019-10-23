@@ -1,6 +1,7 @@
 ﻿using DialogBeamProperties.CadInterfaces;
 using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
+using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model;
 using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.View;
@@ -9,6 +10,7 @@ using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DialogBeamProperties.ViewModel
 {
@@ -301,21 +303,29 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
-            Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+                Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
+            }
         }
 
         private void ApplyButtonClick(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            }
         }
 
         private void ModifyButtonClick(object obj)
@@ -526,6 +536,16 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Save Data
+
+        #region Validation
+
+        private bool IsAllDataValid()
+        {
+            ErrorText = string.Empty;
+            return IsProfileValid();
+        }
+
+        #endregion Validation
 
         #endregion Private Methods
 
