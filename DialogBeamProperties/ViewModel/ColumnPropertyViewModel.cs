@@ -719,17 +719,25 @@ namespace DialogBeamProperties.ViewModel
 
         private bool IsProfileLevelsValid()
         {
-            bool valid = new Validator().AreTopAndBottomPositionsValid(PositionLevelsTop, PositionLevelsBottom);
-            if (!valid)
+            bool valid = false;
+            if (IsPositionLevelsTopChecked && IsPositionLevelsBottomChecked)
             {
-                SetErrorText(PositionLevelErrors);
-                PositionLevelsTopBorderColor = ErrorBorderColor;
-                PositionLevelsBottomBorderColor = ErrorBorderColor;
+                valid = new Validator().AreTopAndBottomPositionsValid(PositionLevelsTop, PositionLevelsBottom);
+                if (!valid)
+                {
+                    SetErrorText(PositionLevelErrors);
+                    PositionLevelsTopBorderColor = ErrorBorderColor;
+                    PositionLevelsBottomBorderColor = ErrorBorderColor;
+                }
+                else
+                {
+                    PositionLevelsTopBorderColor = DefaultBorderColor;
+                    PositionLevelsBottomBorderColor = DefaultBorderColor;
+                }
             }
             else
             {
-                PositionLevelsTopBorderColor = DefaultBorderColor;
-                PositionLevelsBottomBorderColor = DefaultBorderColor;
+                valid = true;
             }
             return valid;
         }
