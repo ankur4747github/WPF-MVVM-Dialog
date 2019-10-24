@@ -20,7 +20,6 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
-        private readonly ColumnCreator columnCreator;
 
         private IColumnProperties _iproperties { get; set; }
 
@@ -382,14 +381,13 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, ColumnCreator columnCreator)
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
             InitCommand();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
-            this.columnCreator = columnCreator;
         }
 
         private void InitCommand()
@@ -430,14 +428,11 @@ namespace DialogBeamProperties.ViewModel
             if (IsAllDataValid())
             {
                 Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
-
                 _iproperties.LoadDataComboBox = LoadDataComboBox;
                 _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
                 SaveNumberingData();
                 SaveAttributesData();
                 SavePositionData();
-
-                columnCreator.CreateColumn(_iproperties.AttributesProfileText, _iproperties.PositionRotationText, _iproperties.PositionLevelsBottomText, _iproperties.PositionLevelsTopText);
             }
         }
 
@@ -457,6 +452,7 @@ namespace DialogBeamProperties.ViewModel
 
         private void ModifyButtonClick(object obj)
         {
+            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
         }
 
         private void GetButtonClick(object obj)
@@ -696,7 +692,7 @@ namespace DialogBeamProperties.ViewModel
 
         private void SelectTab(bool isProfileValid, bool isProfileLevelsValid)
         {
-            if(isProfileValid && !isProfileLevelsValid)
+            if (isProfileValid && !isProfileLevelsValid)
             {
                 SelectedTabIndex = 1;
             }
@@ -704,7 +700,7 @@ namespace DialogBeamProperties.ViewModel
 
         private bool IsProfileLevelsValid()
         {
-            bool valid = new Validations().IsPositionLevelsTopBottomValid(PositionLevelsTop, PositionLevelsBottom);
+            bool valid = new Validator().AreTopAndBottomPositionsValid(PositionLevelsTop, PositionLevelsBottom);
             if (!valid)
             {
                 SetErrorText(PositionLevelErrors);

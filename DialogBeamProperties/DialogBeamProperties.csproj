@@ -72,10 +72,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadInterfaces\BeamCreator.cs" />
-    <Compile Include="CadInterfaces\BeamCreatorDummyImplementation.cs" />
-    <Compile Include="CadInterfaces\ColumnCreator.cs" />
-    <Compile Include="CadInterfaces\ColumnCreatorDummyImplementation.cs" />
     <Compile Include="CadInterfaces\XDataWriter.cs" />
     <Compile Include="CadInterfaces\XDataWriterDummyImplementation.cs" />
     <Compile Include="Helpers\Validations.cs" />
