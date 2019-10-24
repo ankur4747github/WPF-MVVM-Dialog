@@ -3,13 +3,11 @@ using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
 using DialogBeamProperties.Helpers;
 using DialogBeamProperties.Model;
-using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.View;
 using DialogBeamProperties.ViewModel.AbstractViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace DialogBeamProperties.ViewModel
@@ -262,15 +260,14 @@ namespace DialogBeamProperties.ViewModel
         public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
         {
             LoadDataComboBox = new List<string>();
-            _allProfileFileData = new ProfileFileData();
             InitCommand();
-            Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
         }
 
         private void InitCommand()
         {
             ButtonCommand = new RelayCommand(new Action<object>(CloseWindow));
+            OkButtonCommand = new RelayCommand(new Action<object>(OkButtonClick));
             ApplyButtonCommand = new RelayCommand(new Action<object>(ApplyButtonClick));
             ModifyButtonCommand = new RelayCommand(new Action<object>(ModifyButtonClick));
             GetButtonCommand = new RelayCommand(new Action<object>(GetButtonClick));
@@ -278,7 +275,10 @@ namespace DialogBeamProperties.ViewModel
             SaveButtonCommand = new RelayCommand(new Action<object>(SaveButtonClick));
             LoadButtonCommand = new RelayCommand(new Action<object>(LoadButtonClick));
             SelectProfileButtonCommand = new RelayCommand(new Action<object>(SelectProfileButtonClick));
+            EnterKeyCommand = new RelayCommand(new Action<object>(ProfileEnterClick));
         }
+
+      
 
         #endregion Constructor
 
@@ -303,27 +303,32 @@ namespace DialogBeamProperties.ViewModel
 
         private void CloseWindow(object obj)
         {
+            Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
+        }
+
+        private void OkButtonClick(object obj)
+        {
+            _iproperties.LoadDataComboBox = LoadDataComboBox;
+            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
             if (IsAllDataValid())
             {
-                _iproperties.LoadDataComboBox = LoadDataComboBox;
-                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-                SaveNumberingData();
-                SaveAttributesData();
-                SavePositionData();
                 Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
             }
         }
 
         private void ApplyButtonClick(object obj)
         {
+            _iproperties.LoadDataComboBox = LoadDataComboBox;
+            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
+
             if (IsAllDataValid())
             {
-                _iproperties.LoadDataComboBox = LoadDataComboBox;
-                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-                SaveNumberingData();
-                SaveAttributesData();
-                SavePositionData();
-
                 xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
             }
         }
@@ -370,13 +375,20 @@ namespace DialogBeamProperties.ViewModel
                 MessengerToken.SELECTEDPROFILE, SelectedProfile);
 
             SelectProfile selectProfile = new SelectProfile();
-            selectProfile.SetData(_allProfileFileData, AttributesProfileText);
+            selectProfile.SetData(AttributesProfileText);
             selectProfile.ShowDialog();
 
             Messenger.Default.Unregister<string>(this,
                   MessengerToken.SELECTEDPROFILE, SelectedProfile);
         }
 
+        private void ProfileEnterClick(object obj)
+        {
+            if (AttributesProfileText.Trim().Length > 1)
+            {
+                SelectProfileButtonClick(obj);
+            }
+        }
         #endregion Button Click
 
         #region Update Data
@@ -543,6 +555,21 @@ namespace DialogBeamProperties.ViewModel
         {
             ErrorText = string.Empty;
             return IsProfileValid();
+        }
+
+        private bool IsProfileValid()
+        {
+            bool validProfile = false;
+            try
+            {
+                validProfile = new Validator().IsValidProfile(_iproperties);
+                SetErrorOnScreenIfProfileError(validProfile);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return validProfile;
         }
 
         #endregion Validation

@@ -43,9 +43,9 @@ namespace DialogBeamProperties.View
             this.Close();
         }
 
-        internal void SetData(ProfileFileData allProfileFileData, string attributesProfileText)
+        internal void SetData(string attributesProfileText)
         {
-            viewModel.SetData(allProfileFileData, attributesProfileText);
+            viewModel.SetData(attributesProfileText);
         }
 
         public void Dispose()

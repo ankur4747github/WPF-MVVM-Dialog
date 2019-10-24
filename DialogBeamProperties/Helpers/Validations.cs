@@ -2,12 +2,8 @@
 using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.Model.Properties;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using static DialogBeamProperties.Model.ProfileFileData.ProfileFileData;
 
 namespace DialogBeamProperties.Helpers
 {
@@ -40,28 +36,35 @@ namespace DialogBeamProperties.Helpers
 
     public class Validator
     {
-        // Data must be preloaded for this to work.
-        // You could possibly store this is a static variable, to
-        // prevent the reloading of already existing data?
+        public bool IsValidProfile(IBeamProperties iproperties)
+        {
+            return IsValidProfile(iproperties.AttributesProfileText);
+        }
 
-        //public bool IsValid(IColumnProperties columnProperties)
-        //{
-        //    return IsValidProfile(columnProperties.AttributesProfileText) && AreTopAndBottomPositionsValid(columnProperties.PositionLevelsTopText, columnProperties.PositionLevelsBottomText);
-        //}
+        public bool IsValidProfile(IColumnProperties iproperties)
+        {
+            return IsValidProfile(iproperties.AttributesProfileText);
+        }
 
-        //public bool IsValid(IBeamProperties beamProperties)
-        //{
-        //    return IsValidProfile(beamProperties.AttributesProfileText);
-        //}
+        public bool IsValidProfileAndTopAndBottomPositions(IColumnProperties iproperties)
+        {
+            return IsValidProfile(iproperties.AttributesProfileText) &&
+                   AreTopAndBottomPositionsValid(iproperties.PositionLevelsTopText, iproperties.PositionLevelsBottomText);
+        }
 
-        public bool IsValidProfile(string attributesProfileText, List<ProfileData> profiles)
+        public bool IsValidProfile(string attributesProfileText)
         {
             try
             {
+                var profiles = ProfileFileData.Instance;
                 if (!string.IsNullOrEmpty(attributesProfileText))
                 {
-                    var beamdata = profiles.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
-                    if (beamdata.Count() > 0)
+                    var beams = profiles.Beams.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
+                    var chinaProfiles = profiles.ChinaProfiles.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
+                    var usimperialProfiles = profiles.UsimperialProfiles.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
+                    var usmetricProfiles = profiles.UsmetricProfiles.Where(i => i.Profile.ToUpper().Equals(attributesProfileText.ToUpper()));
+                    if (beams.Count() > 0 || chinaProfiles.Count() > 0 ||
+                        usimperialProfiles.Count() > 0 || usmetricProfiles.Count() > 0)
                     {
                         return true;
                     }

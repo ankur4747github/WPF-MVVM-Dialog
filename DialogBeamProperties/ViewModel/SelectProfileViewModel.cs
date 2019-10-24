@@ -131,8 +131,9 @@ namespace DialogBeamProperties.ViewModel
 
         #region Public Methods
 
-        public void SetData(ProfileFileData allProfileFileData, string attributesProfileText)
+        public void SetData(string attributesProfileText)
         {
+            ProfileFileData allProfileFileData = ProfileFileData.Instance;
             var beamdata = allProfileFileData.Beams.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
             var chinadata = allProfileFileData.ChinaProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));
             var usimperialdata = allProfileFileData.UsimperialProfiles.Where(i => i.Profile.ToUpper().StartsWith(attributesProfileText.ToUpper()));

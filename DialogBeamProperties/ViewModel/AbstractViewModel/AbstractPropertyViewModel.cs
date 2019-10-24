@@ -1,14 +1,8 @@
-﻿using DialogBeamProperties.Helpers;
-using DialogBeamProperties.Model.ProfileFileData;
-using GalaSoft.MvvmLight;
-using Newtonsoft.Json.Linq;
+﻿using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Windows;
 using System.Windows.Input;
 
 namespace DialogBeamProperties.ViewModel.AbstractViewModel
@@ -21,7 +15,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         protected const string DefaultBorderColor = "#ABADB3";
         protected const string ErrorBorderColor = "Red";
         protected bool _selectAll = false;
-        protected ProfileFileData _allProfileFileData { get; set; }
 
         #endregion Fields
 
@@ -527,6 +520,43 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion Close Button Command
 
+        #region OK Buttom Command
+
+        private ICommand _okButtonCommand;
+
+        public ICommand OkButtonCommand
+        {
+            get
+            {
+                return _okButtonCommand;
+            }
+            set
+            {
+                _okButtonCommand = value;
+            }
+        }
+
+        #endregion OK Buttom Command
+
+        #region EnterKeyCommand 
+
+        private ICommand _enterKeyCommand;
+
+        public ICommand EnterKeyCommand
+        {
+            get
+            {
+                return _enterKeyCommand;
+            }
+            set
+            {
+                _enterKeyCommand = value;
+            }
+        }
+
+        #endregion OK Buttom Command
+
+
         #region Apply Buttom Command
 
         private ICommand _applyButtonCommand;
@@ -676,67 +706,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion PropertyChanged
 
-        #region Load Profile Files Into List
-
-        protected void LoadProfileFiles()
-        {
-            string temp = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            if (File.Exists(Path.Combine(temp, "Files", "Profile", "beams.json")))
-            {
-                LoadFiles(Path.Combine(temp, "Files", "Profile", "beams.json"), ref _allProfileFileData.Beams);
-            }
-
-            if (File.Exists(Path.Combine(temp, "Files", "Profile", "china-profiles.json")))
-            {
-                LoadFiles(Path.Combine(temp, "Files", "Profile", "china-profiles.json"), ref _allProfileFileData.ChinaProfiles);
-            }
-
-            if (File.Exists(Path.Combine(temp, "Files", "Profile", "usimperial-profiles.json")))
-            {
-                LoadFiles(Path.Combine(temp, "Files", "Profile", "usimperial-profiles.json"), ref _allProfileFileData.UsimperialProfiles);
-            }
-
-            if (File.Exists(Path.Combine(temp, "Files", "Profile", "usmetric-profiles.json")))
-            {
-                LoadFiles(Path.Combine(temp, "Files", "Profile", "usmetric-profiles.json"), ref _allProfileFileData.UsmetricProfiles);
-            }
-        }
-
-        protected void LoadFiles(string filePath, ref List<ProfileData> list)
-        {
-            try
-            {
-                string json = File.ReadAllText(filePath);
-                JArray jsonArray = JArray.Parse(json);
-                list = jsonArray.ToObject<List<ProfileData>>();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        #endregion Load Profile Files Into List
-
         #region Check Is Data Valid
-
-        protected bool IsProfileValid()
-        {
-            bool validProfile = false;
-            try
-            {
-                validProfile = new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.Beams) ||
-                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.ChinaProfiles) ||
-                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.UsimperialProfiles) ||
-                               new Validator().IsValidProfile(AttributesProfileText, _allProfileFileData.UsmetricProfiles);
-                SetErrorOnScreenIfProfileError(validProfile);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return validProfile;
-        }
 
         protected void SetErrorOnScreenIfProfileError(bool validProfile)
         {
