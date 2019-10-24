@@ -20,6 +20,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly IColumnProperties localColumnProperties;
+        private readonly IColumnProperties globaColumnProperties;
 
         private IColumnProperties _iproperties { get; set; }
 
@@ -381,13 +383,15 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, IColumnProperties localColumnProperties, IColumnProperties globaColumnProperties)
         {
             LoadDataComboBox = new List<string>();
             _allProfileFileData = new ProfileFileData();
             InitCommand();
             Task.Factory.StartNew(() => LoadProfileFiles());
             this.xDataWriter = xDataWriter;
+            this.localColumnProperties = localColumnProperties; // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
+            this.globaColumnProperties = globaColumnProperties;
         }
 
         private void InitCommand()

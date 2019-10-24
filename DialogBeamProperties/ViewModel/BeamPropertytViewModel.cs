@@ -19,6 +19,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly IBeamProperties localBeamProperties;
+        private readonly IBeamProperties globalBeamProperties;
 
         private IBeamProperties _iproperties { get; set; }
 
@@ -259,7 +261,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter, IBeamProperties localBeamProperties, IBeamProperties globalBeamProperties)
         {
             LoadDataComboBox = new List<string>();              // can we instantiate in the base class?
             _allProfileFileData = new ProfileFileData();        // can we instantiate in the base class?
@@ -267,6 +269,9 @@ namespace DialogBeamProperties.ViewModel
             InitCommand();
             Task.Factory.StartNew(() => LoadProfileFiles());    // can we load and instantiate in the base class?
             this.xDataWriter = xDataWriter;
+
+            this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
+            this.globalBeamProperties = globalBeamProperties;
         }
 
         private void InitCommand()
@@ -380,6 +385,9 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Button Click
+
+        // We do not need to save or update this data - we can make use of direct databinding
+        // in WPF. We can bind directly to the IProperties values, can't we!!??
 
         #region Update Data
 
