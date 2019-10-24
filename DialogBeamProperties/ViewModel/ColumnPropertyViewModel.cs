@@ -453,14 +453,14 @@ namespace DialogBeamProperties.ViewModel
 
         private void ModifyButtonClick(object obj)
         {
+
+            localColumnProperties.LoadDataComboBox = LoadDataComboBox;
+            localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
             if (IsAllDataValid())
             {
-                localColumnProperties.LoadDataComboBox = LoadDataComboBox;
-                localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-                SaveNumberingData();
-                SaveAttributesData();
-                SavePositionData();
-
                 xDataWriter.WriteXDataToLine(localColumnProperties.AttributesProfileText, localColumnProperties.PositionRotationText);
             }
         }
@@ -692,8 +692,15 @@ namespace DialogBeamProperties.ViewModel
             bool validProfile = false;
             try
             {
-                validProfile = new Validator().IsValidProfile(localColumnProperties);
-                SetErrorOnScreenIfProfileError(validProfile);
+                if (IsAttributesProfileChecked)
+                {
+                    validProfile = new Validator().IsValidProfile(localColumnProperties);
+                    SetErrorOnScreenIfProfileError(validProfile);
+                }
+                else
+                {
+                    validProfile = true;
+                }
             }
             catch (Exception ex)
             {

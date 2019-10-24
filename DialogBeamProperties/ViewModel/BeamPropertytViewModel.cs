@@ -20,7 +20,6 @@ namespace DialogBeamProperties.ViewModel
         private readonly IBeamProperties localBeamProperties;
         private readonly IBeamProperties globalBeamProperties;
 
-
         #endregion Fields
 
         #region INotifyPropertyChange Member
@@ -285,9 +284,7 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion Constructor
 
-        #region Public Methods
 
-        #endregion Public Methods
 
         #region Private Methods
 
@@ -327,13 +324,13 @@ namespace DialogBeamProperties.ViewModel
 
         private void ModifyButtonClick(object obj)
         {
+            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
+            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            SaveNumberingData();
+            SaveAttributesData();
+            SavePositionData();
             if (IsAllDataValid())
             {
-                localBeamProperties.LoadDataComboBox = LoadDataComboBox;
-                localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-                SaveNumberingData();
-                SaveAttributesData();
-                SavePositionData();
                 xDataWriter.WriteXDataToLine(localBeamProperties.AttributesProfileText, localBeamProperties.PositionRotationText);
             }
         }
@@ -551,8 +548,15 @@ namespace DialogBeamProperties.ViewModel
             bool validProfile = false;
             try
             {
-                validProfile = new Validator().IsValidProfile(localBeamProperties);
-                SetErrorOnScreenIfProfileError(validProfile);
+                if (IsAttributesProfileChecked)
+                {
+                    validProfile = new Validator().IsValidProfile(localBeamProperties);
+                    SetErrorOnScreenIfProfileError(validProfile);
+                }
+                else
+                {
+                    validProfile = true;
+                }
             }
             catch (Exception ex)
             {
