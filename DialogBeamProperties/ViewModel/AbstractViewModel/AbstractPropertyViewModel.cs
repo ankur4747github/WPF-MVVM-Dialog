@@ -500,6 +500,11 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion INotifyPropertyChange Member
 
+        public AbstractPropertyViewModel()
+        {
+            LoadDataComboBox = new List<string>();
+        }
+
         #region Button Command
 
         #region Close Button Command

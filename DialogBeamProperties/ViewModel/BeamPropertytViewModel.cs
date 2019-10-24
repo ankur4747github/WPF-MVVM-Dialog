@@ -262,11 +262,8 @@ namespace DialogBeamProperties.ViewModel
             IBeamProperties localBeamProperties,
             IBeamProperties globalBeamProperties)
         {
-            LoadDataComboBox = new List<string>();
             InitCommand();
-
             this.xDataWriter = xDataWriter;
-
             this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
             this.globalBeamProperties = globalBeamProperties;
             UpdateData(localBeamProperties);
