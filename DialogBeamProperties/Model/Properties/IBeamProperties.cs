@@ -4,17 +4,21 @@ namespace DialogBeamProperties.Model
 {
     public interface IBeamProperties
     {
-        //Attributes Tab Data
-        List<string> LoadDataComboBox { get; set; }
+        // The boolean values not important in the CAD file. i.e. whether a check box is checked does not worry
+        // me from a model point of view. That is important from a view and view model point of view.
+        // The only thing we are concerned with saving are the numbers and text fields.
+        // Everything else can be savely removed. i.e. please remove all bools
+
+        List<string> LoadDataComboBox { get; set; }                 // This can be set direclty in the view / view model
 
         string SelectedDataInLoadDataComboBox { get; set; }
-        bool IsNumberingSeriesPartPrefixChecked { get; set; }
+        bool IsNumberingSeriesPartPrefixChecked { get; set; }        // bool can be removed.
         string NumberingSeriesPartPrefixText { get; set; }
-        bool IsNumberingSeriesPartStartumberChecked { get; set; }
+        bool IsNumberingSeriesPartStartumberChecked { get; set; }     // bool can be removed.
         string NumberingSeriesPartStartNumberText { get; set; }
-        bool IsNumberingSeriesAssemblyPrefixChecked { get; set; }
+        bool IsNumberingSeriesAssemblyPrefixChecked { get; set; }      // bool can be removed.
         string NumberingSeriesAssemblyPrefixText { get; set; }
-        bool IsNumberingSeriesAssemblyStartumberChecked { get; set; }
+        bool IsNumberingSeriesAssemblyStartumberChecked { get; set; }    // etc etc.
         string NumberingSeriesAssemblyStartNumberText { get; set; }
 
         bool IsAttributesNameChecked { get; set; }
@@ -33,16 +37,16 @@ namespace DialogBeamProperties.Model
 
         List<string> PositionOnPlaneComboBox { get; set; }
         string SelectedDataInPositionOnPlaneComboBox { get; set; }
-        double PositionOnPlaneText { get; set; } 
+        double PositionOnPlaneText { get; set; }
 
         bool IsPositionRotationChecked { get; set; }
         List<string> PositionRotationComboBox { get; set; }
         string SelectedDataInPositionRotationComboBox { get; set; }
-        double PositionRotationText { get; set; } 
+        double PositionRotationText { get; set; }
 
         bool IsPositionAtDepthChecked { get; set; }
         List<string> PositionAtDepthComboBox { get; set; }
         string SelectedDataInPositionAtDepthComboBox { get; set; }
-        double PositionAtDepthText { get; set; } 
+        double PositionAtDepthText { get; set; }
     }
 }
