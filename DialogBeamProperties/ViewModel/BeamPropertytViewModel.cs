@@ -261,10 +261,11 @@ namespace DialogBeamProperties.ViewModel
 
         public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
         {
-            LoadDataComboBox = new List<string>();
-            _allProfileFileData = new ProfileFileData();
+            LoadDataComboBox = new List<string>();              // can we instantiate in the base class?
+            _allProfileFileData = new ProfileFileData();        // can we instantiate in the base class?
+
             InitCommand();
-            Task.Factory.StartNew(() => LoadProfileFiles());
+            Task.Factory.StartNew(() => LoadProfileFiles());    // can we load and instantiate in the base class?
             this.xDataWriter = xDataWriter;
         }
 
