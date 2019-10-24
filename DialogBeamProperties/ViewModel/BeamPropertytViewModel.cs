@@ -450,6 +450,9 @@ namespace DialogBeamProperties.ViewModel
 
         #region Save Data
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveAttributesData()
         {
             _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
@@ -483,6 +486,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveNumberingData()
         {
             _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
@@ -510,6 +516,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SavePositionData()
         {
             _iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
