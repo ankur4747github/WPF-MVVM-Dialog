@@ -407,17 +407,14 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            IsPositionOnPlaneChecked = localBeamProperties.IsPositionOnPlaneChecked;
             PositionOnPlaneComboBox = localBeamProperties.PositionOnPlaneComboBox;
             SelectedDataInPositionOnPlaneComboBox = localBeamProperties.SelectedDataInPositionOnPlaneComboBox;
             PositionOnPlaneText = localBeamProperties.PositionOnPlaneText;
 
-            IsPositionRotationChecked = localBeamProperties.IsPositionRotationChecked;
             PositionRotationComboBox = localBeamProperties.PositionRotationComboBox;
             SelectedDataInPositionRotationComboBox = localBeamProperties.SelectedDataInPositionRotationComboBox;
             PositionRotationText = localBeamProperties.PositionRotationText;
 
-            IsPositionAtDepthChecked = localBeamProperties.IsPositionAtDepthChecked;
             PositionAtDepthComboBox = localBeamProperties.PositionAtDepthComboBox;
             SelectedDataInPositionAtDepthComboBox = localBeamProperties.SelectedDataInPositionAtDepthComboBox;
             PositionAtDepthText = localBeamProperties.PositionAtDepthText;
@@ -436,27 +433,18 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateAttributesData()
         {
-            IsAttributesNameChecked = localBeamProperties.IsAttributesNameChecked;
             AttributesNameText = localBeamProperties.AttributesNameText;
-            IsAttributesProfileChecked = localBeamProperties.IsAttributesProfileChecked;
             AttributesProfileText = localBeamProperties.AttributesProfileText;
-            IsAttributesMaterialChecked = localBeamProperties.IsAttributesMaterialChecked;
             AttributesMaterialText = localBeamProperties.AttributesMaterialText;
-            IsAttributesFinishChecked = localBeamProperties.IsAttributesFinishChecked;
             AttributesFinishText = localBeamProperties.AttributesFinishText;
-            IsAttributesClassChecked = localBeamProperties.IsAttributesClassChecked;
             AttributesClassText = localBeamProperties.AttributesClassText;
         }
 
         private void UpdateNumberingData()
         {
-            IsNumberingSeriesPartPrefixChecked = localBeamProperties.IsNumberingSeriesPartPrefixChecked;
             NumberingSeriesPartPrefixText = localBeamProperties.NumberingSeriesPartPrefixText;
-            IsNumberingSeriesPartStartumberChecked = localBeamProperties.IsNumberingSeriesPartStartumberChecked;
             NumberingSeriesPartStartNumberText = localBeamProperties.NumberingSeriesPartStartNumberText;
-            IsNumberingSeriesAssemblyPrefixChecked = localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked;
             NumberingSeriesAssemblyPrefixText = localBeamProperties.NumberingSeriesAssemblyPrefixText;
-            IsNumberingSeriesAssemblyStartumberChecked = localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked;
             NumberingSeriesAssemblyStartNumberText = localBeamProperties.NumberingSeriesAssemblyStartNumberText;
         }
 
@@ -469,32 +457,27 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveAttributesData()
         {
-            localBeamProperties.IsAttributesNameChecked = IsAttributesNameChecked;
-            if (localBeamProperties.IsAttributesNameChecked)
+            if (IsAttributesNameChecked)
             {
                 localBeamProperties.AttributesNameText = AttributesNameText;
             }
 
-            localBeamProperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
-            if (localBeamProperties.IsAttributesProfileChecked)
+            if (IsAttributesProfileChecked)
             {
                 localBeamProperties.AttributesProfileText = AttributesProfileText;
             }
 
-            localBeamProperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
-            if (localBeamProperties.IsAttributesMaterialChecked)
+            if (IsAttributesMaterialChecked)
             {
                 localBeamProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
-            localBeamProperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
-            if (localBeamProperties.IsAttributesFinishChecked)
+            if (IsAttributesFinishChecked)
             {
                 localBeamProperties.AttributesFinishText = AttributesFinishText;
             }
 
-            localBeamProperties.IsAttributesClassChecked = IsAttributesClassChecked;
-            if (localBeamProperties.IsAttributesClassChecked)
+            if (IsAttributesClassChecked)
             {
                 localBeamProperties.AttributesClassText = AttributesClassText;
             }
@@ -505,26 +488,22 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveNumberingData()
         {
-            localBeamProperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
-            if (localBeamProperties.IsNumberingSeriesPartPrefixChecked)
+            if (IsNumberingSeriesPartPrefixChecked)
             {
                 localBeamProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
-            localBeamProperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
-            if (localBeamProperties.IsNumberingSeriesPartStartumberChecked)
+            if (IsNumberingSeriesPartStartumberChecked)
             {
                 localBeamProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
-            localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
-            if (localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked)
+            if (IsNumberingSeriesAssemblyPrefixChecked)
             {
                 localBeamProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
-            localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
-            if (localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked)
+            if (IsNumberingSeriesAssemblyStartumberChecked)
             {
                 localBeamProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
@@ -535,24 +514,21 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SavePositionData()
         {
-            localBeamProperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
-            if (localBeamProperties.IsPositionOnPlaneChecked)
+            if (IsPositionOnPlaneChecked)
             {
                 localBeamProperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
                 localBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
                 localBeamProperties.PositionOnPlaneText = PositionOnPlaneText;
             }
 
-            localBeamProperties.IsPositionRotationChecked = IsPositionRotationChecked;
-            if (localBeamProperties.IsPositionRotationChecked)
+            if (IsPositionRotationChecked)
             {
                 localBeamProperties.PositionRotationComboBox = PositionRotationComboBox;
                 localBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
                 localBeamProperties.PositionRotationText = PositionRotationText;
             }
 
-            localBeamProperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
-            if (localBeamProperties.IsPositionAtDepthChecked)
+            if (IsPositionAtDepthChecked)
             {
                 localBeamProperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
                 localBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;

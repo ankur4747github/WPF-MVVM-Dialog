@@ -527,38 +527,33 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SavePositionData()
         {
-            localColumnProperties.IsPositionVerticalChecked = IsPositionVerticalChecked;
-            if (localColumnProperties.IsPositionVerticalChecked)
+            if (IsPositionVerticalChecked)
             {
                 localColumnProperties.PositionVerticalComboBox = PositionVerticalComboBox;
                 localColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
                 localColumnProperties.PositionVerticalText = PositionVerticalText;
             }
 
-            localColumnProperties.IsPositionRotationChecked = IsPositionRotationChecked;
-            if (localColumnProperties.IsPositionRotationChecked)
+            if (IsPositionRotationChecked)
             {
                 localColumnProperties.PositionRotationComboBox = PositionRotationComboBox;
                 localColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
                 localColumnProperties.PositionRotationText = PositionRotationText;
             }
 
-            localColumnProperties.IsPositionHorizontalChecked = IsPositionHorizontalChecked;
-            if (localColumnProperties.IsPositionHorizontalChecked)
+            if (IsPositionHorizontalChecked)
             {
                 localColumnProperties.PositionHorizontalComboBox = PositionHorizontalComboBox;
                 localColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
                 localColumnProperties.PositionHorizontalText = PositionHorizontalText;
             }
 
-            localColumnProperties.IsPositionLevelsTopChecked = IsPositionLevelsTopChecked;
-            if (localColumnProperties.IsPositionLevelsTopChecked)
+            if (IsPositionLevelsTopChecked)
             {
                 localColumnProperties.PositionLevelsTopText = PositionLevelsTop;
             }
 
-            localColumnProperties.IsPositionLevelsBottomChecked = IsPositionLevelsBottomChecked;
-            if (localColumnProperties.IsPositionLevelsBottomChecked)
+            if (IsPositionLevelsBottomChecked)
             {
                 localColumnProperties.PositionLevelsBottomText = PositionLevelsBottom;
             }
@@ -569,32 +564,27 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveAttributesData()
         {
-            localColumnProperties.IsAttributesNameChecked = IsAttributesNameChecked;
-            if (localColumnProperties.IsAttributesNameChecked)
+            if (IsAttributesNameChecked)
             {
                 localColumnProperties.AttributesNameText = AttributesNameText;
             }
 
-            localColumnProperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
-            if (localColumnProperties.IsAttributesProfileChecked)
+            if (IsAttributesProfileChecked)
             {
                 localColumnProperties.AttributesProfileText = AttributesProfileText;
             }
 
-            localColumnProperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
-            if (localColumnProperties.IsAttributesMaterialChecked)
+            if (IsAttributesMaterialChecked)
             {
                 localColumnProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
-            localColumnProperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
-            if (localColumnProperties.IsAttributesFinishChecked)
+            if (IsAttributesFinishChecked)
             {
                 localColumnProperties.AttributesFinishText = AttributesFinishText;
             }
 
-            localColumnProperties.IsAttributesClassChecked = IsAttributesClassChecked;
-            if (localColumnProperties.IsAttributesClassChecked)
+            if (IsAttributesClassChecked)
             {
                 localColumnProperties.AttributesClassText = AttributesClassText;
             }
@@ -605,26 +595,22 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveNumberingData()
         {
-            localColumnProperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
-            if (localColumnProperties.IsNumberingSeriesPartPrefixChecked)
+            if (IsNumberingSeriesPartPrefixChecked)
             {
                 localColumnProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
-            localColumnProperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
-            if (localColumnProperties.IsNumberingSeriesPartStartumberChecked)
+            if (IsNumberingSeriesPartStartumberChecked)
             {
                 localColumnProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
-            localColumnProperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
-            if (localColumnProperties.IsNumberingSeriesAssemblyPrefixChecked)
+            if (IsNumberingSeriesAssemblyPrefixChecked)
             {
                 localColumnProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
-            localColumnProperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
-            if (localColumnProperties.IsNumberingSeriesAssemblyStartumberChecked)
+            if (IsNumberingSeriesAssemblyStartumberChecked)
             {
                 localColumnProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
@@ -644,25 +630,19 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            IsPositionVerticalChecked = localColumnProperties.IsPositionVerticalChecked;
             PositionVerticalComboBox = localColumnProperties.PositionVerticalComboBox;
             SelectedDataInPositionVerticalComboBox = localColumnProperties.SelectedDataInPositionVerticalComboBox;
             PositionVerticalText = localColumnProperties.PositionVerticalText;
 
-            IsPositionRotationChecked = localColumnProperties.IsPositionRotationChecked;
             PositionRotationComboBox = localColumnProperties.PositionRotationComboBox;
             SelectedDataInPositionRotationComboBox = localColumnProperties.SelectedDataInPositionRotationComboBox;
             PositionRotationText = localColumnProperties.PositionRotationText;
 
-            IsPositionHorizontalChecked = localColumnProperties.IsPositionHorizontalChecked;
             PositionHorizontalComboBox = localColumnProperties.PositionHorizontalComboBox;
             SelectedDataInPositionHorizontalComboBox = localColumnProperties.SelectedDataInPositionHorizontalComboBox;
             PositionHorizontalText = localColumnProperties.PositionHorizontalText;
 
-            IsPositionLevelsTopChecked = localColumnProperties.IsPositionLevelsTopChecked;
             PositionLevelsTop = localColumnProperties.PositionLevelsTopText;
-
-            IsPositionLevelsBottomChecked = localColumnProperties.IsPositionLevelsBottomChecked;
             PositionLevelsBottom = localColumnProperties.PositionLevelsBottomText;
         }
 
@@ -679,27 +659,18 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateAttributesData()
         {
-            IsAttributesNameChecked = localColumnProperties.IsAttributesNameChecked;
             AttributesNameText = localColumnProperties.AttributesNameText;
-            IsAttributesProfileChecked = localColumnProperties.IsAttributesProfileChecked;
             AttributesProfileText = localColumnProperties.AttributesProfileText;
-            IsAttributesMaterialChecked = localColumnProperties.IsAttributesMaterialChecked;
             AttributesMaterialText = localColumnProperties.AttributesMaterialText;
-            IsAttributesFinishChecked = localColumnProperties.IsAttributesFinishChecked;
             AttributesFinishText = localColumnProperties.AttributesFinishText;
-            IsAttributesClassChecked = localColumnProperties.IsAttributesClassChecked;
             AttributesClassText = localColumnProperties.AttributesClassText;
         }
 
         private void UpdateNumberingData()
         {
-            IsNumberingSeriesPartPrefixChecked = localColumnProperties.IsNumberingSeriesPartPrefixChecked;
             NumberingSeriesPartPrefixText = localColumnProperties.NumberingSeriesPartPrefixText;
-            IsNumberingSeriesPartStartumberChecked = localColumnProperties.IsNumberingSeriesPartStartumberChecked;
             NumberingSeriesPartStartNumberText = localColumnProperties.NumberingSeriesPartStartNumberText;
-            IsNumberingSeriesAssemblyPrefixChecked = localColumnProperties.IsNumberingSeriesAssemblyPrefixChecked;
             NumberingSeriesAssemblyPrefixText = localColumnProperties.NumberingSeriesAssemblyPrefixText;
-            IsNumberingSeriesAssemblyStartumberChecked = localColumnProperties.IsNumberingSeriesAssemblyStartumberChecked;
             NumberingSeriesAssemblyStartNumberText = localColumnProperties.NumberingSeriesAssemblyStartNumberText;
         }
 

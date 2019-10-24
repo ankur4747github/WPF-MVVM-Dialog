@@ -15,7 +15,6 @@ namespace DialogBeamProperties.Model.Properties
             List<string> list = new List<string>() { "a", "b", "c", "d" };
             beamProperties.LoadDataComboBox = list;
             beamProperties.SelectedDataInLoadDataComboBox = list[0];
-            beamProperties.IsAttributesProfileChecked = true;
             beamProperties.AttributesProfileText = "H100";
 
             List<string> onPlaneList = new List<string>() { "Middle", "Right", "Left" };
@@ -30,23 +29,14 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.PositionAtDepthComboBox = atDepthList;
             beamProperties.SelectedDataInPositionAtDepthComboBox = atDepthList[0];
 
-            beamProperties.IsNumberingSeriesPartPrefixChecked = true;
             beamProperties.NumberingSeriesPartPrefixText = "";
-            beamProperties.IsNumberingSeriesPartStartumberChecked = true;
             beamProperties.NumberingSeriesPartStartNumberText = "";
-            beamProperties.IsNumberingSeriesAssemblyPrefixChecked = true;
             beamProperties.NumberingSeriesAssemblyPrefixText = "";
-            beamProperties.IsNumberingSeriesAssemblyStartumberChecked = true;
             beamProperties.NumberingSeriesAssemblyStartNumberText = "";
-            beamProperties.IsAttributesNameChecked = true;
             beamProperties.AttributesNameText = "";
-            beamProperties.IsAttributesProfileChecked = true;
             beamProperties.AttributesProfileText = profile;
-            beamProperties.IsAttributesMaterialChecked = true;
             beamProperties.AttributesMaterialText = "";
-            beamProperties.IsAttributesFinishChecked = true;
             beamProperties.AttributesFinishText = "";
-            beamProperties.IsAttributesClassChecked = true;
             beamProperties.AttributesClassText = "";
             beamProperties.PositionOnPlaneText = 0;
             beamProperties.PositionRotationText = rotation;
