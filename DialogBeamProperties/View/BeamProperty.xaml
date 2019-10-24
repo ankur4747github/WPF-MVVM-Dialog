@@ -158,6 +158,9 @@
                                          ToolTip="Need At Least 2 Character"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Key="Enter" Command="{Binding EnterKeyCommand}" />
+                                    </TextBox.InputBindings>
                                 </TextBox>
                                 <Button Grid.Column="2"
                                         Content="Select"
@@ -309,7 +312,7 @@
                 <ColumnDefinition Width="60*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Content="OK"
-                    Command="{Binding ButtonCommand}">
+                    Command="{Binding OkButtonCommand}">
             </Button>
             <Button Content="Apply"
                     Command="{Binding ApplyButtonCommand}"

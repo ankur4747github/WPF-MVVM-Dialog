@@ -1,5 +1,6 @@
 ﻿using DialogBeamProperties.Constants;
 using DialogBeamProperties.Model;
+using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.Model.Properties;
 using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
@@ -29,6 +30,7 @@ namespace DialogBeamProperties.View
         public DialogColumnProperties(IColumnProperties iproperties, DialogColumnPropertiesViewModel viewModel)
         {
             InitializeComponent();
+            ProfileFileData allProfileFileData = ProfileFileData.Instance;
             InitMessenger();
             this.viewModel = viewModel;
             this.DataContext = viewModel;
