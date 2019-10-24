@@ -28,6 +28,7 @@ namespace Test
 
         private void DummyColumnProprtyData(IColumnProperties prop)
         {
+            prop.AttributesProfileText = "RS";
             DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
             testColumn = new DialogColumnProperties(viewModel);
             testColumn.Closing += TestColumn_Closing;
@@ -42,6 +43,7 @@ namespace Test
 
         private void DummyBeamPropertyData(IBeamProperties prop)
         {
+            prop.AttributesProfileText = "RS";
             DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
             testBeam = new DialogBeamProperties.DialogBeamProperties(viewModel);
             testBeam.Closing += TestBeam_Closing;
