@@ -28,8 +28,8 @@ namespace Test
 
         private void DummyColumnProprtyData(IColumnProperties prop)
         {
-            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation());
-            testColumn = new DialogColumnProperties(prop, viewModel);
+            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
+            testColumn = new DialogColumnProperties(viewModel);
             testColumn.Closing += TestColumn_Closing;
             testColumn.Show();
             this.Hide();
@@ -37,13 +37,13 @@ namespace Test
 
         private void TestColumn_Closing(object sender, CancelEventArgs e)
         {
-            IColumnProperties prop = testColumn.GetPropertiesData();
+           // IColumnProperties prop = testColumn.GetPropertiesData();
         }
 
         private void DummyBeamPropertyData(IBeamProperties prop)
         {
-            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation());
-            testBeam = new DialogBeamProperties.DialogBeamProperties(prop, viewModel);
+            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
+            testBeam = new DialogBeamProperties.DialogBeamProperties(viewModel);
             testBeam.Closing += TestBeam_Closing;
             testBeam.Show();
             this.Hide();
@@ -51,7 +51,7 @@ namespace Test
 
         private void TestBeam_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            IBeamProperties prop = testBeam.GetPropertiesData();
+            //IBeamProperties prop = testBeam.GetPropertiesData();
         }
 
         public void Dispose()

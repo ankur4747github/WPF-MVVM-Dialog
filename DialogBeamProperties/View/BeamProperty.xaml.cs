@@ -16,14 +16,13 @@ namespace DialogBeamProperties
     {
         private DialogBeamPropertiesViewModel viewModel;
 
-        public DialogBeamProperties(IBeamProperties iproperties, DialogBeamPropertiesViewModel viewModel)
+        public DialogBeamProperties(DialogBeamPropertiesViewModel viewModel)
         {
             InitializeComponent();
             ProfileFileData allProfileFileData = ProfileFileData.Instance;
             InitMessenger();
             this.viewModel = viewModel;
             this.DataContext = viewModel;
-            this.viewModel.SetPropertiesData(iproperties);
         }
 
         private void InitMessenger()

@@ -27,14 +27,13 @@ namespace DialogBeamProperties.View
     {
         private DialogColumnPropertiesViewModel viewModel;
 
-        public DialogColumnProperties(IColumnProperties iproperties, DialogColumnPropertiesViewModel viewModel)
+        public DialogColumnProperties(DialogColumnPropertiesViewModel viewModel)
         {
             InitializeComponent();
             ProfileFileData allProfileFileData = ProfileFileData.Instance;
             InitMessenger();
             this.viewModel = viewModel;
             this.DataContext = viewModel;
-            this.viewModel.SetProtertiesData(iproperties);
         }
 
         private void InitMessenger()

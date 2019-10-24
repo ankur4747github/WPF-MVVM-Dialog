@@ -20,7 +20,6 @@ namespace DialogBeamProperties.ViewModel
         private readonly IBeamProperties localBeamProperties;
         private readonly IBeamProperties globalBeamProperties;
 
-        private IBeamProperties _iproperties { get; set; }
 
         #endregion Fields
 
@@ -259,11 +258,10 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter, IBeamProperties localBeamProperties, IBeamProperties globalBeamProperties)
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter,
+            IBeamProperties localBeamProperties,
+            IBeamProperties globalBeamProperties)
         {
-
-            
-
             LoadDataComboBox = new List<string>();
             InitCommand();
 
@@ -271,6 +269,7 @@ namespace DialogBeamProperties.ViewModel
 
             this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
             this.globalBeamProperties = globalBeamProperties;
+            UpdateData(localBeamProperties);
         }
 
         private void InitCommand()
@@ -287,17 +286,9 @@ namespace DialogBeamProperties.ViewModel
             EnterKeyCommand = new RelayCommand(new Action<object>(ProfileEnterClick));
         }
 
-      
-
         #endregion Constructor
 
         #region Public Methods
-
-        public void SetPropertiesData(IBeamProperties iproperties)
-        {
-            this._iproperties = iproperties;
-            UpdateData(iproperties);
-        }
 
         #endregion Public Methods
 
@@ -312,8 +303,8 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
+            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
@@ -325,15 +316,15 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            _iproperties.LoadDataComboBox = LoadDataComboBox;
-            _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
+            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
 
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+                xDataWriter.WriteXDataToLine(localBeamProperties.AttributesProfileText, localBeamProperties.PositionRotationText);
             }
         }
 
@@ -341,12 +332,12 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                _iproperties.LoadDataComboBox = LoadDataComboBox;
-                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                localBeamProperties.LoadDataComboBox = LoadDataComboBox;
+                localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
                 SaveNumberingData();
                 SaveAttributesData();
                 SavePositionData();
-                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+                xDataWriter.WriteXDataToLine(localBeamProperties.AttributesProfileText, localBeamProperties.PositionRotationText);
             }
         }
 
@@ -401,6 +392,7 @@ namespace DialogBeamProperties.ViewModel
                 SelectProfileButtonClick(obj);
             }
         }
+
         #endregion Button Click
 
         // We do not need to save or update this data - we can make use of direct databinding
@@ -418,20 +410,20 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            IsPositionOnPlaneChecked = _iproperties.IsPositionOnPlaneChecked;
-            PositionOnPlaneComboBox = _iproperties.PositionOnPlaneComboBox;
-            SelectedDataInPositionOnPlaneComboBox = _iproperties.SelectedDataInPositionOnPlaneComboBox;
-            PositionOnPlaneText = _iproperties.PositionOnPlaneText;
+            IsPositionOnPlaneChecked = localBeamProperties.IsPositionOnPlaneChecked;
+            PositionOnPlaneComboBox = localBeamProperties.PositionOnPlaneComboBox;
+            SelectedDataInPositionOnPlaneComboBox = localBeamProperties.SelectedDataInPositionOnPlaneComboBox;
+            PositionOnPlaneText = localBeamProperties.PositionOnPlaneText;
 
-            IsPositionRotationChecked = _iproperties.IsPositionRotationChecked;
-            PositionRotationComboBox = _iproperties.PositionRotationComboBox;
-            SelectedDataInPositionRotationComboBox = _iproperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = _iproperties.PositionRotationText;
+            IsPositionRotationChecked = localBeamProperties.IsPositionRotationChecked;
+            PositionRotationComboBox = localBeamProperties.PositionRotationComboBox;
+            SelectedDataInPositionRotationComboBox = localBeamProperties.SelectedDataInPositionRotationComboBox;
+            PositionRotationText = localBeamProperties.PositionRotationText;
 
-            IsPositionAtDepthChecked = _iproperties.IsPositionAtDepthChecked;
-            PositionAtDepthComboBox = _iproperties.PositionAtDepthComboBox;
-            SelectedDataInPositionAtDepthComboBox = _iproperties.SelectedDataInPositionAtDepthComboBox;
-            PositionAtDepthText = _iproperties.PositionAtDepthText;
+            IsPositionAtDepthChecked = localBeamProperties.IsPositionAtDepthChecked;
+            PositionAtDepthComboBox = localBeamProperties.PositionAtDepthComboBox;
+            SelectedDataInPositionAtDepthComboBox = localBeamProperties.SelectedDataInPositionAtDepthComboBox;
+            PositionAtDepthText = localBeamProperties.PositionAtDepthText;
         }
 
         private void SelectedProfile(string obj)
@@ -447,28 +439,28 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateAttributesData()
         {
-            IsAttributesNameChecked = _iproperties.IsAttributesNameChecked;
-            AttributesNameText = _iproperties.AttributesNameText;
-            IsAttributesProfileChecked = _iproperties.IsAttributesProfileChecked;
-            AttributesProfileText = _iproperties.AttributesProfileText;
-            IsAttributesMaterialChecked = _iproperties.IsAttributesMaterialChecked;
-            AttributesMaterialText = _iproperties.AttributesMaterialText;
-            IsAttributesFinishChecked = _iproperties.IsAttributesFinishChecked;
-            AttributesFinishText = _iproperties.AttributesFinishText;
-            IsAttributesClassChecked = _iproperties.IsAttributesClassChecked;
-            AttributesClassText = _iproperties.AttributesClassText;
+            IsAttributesNameChecked = localBeamProperties.IsAttributesNameChecked;
+            AttributesNameText = localBeamProperties.AttributesNameText;
+            IsAttributesProfileChecked = localBeamProperties.IsAttributesProfileChecked;
+            AttributesProfileText = localBeamProperties.AttributesProfileText;
+            IsAttributesMaterialChecked = localBeamProperties.IsAttributesMaterialChecked;
+            AttributesMaterialText = localBeamProperties.AttributesMaterialText;
+            IsAttributesFinishChecked = localBeamProperties.IsAttributesFinishChecked;
+            AttributesFinishText = localBeamProperties.AttributesFinishText;
+            IsAttributesClassChecked = localBeamProperties.IsAttributesClassChecked;
+            AttributesClassText = localBeamProperties.AttributesClassText;
         }
 
         private void UpdateNumberingData()
         {
-            IsNumberingSeriesPartPrefixChecked = _iproperties.IsNumberingSeriesPartPrefixChecked;
-            NumberingSeriesPartPrefixText = _iproperties.NumberingSeriesPartPrefixText;
-            IsNumberingSeriesPartStartumberChecked = _iproperties.IsNumberingSeriesPartStartumberChecked;
-            NumberingSeriesPartStartNumberText = _iproperties.NumberingSeriesPartStartNumberText;
-            IsNumberingSeriesAssemblyPrefixChecked = _iproperties.IsNumberingSeriesAssemblyPrefixChecked;
-            NumberingSeriesAssemblyPrefixText = _iproperties.NumberingSeriesAssemblyPrefixText;
-            IsNumberingSeriesAssemblyStartumberChecked = _iproperties.IsNumberingSeriesAssemblyStartumberChecked;
-            NumberingSeriesAssemblyStartNumberText = _iproperties.NumberingSeriesAssemblyStartNumberText;
+            IsNumberingSeriesPartPrefixChecked = localBeamProperties.IsNumberingSeriesPartPrefixChecked;
+            NumberingSeriesPartPrefixText = localBeamProperties.NumberingSeriesPartPrefixText;
+            IsNumberingSeriesPartStartumberChecked = localBeamProperties.IsNumberingSeriesPartStartumberChecked;
+            NumberingSeriesPartStartNumberText = localBeamProperties.NumberingSeriesPartStartNumberText;
+            IsNumberingSeriesAssemblyPrefixChecked = localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked;
+            NumberingSeriesAssemblyPrefixText = localBeamProperties.NumberingSeriesAssemblyPrefixText;
+            IsNumberingSeriesAssemblyStartumberChecked = localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked;
+            NumberingSeriesAssemblyStartNumberText = localBeamProperties.NumberingSeriesAssemblyStartNumberText;
         }
 
         #endregion Update Data
@@ -480,34 +472,34 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveAttributesData()
         {
-            _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
-            if (_iproperties.IsAttributesNameChecked)
+            localBeamProperties.IsAttributesNameChecked = IsAttributesNameChecked;
+            if (localBeamProperties.IsAttributesNameChecked)
             {
-                _iproperties.AttributesNameText = AttributesNameText;
+                localBeamProperties.AttributesNameText = AttributesNameText;
             }
 
-            _iproperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
-            if (_iproperties.IsAttributesProfileChecked)
+            localBeamProperties.IsAttributesProfileChecked = IsAttributesProfileChecked;
+            if (localBeamProperties.IsAttributesProfileChecked)
             {
-                _iproperties.AttributesProfileText = AttributesProfileText;
+                localBeamProperties.AttributesProfileText = AttributesProfileText;
             }
 
-            _iproperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
-            if (_iproperties.IsAttributesMaterialChecked)
+            localBeamProperties.IsAttributesMaterialChecked = IsAttributesMaterialChecked;
+            if (localBeamProperties.IsAttributesMaterialChecked)
             {
-                _iproperties.AttributesMaterialText = AttributesMaterialText;
+                localBeamProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
-            _iproperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
-            if (_iproperties.IsAttributesFinishChecked)
+            localBeamProperties.IsAttributesFinishChecked = IsAttributesFinishChecked;
+            if (localBeamProperties.IsAttributesFinishChecked)
             {
-                _iproperties.AttributesFinishText = AttributesFinishText;
+                localBeamProperties.AttributesFinishText = AttributesFinishText;
             }
 
-            _iproperties.IsAttributesClassChecked = IsAttributesClassChecked;
-            if (_iproperties.IsAttributesClassChecked)
+            localBeamProperties.IsAttributesClassChecked = IsAttributesClassChecked;
+            if (localBeamProperties.IsAttributesClassChecked)
             {
-                _iproperties.AttributesClassText = AttributesClassText;
+                localBeamProperties.AttributesClassText = AttributesClassText;
             }
         }
 
@@ -516,28 +508,28 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SaveNumberingData()
         {
-            _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
-            if (_iproperties.IsNumberingSeriesPartPrefixChecked)
+            localBeamProperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
+            if (localBeamProperties.IsNumberingSeriesPartPrefixChecked)
             {
-                _iproperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+                localBeamProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
-            _iproperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
-            if (_iproperties.IsNumberingSeriesPartStartumberChecked)
+            localBeamProperties.IsNumberingSeriesPartStartumberChecked = IsNumberingSeriesPartStartumberChecked;
+            if (localBeamProperties.IsNumberingSeriesPartStartumberChecked)
             {
-                _iproperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+                localBeamProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
-            _iproperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
-            if (_iproperties.IsNumberingSeriesAssemblyPrefixChecked)
+            localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked = IsNumberingSeriesAssemblyPrefixChecked;
+            if (localBeamProperties.IsNumberingSeriesAssemblyPrefixChecked)
             {
-                _iproperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+                localBeamProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
-            _iproperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
-            if (_iproperties.IsNumberingSeriesAssemblyStartumberChecked)
+            localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked = IsNumberingSeriesAssemblyStartumberChecked;
+            if (localBeamProperties.IsNumberingSeriesAssemblyStartumberChecked)
             {
-                _iproperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+                localBeamProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
 
@@ -546,28 +538,28 @@ namespace DialogBeamProperties.ViewModel
         /// </summary>
         private void SavePositionData()
         {
-            _iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
-            if (_iproperties.IsPositionOnPlaneChecked)
+            localBeamProperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;
+            if (localBeamProperties.IsPositionOnPlaneChecked)
             {
-                _iproperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
-                _iproperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-                _iproperties.PositionOnPlaneText = PositionOnPlaneText;
+                localBeamProperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
+                localBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+                localBeamProperties.PositionOnPlaneText = PositionOnPlaneText;
             }
 
-            _iproperties.IsPositionRotationChecked = IsPositionRotationChecked;
-            if (_iproperties.IsPositionRotationChecked)
+            localBeamProperties.IsPositionRotationChecked = IsPositionRotationChecked;
+            if (localBeamProperties.IsPositionRotationChecked)
             {
-                _iproperties.PositionRotationComboBox = PositionRotationComboBox;
-                _iproperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                _iproperties.PositionRotationText = PositionRotationText;
+                localBeamProperties.PositionRotationComboBox = PositionRotationComboBox;
+                localBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                localBeamProperties.PositionRotationText = PositionRotationText;
             }
 
-            _iproperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
-            if (_iproperties.IsPositionAtDepthChecked)
+            localBeamProperties.IsPositionAtDepthChecked = IsPositionAtDepthChecked;
+            if (localBeamProperties.IsPositionAtDepthChecked)
             {
-                _iproperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
-                _iproperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-                _iproperties.PositionAtDepthText = PositionAtDepthText;
+                localBeamProperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
+                localBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+                localBeamProperties.PositionAtDepthText = PositionAtDepthText;
             }
         }
 
@@ -586,7 +578,7 @@ namespace DialogBeamProperties.ViewModel
             bool validProfile = false;
             try
             {
-                validProfile = new Validator().IsValidProfile(_iproperties);
+                validProfile = new Validator().IsValidProfile(localBeamProperties);
                 SetErrorOnScreenIfProfileError(validProfile);
             }
             catch (Exception ex)
