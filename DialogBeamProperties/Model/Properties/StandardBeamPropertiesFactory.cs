@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardBeamPropertiesFactory
     {
-        public IBeamProperties CreateStandardProperties()
+        public IBeamProperties CreateStandardProperties(string profile = "", double rotation = 0)
         {
             BeamProperties beamProperties = new BeamProperties();
 
@@ -41,7 +41,7 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.IsAttributesNameChecked = true;
             beamProperties.AttributesNameText = "";
             beamProperties.IsAttributesProfileChecked = true;
-            beamProperties.AttributesProfileText = "";
+            beamProperties.AttributesProfileText = profile;
             beamProperties.IsAttributesMaterialChecked = true;
             beamProperties.AttributesMaterialText = "";
             beamProperties.IsAttributesFinishChecked = true;
@@ -49,7 +49,7 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.IsAttributesClassChecked = true;
             beamProperties.AttributesClassText = "";
             beamProperties.PositionOnPlaneText = 0;
-            beamProperties.PositionRotationText = 0;
+            beamProperties.PositionRotationText = rotation;
             beamProperties.PositionAtDepthText = 0;
 
             return beamProperties;

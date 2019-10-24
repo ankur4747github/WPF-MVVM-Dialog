@@ -8,6 +8,11 @@ namespace DialogBeamProperties.CadInterfaces
 {
     public class XDataWriterDummyImplementation : XDataWriter
     {
+        public void ChangeLineRL(double topRL, double bottomRL)
+        {
+            // do thing.
+        }
+
         public void WriteXDataToLine(string profile, double rotation)
         {
             // does nothing.

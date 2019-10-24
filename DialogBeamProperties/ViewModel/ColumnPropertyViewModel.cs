@@ -21,6 +21,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly IColumnProperties localColumnProperties;
+        private readonly IColumnProperties globaColumnProperties;
 
         private IColumnProperties _iproperties { get; set; }
 
@@ -382,11 +384,13 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, IColumnProperties localColumnProperties, IColumnProperties globaColumnProperties)
         {
             LoadDataComboBox = new List<string>();
             InitCommand();
             this.xDataWriter = xDataWriter;
+            this.localColumnProperties = localColumnProperties; // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
+            this.globaColumnProperties = globaColumnProperties;
         }
 
         private void InitCommand()
@@ -411,11 +415,6 @@ namespace DialogBeamProperties.ViewModel
         {
             this._iproperties = iproperties;
             UpdateData(iproperties);
-        }
-
-        public IColumnProperties GetPropertiesData()
-        {
-            return _iproperties;
         }
 
         #endregion Public Methods
@@ -451,13 +450,24 @@ namespace DialogBeamProperties.ViewModel
             SavePositionData();
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, 0);
+
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
             }
         }
 
         private void ModifyButtonClick(object obj)
         {
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+                xDataWriter.ChangeLineRL(_iproperties.PositionLevelsTopText, PositionLevelsBottom);
+            }
         }
 
         private void GetButtonClick(object obj)
@@ -517,6 +527,9 @@ namespace DialogBeamProperties.ViewModel
 
         #region Save Data
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SavePositionData()
         {
             _iproperties.IsPositionVerticalChecked = IsPositionVerticalChecked;
@@ -556,6 +569,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveAttributesData()
         {
             _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
@@ -589,6 +605,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveNumberingData()
         {
             _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;

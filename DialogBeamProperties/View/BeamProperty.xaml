@@ -237,8 +237,7 @@
                             </CheckBox>
                             <ComboBox Grid.Column="1"
                                       ItemsSource="{Binding PositionOnPlaneComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}"
-                                      >
+                                      SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}">
                             </ComboBox>
                             <TextBox Grid.Column="2"
                                      Text="{Binding PositionOnPlaneText,Mode=TwoWay}"
@@ -321,6 +320,7 @@
                     Margin="5,0">
             </Button>
             <Button Content="Modify"
+                    Command="{Binding ModifyButtonCommand}"
                     Grid.Column="2"
                     Margin="5,0">
             </Button>

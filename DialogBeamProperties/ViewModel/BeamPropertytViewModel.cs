@@ -17,6 +17,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
+        private readonly IBeamProperties localBeamProperties;
+        private readonly IBeamProperties globalBeamProperties;
 
         private IBeamProperties _iproperties { get; set; }
 
@@ -257,11 +259,18 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter)
+        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter, IBeamProperties localBeamProperties, IBeamProperties globalBeamProperties)
         {
+
+            
+
             LoadDataComboBox = new List<string>();
             InitCommand();
+
             this.xDataWriter = xDataWriter;
+
+            this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
+            this.globalBeamProperties = globalBeamProperties;
         }
 
         private void InitCommand()
@@ -288,11 +297,6 @@ namespace DialogBeamProperties.ViewModel
         {
             this._iproperties = iproperties;
             UpdateData(iproperties);
-        }
-
-        public IBeamProperties GetPropertiesData()
-        {
-            return _iproperties;
         }
 
         #endregion Public Methods
@@ -335,7 +339,15 @@ namespace DialogBeamProperties.ViewModel
 
         private void ModifyButtonClick(object obj)
         {
-            xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            if (IsAllDataValid())
+            {
+                _iproperties.LoadDataComboBox = LoadDataComboBox;
+                _iproperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
+                SaveNumberingData();
+                SaveAttributesData();
+                SavePositionData();
+                xDataWriter.WriteXDataToLine(_iproperties.AttributesProfileText, _iproperties.PositionRotationText);
+            }
         }
 
         private void GetButtonClick(object obj)
@@ -390,6 +402,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
         #endregion Button Click
+
+        // We do not need to save or update this data - we can make use of direct databinding
+        // in WPF. We can bind directly to the IProperties values, can't we!!??
 
         #region Update Data
 
@@ -460,6 +475,9 @@ namespace DialogBeamProperties.ViewModel
 
         #region Save Data
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveAttributesData()
         {
             _iproperties.IsAttributesNameChecked = IsAttributesNameChecked;
@@ -493,6 +511,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SaveNumberingData()
         {
             _iproperties.IsNumberingSeriesPartPrefixChecked = IsNumberingSeriesPartPrefixChecked;
@@ -520,6 +541,9 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        /// <summary>
+        /// /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
+        /// </summary>
         private void SavePositionData()
         {
             _iproperties.IsPositionOnPlaneChecked = IsPositionOnPlaneChecked;

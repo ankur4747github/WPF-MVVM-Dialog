@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardColumnPropertiesFactory
     {
-        public IColumnProperties CreateStandardProperties()
+        public IColumnProperties CreateStandardProperties(string profile = "", double topRl = 0, double bottomRl = 0)
         {
             IColumnProperties columnProperties = new ColumnProperties();
 
@@ -42,7 +42,7 @@ namespace DialogBeamProperties.Model.Properties
             columnProperties.IsAttributesNameChecked = true;
             columnProperties.AttributesNameText = "";
             columnProperties.IsAttributesProfileChecked = true;
-            columnProperties.AttributesProfileText = "";
+            columnProperties.AttributesProfileText = profile;
             columnProperties.IsAttributesMaterialChecked = true;
             columnProperties.AttributesMaterialText = "";
             columnProperties.IsAttributesFinishChecked = true;
@@ -53,9 +53,9 @@ namespace DialogBeamProperties.Model.Properties
             columnProperties.PositionRotationText = 0;
             columnProperties.PositionHorizontalText = 0;
             columnProperties.IsPositionLevelsTopChecked = true;
-            columnProperties.PositionLevelsTopText = 0;
+            columnProperties.PositionLevelsTopText = topRl;
             columnProperties.IsPositionLevelsBottomChecked = true;
-            columnProperties.PositionLevelsBottomText = 0;
+            columnProperties.PositionLevelsBottomText = bottomRl;
 
             return columnProperties;
         }

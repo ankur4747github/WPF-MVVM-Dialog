@@ -37,11 +37,6 @@ namespace DialogBeamProperties.View
             this.viewModel.SetProtertiesData(iproperties);
         }
 
-        public IColumnProperties GetPropertiesData()
-        {
-            return viewModel.GetPropertiesData();
-        }
-
         private void InitMessenger()
         {
             Messenger.Default.Unregister<bool>(this,
