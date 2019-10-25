@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardBeamPropertiesFactory
     {
-        public IBeamProperties CreateStandardProperties(string profile = "", double rotation = 0)
+        public BeamProperties CreateStandardProperties(string profile = "", double rotation = 0)
         {
             BeamProperties beamProperties = new BeamProperties();
 

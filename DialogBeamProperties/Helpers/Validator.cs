@@ -10,17 +10,17 @@ namespace DialogBeamProperties.Helpers
     
     public class Validator
     {
-        public bool IsValidProfile(IBeamProperties iproperties)
+        public bool IsValidProfile(BeamProperties iproperties)
         {
             return IsValidProfile(iproperties.AttributesProfileText);
         }
 
-        public bool IsValidProfile(IColumnProperties iproperties)
+        public bool IsValidProfile(ColumnProperties iproperties)
         {
             return IsValidProfile(iproperties.AttributesProfileText);
         }
 
-        public bool IsValidProfileAndTopAndBottomPositions(IColumnProperties iproperties)
+        public bool IsValidProfileAndTopAndBottomPositions(ColumnProperties iproperties)
         {
             return IsValidProfile(iproperties.AttributesProfileText) &&
                    AreTopAndBottomPositionsValid(iproperties.PositionLevelsTopText, iproperties.PositionLevelsBottomText);

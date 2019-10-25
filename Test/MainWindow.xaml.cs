@@ -20,13 +20,13 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
-            IBeamProperties prop = (new StandardBeamPropertiesFactory()).CreateStandardProperties();
+            BeamProperties prop = (new StandardBeamPropertiesFactory()).CreateStandardProperties();
             DummyBeamPropertyData(prop);
-            IColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties();
+            ColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties();
             DummyColumnProprtyData(propColumn);
         }
 
-        private void DummyColumnProprtyData(IColumnProperties prop)
+        private void DummyColumnProprtyData(ColumnProperties prop)
         {
             prop.AttributesProfileText = "RS";
             DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
@@ -41,7 +41,7 @@ namespace Test
            // IColumnProperties prop = testColumn.GetPropertiesData();
         }
 
-        private void DummyBeamPropertyData(IBeamProperties prop)
+        private void DummyBeamPropertyData(BeamProperties prop)
         {
             prop.AttributesProfileText = "RS";
             DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);

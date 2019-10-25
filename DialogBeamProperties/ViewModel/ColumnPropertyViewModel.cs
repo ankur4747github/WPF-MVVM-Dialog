@@ -21,8 +21,8 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
-        private readonly IColumnProperties localColumnProperties;
-        private readonly IColumnProperties globaColumnProperties;
+        private readonly ColumnProperties localColumnProperties;
+        private readonly ColumnProperties globaColumnProperties;
 
 
         #endregion Fields
@@ -384,8 +384,8 @@ namespace DialogBeamProperties.ViewModel
         #region Constructor
 
         public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, 
-                                                IColumnProperties localColumnProperties, 
-                                                IColumnProperties globaColumnProperties)
+                                                ColumnProperties localColumnProperties, 
+                                                ColumnProperties globaColumnProperties)
         {
             InitCommand();
             this.xDataWriter = xDataWriter;
@@ -620,7 +620,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Update Data
 
-        private void UpdateData(IColumnProperties iproperties)
+        private void UpdateData(ColumnProperties iproperties)
         {
             LoadData(iproperties);
             UpdatePositionData();
@@ -651,7 +651,7 @@ namespace DialogBeamProperties.ViewModel
             AttributesProfileText = obj;
         }
 
-        private void LoadData(IColumnProperties iproperties)
+        private void LoadData(ColumnProperties iproperties)
         {
             LoadDataComboBox = iproperties.LoadDataComboBox;
             SelectedDataInLoadDataComboBox = iproperties.SelectedDataInLoadDataComboBox;

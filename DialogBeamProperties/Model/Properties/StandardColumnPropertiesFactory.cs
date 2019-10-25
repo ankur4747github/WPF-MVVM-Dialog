@@ -8,9 +8,9 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardColumnPropertiesFactory
     {
-        public IColumnProperties CreateStandardProperties(string profile = "", double topRl = 0, double bottomRl = 0)
+        public ColumnProperties CreateStandardProperties(string profile = "", double topRl = 0, double bottomRl = 0)
         {
-            IColumnProperties columnProperties = new ColumnProperties();
+            ColumnProperties columnProperties = new ColumnProperties();
 
             List<string> list = new List<string>() { "a", "b", "c", "d" };
 
