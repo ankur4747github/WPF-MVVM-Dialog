@@ -679,20 +679,33 @@ namespace DialogBeamProperties.ViewModel
                 if (!valid)
                 {
                     SetErrorText(PositionLevelErrors);
-                    PositionLevelsTopBorderColor = ErrorBorderColor;
-                    PositionLevelsBottomBorderColor = ErrorBorderColor;
+                    SetLevelsError(true);
                 }
                 else
                 {
-                    PositionLevelsTopBorderColor = DefaultBorderColor;
-                    PositionLevelsBottomBorderColor = DefaultBorderColor;
+                    SetLevelsError(false);
                 }
             }
             else
             {
+                SetLevelsError(false);
                 valid = true;
             }
             return valid;
+        }
+
+        private void SetLevelsError(bool error)
+        {
+            if (error)
+            {
+                PositionLevelsTopBorderColor = ErrorBorderColor;
+                PositionLevelsBottomBorderColor = ErrorBorderColor;
+            }
+            else
+            {
+                PositionLevelsTopBorderColor = DefaultBorderColor;
+                PositionLevelsBottomBorderColor = DefaultBorderColor;
+            }
         }
 
         #endregion Validation
