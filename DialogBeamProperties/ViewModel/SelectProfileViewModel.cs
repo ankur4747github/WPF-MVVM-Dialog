@@ -95,6 +95,8 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion Apply Buttom Command
 
+       
+
         #endregion Button Command
 
         #region PropertyChanged
@@ -127,6 +129,8 @@ namespace DialogBeamProperties.ViewModel
             CancelButtonCommand = new RelayCommand(new Action<object>(CancelButtonClick));
         }
 
+      
+
         #endregion Constructor
 
         #region Public Methods
@@ -153,6 +157,10 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
+        public void ListViewMouseDoubleClick()
+        {
+            OkButtonClick(true);
+        }
         #endregion Public Methods
 
         #region Private Methods
@@ -170,6 +178,8 @@ namespace DialogBeamProperties.ViewModel
                 Messenger.Default.Send(true, MessengerToken.CLOSESELECTPROFILEWINDOW);
             }
         }
+
+     
 
         #endregion Private Methods
     }

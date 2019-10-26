@@ -17,6 +17,7 @@
         </Grid.RowDefinitions>
         <ListView ItemsSource="{Binding ProfileList,Mode=OneWay}"
                   SelectedItem="{Binding SelectedProfile,Mode=TwoWay}"
+                  MouseDoubleClick="ListView_MouseDoubleClick"
                   Margin="5">
         </ListView>
 

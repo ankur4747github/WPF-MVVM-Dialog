@@ -45,13 +45,18 @@ namespace DialogBeamProperties.View
 
         internal void SetData(string attributesProfileText)
         {
-            viewModel.SetData(attributesProfileText);
+            viewModel?.SetData(attributesProfileText);
         }
 
         public void Dispose()
         {
             Messenger.Default.Unregister<bool>(this,
                     MessengerToken.CLOSESELECTPROFILEWINDOW, CloseWindow);
+        }
+
+        private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            viewModel?.ListViewMouseDoubleClick();
         }
     }
 }
