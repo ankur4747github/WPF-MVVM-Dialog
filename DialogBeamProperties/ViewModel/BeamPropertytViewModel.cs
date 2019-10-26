@@ -505,12 +505,12 @@ namespace DialogBeamProperties.ViewModel
                 if (IsAttributesProfileChecked)
                 {
                     validProfile = new Validator().IsValidProfile(localBeamProperties);
-                    SetErrorOnScreenIfProfileError(validProfile);
                 }
                 else
                 {
                     validProfile = true;
                 }
+                SetErrorOnScreenIfProfileError(validProfile);
             }
             catch (Exception ex)
             {

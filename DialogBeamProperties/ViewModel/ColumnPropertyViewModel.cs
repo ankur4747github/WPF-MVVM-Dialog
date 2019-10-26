@@ -647,12 +647,12 @@ namespace DialogBeamProperties.ViewModel
                 if (IsAttributesProfileChecked)
                 {
                     validProfile = new Validator().IsValidProfile(localColumnProperties);
-                    SetErrorOnScreenIfProfileError(validProfile);
                 }
                 else
                 {
                     validProfile = true;
                 }
+                SetErrorOnScreenIfProfileError(validProfile);
             }
             catch (Exception ex)
             {
