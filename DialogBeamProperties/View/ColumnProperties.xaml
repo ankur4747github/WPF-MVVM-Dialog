@@ -244,7 +244,7 @@
                                           SelectedItem="{Binding SelectedDataInPositionVerticalComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
-                                         Text="{Binding PositionVerticalText,Mode=TwoWay}"
+                                         Text="{Binding PositionVerticalText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
@@ -266,7 +266,7 @@
                                           SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
-                                     Text="{Binding PositionRotationText,Mode=TwoWay}"
+                                     Text="{Binding PositionRotationText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -288,7 +288,7 @@
                                           SelectedItem="{Binding SelectedDataInPositionHorizontalComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
-                                     Text="{Binding PositionHorizontalText,Mode=TwoWay}"
+                                     Text="{Binding PositionHorizontalText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                      Margin="15,0,0,0"
                                      HorizontalAlignment="Stretch"
                                      VerticalAlignment="Center">
@@ -311,7 +311,7 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                         Text="{Binding PositionLevelsTop,Mode=TwoWay}"
+                                         Text="{Binding PositionLevelsTop,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          BorderBrush="{Binding PositionLevelsTopBorderColor, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"
@@ -328,7 +328,7 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <TextBox Grid.Column="1"
-                                         Text="{Binding PositionLevelsBottom,Mode=TwoWay}"
+                                         Text="{Binding PositionLevelsBottom,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          BorderBrush="{Binding PositionLevelsBottomBorderColor, Mode=OneWay}"
                                          Margin="15,0,0,0"
                                          HorizontalAlignment="Stretch"

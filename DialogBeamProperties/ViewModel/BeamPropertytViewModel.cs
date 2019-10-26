@@ -69,20 +69,24 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionOnPlaneText
 
-        public double PositionOnPlaneText
+        public string PositionOnPlaneText
         {
             get { return _positionOnPlaneText; }
             set
             {
-                if (value == _positionOnPlaneText)
+                if (value.ToString() == _positionOnPlaneText)
                     return;
 
-                _positionOnPlaneText = value;
+                _positionOnPlaneText = value.ToString();
+                if (!string.IsNullOrEmpty(PositionOnPlaneText))
+                {
+                    IsPositionOnPlaneChecked = Convert.ToDouble(PositionOnPlaneText) > 0;
+                }
                 OnPropertyChangedAsync(nameof(PositionOnPlaneText));
             }
         }
 
-        private double _positionOnPlaneText { get; set; }
+        private string _positionOnPlaneText { get; set; }
 
         #endregion PositionOnPlaneText
 
@@ -126,20 +130,24 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionRotationText
 
-        public double PositionRotationText
+        public string PositionRotationText
         {
             get { return _positionRotationText; }
             set
             {
-                if (value == _positionRotationText)
+                if (value.ToString() == _positionRotationText)
                     return;
 
-                _positionRotationText = value;
+                _positionRotationText = value.ToString();
+                if (!string.IsNullOrEmpty(PositionRotationText))
+                {
+                    IsPositionRotationChecked = Convert.ToDouble(PositionRotationText) > 0;
+                }
                 OnPropertyChangedAsync(nameof(PositionRotationText));
             }
         }
 
-        private double _positionRotationText { get; set; }
+        private string _positionRotationText { get; set; }
 
         #endregion PositionRotationText
 
@@ -183,20 +191,24 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionAtDepthText
 
-        public double PositionAtDepthText
+        public string PositionAtDepthText
         {
             get { return _positionAtDepthText; }
             set
             {
-                if (value == _positionAtDepthText)
+                if (value.ToString() == _positionAtDepthText)
                     return;
 
-                _positionAtDepthText = value;
+                _positionAtDepthText = value.ToString();
+                if (!string.IsNullOrEmpty(PositionAtDepthText))
+                {
+                    IsPositionAtDepthChecked = Convert.ToDouble(PositionAtDepthText) > 0;
+                }
                 OnPropertyChangedAsync(nameof(PositionAtDepthText));
             }
         }
 
-        private double _positionAtDepthText { get; set; }
+        private string _positionAtDepthText { get; set; }
 
         #endregion PositionAtDepthText
 
@@ -355,13 +367,13 @@ namespace DialogBeamProperties.ViewModel
         private void UpdatePositionData()
         {
             SelectedDataInPositionOnPlaneComboBox = localBeamProperties.SelectedDataInPositionOnPlaneComboBox;
-            PositionOnPlaneText = localBeamProperties.PositionOnPlaneText;
+            PositionOnPlaneText = localBeamProperties.PositionOnPlaneText.ToString();
 
             SelectedDataInPositionRotationComboBox = localBeamProperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = localBeamProperties.PositionRotationText;
+            PositionRotationText = localBeamProperties.PositionRotationText.ToString();
 
             SelectedDataInPositionAtDepthComboBox = localBeamProperties.SelectedDataInPositionAtDepthComboBox;
-            PositionAtDepthText = localBeamProperties.PositionAtDepthText;
+            PositionAtDepthText = localBeamProperties.PositionAtDepthText.ToString();
         }
 
         private void SelectedProfile(string obj)
@@ -459,19 +471,19 @@ namespace DialogBeamProperties.ViewModel
             if (IsPositionOnPlaneChecked)
             {
                 localBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-                localBeamProperties.PositionOnPlaneText = PositionOnPlaneText;
+                localBeamProperties.PositionOnPlaneText = Convert.ToDouble(PositionOnPlaneText);
             }
 
             if (IsPositionRotationChecked)
             {
                 localBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                localBeamProperties.PositionRotationText = PositionRotationText;
+                localBeamProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
             }
 
             if (IsPositionAtDepthChecked)
             {
                 localBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-                localBeamProperties.PositionAtDepthText = PositionAtDepthText;
+                localBeamProperties.PositionAtDepthText = Convert.ToDouble(PositionAtDepthText);
             }
         }
 
