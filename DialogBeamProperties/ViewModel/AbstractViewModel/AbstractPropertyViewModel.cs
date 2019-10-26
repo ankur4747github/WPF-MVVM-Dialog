@@ -16,28 +16,11 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         protected const string ErrorBorderColor = "Red";
         protected bool _selectAll = false;
 
+        public List<string> LoadDataComboBox { get; set; }
+
         #endregion Fields
 
         #region INotifyPropertyChange Member
-
-        #region LoadDataComboBox
-
-        public List<string> LoadDataComboBox
-        {
-            get { return _loadDataComboBox; }
-            set
-            {
-                if (value == _loadDataComboBox)
-                    return;
-
-                _loadDataComboBox = value;
-                OnPropertyChangedAsync(nameof(LoadDataComboBox));
-            }
-        }
-
-        private List<string> _loadDataComboBox { get; set; }
-
-        #endregion LoadDataComboBox
 
         #region SelectedDataInLoadDataComboBox
 
@@ -502,7 +485,8 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         public AbstractPropertyViewModel()
         {
-            LoadDataComboBox = new List<string>();
+            LoadDataComboBox = new List<string>() { "a", "b", "c", "d" };
+            SelectedDataInLoadDataComboBox = LoadDataComboBox[0];
         }
 
         #region Button Command
@@ -543,7 +527,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #endregion OK Buttom Command
 
-        #region EnterKeyCommand 
+        #region EnterKeyCommand
 
         private ICommand _enterKeyCommand;
 
@@ -559,8 +543,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
             }
         }
 
-        #endregion OK Buttom Command
-
+        #endregion EnterKeyCommand
 
         #region Apply Buttom Command
 

@@ -39,6 +39,7 @@
                     Command="{Binding LoadButtonCommand}">
             </Button>
             <ComboBox Width="120"
+                      SelectedIndex="0"
                       Grid.Column="2"
                       SelectedItem="{Binding SelectedDataInLoadDataComboBox, Mode=TwoWay}"
                       ItemsSource="{Binding LoadDataComboBox, Mode=OneWay}">
@@ -234,18 +235,19 @@
                                     <ColumnDefinition Width="120*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <CheckBox Content="Vertical:"
-                                      IsChecked="{Binding IsPositionVerticalChecked, Mode=TwoWay}"
-                                      VerticalAlignment="Center">
+                                          IsChecked="{Binding IsPositionVerticalChecked, Mode=TwoWay}"
+                                          VerticalAlignment="Center">
                                 </CheckBox>
                                 <ComboBox Grid.Column="1"
-                                      ItemsSource="{Binding PositionVerticalComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionVerticalComboBox,Mode=TwoWay}">
+                                          SelectedIndex="0"
+                                          ItemsSource="{Binding PositionVerticalComboBox, Mode=OneWay}"
+                                          SelectedItem="{Binding SelectedDataInPositionVerticalComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
-                                     Text="{Binding PositionVerticalText,Mode=TwoWay}"
-                                     Margin="15,0,0,0"
-                                     HorizontalAlignment="Stretch"
-                                     VerticalAlignment="Center">
+                                         Text="{Binding PositionVerticalText,Mode=TwoWay}"
+                                         Margin="15,0,0,0"
+                                         HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Center">
                                 </TextBox>
                             </Grid>
                             <Grid Margin="0,5">
@@ -259,8 +261,9 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <ComboBox Grid.Column="1"
-                                      ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
+                                          SelectedIndex="0"
+                                          ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
+                                          SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
                                      Text="{Binding PositionRotationText,Mode=TwoWay}"
@@ -280,8 +283,9 @@
                                       VerticalAlignment="Center">
                                 </CheckBox>
                                 <ComboBox Grid.Column="1"
-                                      ItemsSource="{Binding PositionHorizontalComboBox, Mode=OneWay}"
-                                      SelectedItem="{Binding SelectedDataInPositionHorizontalComboBox,Mode=TwoWay}">
+                                          SelectedIndex="0"
+                                          ItemsSource="{Binding PositionHorizontalComboBox, Mode=OneWay}"
+                                          SelectedItem="{Binding SelectedDataInPositionHorizontalComboBox,Mode=TwoWay}">
                                 </ComboBox>
                                 <TextBox Grid.Column="2"
                                      Text="{Binding PositionHorizontalText,Mode=TwoWay}"

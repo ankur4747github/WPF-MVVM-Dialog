@@ -11,24 +11,8 @@ namespace DialogBeamProperties.Model.Properties
         public BeamProperties CreateStandardProperties(string profile = "", double rotation = 0)
         {
             BeamProperties beamProperties = new BeamProperties();
-
-            List<string> list = new List<string>() { "a", "b", "c", "d" };
-            beamProperties.LoadDataComboBox = list;
-            beamProperties.SelectedDataInLoadDataComboBox = list[0];
+            
             beamProperties.AttributesProfileText = "H100";
-
-            List<string> onPlaneList = new List<string>() { "Middle", "Right", "Left" };
-            beamProperties.PositionOnPlaneComboBox = onPlaneList;
-            beamProperties.SelectedDataInPositionOnPlaneComboBox = onPlaneList[0];
-
-            List<string> rotationList = new List<string>() { "Front", "Top", "Back", "Below" };
-            beamProperties.PositionRotationComboBox = rotationList;
-            beamProperties.SelectedDataInPositionRotationComboBox = rotationList[0];
-
-            List<string> atDepthList = new List<string>() { "Middle", "Front", "Behind" };
-            beamProperties.PositionAtDepthComboBox = atDepthList;
-            beamProperties.SelectedDataInPositionAtDepthComboBox = atDepthList[0];
-
             beamProperties.NumberingSeriesPartPrefixText = "";
             beamProperties.NumberingSeriesPartStartNumberText = "";
             beamProperties.NumberingSeriesAssemblyPrefixText = "";

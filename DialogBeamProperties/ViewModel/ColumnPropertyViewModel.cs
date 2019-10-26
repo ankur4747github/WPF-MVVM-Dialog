@@ -2,14 +2,12 @@
 using DialogBeamProperties.Command;
 using DialogBeamProperties.Constants;
 using DialogBeamProperties.Helpers;
-using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.Model.Properties;
 using DialogBeamProperties.View;
 using DialogBeamProperties.ViewModel.AbstractViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace DialogBeamProperties.ViewModel
@@ -24,6 +22,9 @@ namespace DialogBeamProperties.ViewModel
         private readonly ColumnProperties localColumnProperties;
         private readonly ColumnProperties globaColumnProperties;
 
+        public List<string> PositionRotationComboBox { get; set; }
+        public List<string> PositionVerticalComboBox { get; set; }
+        public List<string> PositionHorizontalComboBox { get; set; }
 
         #endregion Fields
 
@@ -47,25 +48,6 @@ namespace DialogBeamProperties.ViewModel
         private bool _isPositionVerticalChecked { get; set; }
 
         #endregion IsPositionVerticalChecked
-
-        #region PositionVerticalComboBox
-
-        public List<string> PositionVerticalComboBox
-        {
-            get { return _positionVerticalComboBox; }
-            set
-            {
-                if (value == _positionVerticalComboBox)
-                    return;
-
-                _positionVerticalComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionVerticalComboBox));
-            }
-        }
-
-        private List<string> _positionVerticalComboBox { get; set; }
-
-        #endregion PositionVerticalComboBox
 
         #region SelectedDataInPositionVerticalComboBox
 
@@ -124,25 +106,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion IsPositionRotationChecked
 
-        #region PositionRotationComboBox
-
-        public List<string> PositionRotationComboBox
-        {
-            get { return _positionRotationComboBox; }
-            set
-            {
-                if (value == _positionRotationComboBox)
-                    return;
-
-                _positionRotationComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionRotationComboBox));
-            }
-        }
-
-        private List<string> _positionRotationComboBox { get; set; }
-
-        #endregion PositionRotationComboBox
-
         #region SelectedDataInPositionRotationComboBox
 
         public string SelectedDataInPositionRotationComboBox
@@ -199,25 +162,6 @@ namespace DialogBeamProperties.ViewModel
         private bool _isPositionHorizontalChecked { get; set; }
 
         #endregion IsPositionHorizontalChecked
-
-        #region PositionHorizontalComboBox
-
-        public List<string> PositionHorizontalComboBox
-        {
-            get { return _positionHorizontalComboBox; }
-            set
-            {
-                if (value == _positionHorizontalComboBox)
-                    return;
-
-                _positionHorizontalComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionHorizontalComboBox));
-            }
-        }
-
-        private List<string> _positionHorizontalComboBox { get; set; }
-
-        #endregion PositionHorizontalComboBox
 
         #region SelectedDataInPositionHorizontalComboBox
 
@@ -383,8 +327,8 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter, 
-                                                ColumnProperties localColumnProperties, 
+        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter,
+                                                ColumnProperties localColumnProperties,
                                                 ColumnProperties globaColumnProperties)
         {
             InitCommand();
@@ -392,6 +336,14 @@ namespace DialogBeamProperties.ViewModel
             this.localColumnProperties = localColumnProperties; // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
             this.globaColumnProperties = globaColumnProperties;
             UpdateData(localColumnProperties);
+
+            PositionRotationComboBox = new List<string>() { "Front", "Top", "Back", "Below" };
+            PositionVerticalComboBox = new List<string>() { "Middle", "Right", "Left" };
+            PositionHorizontalComboBox = new List<string>() { "Middle", "Front", "Behind" };
+
+            SelectedDataInPositionVerticalComboBox = PositionVerticalComboBox[0];
+            SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
+            SelectedDataInPositionHorizontalComboBox = PositionHorizontalComboBox[0];
         }
 
         private void InitCommand()
@@ -410,11 +362,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion Constructor
 
-        #region Public Methods
-
-
-        #endregion Public Methods
-
         #region Private Methods
 
         #region Button Click
@@ -426,7 +373,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            localColumnProperties.LoadDataComboBox = LoadDataComboBox;
             localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
@@ -439,22 +385,18 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            localColumnProperties.LoadDataComboBox = LoadDataComboBox;
             localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
             SavePositionData();
             if (IsAllDataValid())
             {
-
                 xDataWriter.WriteXDataToLine(localColumnProperties.AttributesProfileText, localColumnProperties.PositionRotationText);
             }
         }
 
         private void ModifyButtonClick(object obj)
         {
-
-            localColumnProperties.LoadDataComboBox = LoadDataComboBox;
             localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
@@ -518,6 +460,7 @@ namespace DialogBeamProperties.ViewModel
                 SelectProfileButtonClick(obj);
             }
         }
+
         #endregion Button Click
 
         #region Save Data
@@ -529,21 +472,18 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsPositionVerticalChecked)
             {
-                localColumnProperties.PositionVerticalComboBox = PositionVerticalComboBox;
                 localColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
                 localColumnProperties.PositionVerticalText = PositionVerticalText;
             }
 
             if (IsPositionRotationChecked)
             {
-                localColumnProperties.PositionRotationComboBox = PositionRotationComboBox;
                 localColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
                 localColumnProperties.PositionRotationText = PositionRotationText;
             }
 
             if (IsPositionHorizontalChecked)
             {
-                localColumnProperties.PositionHorizontalComboBox = PositionHorizontalComboBox;
                 localColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
                 localColumnProperties.PositionHorizontalText = PositionHorizontalText;
             }
@@ -630,15 +570,12 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            PositionVerticalComboBox = localColumnProperties.PositionVerticalComboBox;
             SelectedDataInPositionVerticalComboBox = localColumnProperties.SelectedDataInPositionVerticalComboBox;
             PositionVerticalText = localColumnProperties.PositionVerticalText;
 
-            PositionRotationComboBox = localColumnProperties.PositionRotationComboBox;
             SelectedDataInPositionRotationComboBox = localColumnProperties.SelectedDataInPositionRotationComboBox;
             PositionRotationText = localColumnProperties.PositionRotationText;
 
-            PositionHorizontalComboBox = localColumnProperties.PositionHorizontalComboBox;
             SelectedDataInPositionHorizontalComboBox = localColumnProperties.SelectedDataInPositionHorizontalComboBox;
             PositionHorizontalText = localColumnProperties.PositionHorizontalText;
 
@@ -653,7 +590,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void LoadData(ColumnProperties iproperties)
         {
-            LoadDataComboBox = iproperties.LoadDataComboBox;
             SelectedDataInLoadDataComboBox = iproperties.SelectedDataInLoadDataComboBox;
         }
 

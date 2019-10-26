@@ -20,6 +20,10 @@ namespace DialogBeamProperties.ViewModel
         private readonly BeamProperties localBeamProperties;
         private readonly BeamProperties globalBeamProperties;
 
+        public List<string> PositionOnPlaneComboBox { get; set; }
+        public List<string> PositionRotationComboBox { get; set; }
+        public List<string> PositionAtDepthComboBox { get; set; }
+
         #endregion Fields
 
         #region INotifyPropertyChange Member
@@ -43,25 +47,6 @@ namespace DialogBeamProperties.ViewModel
         private bool _isPositionOnPlaneChecked { get; set; }
 
         #endregion IsPositionOnPlaneChecked
-
-        #region PositionOnPlaneComboBox
-
-        public List<string> PositionOnPlaneComboBox
-        {
-            get { return _positionOnPlaneComboBox; }
-            set
-            {
-                if (value == _positionOnPlaneComboBox)
-                    return;
-
-                _positionOnPlaneComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionOnPlaneComboBox));
-            }
-        }
-
-        private List<string> _positionOnPlaneComboBox { get; set; }
-
-        #endregion PositionOnPlaneComboBox
 
         #region SelectedDataInPositionOnPlaneComboBox
 
@@ -120,25 +105,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion IsPositionRotationChecked
 
-        #region PositionRotationComboBox
-
-        public List<string> PositionRotationComboBox
-        {
-            get { return _positionRotationComboBox; }
-            set
-            {
-                if (value == _positionRotationComboBox)
-                    return;
-
-                _positionRotationComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionRotationComboBox));
-            }
-        }
-
-        private List<string> _positionRotationComboBox { get; set; }
-
-        #endregion PositionRotationComboBox
-
         #region SelectedDataInPositionRotationComboBox
 
         public string SelectedDataInPositionRotationComboBox
@@ -196,25 +162,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion IsPositionAtDepthChecked
 
-        #region PositionAtDepthComboBox
-
-        public List<string> PositionAtDepthComboBox
-        {
-            get { return _positionAtDepthComboBox; }
-            set
-            {
-                if (value == _positionAtDepthComboBox)
-                    return;
-
-                _positionAtDepthComboBox = value;
-                OnPropertyChangedAsync(nameof(PositionAtDepthComboBox));
-            }
-        }
-
-        private List<string> _positionAtDepthComboBox { get; set; }
-
-        #endregion PositionAtDepthComboBox
-
         #region SelectedDataInPositionAtDepthComboBox
 
         public string SelectedDataInPositionAtDepthComboBox
@@ -266,6 +213,14 @@ namespace DialogBeamProperties.ViewModel
             this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
             this.globalBeamProperties = globalBeamProperties;
             UpdateData(localBeamProperties);
+
+            PositionOnPlaneComboBox = new List<string>() { "Middle", "Right", "Left" };
+            PositionRotationComboBox = new List<string>() { "Front", "Top", "Back", "Below" };
+            PositionAtDepthComboBox = new List<string>() { "Middle", "Front", "Behind" };
+
+            SelectedDataInPositionOnPlaneComboBox = PositionOnPlaneComboBox[0];
+            SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
+            SelectedDataInPositionAtDepthComboBox = PositionAtDepthComboBox[0];
         }
 
         private void InitCommand()
@@ -284,8 +239,6 @@ namespace DialogBeamProperties.ViewModel
 
         #endregion Constructor
 
-
-
         #region Private Methods
 
         #region Button Click
@@ -297,7 +250,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
             localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
@@ -310,7 +262,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
             localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
@@ -324,7 +275,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void ModifyButtonClick(object obj)
         {
-            localBeamProperties.LoadDataComboBox = LoadDataComboBox;
             localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
             SaveNumberingData();
             SaveAttributesData();
@@ -404,15 +354,12 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdatePositionData()
         {
-            PositionOnPlaneComboBox = localBeamProperties.PositionOnPlaneComboBox;
             SelectedDataInPositionOnPlaneComboBox = localBeamProperties.SelectedDataInPositionOnPlaneComboBox;
             PositionOnPlaneText = localBeamProperties.PositionOnPlaneText;
 
-            PositionRotationComboBox = localBeamProperties.PositionRotationComboBox;
             SelectedDataInPositionRotationComboBox = localBeamProperties.SelectedDataInPositionRotationComboBox;
             PositionRotationText = localBeamProperties.PositionRotationText;
 
-            PositionAtDepthComboBox = localBeamProperties.PositionAtDepthComboBox;
             SelectedDataInPositionAtDepthComboBox = localBeamProperties.SelectedDataInPositionAtDepthComboBox;
             PositionAtDepthText = localBeamProperties.PositionAtDepthText;
         }
@@ -424,8 +371,6 @@ namespace DialogBeamProperties.ViewModel
 
         private void LoadData(BeamProperties iproperties)
         {
-            LoadDataComboBox = iproperties.LoadDataComboBox;
-            SelectedDataInLoadDataComboBox = iproperties.SelectedDataInLoadDataComboBox;
         }
 
         private void UpdateAttributesData()
@@ -513,21 +458,18 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsPositionOnPlaneChecked)
             {
-                localBeamProperties.PositionOnPlaneComboBox = PositionOnPlaneComboBox;
                 localBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
                 localBeamProperties.PositionOnPlaneText = PositionOnPlaneText;
             }
 
             if (IsPositionRotationChecked)
             {
-                localBeamProperties.PositionRotationComboBox = PositionRotationComboBox;
                 localBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
                 localBeamProperties.PositionRotationText = PositionRotationText;
             }
 
             if (IsPositionAtDepthChecked)
             {
-                localBeamProperties.PositionAtDepthComboBox = PositionAtDepthComboBox;
                 localBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
                 localBeamProperties.PositionAtDepthText = PositionAtDepthText;
             }

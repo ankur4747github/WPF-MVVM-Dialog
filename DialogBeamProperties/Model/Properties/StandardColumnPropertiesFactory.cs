@@ -11,25 +11,7 @@ namespace DialogBeamProperties.Model.Properties
         public ColumnProperties CreateStandardProperties(string profile = "", double topRl = 0, double bottomRl = 0)
         {
             ColumnProperties columnProperties = new ColumnProperties();
-
-            List<string> list = new List<string>() { "a", "b", "c", "d" };
-
-            columnProperties.LoadDataComboBox = list;
-            columnProperties.SelectedDataInLoadDataComboBox = list[0];
             columnProperties.AttributesProfileText = "H100";
-
-            List<string> verticleList = new List<string>() { "Middle", "Right", "Left" };
-            columnProperties.PositionVerticalComboBox = verticleList;
-            columnProperties.SelectedDataInPositionVerticalComboBox = verticleList[0];
-
-            List<string> rotationList = new List<string>() { "Front", "Top", "Back", "Below" };
-            columnProperties.PositionRotationComboBox = rotationList;
-            columnProperties.SelectedDataInPositionRotationComboBox = rotationList[0];
-
-            List<string> horizontalList = new List<string>() { "Middle", "Front", "Behind" };
-            columnProperties.PositionHorizontalComboBox = horizontalList;
-            columnProperties.SelectedDataInPositionHorizontalComboBox = horizontalList[0];
-
             columnProperties.NumberingSeriesPartPrefixText = "";
             columnProperties.NumberingSeriesPartStartNumberText = "";
             columnProperties.NumberingSeriesAssemblyPrefixText = "";

@@ -4,7 +4,7 @@ namespace DialogBeamProperties.Model
 {
     public class BeamProperties
     {
-        public List<string> LoadDataComboBox { get; set; }
+        
         public string SelectedDataInLoadDataComboBox { get; set; }
         public string NumberingSeriesPartPrefixText { get; set; }
         public string NumberingSeriesPartStartNumberText { get; set; }
@@ -15,13 +15,10 @@ namespace DialogBeamProperties.Model
         public string AttributesMaterialText { get; set; }
         public string AttributesFinishText { get; set; }
         public string AttributesClassText { get; set; }
-        public List<string> PositionOnPlaneComboBox { get; set; }
         public string SelectedDataInPositionOnPlaneComboBox { get; set; }
         public double PositionOnPlaneText { get; set; }
-        public List<string> PositionRotationComboBox { get; set; }
         public string SelectedDataInPositionRotationComboBox { get; set; }
         public double PositionRotationText { get; set; }
-        public List<string> PositionAtDepthComboBox { get; set; }
         public string SelectedDataInPositionAtDepthComboBox { get; set; }
         public double PositionAtDepthText { get; set; }
     }

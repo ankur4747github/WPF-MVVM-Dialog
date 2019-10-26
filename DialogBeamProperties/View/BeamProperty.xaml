@@ -40,6 +40,7 @@
             </Button>
             <ComboBox Width="120"
                       Grid.Column="2"
+                      SelectedIndex="0"
                       SelectedItem="{Binding SelectedDataInLoadDataComboBox, Mode=TwoWay}"
                       ItemsSource="{Binding LoadDataComboBox, Mode=OneWay}">
             </ComboBox>
@@ -236,6 +237,7 @@
                                       VerticalAlignment="Center">
                             </CheckBox>
                             <ComboBox Grid.Column="1"
+                                      SelectedIndex="0"
                                       ItemsSource="{Binding PositionOnPlaneComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}">
                             </ComboBox>
@@ -257,6 +259,7 @@
                                       VerticalAlignment="Center">
                             </CheckBox>
                             <ComboBox Grid.Column="1"
+                                      SelectedIndex="0"
                                       ItemsSource="{Binding PositionRotationComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionRotationComboBox,Mode=TwoWay}">
                             </ComboBox>
@@ -278,6 +281,7 @@
                                       VerticalAlignment="Center">
                             </CheckBox>
                             <ComboBox Grid.Column="1"
+                                      SelectedIndex="0"
                                       ItemsSource="{Binding PositionAtDepthComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionAtDepthComboBox,Mode=TwoWay}">
                             </ComboBox>
