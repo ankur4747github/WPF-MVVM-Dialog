@@ -71,7 +71,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _numberingSeriesPartPrefixText = value;
-                IsNumberingSeriesPartPrefixChecked = NumberingSeriesPartPrefixText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(NumberingSeriesPartPrefixText));
             }
         }
@@ -110,7 +109,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _numberingSeriesPartStartNumberText = value;
-                IsNumberingSeriesPartStartumberChecked = NumberingSeriesPartStartNumberText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(NumberingSeriesPartStartNumberText));
             }
         }
@@ -149,7 +147,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _numberingSeriesAssemblyPrefixText = value;
-                IsNumberingSeriesAssemblyPrefixChecked = NumberingSeriesAssemblyPrefixText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(NumberingSeriesAssemblyPrefixText));
             }
         }
@@ -188,7 +185,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _numberingSeriesAssemblyStartNumberText = value;
-                IsNumberingSeriesAssemblyStartumberChecked = NumberingSeriesAssemblyStartNumberText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(NumberingSeriesAssemblyStartNumberText));
             }
         }
@@ -227,7 +223,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesNameText = value;
-                IsAttributesNameChecked = AttributesNameText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(AttributesNameText));
             }
         }
@@ -287,7 +282,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                 _attributesProfileText = value;
                 ProfileBorderColor = DefaultBorderColor;
                 IsSelectProfileButtonEnable = AttributesProfileText.Trim().Length > 1;
-                IsAttributesProfileChecked = AttributesProfileText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(AttributesProfileText));
             }
         }
@@ -326,7 +320,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesMaterialText = value;
-                IsAttributesMaterialChecked = AttributesMaterialText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(AttributesMaterialText));
             }
         }
@@ -365,7 +358,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesFinishText = value;
-                IsAttributesFinishChecked = AttributesFinishText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(AttributesFinishText));
             }
         }
@@ -404,7 +396,6 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesClassText = value;
-                IsAttributesClassChecked = AttributesClassText.Trim().Length > 0;
                 OnPropertyChangedAsync(nameof(AttributesClassText));
             }
         }

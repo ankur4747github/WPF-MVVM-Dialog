@@ -70,24 +70,21 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionVerticalText
 
-        public string PositionVerticalText
+        public double PositionVerticalText
         {
             get { return _positionVerticalText; }
             set
             {
-                if (value.ToString() == _positionVerticalText)
+                if (value == _positionVerticalText)
                     return;
 
-                _positionVerticalText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionVerticalText))
-                {
-                    IsPositionVerticalChecked = Convert.ToDouble(PositionVerticalText) > 0;
-                }
+                _positionVerticalText = value;
+                
                 OnPropertyChangedAsync(nameof(PositionVerticalText));
             }
         }
 
-        private string _positionVerticalText { get; set; }
+        private double _positionVerticalText { get; set; }
 
         #endregion PositionVerticalText
 
@@ -131,24 +128,21 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionRotationText
 
-        public string PositionRotationText
+        public double PositionRotationText
         {
             get { return _positionRotationText; }
             set
             {
-                if (value.ToString() == _positionRotationText)
+                if (value == _positionRotationText)
                     return;
 
-                _positionRotationText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionRotationText))
-                {
-                    IsPositionRotationChecked = Convert.ToDouble(PositionRotationText) > 0;
-                }
+                _positionRotationText = value;
+               
                 OnPropertyChangedAsync(nameof(PositionRotationText));
             }
         }
 
-        private string _positionRotationText { get; set; }
+        private double _positionRotationText { get; set; }
 
         #endregion PositionRotationText
 
@@ -192,24 +186,21 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionHorizontalText
 
-        public string PositionHorizontalText
+        public double PositionHorizontalText
         {
             get { return _positionHorizontalText; }
             set
             {
-                if (value.ToString() == _positionHorizontalText)
+                if (value == _positionHorizontalText)
                     return;
 
-                _positionHorizontalText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionHorizontalText))
-                {
-                    IsPositionHorizontalChecked = Convert.ToDouble(PositionHorizontalText) > 0;
-                }
+                _positionHorizontalText = value;
+                
                 OnPropertyChangedAsync(nameof(PositionHorizontalText));
             }
         }
 
-        private string _positionHorizontalText { get; set; }
+        private double _positionHorizontalText { get; set; }
 
         #endregion PositionHorizontalText
 
@@ -234,26 +225,25 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionsLevelTop
 
-        public string PositionLevelsTop
+        public double PositionLevelsTop
         {
             get { return _positionLevelTop; }
             set
             {
-                if (value.ToString() == _positionLevelTop)
+                if (value == _positionLevelTop)
                     return;
 
-                _positionLevelTop = value.ToString();
+                _positionLevelTop = value;
                 if (PositionLevelsTop.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsTopChecked = Convert.ToDouble(PositionLevelsTop) > 0;
                 }
 
                 OnPropertyChangedAsync(nameof(PositionLevelsTop));
             }
         }
 
-        private string _positionLevelTop { get; set; }
+        private double _positionLevelTop { get; set; }
 
         #endregion PositionsLevelTop
 
@@ -278,26 +268,25 @@ namespace DialogBeamProperties.ViewModel
 
         #region PositionLevelsBottom
 
-        public string PositionLevelsBottom
+        public double PositionLevelsBottom
         {
             get { return _positionLevelBottom; }
             set
             {
-                if (value.ToString() == _positionLevelBottom)
+                if (value== _positionLevelBottom)
                     return;
 
-                _positionLevelBottom = value.ToString();
+                _positionLevelBottom = value;
                 if (PositionLevelsBottom.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsBottomChecked = Convert.ToDouble(PositionLevelsBottom) > 0;
                 }
 
                 OnPropertyChangedAsync(nameof(PositionLevelsBottom));
             }
         }
 
-        private string _positionLevelBottom { get; set; }
+        private double _positionLevelBottom { get; set; }
 
         #endregion PositionLevelsBottom
 
@@ -489,29 +478,29 @@ namespace DialogBeamProperties.ViewModel
             if (IsPositionVerticalChecked)
             {
                 localColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
-                localColumnProperties.PositionVerticalText = Convert.ToDouble(PositionVerticalText);
+                localColumnProperties.PositionVerticalText = PositionVerticalText;
             }
 
             if (IsPositionRotationChecked)
             {
                 localColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                localColumnProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
+                localColumnProperties.PositionRotationText = PositionRotationText;
             }
 
             if (IsPositionHorizontalChecked)
             {
                 localColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
-                localColumnProperties.PositionHorizontalText = Convert.ToDouble(PositionHorizontalText);
+                localColumnProperties.PositionHorizontalText = PositionHorizontalText;
             }
 
             if (IsPositionLevelsTopChecked)
             {
-                localColumnProperties.PositionLevelsTopText = Convert.ToDouble(PositionLevelsTop);
+                localColumnProperties.PositionLevelsTopText = PositionLevelsTop;
             }
 
             if (IsPositionLevelsBottomChecked)
             {
-                localColumnProperties.PositionLevelsBottomText = Convert.ToDouble(PositionLevelsBottom);
+                localColumnProperties.PositionLevelsBottomText = PositionLevelsBottom;
             }
         }
 
@@ -587,16 +576,16 @@ namespace DialogBeamProperties.ViewModel
         private void UpdatePositionData()
         {
             SelectedDataInPositionVerticalComboBox = localColumnProperties.SelectedDataInPositionVerticalComboBox;
-            PositionVerticalText = localColumnProperties.PositionVerticalText.ToString();
+            PositionVerticalText = localColumnProperties.PositionVerticalText;
 
             SelectedDataInPositionRotationComboBox = localColumnProperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = localColumnProperties.PositionRotationText.ToString();
+            PositionRotationText = localColumnProperties.PositionRotationText;
 
             SelectedDataInPositionHorizontalComboBox = localColumnProperties.SelectedDataInPositionHorizontalComboBox;
-            PositionHorizontalText = localColumnProperties.PositionHorizontalText.ToString();
+            PositionHorizontalText = localColumnProperties.PositionHorizontalText;
 
-            PositionLevelsTop = localColumnProperties.PositionLevelsTopText.ToString();
-            PositionLevelsBottom = localColumnProperties.PositionLevelsBottomText.ToString();
+            PositionLevelsTop = localColumnProperties.PositionLevelsTopText;
+            PositionLevelsBottom = localColumnProperties.PositionLevelsBottomText;
         }
 
         private void SelectedProfile(string obj)
@@ -675,7 +664,7 @@ namespace DialogBeamProperties.ViewModel
             if (IsPositionLevelsTopChecked && IsPositionLevelsBottomChecked)
             {
                 valid = new Validator().AreTopAndBottomPositionsValid
-                                        (Convert.ToDouble(PositionLevelsTop), Convert.ToDouble(PositionLevelsBottom));
+                                        (PositionLevelsTop, PositionLevelsBottom);
                 if (!valid)
                 {
                     SetErrorText(PositionLevelErrors);
