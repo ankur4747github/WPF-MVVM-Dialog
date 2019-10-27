@@ -241,6 +241,7 @@
                                       ItemsSource="{Binding PositionOnPlaneComboBox, Mode=OneWay}"
                                       SelectedItem="{Binding SelectedDataInPositionOnPlaneComboBox,Mode=TwoWay}">
                             </ComboBox>
+                            
                             <TextBox Grid.Column="2"
                                      Text="{Binding PositionOnPlaneText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                      Margin="15,0,0,0"

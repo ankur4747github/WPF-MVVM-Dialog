@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Windows.Input;
 
 namespace DialogBeamProperties.ViewModel.AbstractViewModel
@@ -731,5 +732,26 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         }
 
         #endregion Check Is Data Valid
+
+        #region Check is Valid Deciamil
+        public bool IsValidDecimal(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return true;
+            }
+
+            double result;
+            if (Double.TryParse(value, out result))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                
+        }
+        #endregion
     }
 }

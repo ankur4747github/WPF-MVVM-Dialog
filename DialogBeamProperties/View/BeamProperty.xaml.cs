@@ -5,7 +5,9 @@ using DialogBeamProperties.Model.ProfileFileData;
 using DialogBeamProperties.ViewModel;
 using GalaSoft.MvvmLight.Messaging;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Input;
 
 namespace DialogBeamProperties
 {
@@ -38,10 +40,14 @@ namespace DialogBeamProperties
             this.Close();
         }
 
+        
+
         public void Dispose()
         {
             Messenger.Default.Unregister<bool>(this,
                     MessengerToken.CLOSEBEAMPROPERTYWINDOW, CloseWindow);
         }
+
+       
     }
 }

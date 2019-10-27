@@ -74,7 +74,7 @@ namespace DialogBeamProperties.ViewModel
             get { return _positionOnPlaneText; }
             set
             {
-                if (value.ToString() == _positionOnPlaneText)
+                if (value.ToString() == _positionOnPlaneText || !IsValidDecimal(value))
                     return;
 
                 _positionOnPlaneText = value.ToString();
@@ -85,6 +85,8 @@ namespace DialogBeamProperties.ViewModel
                 OnPropertyChangedAsync(nameof(PositionOnPlaneText));
             }
         }
+
+    
 
         private string _positionOnPlaneText { get; set; }
 
@@ -135,7 +137,7 @@ namespace DialogBeamProperties.ViewModel
             get { return _positionRotationText; }
             set
             {
-                if (value.ToString() == _positionRotationText)
+                if (value.ToString() == _positionRotationText || !IsValidDecimal(value))
                     return;
 
                 _positionRotationText = value.ToString();
@@ -196,7 +198,7 @@ namespace DialogBeamProperties.ViewModel
             get { return _positionAtDepthText; }
             set
             {
-                if (value.ToString() == _positionAtDepthText)
+                if (value.ToString() == _positionAtDepthText || !IsValidDecimal(value))
                     return;
 
                 _positionAtDepthText = value.ToString();
