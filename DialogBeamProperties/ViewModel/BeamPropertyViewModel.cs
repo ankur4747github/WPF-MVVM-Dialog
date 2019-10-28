@@ -86,8 +86,6 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-    
-
         private string _positionOnPlaneText { get; set; }
 
         #endregion PositionOnPlaneText
@@ -255,7 +253,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Private Methods
 
-        #region Button Click
+        #region Command Handlers
 
         private void CloseWindow(object obj)
         {
@@ -351,7 +349,7 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        #endregion Button Click
+        #endregion Command Handlers
 
         // We do not need to save or update this data - we can make use of direct databinding
         // in WPF. We can bind directly to the IProperties values, can't we!!??
