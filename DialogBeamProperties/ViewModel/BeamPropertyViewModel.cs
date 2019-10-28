@@ -18,6 +18,7 @@ namespace DialogBeamProperties.ViewModel
 
         private readonly XDataWriter xDataWriter;
         private BeamProperties globalBeamProperties;
+        private readonly BeamValuesGetter beamValuesGetter;
 
         public List<string> PositionOnPlaneComboBox { get; set; }
         public List<string> PositionRotationComboBox { get; set; }
@@ -217,11 +218,14 @@ namespace DialogBeamProperties.ViewModel
 
         public DialogBeamPropertiesViewModel(XDataWriter xDataWriter,
             BeamProperties localBeamProperties,
-            BeamProperties globalBeamProperties)
+            BeamProperties globalBeamProperties,
+            BeamValuesGetter beamValuesGetter
+            )
         {
             InitCommand();
             this.xDataWriter = xDataWriter;
             this.globalBeamProperties = globalBeamProperties;
+            this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
 
             PositionOnPlaneComboBox = new List<string>() { "Middle", "Right", "Left" };
