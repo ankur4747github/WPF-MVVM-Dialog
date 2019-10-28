@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="CadInterfaces\BeamValuesGetter.cs" />
     <Compile Include="CadInterfaces\BeamValuesGetterDummyImplementation.cs" />
+    <Compile Include="CadInterfaces\ColumnValuesGetter.cs" />
     <Compile Include="CadInterfaces\XDataWriter.cs" />
     <Compile Include="CadInterfaces\XDataWriterDummyImplementation.cs" />
     <Compile Include="Helpers\Validator.cs" />
