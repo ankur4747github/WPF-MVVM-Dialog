@@ -389,9 +389,7 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                ColumnProperties clonedGlobalProperties = cloneGlobalProperties(globaColumnProperties);
-                ColumnProperties updateIfChecked = updatedCheckedProperties(clonedGlobalProperties);
-                globaColumnProperties = updateIfChecked;
+                saveCheckedPropertiesToGlobalVariable();
 
                 Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
             }
@@ -399,19 +397,16 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            ColumnProperties clonedGlobalProperties = cloneGlobalProperties(globaColumnProperties);
-            ColumnProperties updateIfChecked = updatedCheckedProperties(clonedGlobalProperties);
-            globaColumnProperties = updateIfChecked;
+            saveCheckedPropertiesToGlobalVariable();
         }
 
         private void ModifyButtonClick(object obj)
         {
             if (IsAllDataValid())
             {
-                ColumnProperties clonedGlobalProperties = cloneGlobalProperties(globaColumnProperties);
-                ColumnProperties updateIfChecked = updatedCheckedProperties(clonedGlobalProperties);
+                saveCheckedPropertiesToGlobalVariable();
 
-                xDataWriter.WriteXDataToLine(updateIfChecked.AttributesProfileText, updateIfChecked.PositionRotationText);
+                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
 
@@ -473,129 +468,96 @@ namespace DialogBeamProperties.ViewModel
 
         #region Save Data
 
-        private ColumnProperties updatedCheckedProperties(ColumnProperties clonedGlobalProperties)
+        private void saveCheckedPropertiesToGlobalVariable()
         {
-            SelectedDataInLoadDataComboBox = clonedGlobalProperties.SelectedDataInLoadDataComboBox;
-            SaveAttributesData(clonedGlobalProperties);
-            SaveNumberingData(clonedGlobalProperties);
-            SavePositionData(clonedGlobalProperties);
-
-            return cloneGlobalProperties(clonedGlobalProperties);
+            SelectedDataInLoadDataComboBox = globaColumnProperties.SelectedDataInLoadDataComboBox;
+            SaveAttributesData();
+            SaveNumberingData();
+            SavePositionData();
         }
 
-        private ColumnProperties cloneGlobalProperties(ColumnProperties inputColumnProperties)
-        {
-            ColumnProperties columnProperties = new ColumnProperties()
-            {
-                SelectedDataInLoadDataComboBox = inputColumnProperties.SelectedDataInLoadDataComboBox,
-                NumberingSeriesPartPrefixText = inputColumnProperties.NumberingSeriesPartPrefixText,
-                NumberingSeriesPartStartNumberText = inputColumnProperties.NumberingSeriesPartStartNumberText,
-                NumberingSeriesAssemblyPrefixText = inputColumnProperties.NumberingSeriesAssemblyPrefixText,
-                NumberingSeriesAssemblyStartNumberText = inputColumnProperties.NumberingSeriesAssemblyStartNumberText,
-                AttributesNameText = inputColumnProperties.AttributesNameText,
-                AttributesProfileText = inputColumnProperties.AttributesProfileText,
-                AttributesMaterialText = inputColumnProperties.AttributesMaterialText,
-                AttributesFinishText = inputColumnProperties.AttributesFinishText,
-                AttributesClassText = inputColumnProperties.AttributesClassText,
-
-                SelectedDataInPositionVerticalComboBox = inputColumnProperties.SelectedDataInPositionVerticalComboBox,
-                PositionVerticalText = inputColumnProperties.PositionVerticalText,
-
-                SelectedDataInPositionRotationComboBox = inputColumnProperties.SelectedDataInPositionRotationComboBox,
-                PositionRotationText = inputColumnProperties.PositionRotationText,
-
-                SelectedDataInPositionHorizontalComboBox = inputColumnProperties.SelectedDataInPositionHorizontalComboBox,
-                PositionHorizontalText = inputColumnProperties.PositionHorizontalText,
-
-                PositionLevelsTopText = inputColumnProperties.PositionLevelsTopText,
-                PositionLevelsBottomText = inputColumnProperties.PositionLevelsBottomText
-            };
-
-            return columnProperties;
-        }
-
-        private void SavePositionData(ColumnProperties clonedGlobalProperties)
+        private void SavePositionData()
         {
             if (IsPositionVerticalChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
-                clonedGlobalProperties.PositionVerticalText = Convert.ToDouble(PositionVerticalText);
+                globaColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
+                globaColumnProperties.PositionVerticalText = Convert.ToDouble(PositionVerticalText);
             }
 
             if (IsPositionRotationChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                clonedGlobalProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
+                globaColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                globaColumnProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
             }
 
             if (IsPositionHorizontalChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
-                clonedGlobalProperties.PositionHorizontalText = Convert.ToDouble(PositionHorizontalText);
+                globaColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
+                globaColumnProperties.PositionHorizontalText = Convert.ToDouble(PositionHorizontalText);
             }
 
             if (IsPositionLevelsTopChecked)
             {
-                clonedGlobalProperties.PositionLevelsTopText = Convert.ToDouble(PositionLevelsTop);
+                globaColumnProperties.PositionLevelsTopText = Convert.ToDouble(PositionLevelsTop);
             }
 
             if (IsPositionLevelsBottomChecked)
             {
-                clonedGlobalProperties.PositionLevelsBottomText = Convert.ToDouble(PositionLevelsBottom);
+                globaColumnProperties.PositionLevelsBottomText = Convert.ToDouble(PositionLevelsBottom);
             }
         }
 
-        private void SaveAttributesData(ColumnProperties clonedGlobalProperties)
+        private void SaveAttributesData()
         {
             if (IsAttributesNameChecked)
             {
-                clonedGlobalProperties.AttributesNameText = AttributesNameText;
+                globaColumnProperties.AttributesNameText = AttributesNameText;
             }
 
             if (IsAttributesProfileChecked)
             {
-                clonedGlobalProperties.AttributesProfileText = AttributesProfileText;
+                globaColumnProperties.AttributesProfileText = AttributesProfileText;
             }
 
             if (IsAttributesMaterialChecked)
             {
-                clonedGlobalProperties.AttributesMaterialText = AttributesMaterialText;
+                globaColumnProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
             if (IsAttributesFinishChecked)
             {
-                clonedGlobalProperties.AttributesFinishText = AttributesFinishText;
+                globaColumnProperties.AttributesFinishText = AttributesFinishText;
             }
 
             if (IsAttributesClassChecked)
             {
-                clonedGlobalProperties.AttributesClassText = AttributesClassText;
+                globaColumnProperties.AttributesClassText = AttributesClassText;
             }
         }
 
         /// <summary>
         /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
         /// </summary>
-        private void SaveNumberingData(ColumnProperties clonedGlobalProperties)
+        private void SaveNumberingData()
         {
             if (IsNumberingSeriesPartPrefixChecked)
             {
-                clonedGlobalProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+                globaColumnProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
             if (IsNumberingSeriesPartStartumberChecked)
             {
-                clonedGlobalProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+                globaColumnProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
             if (IsNumberingSeriesAssemblyPrefixChecked)
             {
-                clonedGlobalProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+                globaColumnProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
             if (IsNumberingSeriesAssemblyStartumberChecked)
             {
-                clonedGlobalProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+                globaColumnProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
 

@@ -266,9 +266,7 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
-                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
-                globalBeamProperties = updatedIfChecked;
+                saveCheckedPropertiesToGlobalVariable();
                 Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
             }
         }
@@ -277,10 +275,7 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
-                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
-
-                globalBeamProperties = updatedIfChecked;
+                saveCheckedPropertiesToGlobalVariable();
             }
         }
 
@@ -288,10 +283,9 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
-                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
+                saveCheckedPropertiesToGlobalVariable();
 
-                xDataWriter.WriteXDataToLine(updatedIfChecked.AttributesProfileText, Convert.ToDouble(updatedIfChecked.PositionRotationText));
+                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
 
@@ -407,110 +401,83 @@ namespace DialogBeamProperties.ViewModel
 
         #region Save Data
 
-        private BeamProperties cloneGlobalProperties(BeamProperties inputBeamProperties)
+        private void saveCheckedPropertiesToGlobalVariable()
         {
-            BeamProperties beamProperties = new BeamProperties()
-            {
-                SelectedDataInLoadDataComboBox = inputBeamProperties.SelectedDataInLoadDataComboBox,
-                NumberingSeriesPartPrefixText = inputBeamProperties.NumberingSeriesPartPrefixText,
-                NumberingSeriesPartStartNumberText = inputBeamProperties.NumberingSeriesPartStartNumberText,
-                NumberingSeriesAssemblyPrefixText = inputBeamProperties.NumberingSeriesAssemblyPrefixText,
-                NumberingSeriesAssemblyStartNumberText = inputBeamProperties.NumberingSeriesAssemblyStartNumberText,
-                AttributesNameText = inputBeamProperties.AttributesNameText,
-                AttributesProfileText = inputBeamProperties.AttributesProfileText,
-                AttributesMaterialText = inputBeamProperties.AttributesMaterialText,
-                AttributesFinishText = inputBeamProperties.AttributesFinishText,
-                AttributesClassText = inputBeamProperties.AttributesClassText,
-                SelectedDataInPositionOnPlaneComboBox = inputBeamProperties.SelectedDataInPositionOnPlaneComboBox,
-                PositionOnPlaneText = inputBeamProperties.PositionOnPlaneText,
-                SelectedDataInPositionRotationComboBox = inputBeamProperties.SelectedDataInPositionRotationComboBox,
-                PositionRotationText = inputBeamProperties.PositionRotationText,
-                SelectedDataInPositionAtDepthComboBox = inputBeamProperties.SelectedDataInPositionAtDepthComboBox,
-                PositionAtDepthText = inputBeamProperties.PositionAtDepthText,
-            };
-
-            return beamProperties;
+            SelectedDataInLoadDataComboBox = globalBeamProperties.SelectedDataInLoadDataComboBox;
+            SaveAttributesData();
+            SaveNumberingData();
+            SavePositionData();
         }
 
-        private BeamProperties updatedCheckedProperties(BeamProperties clonedGlobalProperties)
-        {
-            SelectedDataInLoadDataComboBox = clonedGlobalProperties.SelectedDataInLoadDataComboBox;
-            SaveAttributesData(clonedGlobalProperties);
-            SaveNumberingData(clonedGlobalProperties);
-            SavePositionData(clonedGlobalProperties);
-
-            return cloneGlobalProperties(clonedGlobalProperties);
-        }
-
-        private void SaveAttributesData(BeamProperties clonedGlobalProperties)
+        private void SaveAttributesData()
         {
             if (IsAttributesNameChecked)
             {
-                clonedGlobalProperties.AttributesNameText = AttributesNameText;
+                globalBeamProperties.AttributesNameText = AttributesNameText;
             }
 
             if (IsAttributesProfileChecked)
             {
-                clonedGlobalProperties.AttributesProfileText = AttributesProfileText;
+                globalBeamProperties.AttributesProfileText = AttributesProfileText;
             }
 
             if (IsAttributesMaterialChecked)
             {
-                clonedGlobalProperties.AttributesMaterialText = AttributesMaterialText;
+                globalBeamProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
             if (IsAttributesFinishChecked)
             {
-                clonedGlobalProperties.AttributesFinishText = AttributesFinishText;
+                globalBeamProperties.AttributesFinishText = AttributesFinishText;
             }
 
             if (IsAttributesClassChecked)
             {
-                clonedGlobalProperties.AttributesClassText = AttributesClassText;
+                globalBeamProperties.AttributesClassText = AttributesClassText;
             }
         }
 
-        private void SaveNumberingData(BeamProperties clonedGlobalProperties)
+        private void SaveNumberingData()
         {
             if (IsNumberingSeriesPartPrefixChecked)
             {
-                clonedGlobalProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+                globalBeamProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
             if (IsNumberingSeriesPartStartumberChecked)
             {
-                clonedGlobalProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+                globalBeamProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
             if (IsNumberingSeriesAssemblyPrefixChecked)
             {
-                clonedGlobalProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+                globalBeamProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
             if (IsNumberingSeriesAssemblyStartumberChecked)
             {
-                clonedGlobalProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+                globalBeamProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
 
-        private void SavePositionData(BeamProperties clonedGlobalProperties)
+        private void SavePositionData()
         {
             if (IsPositionOnPlaneChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-                clonedGlobalProperties.PositionOnPlaneText = Convert.ToDouble(PositionOnPlaneText);
+                globalBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+                globalBeamProperties.PositionOnPlaneText = Convert.ToDouble(PositionOnPlaneText);
             }
 
             if (IsPositionRotationChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                clonedGlobalProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
+                globalBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                globalBeamProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
             }
 
             if (IsPositionAtDepthChecked)
             {
-                clonedGlobalProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-                clonedGlobalProperties.PositionAtDepthText = Convert.ToDouble(PositionAtDepthText);
+                globalBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+                globalBeamProperties.PositionAtDepthText = Convert.ToDouble(PositionAtDepthText);
             }
         }
 
