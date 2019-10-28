@@ -7,25 +7,8 @@ using System.Windows;
 
 namespace DialogBeamProperties.Helpers
 {
-    
     public class Validator
     {
-        public bool IsValidProfile(BeamProperties iproperties)
-        {
-            return IsValidProfile(iproperties.AttributesProfileText);
-        }
-
-        public bool IsValidProfile(ColumnProperties iproperties)
-        {
-            return IsValidProfile(iproperties.AttributesProfileText);
-        }
-
-        public bool IsValidProfileAndTopAndBottomPositions(ColumnProperties iproperties)
-        {
-            return IsValidProfile(iproperties.AttributesProfileText) &&
-                   AreTopAndBottomPositionsValid(iproperties.PositionLevelsTopText, iproperties.PositionLevelsBottomText);
-        }
-
         public bool IsValidProfile(string attributesProfileText)
         {
             try

@@ -517,7 +517,7 @@ namespace DialogBeamProperties.ViewModel
             {
                 if (IsAttributesProfileChecked)
                 {
-                    validProfile = new Validator().IsValidProfile(localBeamProperties);
+                    validProfile = new Validator().IsValidProfile(AttributesProfileText);
                 }
                 else
                 {
