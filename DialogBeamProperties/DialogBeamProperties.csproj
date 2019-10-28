@@ -95,7 +95,7 @@
     <Compile Include="Constants\MessengerToken.cs" />
     <Compile Include="Model\ProfileFileData\ProfileFileData.cs" />
     <Compile Include="Model\Properties\BeamProperties.cs" />
-    <Compile Include="ViewModel\BeamPropertytViewModel.cs" />
+    <Compile Include="ViewModel\BeamPropertyViewModel.cs" />
     <Compile Include="View\BeamProperty.xaml.cs">
       <DependentUpon>BeamProperty.xaml</DependentUpon>
       <SubType>Code</SubType>

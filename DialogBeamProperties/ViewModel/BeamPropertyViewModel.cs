@@ -17,8 +17,7 @@ namespace DialogBeamProperties.ViewModel
         #region Fields
 
         private readonly XDataWriter xDataWriter;
-        private readonly BeamProperties localBeamProperties;
-        private readonly BeamProperties globalBeamProperties;
+        private BeamProperties globalBeamProperties;
 
         public List<string> PositionOnPlaneComboBox { get; set; }
         public List<string> PositionRotationComboBox { get; set; }
@@ -222,9 +221,8 @@ namespace DialogBeamProperties.ViewModel
         {
             InitCommand();
             this.xDataWriter = xDataWriter;
-            this.localBeamProperties = localBeamProperties;     // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
             this.globalBeamProperties = globalBeamProperties;
-            UpdateData(localBeamProperties);
+            UpdateViewModel(localBeamProperties);
 
             PositionOnPlaneComboBox = new List<string>() { "Middle", "Right", "Left" };
             PositionRotationComboBox = new List<string>() { "Front", "Top", "Back", "Below" };
@@ -262,43 +260,38 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
             if (IsAllDataValid())
             {
+                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
+                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
+                globalBeamProperties = updatedIfChecked;
                 Messenger.Default.Send(true, MessengerToken.CLOSEBEAMPROPERTYWINDOW);
             }
         }
 
         private void ApplyButtonClick(object obj)
         {
-            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
-
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(localBeamProperties.AttributesProfileText, localBeamProperties.PositionRotationText);
+                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
+                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
+
+                globalBeamProperties = updatedIfChecked;
             }
         }
 
         private void ModifyButtonClick(object obj)
         {
-            localBeamProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(localBeamProperties.AttributesProfileText, localBeamProperties.PositionRotationText);
+                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
 
         private void GetButtonClick(object obj)
         {
+            BeamProperties beamProperties = beamValuesGetter.GetBeamProperties();
+            UpdateViewModel(beamProperties);
         }
 
         private void SelectAllCheckBoxButtonClick(object obj)
@@ -356,24 +349,23 @@ namespace DialogBeamProperties.ViewModel
 
         #region Update Data
 
-        private void UpdateData(BeamProperties iproperties)
+        private void UpdateViewModel(BeamProperties beamProperties)
         {
-            LoadData(iproperties);
-            UpdatePositionData();
-            UpdateAttributesData();
-            UpdateNumberingData();
+            UpdatePositionData(beamProperties);
+            UpdateAttributesData(beamProperties);
+            UpdateNumberingData(beamProperties);
         }
 
-        private void UpdatePositionData()
+        private void UpdatePositionData(BeamProperties beamProperties)
         {
-            SelectedDataInPositionOnPlaneComboBox = localBeamProperties.SelectedDataInPositionOnPlaneComboBox;
-            PositionOnPlaneText = localBeamProperties.PositionOnPlaneText.ToString();
+            SelectedDataInPositionOnPlaneComboBox = beamProperties.SelectedDataInPositionOnPlaneComboBox;
+            PositionOnPlaneText = beamProperties.PositionOnPlaneText.ToString();
 
-            SelectedDataInPositionRotationComboBox = localBeamProperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = localBeamProperties.PositionRotationText.ToString();
+            SelectedDataInPositionRotationComboBox = beamProperties.SelectedDataInPositionRotationComboBox;
+            PositionRotationText = beamProperties.PositionRotationText.ToString();
 
-            SelectedDataInPositionAtDepthComboBox = localBeamProperties.SelectedDataInPositionAtDepthComboBox;
-            PositionAtDepthText = localBeamProperties.PositionAtDepthText.ToString();
+            SelectedDataInPositionAtDepthComboBox = beamProperties.SelectedDataInPositionAtDepthComboBox;
+            PositionAtDepthText = beamProperties.PositionAtDepthText.ToString();
         }
 
         private void SelectedProfile(string obj)
@@ -381,109 +373,130 @@ namespace DialogBeamProperties.ViewModel
             AttributesProfileText = obj;
         }
 
-        private void LoadData(BeamProperties iproperties)
+        private void UpdateAttributesData(BeamProperties beamProperties)
         {
+            AttributesNameText = beamProperties.AttributesNameText;
+            AttributesProfileText = beamProperties.AttributesProfileText;
+            AttributesMaterialText = beamProperties.AttributesMaterialText;
+            AttributesFinishText = beamProperties.AttributesFinishText;
+            AttributesClassText = beamProperties.AttributesClassText;
         }
 
-        private void UpdateAttributesData()
+        private void UpdateNumberingData(BeamProperties beamProperties)
         {
-            AttributesNameText = localBeamProperties.AttributesNameText;
-            AttributesProfileText = localBeamProperties.AttributesProfileText;
-            AttributesMaterialText = localBeamProperties.AttributesMaterialText;
-            AttributesFinishText = localBeamProperties.AttributesFinishText;
-            AttributesClassText = localBeamProperties.AttributesClassText;
-        }
-
-        private void UpdateNumberingData()
-        {
-            NumberingSeriesPartPrefixText = localBeamProperties.NumberingSeriesPartPrefixText;
-            NumberingSeriesPartStartNumberText = localBeamProperties.NumberingSeriesPartStartNumberText;
-            NumberingSeriesAssemblyPrefixText = localBeamProperties.NumberingSeriesAssemblyPrefixText;
-            NumberingSeriesAssemblyStartNumberText = localBeamProperties.NumberingSeriesAssemblyStartNumberText;
+            NumberingSeriesPartPrefixText = beamProperties.NumberingSeriesPartPrefixText;
+            NumberingSeriesPartStartNumberText = beamProperties.NumberingSeriesPartStartNumberText;
+            NumberingSeriesAssemblyPrefixText = beamProperties.NumberingSeriesAssemblyPrefixText;
+            NumberingSeriesAssemblyStartNumberText = beamProperties.NumberingSeriesAssemblyStartNumberText;
         }
 
         #endregion Update Data
 
         #region Save Data
 
-        /// <summary>
-        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
-        /// </summary>
-        private void SaveAttributesData()
+        private BeamProperties cloneGlobalProperties(BeamProperties inputBeamProperties)
+        {
+            BeamProperties beamProperties = new BeamProperties()
+            {
+                SelectedDataInLoadDataComboBox = inputBeamProperties.SelectedDataInLoadDataComboBox,
+                NumberingSeriesPartPrefixText = inputBeamProperties.NumberingSeriesPartPrefixText,
+                NumberingSeriesPartStartNumberText = inputBeamProperties.NumberingSeriesPartStartNumberText,
+                NumberingSeriesAssemblyPrefixText = inputBeamProperties.NumberingSeriesAssemblyPrefixText,
+                NumberingSeriesAssemblyStartNumberText = inputBeamProperties.NumberingSeriesAssemblyStartNumberText,
+                AttributesNameText = inputBeamProperties.AttributesNameText,
+                AttributesProfileText = inputBeamProperties.AttributesProfileText,
+                AttributesMaterialText = inputBeamProperties.AttributesMaterialText,
+                AttributesFinishText = inputBeamProperties.AttributesFinishText,
+                AttributesClassText = inputBeamProperties.AttributesClassText,
+                SelectedDataInPositionOnPlaneComboBox = inputBeamProperties.SelectedDataInPositionOnPlaneComboBox,
+                PositionOnPlaneText = inputBeamProperties.PositionOnPlaneText,
+                SelectedDataInPositionRotationComboBox = inputBeamProperties.SelectedDataInPositionRotationComboBox,
+                PositionRotationText = inputBeamProperties.PositionRotationText,
+                SelectedDataInPositionAtDepthComboBox = inputBeamProperties.SelectedDataInPositionAtDepthComboBox,
+                PositionAtDepthText = inputBeamProperties.PositionAtDepthText,
+            };
+
+            return beamProperties;
+        }
+
+        private BeamProperties updatedCheckedProperties(BeamProperties clonedGlobalProperties)
+        {
+            SaveAttributesData(clonedGlobalProperties);
+            SaveNumberingData(clonedGlobalProperties);
+            SavePositionData(clonedGlobalProperties);
+
+            return cloneGlobalProperties(clonedGlobalProperties);
+        }
+
+        private void SaveAttributesData(BeamProperties clonedGlobalProperties)
         {
             if (IsAttributesNameChecked)
             {
-                localBeamProperties.AttributesNameText = AttributesNameText;
+                clonedGlobalProperties.AttributesNameText = AttributesNameText;
             }
 
             if (IsAttributesProfileChecked)
             {
-                localBeamProperties.AttributesProfileText = AttributesProfileText;
+                clonedGlobalProperties.AttributesProfileText = AttributesProfileText;
             }
 
             if (IsAttributesMaterialChecked)
             {
-                localBeamProperties.AttributesMaterialText = AttributesMaterialText;
+                clonedGlobalProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
             if (IsAttributesFinishChecked)
             {
-                localBeamProperties.AttributesFinishText = AttributesFinishText;
+                clonedGlobalProperties.AttributesFinishText = AttributesFinishText;
             }
 
             if (IsAttributesClassChecked)
             {
-                localBeamProperties.AttributesClassText = AttributesClassText;
+                clonedGlobalProperties.AttributesClassText = AttributesClassText;
             }
         }
 
-        /// <summary>
-        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
-        /// </summary>
-        private void SaveNumberingData()
+        private void SaveNumberingData(BeamProperties clonedGlobalProperties)
         {
             if (IsNumberingSeriesPartPrefixChecked)
             {
-                localBeamProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+                clonedGlobalProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
             if (IsNumberingSeriesPartStartumberChecked)
             {
-                localBeamProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+                clonedGlobalProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
             if (IsNumberingSeriesAssemblyPrefixChecked)
             {
-                localBeamProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+                clonedGlobalProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
             if (IsNumberingSeriesAssemblyStartumberChecked)
             {
-                localBeamProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+                clonedGlobalProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
 
-        /// <summary>
-        /// /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
-        /// </summary>
-        private void SavePositionData()
+        private void SavePositionData(BeamProperties clonedGlobalProperties)
         {
             if (IsPositionOnPlaneChecked)
             {
-                localBeamProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
-                localBeamProperties.PositionOnPlaneText = Convert.ToDouble(PositionOnPlaneText);
+                clonedGlobalProperties.SelectedDataInPositionOnPlaneComboBox = SelectedDataInPositionOnPlaneComboBox;
+                clonedGlobalProperties.PositionOnPlaneText = Convert.ToDouble(PositionOnPlaneText);
             }
 
             if (IsPositionRotationChecked)
             {
-                localBeamProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                localBeamProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
+                clonedGlobalProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                clonedGlobalProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
             }
 
             if (IsPositionAtDepthChecked)
             {
-                localBeamProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
-                localBeamProperties.PositionAtDepthText = Convert.ToDouble(PositionAtDepthText);
+                clonedGlobalProperties.SelectedDataInPositionAtDepthComboBox = SelectedDataInPositionAtDepthComboBox;
+                clonedGlobalProperties.PositionAtDepthText = Convert.ToDouble(PositionAtDepthText);
             }
         }
 
