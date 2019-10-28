@@ -218,13 +218,13 @@ namespace DialogBeamProperties.ViewModel
 
         public DialogBeamPropertiesViewModel(XDataWriter xDataWriter,
             BeamProperties localBeamProperties,
-            BeamProperties globalBeamProperties,
+            BeamProperties globalBeamPropertiesInput,
             BeamValuesGetter beamValuesGetter
             )
         {
             InitCommand();
             this.xDataWriter = xDataWriter;
-            this.globalBeamProperties = globalBeamProperties;
+            globalBeamProperties = globalBeamPropertiesInput;
             this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
 
@@ -288,7 +288,10 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
+                BeamProperties clonedGlobalProperties = cloneGlobalProperties(globalBeamProperties);
+                BeamProperties updatedIfChecked = updatedCheckedProperties(clonedGlobalProperties);
+
+                xDataWriter.WriteXDataToLine(updatedIfChecked.AttributesProfileText, Convert.ToDouble(updatedIfChecked.PositionRotationText));
             }
         }
 
@@ -355,9 +358,15 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateViewModel(BeamProperties beamProperties)
         {
+            LoadData(beamProperties);
             UpdatePositionData(beamProperties);
             UpdateAttributesData(beamProperties);
             UpdateNumberingData(beamProperties);
+        }
+
+        private void LoadData(BeamProperties beamProperties)
+        {
+            SelectedDataInLoadDataComboBox = beamProperties.SelectedDataInLoadDataComboBox;
         }
 
         private void UpdatePositionData(BeamProperties beamProperties)
@@ -425,6 +434,7 @@ namespace DialogBeamProperties.ViewModel
 
         private BeamProperties updatedCheckedProperties(BeamProperties clonedGlobalProperties)
         {
+            SelectedDataInLoadDataComboBox = clonedGlobalProperties.SelectedDataInLoadDataComboBox;
             SaveAttributesData(clonedGlobalProperties);
             SaveNumberingData(clonedGlobalProperties);
             SavePositionData(clonedGlobalProperties);
