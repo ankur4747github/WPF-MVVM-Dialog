@@ -283,8 +283,6 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                saveCheckedPropertiesToGlobalVariable();
-
                 xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
