@@ -29,7 +29,8 @@ namespace Test
         private void DummyColumnProprtyData(ColumnProperties prop)
         {
             prop.AttributesProfileText = "RS";
-            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
+            BeamValuesGetterDummyImplementation beamValuesGetter = new BeamValuesGetterDummyImplementation();
+            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new MemberModifierFactoryDummyImplementation(), prop, prop);
             testColumn = new DialogColumnProperties(viewModel);
             testColumn.Closing += TestColumn_Closing;
             testColumn.Show();

@@ -497,9 +497,19 @@ namespace DialogBeamProperties.ViewModel
         private bool IsAllDataValid()
         {
             ErrorText = string.Empty;
-            return IsProfileValid();
+            return IsProfileValid() && IsAttributesClassValid();
         }
 
+        private bool IsAttributesClassValid()
+        {
+            bool valid = true;
+            if (IsAttributesClassChecked)
+            {
+                valid = new Validator().IsValidAttributesClass(AttributesClassText);
+            }
+            SetErrorOnScreenIsAttributesClassError(valid);
+            return valid;
+        }
         private bool IsProfileValid()
         {
             bool validProfile = false;

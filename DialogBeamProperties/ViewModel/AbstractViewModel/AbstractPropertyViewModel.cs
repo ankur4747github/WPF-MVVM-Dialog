@@ -13,6 +13,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         #region Fields
 
         protected const string ErrorProfileMessage = "Please enter valid profile.";
+        protected const string ErrorAttributeClassMessage = "Attribute Class value should be between 0 - 100.";
         protected const string DefaultBorderColor = "#ABADB3";
         protected const string ErrorBorderColor = "Red";
         protected bool _selectAll = false;
@@ -396,7 +397,7 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
 
         #region AttributesClassText
 
-        public string AttributesClassText
+        public int AttributesClassText
         {
             get { return _attributesClassText; }
             set
@@ -405,12 +406,12 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
                     return;
 
                 _attributesClassText = value;
-                IsAttributesClassChecked = AttributesClassText.Trim().Length > 0;
+                IsAttributesClassChecked = AttributesClassText > 0;
                 OnPropertyChangedAsync(nameof(AttributesClassText));
             }
         }
 
-        private string _attributesClassText { get; set; }
+        private int _attributesClassText { get; set; }
 
         #endregion AttributesClassText
 
@@ -490,6 +491,25 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
         private string _profileBorderColor = DefaultBorderColor;
 
         #endregion ProfileBorderColor
+
+        #region AttributesClassBorderColor
+
+        public string AttributesClassBorderColor
+        {
+            get { return _attributesClassBorderColor; }
+            set
+            {
+                if (value == _attributesClassBorderColor)
+                    return;
+
+                _attributesClassBorderColor = value;
+                OnPropertyChangedAsync(nameof(AttributesClassBorderColor));
+            }
+        }
+
+        private string _attributesClassBorderColor = DefaultBorderColor;
+
+        #endregion AttributesClassBorderColor
 
         #endregion INotifyPropertyChange Member
 
@@ -716,6 +736,19 @@ namespace DialogBeamProperties.ViewModel.AbstractViewModel
             else
             {
                 ProfileBorderColor = DefaultBorderColor;
+            }
+        }
+
+        protected void SetErrorOnScreenIsAttributesClassError(bool valid)
+        {
+            if (!valid)
+            {
+                SetErrorText(ErrorAttributeClassMessage);
+                AttributesClassBorderColor = ErrorBorderColor;
+            }
+            else
+            {
+                AttributesClassBorderColor = DefaultBorderColor;
             }
         }
 

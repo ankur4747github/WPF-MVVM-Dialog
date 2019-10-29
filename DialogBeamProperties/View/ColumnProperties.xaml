@@ -214,6 +214,7 @@
                                 <TextBox Grid.Column="1"
                                          Text="{Binding AttributesClassText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                          Margin="15,0,0,0"
+                                         BorderBrush="{Binding AttributesClassBorderColor, Mode=OneWay}"
                                          HorizontalAlignment="Stretch"
                                          VerticalAlignment="Center">
                                 </TextBox>
