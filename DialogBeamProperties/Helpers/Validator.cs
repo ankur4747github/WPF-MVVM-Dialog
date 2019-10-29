@@ -9,6 +9,16 @@ namespace DialogBeamProperties.Helpers
 {
     public class Validator
     {
+        public bool IsBeamValid(string attributesProfileText)
+        {
+            return IsValidProfile(attributesProfileText);
+        }
+
+        public bool IsColumnValid(string attributesProfileText, double positionLevelsTop, double positionLevelsBottom)
+        {
+            return IsValidProfile(attributesProfileText) && AreTopAndBottomPositionsValid(positionLevelsTop, positionLevelsBottom);
+        }
+
         public bool IsValidProfile(string attributesProfileText)
         {
             try
