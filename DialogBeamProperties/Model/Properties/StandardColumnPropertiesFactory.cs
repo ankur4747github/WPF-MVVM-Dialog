@@ -20,7 +20,7 @@ namespace DialogBeamProperties.Model.Properties
             columnProperties.AttributesProfileText = profile;
             columnProperties.AttributesMaterialText = "";
             columnProperties.AttributesFinishText = "";
-            columnProperties.AttributesClassText = "";
+            columnProperties.AttributesClassText = 0;
             columnProperties.PositionVerticalText = 0;
             columnProperties.PositionRotationText = 0;
             columnProperties.PositionHorizontalText = 0;

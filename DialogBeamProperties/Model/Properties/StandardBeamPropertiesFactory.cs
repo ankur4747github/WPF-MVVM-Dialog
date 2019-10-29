@@ -21,7 +21,7 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.AttributesProfileText = profile;
             beamProperties.AttributesMaterialText = "";
             beamProperties.AttributesFinishText = "";
-            beamProperties.AttributesClassText = "";
+            beamProperties.AttributesClassText = 0;
             beamProperties.PositionOnPlaneText = 0;
             beamProperties.PositionRotationText = rotation;
             beamProperties.PositionAtDepthText = 0;

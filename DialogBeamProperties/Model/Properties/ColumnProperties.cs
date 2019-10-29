@@ -13,7 +13,7 @@ namespace DialogBeamProperties.Model.Properties
         public string AttributesProfileText { get; set; }
         public string AttributesMaterialText { get; set; }
         public string AttributesFinishText { get; set; }
-        public string AttributesClassText { get; set; }
+        public int AttributesClassText { get; set; }
         public string SelectedDataInPositionVerticalComboBox { get; set; }
         public double PositionVerticalText { get; set; }
         public string SelectedDataInPositionRotationComboBox { get; set; }

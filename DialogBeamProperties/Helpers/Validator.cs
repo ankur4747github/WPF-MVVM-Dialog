@@ -48,5 +48,10 @@ namespace DialogBeamProperties.Helpers
         {
             return Math.Abs(positionLevelsTop - positionLevelsBottom) > 0.01;
         }
+
+        internal bool IsValidAttributesClass(int attributesClassText)
+        {
+            return attributesClassText > 0 && attributesClassText < 100;
+        }
     }
 }

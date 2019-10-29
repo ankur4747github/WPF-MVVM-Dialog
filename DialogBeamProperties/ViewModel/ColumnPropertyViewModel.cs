@@ -397,7 +397,10 @@ namespace DialogBeamProperties.ViewModel
 
         private void ApplyButtonClick(object obj)
         {
-            saveCheckedPropertiesToGlobalVariable();
+            if (IsAllDataValid())
+            {
+                saveCheckedPropertiesToGlobalVariable();
+            }
         }
 
         private void ModifyButtonClick(object obj)
@@ -632,9 +635,21 @@ namespace DialogBeamProperties.ViewModel
         {
             ErrorText = string.Empty;
             bool isProfileValid = IsProfileValid();
+            bool isAttributesClassValid = IsAttributesClassValid();
             bool isProfileLevelsValid = IsProfileLevelsValid();
             SelectTab(isProfileValid, isProfileLevelsValid);
-            return isProfileValid && isProfileLevelsValid;
+            return isProfileValid && isProfileLevelsValid && isAttributesClassValid;
+        }
+
+        private bool IsAttributesClassValid()
+        {
+            bool valid = true;
+            if (IsAttributesClassChecked)
+            {
+                valid = new Validator().IsValidAttributesClass(AttributesClassText);
+            }
+            SetErrorOnScreenIsAttributesClassError(valid);
+            return valid;
         }
 
         private bool IsProfileValid()
