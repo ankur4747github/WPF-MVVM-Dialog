@@ -36,7 +36,7 @@ namespace DialogBeamProperties.Helpers
 
         public bool AreTopAndBottomPositionsValid(double positionLevelsTop, double positionLevelsBottom)
         {
-            return positionLevelsBottom != positionLevelsTop;
+            return Math.Abs(positionLevelsTop - positionLevelsBottom) < 0.01;
         }
     }
 }
