@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DialogBeamProperties.CadInterfaces
 {
-    public interface XDataWriter
+    public interface MemberModifier : IDisposable
     {
-        void WriteXDataToLine(string profile, double rotation);
+        void ModifyProfile(string profile);
 
-        void ChangeLineRL(double topRL, double bottomRL);
+        void ModifyRotation(double rotation);
     }
 }

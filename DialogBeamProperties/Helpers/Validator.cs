@@ -7,23 +7,16 @@ using System.Windows;
 
 namespace DialogBeamProperties.Helpers
 {
-    
     public class Validator
     {
-        public bool IsValidProfile(BeamProperties iproperties)
+        public bool IsBeamValid(string attributesProfileText)
         {
-            return IsValidProfile(iproperties.AttributesProfileText);
+            return IsValidProfile(attributesProfileText);
         }
 
-        public bool IsValidProfile(ColumnProperties iproperties)
+        public bool IsColumnValid(string attributesProfileText, double positionLevelsTop, double positionLevelsBottom)
         {
-            return IsValidProfile(iproperties.AttributesProfileText);
-        }
-
-        public bool IsValidProfileAndTopAndBottomPositions(ColumnProperties iproperties)
-        {
-            return IsValidProfile(iproperties.AttributesProfileText) &&
-                   AreTopAndBottomPositionsValid(iproperties.PositionLevelsTopText, iproperties.PositionLevelsBottomText);
+            return IsValidProfile(attributesProfileText) && AreTopAndBottomPositionsValid(positionLevelsTop, positionLevelsBottom);
         }
 
         public bool IsValidProfile(string attributesProfileText)
@@ -53,7 +46,7 @@ namespace DialogBeamProperties.Helpers
 
         public bool AreTopAndBottomPositionsValid(double positionLevelsTop, double positionLevelsBottom)
         {
-            return positionLevelsBottom != positionLevelsTop;
+            return Math.Abs(positionLevelsTop - positionLevelsBottom) < 0.01;
         }
     }
 }

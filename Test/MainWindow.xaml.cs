@@ -38,13 +38,14 @@ namespace Test
 
         private void TestColumn_Closing(object sender, CancelEventArgs e)
         {
-           // IColumnProperties prop = testColumn.GetPropertiesData();
+            // IColumnProperties prop = testColumn.GetPropertiesData();
         }
 
         private void DummyBeamPropertyData(BeamProperties prop)
         {
             prop.AttributesProfileText = "RS";
-            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new XDataWriterDummyImplementation(), prop, prop);
+            BeamValuesGetterDummyImplementation beamValuesGetter = new BeamValuesGetterDummyImplementation();
+            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new MemberModifierFactoryDummyImplementation(), prop, prop, beamValuesGetter);
             testBeam = new DialogBeamProperties.DialogBeamProperties(viewModel);
             testBeam.Closing += TestBeam_Closing;
             testBeam.Show();

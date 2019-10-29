@@ -18,9 +18,8 @@ namespace DialogBeamProperties.ViewModel
 
         #region Fields
 
-        private readonly XDataWriter xDataWriter;
-        private readonly ColumnProperties localColumnProperties;
-        private readonly ColumnProperties globaColumnProperties;
+        private readonly MemberModifierFactory modifierFactory;
+        private ColumnProperties globaColumnProperties;
 
         public List<string> PositionRotationComboBox { get; set; }
         public List<string> PositionVerticalComboBox { get; set; }
@@ -343,15 +342,14 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter,
+        public DialogColumnPropertiesViewModel(MemberModifierFactory memberModifierFactory,
                                                 ColumnProperties localColumnProperties,
                                                 ColumnProperties globaColumnProperties)
         {
             InitCommand();
-            this.xDataWriter = xDataWriter;
-            this.localColumnProperties = localColumnProperties; // Bind everything in the view to to the local beam properties, but only update the binding if the relevant check box is checked.
+            this.modifierFactory = memberModifierFactory;
             this.globaColumnProperties = globaColumnProperties;
-            UpdateData(localColumnProperties);
+            UpdateViewModel(localColumnProperties);
 
             PositionRotationComboBox = new List<string>() { "Front", "Top", "Back", "Below" };
             PositionVerticalComboBox = new List<string>() { "Middle", "Right", "Left" };
@@ -380,7 +378,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Private Methods
 
-        #region Button Click
+        #region Command Methods
 
         private void CloseWindow(object obj)
         {
@@ -389,37 +387,35 @@ namespace DialogBeamProperties.ViewModel
 
         private void OkButtonClick(object obj)
         {
-            localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
             if (IsAllDataValid())
             {
+                saveCheckedPropertiesToGlobalVariable();
+
                 Messenger.Default.Send(true, MessengerToken.CLOSECOLUMNPROPERTYWINDOW);
             }
         }
 
         private void ApplyButtonClick(object obj)
         {
-            localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
-            if (IsAllDataValid())
-            {
-                xDataWriter.WriteXDataToLine(localColumnProperties.AttributesProfileText, localColumnProperties.PositionRotationText);
-            }
+            saveCheckedPropertiesToGlobalVariable();
         }
 
         private void ModifyButtonClick(object obj)
         {
-            localColumnProperties.SelectedDataInLoadDataComboBox = SelectedDataInLoadDataComboBox;
-            SaveNumberingData();
-            SaveAttributesData();
-            SavePositionData();
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(localColumnProperties.AttributesProfileText, localColumnProperties.PositionRotationText);
+                using (MemberModifier memberModifier = modifierFactory.CreateMemberModifier())
+                {
+                    if (IsAttributesProfileChecked)
+                    {
+                        memberModifier.ModifyProfile(AttributesProfileText);
+                    }
+
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
+                    }
+                }
             }
         }
 
@@ -477,72 +473,74 @@ namespace DialogBeamProperties.ViewModel
             }
         }
 
-        #endregion Button Click
+        #endregion Command Methods
 
         #region Save Data
 
-        /// <summary>
-        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
-        /// </summary>
+        private void saveCheckedPropertiesToGlobalVariable()
+        {
+            SelectedDataInLoadDataComboBox = globaColumnProperties.SelectedDataInLoadDataComboBox;
+            SaveAttributesData();
+            SaveNumberingData();
+            SavePositionData();
+        }
+
         private void SavePositionData()
         {
             if (IsPositionVerticalChecked)
             {
-                localColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
-                localColumnProperties.PositionVerticalText = Convert.ToDouble(PositionVerticalText);
+                globaColumnProperties.SelectedDataInPositionVerticalComboBox = SelectedDataInPositionVerticalComboBox;
+                globaColumnProperties.PositionVerticalText = Convert.ToDouble(PositionVerticalText);
             }
 
             if (IsPositionRotationChecked)
             {
-                localColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
-                localColumnProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
+                globaColumnProperties.SelectedDataInPositionRotationComboBox = SelectedDataInPositionRotationComboBox;
+                globaColumnProperties.PositionRotationText = Convert.ToDouble(PositionRotationText);
             }
 
             if (IsPositionHorizontalChecked)
             {
-                localColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
-                localColumnProperties.PositionHorizontalText = Convert.ToDouble(PositionHorizontalText);
+                globaColumnProperties.SelectedDataInPositionHorizontalComboBox = SelectedDataInPositionHorizontalComboBox;
+                globaColumnProperties.PositionHorizontalText = Convert.ToDouble(PositionHorizontalText);
             }
 
             if (IsPositionLevelsTopChecked)
             {
-                localColumnProperties.PositionLevelsTopText = Convert.ToDouble(PositionLevelsTop);
+                globaColumnProperties.PositionLevelsTopText = Convert.ToDouble(PositionLevelsTop);
             }
 
             if (IsPositionLevelsBottomChecked)
             {
-                localColumnProperties.PositionLevelsBottomText = Convert.ToDouble(PositionLevelsBottom);
+                globaColumnProperties.PositionLevelsBottomText = Convert.ToDouble(PositionLevelsBottom);
             }
         }
 
-        /// <summary>
-        /// Remove method: make use of conditional binding directly in xamḷ. Only update if ticked.
-        /// </summary>
         private void SaveAttributesData()
         {
             if (IsAttributesNameChecked)
             {
-                localColumnProperties.AttributesNameText = AttributesNameText;
+                globaColumnProperties.AttributesNameText = AttributesNameText;
             }
 
             if (IsAttributesProfileChecked)
             {
-                localColumnProperties.AttributesProfileText = AttributesProfileText;
+                globaColumnProperties.AttributesProfileText = AttributesProfileText;
             }
 
             if (IsAttributesMaterialChecked)
             {
-                localColumnProperties.AttributesMaterialText = AttributesMaterialText;
+                globaColumnProperties.AttributesMaterialText = AttributesMaterialText;
             }
 
             if (IsAttributesFinishChecked)
             {
-                localColumnProperties.AttributesFinishText = AttributesFinishText;
+                globaColumnProperties.AttributesFinishText = AttributesFinishText;
             }
 
             if (IsAttributesClassChecked)
             {
-                localColumnProperties.AttributesClassText = AttributesClassText;
+                globaColumnProperties.AttributesClassText = AttributesClassText;
             }
         }
 
@@ -553,22 +551,22 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsNumberingSeriesPartPrefixChecked)
             {
-                localColumnProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
+                globaColumnProperties.NumberingSeriesPartPrefixText = NumberingSeriesPartPrefixText;
             }
 
             if (IsNumberingSeriesPartStartumberChecked)
             {
-                localColumnProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
+                globaColumnProperties.NumberingSeriesPartStartNumberText = NumberingSeriesPartStartNumberText;
             }
 
             if (IsNumberingSeriesAssemblyPrefixChecked)
             {
-                localColumnProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
+                globaColumnProperties.NumberingSeriesAssemblyPrefixText = NumberingSeriesAssemblyPrefixText;
             }
 
             if (IsNumberingSeriesAssemblyStartumberChecked)
             {
-                localColumnProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
+                globaColumnProperties.NumberingSeriesAssemblyStartNumberText = NumberingSeriesAssemblyStartNumberText;
             }
         }
 
@@ -576,27 +574,27 @@ namespace DialogBeamProperties.ViewModel
 
         #region Update Data
 
-        private void UpdateData(ColumnProperties iproperties)
+        private void UpdateViewModel(ColumnProperties columnProperties)
         {
-            LoadData(iproperties);
-            UpdatePositionData();
-            UpdateAttributesData();
-            UpdateNumberingData();
+            LoadData(columnProperties);
+            UpdatePositionData(columnProperties);
+            UpdateAttributesData(columnProperties);
+            UpdateNumberingData(columnProperties);
         }
 
-        private void UpdatePositionData()
+        private void UpdatePositionData(ColumnProperties columnProperties)
         {
-            SelectedDataInPositionVerticalComboBox = localColumnProperties.SelectedDataInPositionVerticalComboBox;
-            PositionVerticalText = localColumnProperties.PositionVerticalText.ToString();
+            SelectedDataInPositionVerticalComboBox = columnProperties.SelectedDataInPositionVerticalComboBox;
+            PositionVerticalText = columnProperties.PositionVerticalText.ToString();
 
-            SelectedDataInPositionRotationComboBox = localColumnProperties.SelectedDataInPositionRotationComboBox;
-            PositionRotationText = localColumnProperties.PositionRotationText.ToString();
+            SelectedDataInPositionRotationComboBox = columnProperties.SelectedDataInPositionRotationComboBox;
+            PositionRotationText = columnProperties.PositionRotationText.ToString();
 
-            SelectedDataInPositionHorizontalComboBox = localColumnProperties.SelectedDataInPositionHorizontalComboBox;
-            PositionHorizontalText = localColumnProperties.PositionHorizontalText.ToString();
+            SelectedDataInPositionHorizontalComboBox = columnProperties.SelectedDataInPositionHorizontalComboBox;
+            PositionHorizontalText = columnProperties.PositionHorizontalText.ToString();
 
-            PositionLevelsTop = localColumnProperties.PositionLevelsTopText.ToString();
-            PositionLevelsBottom = localColumnProperties.PositionLevelsBottomText.ToString();
+            PositionLevelsTop = columnProperties.PositionLevelsTopText.ToString();
+            PositionLevelsBottom = columnProperties.PositionLevelsBottomText.ToString();
         }
 
         private void SelectedProfile(string obj)
@@ -604,26 +602,26 @@ namespace DialogBeamProperties.ViewModel
             AttributesProfileText = obj;
         }
 
-        private void LoadData(ColumnProperties iproperties)
+        private void LoadData(ColumnProperties columnProperties)
         {
-            SelectedDataInLoadDataComboBox = iproperties.SelectedDataInLoadDataComboBox;
+            SelectedDataInLoadDataComboBox = columnProperties.SelectedDataInLoadDataComboBox;
         }
 
-        private void UpdateAttributesData()
+        private void UpdateAttributesData(ColumnProperties columnProperties)
         {
-            AttributesNameText = localColumnProperties.AttributesNameText;
-            AttributesProfileText = localColumnProperties.AttributesProfileText;
-            AttributesMaterialText = localColumnProperties.AttributesMaterialText;
-            AttributesFinishText = localColumnProperties.AttributesFinishText;
-            AttributesClassText = localColumnProperties.AttributesClassText;
+            AttributesNameText = columnProperties.AttributesNameText;
+            AttributesProfileText = columnProperties.AttributesProfileText;
+            AttributesMaterialText = columnProperties.AttributesMaterialText;
+            AttributesFinishText = columnProperties.AttributesFinishText;
+            AttributesClassText = columnProperties.AttributesClassText;
         }
 
-        private void UpdateNumberingData()
+        private void UpdateNumberingData(ColumnProperties columnProperties)
         {
-            NumberingSeriesPartPrefixText = localColumnProperties.NumberingSeriesPartPrefixText;
-            NumberingSeriesPartStartNumberText = localColumnProperties.NumberingSeriesPartStartNumberText;
-            NumberingSeriesAssemblyPrefixText = localColumnProperties.NumberingSeriesAssemblyPrefixText;
-            NumberingSeriesAssemblyStartNumberText = localColumnProperties.NumberingSeriesAssemblyStartNumberText;
+            NumberingSeriesPartPrefixText = columnProperties.NumberingSeriesPartPrefixText;
+            NumberingSeriesPartStartNumberText = columnProperties.NumberingSeriesPartStartNumberText;
+            NumberingSeriesAssemblyPrefixText = columnProperties.NumberingSeriesAssemblyPrefixText;
+            NumberingSeriesAssemblyStartNumberText = columnProperties.NumberingSeriesAssemblyStartNumberText;
         }
 
         #endregion Update Data
@@ -646,7 +644,7 @@ namespace DialogBeamProperties.ViewModel
             {
                 if (IsAttributesProfileChecked)
                 {
-                    validProfile = new Validator().IsValidProfile(localColumnProperties);
+                    validProfile = new Validator().IsValidProfile(AttributesProfileText);
                 }
                 else
                 {
