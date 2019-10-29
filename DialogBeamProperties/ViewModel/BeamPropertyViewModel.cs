@@ -16,6 +16,7 @@ namespace DialogBeamProperties.ViewModel
     {
         #region Fields
 
+        private readonly MemberModifierFactory modifierFactory;
         private BeamProperties globalBeamProperties;
         private readonly BeamValuesGetter beamValuesGetter;
 
@@ -215,12 +216,14 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
+        public DialogBeamPropertiesViewModel(MemberModifierFactory modifierFactory,
             BeamProperties localBeamProperties,
             BeamProperties globalBeamPropertiesInput,
             BeamValuesGetter beamValuesGetter
             )
         {
             InitCommand();
+            this.modifierFactory = modifierFactory;
             globalBeamProperties = globalBeamPropertiesInput;
             this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
@@ -280,6 +283,18 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
+                using (MemberModifier memberModifier = modifierFactory.CreateMemberModifier())
+                {
+                    if (IsAttributesProfileChecked)
+                    {
+                        memberModifier.ModifyProfile(AttributesProfileText);
+                    }
+
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
+                    }
+                }
             }
         }
 

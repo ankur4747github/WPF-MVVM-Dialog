@@ -18,6 +18,7 @@ namespace DialogBeamProperties.ViewModel
 
         #region Fields
 
+        private readonly MemberModifierFactory modifierFactory;
         private ColumnProperties globaColumnProperties;
 
         public List<string> PositionRotationComboBox { get; set; }
@@ -341,10 +342,12 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
+        public DialogColumnPropertiesViewModel(MemberModifierFactory memberModifierFactory,
                                                 ColumnProperties localColumnProperties,
                                                 ColumnProperties globaColumnProperties)
         {
             InitCommand();
+            this.modifierFactory = memberModifierFactory;
             this.globaColumnProperties = globaColumnProperties;
             UpdateViewModel(localColumnProperties);
 
@@ -401,6 +404,18 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
+                using (MemberModifier memberModifier = modifierFactory.CreateMemberModifier())
+                {
+                    if (IsAttributesProfileChecked)
+                    {
+                        memberModifier.ModifyProfile(AttributesProfileText);
+                    }
+
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
+                    }
+                }
             }
         }
 

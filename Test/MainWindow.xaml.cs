@@ -45,6 +45,7 @@ namespace Test
         {
             prop.AttributesProfileText = "RS";
             BeamValuesGetterDummyImplementation beamValuesGetter = new BeamValuesGetterDummyImplementation();
+            DialogBeamPropertiesViewModel viewModel = new DialogBeamPropertiesViewModel(new MemberModifierFactoryDummyImplementation(), prop, prop, beamValuesGetter);
             testBeam = new DialogBeamProperties.DialogBeamProperties(viewModel);
             testBeam.Closing += TestBeam_Closing;
             testBeam.Show();

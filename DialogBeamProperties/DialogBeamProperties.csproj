@@ -75,6 +75,10 @@
     <Compile Include="CadInterfaces\BeamValuesGetter.cs" />
     <Compile Include="CadInterfaces\BeamValuesGetterDummyImplementation.cs" />
     <Compile Include="CadInterfaces\ColumnValuesGetter.cs" />
+    <Compile Include="CadInterfaces\MemberModifier.cs" />
+    <Compile Include="CadInterfaces\MemberModifierDummyImplmentation.cs" />
+    <Compile Include="CadInterfaces\MemberModifierFactory.cs" />
+    <Compile Include="CadInterfaces\MemberModifierFactoryDummyImplementation.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Model\Properties\ColumnProperties.cs" />
     <Compile Include="Model\Properties\StandardColumnPropertiesFactory.cs" />
