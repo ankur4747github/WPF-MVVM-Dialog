@@ -16,7 +16,6 @@ namespace DialogBeamProperties.ViewModel
     {
         #region Fields
 
-        private readonly XDataWriter xDataWriter;
         private BeamProperties globalBeamProperties;
         private readonly BeamValuesGetter beamValuesGetter;
 
@@ -216,14 +215,12 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogBeamPropertiesViewModel(XDataWriter xDataWriter,
             BeamProperties localBeamProperties,
             BeamProperties globalBeamPropertiesInput,
             BeamValuesGetter beamValuesGetter
             )
         {
             InitCommand();
-            this.xDataWriter = xDataWriter;
             globalBeamProperties = globalBeamPropertiesInput;
             this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
@@ -283,7 +280,6 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
 

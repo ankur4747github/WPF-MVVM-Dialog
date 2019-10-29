@@ -18,7 +18,6 @@ namespace DialogBeamProperties.ViewModel
 
         #region Fields
 
-        private readonly XDataWriter xDataWriter;
         private ColumnProperties globaColumnProperties;
 
         public List<string> PositionRotationComboBox { get; set; }
@@ -342,12 +341,10 @@ namespace DialogBeamProperties.ViewModel
 
         #region Constructor
 
-        public DialogColumnPropertiesViewModel(XDataWriter xDataWriter,
                                                 ColumnProperties localColumnProperties,
                                                 ColumnProperties globaColumnProperties)
         {
             InitCommand();
-            this.xDataWriter = xDataWriter;
             this.globaColumnProperties = globaColumnProperties;
             UpdateViewModel(localColumnProperties);
 
@@ -404,7 +401,6 @@ namespace DialogBeamProperties.ViewModel
         {
             if (IsAllDataValid())
             {
-                xDataWriter.WriteXDataToLine(AttributesProfileText, Convert.ToDouble(PositionRotationText));
             }
         }
 
