@@ -294,6 +294,11 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                     }
+
+                    if (IsAttributesClassChecked)
+                    {
+                        memberModifier.ModifyClass(Convert.ToInt32(AttributesClassText));
+                    }
                 }
             }
         }
