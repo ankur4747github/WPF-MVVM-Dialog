@@ -297,7 +297,7 @@ namespace DialogBeamProperties.ViewModel
 
                     if (IsAttributesClassChecked)
                     {
-                        memberModifier.ModifyClass(Convert.ToInt32(AttributesClassText));
+                        memberModifier.ModifyClass((AttributesClassText));
                     }
                 }
             }
@@ -358,9 +358,6 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Command Handlers
-
-        // We do not need to save or update this data - we can make use of direct databinding
-        // in WPF. We can bind directly to the IProperties values, can't we!!??
 
         #region Update Data
 
@@ -515,6 +512,7 @@ namespace DialogBeamProperties.ViewModel
             SetErrorOnScreenIsAttributesClassError(valid);
             return valid;
         }
+
         private bool IsProfileValid()
         {
             bool validProfile = false;
