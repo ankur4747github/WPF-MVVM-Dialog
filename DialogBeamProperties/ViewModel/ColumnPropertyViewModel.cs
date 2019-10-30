@@ -443,8 +443,15 @@ namespace DialogBeamProperties.ViewModel
 
         private void GetButtonClick(object obj)
         {
-            ColumnProperties columnProperties = columnValuesGetter.GetColumnProperties();
-            UpdateViewModel(columnProperties);
+            try
+            {
+                ColumnProperties columnProperties = columnValuesGetter.GetColumnProperties();
+                UpdateViewModel(columnProperties);
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SelectAllCheckBoxButtonClick(object obj)

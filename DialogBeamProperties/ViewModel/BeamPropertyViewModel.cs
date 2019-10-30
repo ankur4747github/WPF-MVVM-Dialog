@@ -310,8 +310,15 @@ namespace DialogBeamProperties.ViewModel
 
         private void GetButtonClick(object obj)
         {
-            BeamProperties beamProperties = beamValuesGetter.GetBeamProperties();
-            UpdateViewModel(beamProperties);
+            try
+            {
+                BeamProperties beamProperties = beamValuesGetter.GetBeamProperties();
+                UpdateViewModel(beamProperties);
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SelectAllCheckBoxButtonClick(object obj)
