@@ -8,6 +8,10 @@ namespace DialogBeamProperties.CadInterfaces
 {
     internal class MemberModifierDummyImplmentation : MemberModifier
     {
+        public MemberModifierDummyImplmentation()
+        {
+        }
+
         public void Dispose()
         {
         }
@@ -17,6 +21,10 @@ namespace DialogBeamProperties.CadInterfaces
         }
 
         public void ModifyRotation(double rotation)
+        {
+        }
+
+        public void ModifyClass(int color)
         {
         }
     }

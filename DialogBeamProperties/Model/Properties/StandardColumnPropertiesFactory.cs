@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardColumnPropertiesFactory
     {
-        public ColumnProperties CreateStandardProperties(string profile = "", double topRl = 0, double bottomRl = 0)
+        public ColumnProperties CreateStandardProperties(string profile = "", double rotation = 0, int color = 0, double topRl = 0, double bottomRl = 0)
         {
             ColumnProperties columnProperties = new ColumnProperties();
             columnProperties.AttributesProfileText = "H100";
@@ -20,9 +20,9 @@ namespace DialogBeamProperties.Model.Properties
             columnProperties.AttributesProfileText = profile;
             columnProperties.AttributesMaterialText = "";
             columnProperties.AttributesFinishText = "";
-            columnProperties.AttributesClassText = 0;
+            columnProperties.AttributesClassText = color;
             columnProperties.PositionVerticalText = 0;
-            columnProperties.PositionRotationText = 0;
+            columnProperties.PositionRotationText = rotation;
             columnProperties.PositionHorizontalText = 0;
             columnProperties.PositionLevelsTopText = topRl;
             columnProperties.PositionLevelsBottomText = bottomRl;
