@@ -423,6 +423,11 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                     }
 
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
+                    }
+
                     if (IsPositionLevelsTopChecked)
                     {
                         memberModifier.ModifyTopPosition(Convert.ToDouble(PositionLevelsTop));

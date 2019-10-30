@@ -295,14 +295,14 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                     }
 
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
+                    }
+
                     if (IsAttributesClassChecked)
                     {
                         memberModifier.ModifyClass((AttributesClassText));
-                    }
-
-                    if (IsPositionRotationChecked)
-                    {
-                        memberModifier.ModifyPositionRotation(PositionRotationText);
                     }
                 }
             }

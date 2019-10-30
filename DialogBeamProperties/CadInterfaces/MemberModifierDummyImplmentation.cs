@@ -36,7 +36,7 @@ namespace DialogBeamProperties.CadInterfaces
         {
         }
 
-        public void ModifyPositionRotation(string positionRotationText)
+        public void ModifyPositionRotationEnum(string positionRotationText)
         {
         }
     }
