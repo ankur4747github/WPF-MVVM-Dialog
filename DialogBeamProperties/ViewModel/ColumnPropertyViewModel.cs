@@ -14,7 +14,7 @@ namespace DialogBeamProperties.ViewModel
 {
     public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
-        private const string PositionLevelErrors = "Position Levels should not be equals.";
+        private const string PositionLevelErrors = "Position Levels should not be equals and \r\nTop should be greater then Bottom.";
 
         #region Fields
 
