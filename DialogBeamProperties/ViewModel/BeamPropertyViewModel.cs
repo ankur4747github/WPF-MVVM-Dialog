@@ -228,9 +228,9 @@ namespace DialogBeamProperties.ViewModel
             this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
 
-            PositionOnPlaneComboBox = new List<string>() { "Middle", "Right", "Left" };
-            PositionRotationComboBox = new List<string>() { "Front", "Top", "Back", "Below" };
-            PositionAtDepthComboBox = new List<string>() { "Middle", "Front", "Behind" };
+            PositionOnPlaneComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
+            PositionRotationComboBox = new List<string>() { "FRONT", "TOP", "BACK", "BELOW" };
+            PositionAtDepthComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
 
             SelectedDataInPositionOnPlaneComboBox = PositionOnPlaneComboBox[0];
             SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
