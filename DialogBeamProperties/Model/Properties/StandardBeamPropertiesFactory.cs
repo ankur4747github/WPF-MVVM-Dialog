@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardBeamPropertiesFactory
     {
-        public BeamProperties CreateStandardProperties(string profile = "", double rotation = 0, int color = 0)
+        public BeamProperties CreateStandardProperties(string profile = "", double rotation = 0, int color = 0, string rotationEnum = "")
         {
             BeamProperties beamProperties = new BeamProperties();
 
@@ -25,6 +25,7 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.PositionOnPlaneText = 0;
             beamProperties.PositionRotationText = rotation;
             beamProperties.PositionAtDepthText = 0;
+            beamProperties.SelectedDataInPositionRotationComboBox = rotationEnum;
 
             return beamProperties;
         }

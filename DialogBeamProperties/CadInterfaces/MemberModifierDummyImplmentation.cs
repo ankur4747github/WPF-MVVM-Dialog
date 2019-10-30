@@ -35,5 +35,9 @@ namespace DialogBeamProperties.CadInterfaces
         public void ModifyBottomPosition(double positionLevelsBottom)
         {
         }
+
+        public void ModifyPositionRotation(string positionRotationText)
+        {
+        }
     }
 }

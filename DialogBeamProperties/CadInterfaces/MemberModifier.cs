@@ -17,5 +17,7 @@ namespace DialogBeamProperties.CadInterfaces
         void ModifyTopPosition(double positionLevelsTop);
 
         void ModifyBottomPosition(double positionLevelsBottom);
+
+        void ModifyPositionRotation(string positionRotationText);
     }
 }
