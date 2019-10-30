@@ -13,5 +13,9 @@ namespace DialogBeamProperties.CadInterfaces
         void ModifyRotation(double rotation);
 
         void ModifyClass(int color);
+
+        void ModifyTopPosition(double positionLevelsTop);
+
+        void ModifyBottomPosition(double positionLevelsBottom);
     }
 }

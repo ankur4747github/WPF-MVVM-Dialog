@@ -418,6 +418,16 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                     }
+
+                    if (IsPositionLevelsTopChecked)
+                    {
+                        memberModifier.ModifyTopPosition(Convert.ToDouble(PositionLevelsTop));
+                    }
+
+                    if (IsPositionLevelsBottomChecked)
+                    {
+                        memberModifier.ModifyBottomPosition(Convert.ToDouble(PositionLevelsBottom));
+                    }
                 }
             }
         }

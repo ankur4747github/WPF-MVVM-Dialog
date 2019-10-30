@@ -27,5 +27,13 @@ namespace DialogBeamProperties.CadInterfaces
         public void ModifyClass(int color)
         {
         }
+
+        public void ModifyTopPosition(double positionLevelsTop)
+        {
+        }
+
+        public void ModifyBottomPosition(double positionLevelsBottom)
+        {
+        }
     }
 }
