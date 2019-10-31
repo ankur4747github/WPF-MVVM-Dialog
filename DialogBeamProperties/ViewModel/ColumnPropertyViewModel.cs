@@ -20,6 +20,7 @@ namespace DialogBeamProperties.ViewModel
 
         private readonly MemberModifierFactory modifierFactory;
         private ColumnProperties globaColumnProperties;
+        private readonly ColumnValuesGetter columnValuesGetter;
 
         public List<string> PositionRotationComboBox { get; set; }
         public List<string> PositionVerticalComboBox { get; set; }
@@ -346,11 +347,14 @@ namespace DialogBeamProperties.ViewModel
 
         public DialogColumnPropertiesViewModel(MemberModifierFactory memberModifierFactory,
                                                 ColumnProperties localColumnProperties,
-                                                ColumnProperties globaColumnProperties)
+                                                ColumnProperties globaColumnProperties,
+                                                ColumnValuesGetter columnValuesGetter
+                                                )
         {
             InitCommand();
             this.modifierFactory = memberModifierFactory;
             this.globaColumnProperties = globaColumnProperties;
+            this.columnValuesGetter = columnValuesGetter;
             UpdateViewModel(localColumnProperties);
 
             PositionRotationComboBox = new List<string>() { "FRONT", "TOP", "BACK", "BELOW" };
@@ -420,12 +424,36 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                     }
+
+                    if (IsPositionRotationChecked)
+                    {
+                        memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
+                    }
+
+                    if (IsPositionLevelsTopChecked)
+                    {
+                        memberModifier.ModifyTopPosition(Convert.ToDouble(PositionLevelsTop));
+                    }
+
+                    if (IsPositionLevelsBottomChecked)
+                    {
+                        memberModifier.ModifyBottomPosition(Convert.ToDouble(PositionLevelsBottom));
+                    }
                 }
             }
         }
 
         private void GetButtonClick(object obj)
         {
+            try
+            {
+                ColumnProperties columnProperties = columnValuesGetter.GetColumnProperties();
+                UpdateViewModel(columnProperties);
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SelectAllCheckBoxButtonClick(object obj)

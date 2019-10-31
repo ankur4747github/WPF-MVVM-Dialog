@@ -4,7 +4,6 @@ namespace DialogBeamProperties.Model
 {
     public class BeamProperties
     {
-        
         public string SelectedDataInLoadDataComboBox { get; set; }
         public string NumberingSeriesPartPrefixText { get; set; }
         public string NumberingSeriesPartStartNumberText { get; set; }
