@@ -607,10 +607,29 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateViewModel(ColumnProperties columnProperties)
         {
+            TickAllBoxes();
             LoadData(columnProperties);
             UpdatePositionData(columnProperties);
             UpdateAttributesData(columnProperties);
             UpdateNumberingData(columnProperties);
+        }
+
+        private void TickAllBoxes()
+        {
+            IsNumberingSeriesPartPrefixChecked = true;
+            IsNumberingSeriesPartStartumberChecked = true;
+            IsNumberingSeriesAssemblyPrefixChecked = true;
+            IsNumberingSeriesAssemblyStartumberChecked = true;
+            IsAttributesNameChecked = true;
+            IsAttributesProfileChecked = true;
+            IsAttributesMaterialChecked = true;
+            IsAttributesFinishChecked = true;
+            IsAttributesClassChecked = true;
+            IsPositionVerticalChecked = true;
+            IsPositionRotationChecked = true;
+            IsPositionHorizontalChecked = true;
+            IsPositionLevelsTopChecked = true;
+            IsPositionLevelsBottomChecked = true;
         }
 
         private void UpdatePositionData(ColumnProperties columnProperties)

@@ -375,6 +375,7 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateViewModel(BeamProperties beamProperties)
         {
+            TickAllBoxes();
             LoadData(beamProperties);
             UpdatePositionData(beamProperties);
             UpdateAttributesData(beamProperties);
@@ -548,6 +549,22 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Validation
+
+        private void TickAllBoxes()
+        {
+            IsNumberingSeriesPartPrefixChecked = true;
+            IsNumberingSeriesPartStartumberChecked = true;
+            IsNumberingSeriesAssemblyPrefixChecked = true;
+            IsNumberingSeriesAssemblyStartumberChecked = true;
+            IsAttributesNameChecked = true;
+            IsAttributesProfileChecked = true;
+            IsAttributesMaterialChecked = true;
+            IsAttributesFinishChecked = true;
+            IsAttributesClassChecked = true;
+            IsPositionOnPlaneChecked = true;
+            IsPositionRotationChecked = true;
+            IsPositionAtDepthChecked = true;
+        }
 
         #endregion Private Methods
 
