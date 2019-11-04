@@ -40,14 +40,10 @@ namespace DialogBeamProperties
             this.Close();
         }
 
-        
-
         public void Dispose()
         {
             Messenger.Default.Unregister<bool>(this,
                     MessengerToken.CLOSEBEAMPROPERTYWINDOW, CloseWindow);
         }
-
-       
     }
 }
