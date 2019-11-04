@@ -14,7 +14,7 @@ namespace DialogBeamProperties.ViewModel
 {
     public class DialogColumnPropertiesViewModel : AbstractPropertyViewModel, IDisposable
     {
-        private const string PositionLevelErrors = "Position Levels should not be equals.";
+        private const string PositionLevelErrors = "Position Levels should not be equals and \r\nTop should be greater then Bottom.";
 
         #region Fields
 
@@ -246,7 +246,8 @@ namespace DialogBeamProperties.ViewModel
                 if (PositionLevelsTop.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsTopChecked = Convert.ToDouble(PositionLevelsTop) > 0;
+                    IsPositionLevelsTopChecked = Convert.ToDouble(PositionLevelsTop) > 0 
+                                              || Convert.ToDouble(PositionLevelsTop) < 0;
                 }
 
                 OnPropertyChangedAsync(nameof(PositionLevelsTop));
@@ -290,7 +291,8 @@ namespace DialogBeamProperties.ViewModel
                 if (PositionLevelsBottom.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsBottomChecked = Convert.ToDouble(PositionLevelsBottom) > 0;
+                    IsPositionLevelsBottomChecked = Convert.ToDouble(PositionLevelsBottom) > 0 
+                                                    || Convert.ToDouble(PositionLevelsBottom) < 0;
                 }
 
                 OnPropertyChangedAsync(nameof(PositionLevelsBottom));

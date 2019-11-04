@@ -46,7 +46,8 @@ namespace DialogBeamProperties.Helpers
 
         public bool AreTopAndBottomPositionsValid(double positionLevelsTop, double positionLevelsBottom)
         {
-            return Math.Abs(positionLevelsTop - positionLevelsBottom) > 0.01;
+            return (Math.Abs(positionLevelsTop - positionLevelsBottom) > 0.01) &&
+                   (positionLevelsTop > positionLevelsBottom);
         }
 
         internal bool IsValidAttributesClass(int attributesClassText)
