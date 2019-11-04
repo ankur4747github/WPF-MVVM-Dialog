@@ -51,7 +51,7 @@ namespace DialogBeamProperties.Helpers
 
         internal bool IsValidAttributesClass(int attributesClassText)
         {
-            return attributesClassText > 0 && attributesClassText < 100;
+            return attributesClassText >= 0 && attributesClassText < 100;
         }
     }
 }
