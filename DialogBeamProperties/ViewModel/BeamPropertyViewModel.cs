@@ -225,9 +225,9 @@ namespace DialogBeamProperties.ViewModel
             InitCommand();
             this.modifierFactory = modifierFactory;
             globalBeamProperties = globalBeamPropertiesInput;
-            this.beamValuesGetter = beamValuesGetter;
+            this.beamValuesGetter = beamValuesGetter;            
             UpdateViewModel(localBeamProperties);
-
+            TickAllBoxes();
             PositionOnPlaneComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
             PositionRotationComboBox = new List<string>() { "FRONT", "TOP", "BACK", "BELOW" };
             PositionAtDepthComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
@@ -374,7 +374,7 @@ namespace DialogBeamProperties.ViewModel
         #region Update Data
 
         private void UpdateViewModel(BeamProperties beamProperties)
-        {
+        {            
             LoadData(beamProperties);
             UpdatePositionData(beamProperties);
             UpdateAttributesData(beamProperties);
@@ -548,6 +548,22 @@ namespace DialogBeamProperties.ViewModel
         }
 
         #endregion Validation
+
+        private void TickAllBoxes()
+        {
+            IsNumberingSeriesPartPrefixChecked = true;
+            IsNumberingSeriesPartStartumberChecked = true;
+            IsNumberingSeriesAssemblyPrefixChecked = true;
+            IsNumberingSeriesAssemblyStartumberChecked = true;
+            IsAttributesNameChecked = true;
+            IsAttributesProfileChecked = true;
+            IsAttributesMaterialChecked = true;
+            IsAttributesFinishChecked = true;
+            IsAttributesClassChecked = true;
+            IsPositionOnPlaneChecked = true;
+            IsPositionRotationChecked = true;
+            IsPositionAtDepthChecked = true;
+        }
 
         #endregion Private Methods
 
