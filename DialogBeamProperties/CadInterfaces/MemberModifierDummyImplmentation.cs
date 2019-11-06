@@ -54,7 +54,10 @@ namespace DialogBeamProperties.CadInterfaces
 
         public void ModifyPlaneOffset(double planeOffset)
         {
-            throw new NotImplementedException();
+        }
+
+        public void Regen()
+        {
         }
     }
 }

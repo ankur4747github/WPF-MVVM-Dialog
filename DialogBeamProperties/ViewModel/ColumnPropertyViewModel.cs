@@ -447,6 +447,8 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyBottomPosition(Convert.ToDouble(PositionLevelsBottom));
                     }
+
+                    memberModifier.Regen();
                 }
             }
         }

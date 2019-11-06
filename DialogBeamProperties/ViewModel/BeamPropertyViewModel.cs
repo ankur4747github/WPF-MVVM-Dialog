@@ -312,6 +312,8 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyDepthEnum(SelectedDataInPositionAtDepthComboBox);
                         memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionAtDepthText));
                     }
+
+                    memberModifier.Regen();
                 }
             }
         }

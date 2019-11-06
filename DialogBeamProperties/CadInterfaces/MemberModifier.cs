@@ -27,5 +27,7 @@ namespace DialogBeamProperties.CadInterfaces
         void ModifyPlaneEnum(string planeEnum);
 
         void ModifyPlaneOffset(double planeOffset);
+
+        void Regen();
     }
 }
