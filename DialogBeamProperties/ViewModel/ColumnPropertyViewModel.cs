@@ -359,7 +359,7 @@ namespace DialogBeamProperties.ViewModel
 
             PositionRotationComboBox = new List<string>() { "TOP" };
             PositionVerticalComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
-            PositionHorizontalComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
+            PositionHorizontalComboBox = new List<string>() { "LEFT", "MIDDLE", "RIGHT" };
 
             SelectedDataInPositionVerticalComboBox = PositionVerticalComboBox[0];
             SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
