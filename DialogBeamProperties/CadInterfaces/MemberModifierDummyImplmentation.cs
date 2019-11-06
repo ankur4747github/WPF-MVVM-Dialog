@@ -39,5 +39,22 @@ namespace DialogBeamProperties.CadInterfaces
         public void ModifyPositionRotationEnum(string positionRotationText)
         {
         }
+
+        public void ModifyDepthEnum(string depthEnum)
+        {
+        }
+
+        public void ModifyDepthOffset(double depthOffset)
+        {
+        }
+
+        public void ModifyPlaneEnum(string planeEnum)
+        {
+        }
+
+        public void ModifyPlaneOffset(double planeOffset)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

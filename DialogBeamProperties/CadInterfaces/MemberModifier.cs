@@ -10,6 +10,8 @@ namespace DialogBeamProperties.CadInterfaces
     {
         void ModifyProfile(string profile);
 
+        void ModifyPositionRotationEnum(string positionRotationText);
+
         void ModifyRotation(double rotation);
 
         void ModifyClass(int color);
@@ -18,6 +20,12 @@ namespace DialogBeamProperties.CadInterfaces
 
         void ModifyBottomPosition(double positionLevelsBottom);
 
-        void ModifyPositionRotationEnum(string positionRotationText);
+        void ModifyDepthEnum(string depthEnum);
+
+        void ModifyDepthOffset(double depthOffset);
+
+        void ModifyPlaneEnum(string planeEnum);
+
+        void ModifyPlaneOffset(double planeOffset);
     }
 }

@@ -293,16 +293,24 @@ namespace DialogBeamProperties.ViewModel
                     if (IsPositionRotationChecked)
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
-                    }
-
-                    if (IsPositionRotationChecked)
-                    {
                         memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
                     }
 
                     if (IsAttributesClassChecked)
                     {
                         memberModifier.ModifyClass((AttributesClassText));
+                    }
+
+                    if (IsPositionOnPlaneChecked)
+                    {
+                        memberModifier.ModifyPlaneEnum(SelectedDataInPositionOnPlaneComboBox);
+                        memberModifier.ModifyPlaneOffset(Convert.ToDouble(PositionOnPlaneText));
+                    }
+
+                    if (IsPositionAtDepthChecked)
+                    {
+                        memberModifier.ModifyDepthEnum(SelectedDataInPositionAtDepthComboBox);
+                        memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionAtDepthText));
                     }
                 }
             }
