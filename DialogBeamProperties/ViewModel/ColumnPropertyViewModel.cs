@@ -617,11 +617,11 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateViewModel(ColumnProperties columnProperties)
         {
-            TickAllBoxes();
             LoadData(columnProperties);
             UpdatePositionData(columnProperties);
             UpdateAttributesData(columnProperties);
             UpdateNumberingData(columnProperties);
+            TickAllBoxes();
         }
 
         private void TickAllBoxes()
