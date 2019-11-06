@@ -358,7 +358,7 @@ namespace DialogBeamProperties.ViewModel
             UpdateViewModel(localColumnProperties);
 
             PositionRotationComboBox = new List<string>() { "TOP" };
-            PositionVerticalComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
+            PositionVerticalComboBox = new List<string>() { "DOWN", "MIDDLE", "UP" };
             PositionHorizontalComboBox = new List<string>() { "LEFT", "MIDDLE", "RIGHT" };
 
             SelectedDataInPositionVerticalComboBox = PositionVerticalComboBox[0];
