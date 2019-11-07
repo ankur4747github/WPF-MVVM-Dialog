@@ -225,11 +225,11 @@ namespace DialogBeamProperties.ViewModel
             InitCommand();
             this.modifierFactory = modifierFactory;
             globalBeamProperties = globalBeamPropertiesInput;
-            this.beamValuesGetter = beamValuesGetter;            
+            this.beamValuesGetter = beamValuesGetter;
             UpdateViewModel(localBeamProperties);
             TickAllBoxes();
             PositionOnPlaneComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
-            PositionRotationComboBox = new List<string>() { "FRONT", "TOP", "BACK", "BELOW" };
+            PositionRotationComboBox = new List<string>() { "TOP" };
             PositionAtDepthComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
 
             SelectedDataInPositionOnPlaneComboBox = PositionOnPlaneComboBox[0];
@@ -293,10 +293,6 @@ namespace DialogBeamProperties.ViewModel
                     if (IsPositionRotationChecked)
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
-                    }
-
-                    if (IsPositionRotationChecked)
-                    {
                         memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
                     }
 
@@ -304,6 +300,20 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyClass((AttributesClassText));
                     }
+
+                    if (IsPositionOnPlaneChecked)
+                    {
+                        memberModifier.ModifyPlaneEnum(SelectedDataInPositionOnPlaneComboBox);
+                        memberModifier.ModifyPlaneOffset(Convert.ToDouble(PositionOnPlaneText));
+                    }
+
+                    if (IsPositionAtDepthChecked)
+                    {
+                        memberModifier.ModifyDepthEnum(SelectedDataInPositionAtDepthComboBox);
+                        memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionAtDepthText));
+                    }
+
+                    memberModifier.Regen();
                 }
             }
         }
@@ -374,7 +384,7 @@ namespace DialogBeamProperties.ViewModel
         #region Update Data
 
         private void UpdateViewModel(BeamProperties beamProperties)
-        {            
+        {
             LoadData(beamProperties);
             UpdatePositionData(beamProperties);
             UpdateAttributesData(beamProperties);

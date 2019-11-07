@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardColumnPropertiesFactory
     {
-        public ColumnProperties CreateStandardProperties(string profile = "", double rotation = 0, int color = 0, double topRl = 0, double bottomRl = 0, string rotationEnum = "")
+        public ColumnProperties CreateStandardProperties(string profile = "", double rotation = 0, int color = 0, double topRl = 0, double bottomRl = 0, string rotationEnum = "", string depthEnum = "", double depthOffset = 0, string planeEnum = "", double planeOffset = 0)
         {
             ColumnProperties columnProperties = new ColumnProperties();
             columnProperties.AttributesProfileText = "H100";
@@ -21,13 +21,14 @@ namespace DialogBeamProperties.Model.Properties
             columnProperties.AttributesMaterialText = "";
             columnProperties.AttributesFinishText = "";
             columnProperties.AttributesClassText = color;
-            columnProperties.PositionVerticalText = 0;
+            columnProperties.PositionVerticalText = planeOffset;
             columnProperties.PositionRotationText = rotation;
-            columnProperties.PositionHorizontalText = 0;
+            columnProperties.PositionHorizontalText = depthOffset;
             columnProperties.PositionLevelsTopText = topRl;
             columnProperties.PositionLevelsBottomText = bottomRl;
             columnProperties.SelectedDataInPositionRotationComboBox = rotationEnum;
-
+            columnProperties.SelectedDataInPositionVerticalComboBox = planeEnum;
+            columnProperties.SelectedDataInPositionHorizontalComboBox = depthEnum;
             return columnProperties;
         }
     }

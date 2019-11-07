@@ -246,7 +246,7 @@ namespace DialogBeamProperties.ViewModel
                 if (PositionLevelsTop.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsTopChecked = Convert.ToDouble(PositionLevelsTop) > 0 
+                    IsPositionLevelsTopChecked = Convert.ToDouble(PositionLevelsTop) > 0
                                               || Convert.ToDouble(PositionLevelsTop) < 0;
                 }
 
@@ -291,7 +291,7 @@ namespace DialogBeamProperties.ViewModel
                 if (PositionLevelsBottom.ToString().Length > 0)
                 {
                     PositionLevelsTopBorderColor = DefaultBorderColor;
-                    IsPositionLevelsBottomChecked = Convert.ToDouble(PositionLevelsBottom) > 0 
+                    IsPositionLevelsBottomChecked = Convert.ToDouble(PositionLevelsBottom) > 0
                                                     || Convert.ToDouble(PositionLevelsBottom) < 0;
                 }
 
@@ -357,9 +357,9 @@ namespace DialogBeamProperties.ViewModel
             this.columnValuesGetter = columnValuesGetter;
             UpdateViewModel(localColumnProperties);
 
-            PositionRotationComboBox = new List<string>() { "FRONT", "TOP", "BACK", "BELOW" };
-            PositionVerticalComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
-            PositionHorizontalComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
+            PositionRotationComboBox = new List<string>() { "TOP" };
+            PositionVerticalComboBox = new List<string>() { "DOWN", "MIDDLE", "UP" };
+            PositionHorizontalComboBox = new List<string>() { "LEFT", "MIDDLE", "RIGHT" };
 
             SelectedDataInPositionVerticalComboBox = PositionVerticalComboBox[0];
             SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
@@ -420,14 +420,27 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyProfile(AttributesProfileText);
                     }
 
-                    if (IsPositionRotationChecked)
+                    if (IsAttributesClassChecked)
                     {
-                        memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
+                        memberModifier.ModifyClass((AttributesClassText));
                     }
 
                     if (IsPositionRotationChecked)
                     {
+                        memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
                         memberModifier.ModifyPositionRotationEnum(SelectedDataInPositionRotationComboBox);
+                    }
+
+                    if (IsPositionVerticalChecked)
+                    {
+                        memberModifier.ModifyPlaneEnum(SelectedDataInPositionVerticalComboBox);
+                        memberModifier.ModifyPlaneOffset(Convert.ToDouble(PositionVerticalText));
+                    }
+
+                    if (IsPositionHorizontalChecked)
+                    {
+                        memberModifier.ModifyDepthEnum(SelectedDataInPositionHorizontalComboBox);
+                        memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionHorizontalText));
                     }
 
                     if (IsPositionLevelsTopChecked)
@@ -439,6 +452,8 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyBottomPosition(Convert.ToDouble(PositionLevelsBottom));
                     }
+
+                    memberModifier.Regen();
                 }
             }
         }
@@ -609,11 +624,11 @@ namespace DialogBeamProperties.ViewModel
 
         private void UpdateViewModel(ColumnProperties columnProperties)
         {
-            TickAllBoxes();
             LoadData(columnProperties);
             UpdatePositionData(columnProperties);
             UpdateAttributesData(columnProperties);
             UpdateNumberingData(columnProperties);
+            TickAllBoxes();
         }
 
         private void TickAllBoxes()
