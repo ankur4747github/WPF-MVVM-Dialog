@@ -420,6 +420,11 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyProfile(AttributesProfileText);
                     }
 
+                    if (IsAttributesClassChecked)
+                    {
+                        memberModifier.ModifyClass((AttributesClassText));
+                    }
+
                     if (IsPositionRotationChecked)
                     {
                         memberModifier.ModifyRotation(Convert.ToDouble(PositionRotationText));
