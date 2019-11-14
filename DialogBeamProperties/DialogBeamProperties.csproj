@@ -75,6 +75,7 @@
     <Compile Include="CadInterfaces\BeamValuesGetter.cs" />
     <Compile Include="CadInterfaces\BeamValuesGetterDummyImplementation.cs" />
     <Compile Include="CadInterfaces\ColumnValuesGetter.cs" />
+    <Compile Include="CadInterfaces\ColumnValuesGetterImplementation.cs" />
     <Compile Include="CadInterfaces\MemberModifier.cs" />
     <Compile Include="CadInterfaces\MemberModifierDummyImplmentation.cs" />
     <Compile Include="CadInterfaces\MemberModifierFactory.cs" />

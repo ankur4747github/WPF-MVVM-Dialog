@@ -28,6 +28,12 @@ namespace DialogBeamProperties.CadInterfaces
 
         void ModifyPlaneOffset(double planeOffset);
 
+        void ModifyFinish(string finish);
+
+        void ModifyMaterial(string material);
+
+        void ModifyName(string name);
+
         void Regen();
     }
 }

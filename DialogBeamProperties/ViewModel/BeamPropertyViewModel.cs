@@ -222,12 +222,6 @@ namespace DialogBeamProperties.ViewModel
             BeamValuesGetter beamValuesGetter
             )
         {
-            InitCommand();
-            this.modifierFactory = modifierFactory;
-            globalBeamProperties = globalBeamPropertiesInput;
-            this.beamValuesGetter = beamValuesGetter;
-            UpdateViewModel(localBeamProperties);
-            TickAllBoxes();
             PositionOnPlaneComboBox = new List<string>() { "MIDDLE", "RIGHT", "LEFT" };
             PositionRotationComboBox = new List<string>() { "TOP" };
             PositionAtDepthComboBox = new List<string>() { "MIDDLE", "FRONT", "BEHIND" };
@@ -235,6 +229,13 @@ namespace DialogBeamProperties.ViewModel
             SelectedDataInPositionOnPlaneComboBox = PositionOnPlaneComboBox[0];
             SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
             SelectedDataInPositionAtDepthComboBox = PositionAtDepthComboBox[0];
+
+            InitCommand();
+            this.modifierFactory = modifierFactory;
+            globalBeamProperties = globalBeamPropertiesInput;
+            this.beamValuesGetter = beamValuesGetter;
+            UpdateViewModel(localBeamProperties);
+            TickAllBoxes();
         }
 
         private void InitCommand()
@@ -311,6 +312,21 @@ namespace DialogBeamProperties.ViewModel
                     {
                         memberModifier.ModifyDepthEnum(SelectedDataInPositionAtDepthComboBox);
                         memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionAtDepthText));
+                    }
+
+                    if (IsAttributesFinishChecked)
+                    {
+                        memberModifier.ModifyFinish(AttributesFinishText);
+                    }
+
+                    if (IsAttributesMaterialChecked)
+                    {
+                        memberModifier.ModifyMaterial(AttributesMaterialText);
+                    }
+
+                    if (IsAttributesNameChecked)
+                    {
+                        memberModifier.ModifyName(AttributesNameText);
                     }
 
                     memberModifier.Regen();

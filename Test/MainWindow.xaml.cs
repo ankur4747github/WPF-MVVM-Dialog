@@ -20,17 +20,17 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
-            BeamProperties prop = (new StandardBeamPropertiesFactory()).CreateStandardProperties();
+            BeamProperties prop = (new StandardBeamPropertiesFactory()).CreateStandardProperties("ABC", 0, 0, "TOP", "MIDDLE", 0, "MIDDLE", 0);
             DummyBeamPropertyData(prop);
-            ColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties();
+            ColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties("EFG", 0, 0, 1000, 0, "TOP", "MIDDLE", 0, "MIDDLE", 0);
             DummyColumnProprtyData(propColumn);
         }
 
         private void DummyColumnProprtyData(ColumnProperties prop)
         {
             prop.AttributesProfileText = "RS";
-            BeamValuesGetterDummyImplementation beamValuesGetter = new BeamValuesGetterDummyImplementation();
-            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new MemberModifierFactoryDummyImplementation(), prop, prop);
+            ColumnValuesGetter columnValuesGetter = new ColumnValuesGetterImplementation();
+            DialogColumnPropertiesViewModel viewModel = new DialogColumnPropertiesViewModel(new MemberModifierFactoryDummyImplementation(), prop, prop, columnValuesGetter);
             testColumn = new DialogColumnProperties(viewModel);
             testColumn.Closing += TestColumn_Closing;
             testColumn.Show();
