@@ -358,14 +358,12 @@ namespace DialogBeamProperties.ViewModel
             SelectedDataInPositionVerticalComboBox = PositionVerticalComboBox[0];
             SelectedDataInPositionRotationComboBox = PositionRotationComboBox[0];
             SelectedDataInPositionHorizontalComboBox = PositionHorizontalComboBox[0];
-            
+
             InitCommand();
             this.modifierFactory = memberModifierFactory;
             this.globaColumnProperties = globaColumnProperties;
             this.columnValuesGetter = columnValuesGetter;
             UpdateViewModel(localColumnProperties);
-
-
         }
 
         private void InitCommand()
@@ -453,6 +451,21 @@ namespace DialogBeamProperties.ViewModel
                     if (IsPositionLevelsBottomChecked)
                     {
                         memberModifier.ModifyBottomPosition(Convert.ToDouble(PositionLevelsBottom));
+                    }
+
+                    if (IsAttributesFinishChecked)
+                    {
+                        memberModifier.ModifyFinish(AttributesFinishText);
+                    }
+
+                    if (IsAttributesMaterialChecked)
+                    {
+                        memberModifier.ModifyMaterial(AttributesMaterialText);
+                    }
+
+                    if (IsAttributesNameChecked)
+                    {
+                        memberModifier.ModifyName(AttributesNameText);
                     }
 
                     memberModifier.Regen();

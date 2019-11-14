@@ -12,7 +12,7 @@ namespace DialogBeamProperties.CadInterfaces
     {
         public BeamProperties GetBeamProperties()
         {
-            return (new StandardBeamPropertiesFactory()).CreateStandardProperties("", 0, 0, "", "", 0, "", 0);
+            return (new StandardBeamPropertiesFactory()).CreateStandardProperties("", 0, 0, "", "", 0, "", 0, "", "", "");
         }
     }
 }

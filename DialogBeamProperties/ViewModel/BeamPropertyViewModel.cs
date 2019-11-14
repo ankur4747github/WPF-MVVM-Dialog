@@ -314,6 +314,21 @@ namespace DialogBeamProperties.ViewModel
                         memberModifier.ModifyDepthOffset(Convert.ToDouble(PositionAtDepthText));
                     }
 
+                    if (IsAttributesFinishChecked)
+                    {
+                        memberModifier.ModifyFinish(AttributesFinishText);
+                    }
+
+                    if (IsAttributesMaterialChecked)
+                    {
+                        memberModifier.ModifyMaterial(AttributesMaterialText);
+                    }
+
+                    if (IsAttributesNameChecked)
+                    {
+                        memberModifier.ModifyName(AttributesNameText);
+                    }
+
                     memberModifier.Regen();
                 }
             }

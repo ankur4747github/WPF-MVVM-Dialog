@@ -8,7 +8,7 @@ namespace DialogBeamProperties.Model.Properties
 {
     public class StandardBeamPropertiesFactory
     {
-        public BeamProperties CreateStandardProperties(string profile, double rotation, int color, string rotationEnum, string depthEnum, double depthOffset, string planeEnum, double planeOffset)
+        public BeamProperties CreateStandardProperties(string profile, double rotation, int color, string rotationEnum, string depthEnum, double depthOffset, string planeEnum, double planeOffset, string finish, string material, string name)
         {
             BeamProperties beamProperties = new BeamProperties();
 
@@ -17,10 +17,10 @@ namespace DialogBeamProperties.Model.Properties
             beamProperties.NumberingSeriesPartStartNumberText = "";
             beamProperties.NumberingSeriesAssemblyPrefixText = "";
             beamProperties.NumberingSeriesAssemblyStartNumberText = "";
-            beamProperties.AttributesNameText = "";
+            beamProperties.AttributesNameText = name;
             beamProperties.AttributesProfileText = profile;
-            beamProperties.AttributesMaterialText = "";
-            beamProperties.AttributesFinishText = "";
+            beamProperties.AttributesMaterialText = material;
+            beamProperties.AttributesFinishText = finish;
             beamProperties.AttributesClassText = color;
             beamProperties.PositionOnPlaneText = planeOffset;
             beamProperties.PositionRotationText = rotation;

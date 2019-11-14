@@ -11,7 +11,7 @@ namespace DialogBeamProperties.CadInterfaces
     {
         public ColumnProperties GetColumnProperties()
         {
-            ColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties("EFG", 0, 0, 1000, 0, "TOP", "MIDDLE", 0, "MIDDLE", 0);
+            ColumnProperties propColumn = (new StandardColumnPropertiesFactory()).CreateStandardProperties("EFG", 0, 0, 1000, 0, "TOP", "MIDDLE", 0, "MIDDLE", 0, "Looks nice", "Steel", "hello world");
             return propColumn;
         }
     }

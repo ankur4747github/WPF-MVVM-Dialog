@@ -59,5 +59,17 @@ namespace DialogBeamProperties.CadInterfaces
         public void Regen()
         {
         }
+
+        public void ModifyFinish(string finish)
+        {
+        }
+
+        public void ModifyMaterial(string material)
+        {
+        }
+
+        public void ModifyName(string name)
+        {
+        }
     }
 }
