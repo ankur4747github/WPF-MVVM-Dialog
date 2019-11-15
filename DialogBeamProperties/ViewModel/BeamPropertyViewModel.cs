@@ -78,9 +78,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionOnPlaneText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionOnPlaneText))
+                if (!string.IsNullOrEmpty(PositionOnPlaneText) && !IsPositionOnPlaneChecked)
                 {
-                    IsPositionOnPlaneChecked = Convert.ToDouble(PositionOnPlaneText) > 0;
+                    IsPositionOnPlaneChecked = PositionOnPlaneText.Trim().Length > 0;
+                }
+                else if(PositionOnPlaneText.Trim().Length == 0)
+                {
+                    IsPositionOnPlaneChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionOnPlaneText));
             }
@@ -139,9 +143,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionRotationText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionRotationText))
+                if (!string.IsNullOrEmpty(PositionRotationText) && !IsPositionRotationChecked)
                 {
-                    IsPositionRotationChecked = Convert.ToDouble(PositionRotationText) > 0;
+                    IsPositionRotationChecked = PositionRotationText.Trim().Length > 0;
+                }
+                else if(PositionRotationText.Trim().Length == 0)
+                {
+                    IsPositionRotationChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionRotationText));
             }
@@ -200,9 +208,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionAtDepthText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionAtDepthText))
+                if (!string.IsNullOrEmpty(PositionAtDepthText) && !IsPositionAtDepthChecked)
                 {
-                    IsPositionAtDepthChecked = Convert.ToDouble(PositionAtDepthText) > 0;
+                    IsPositionAtDepthChecked = PositionAtDepthText.Trim().Length > 0;
+                }
+                else if(PositionAtDepthText.Trim().Length == 0)
+                {
+                    IsPositionAtDepthChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionAtDepthText));
             }

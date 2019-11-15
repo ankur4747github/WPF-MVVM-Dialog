@@ -79,9 +79,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionVerticalText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionVerticalText))
+                if (!string.IsNullOrEmpty(PositionVerticalText) && !IsPositionVerticalChecked)
                 {
-                    IsPositionVerticalChecked = Convert.ToDouble(PositionVerticalText) > 0;
+                    IsPositionVerticalChecked = PositionVerticalText.Trim().Length > 0;
+                }
+                else if(PositionVerticalText.Trim().Length == 0)
+                {
+                    IsPositionVerticalChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionVerticalText));
             }
@@ -140,9 +144,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionRotationText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionRotationText))
+                if (!string.IsNullOrEmpty(PositionRotationText) && !IsPositionRotationChecked)
                 {
-                    IsPositionRotationChecked = Convert.ToDouble(PositionRotationText) > 0;
+                    IsPositionRotationChecked = PositionRotationText.Trim().Length > 0;
+                }
+                else if (PositionRotationText.Trim().Length == 0)
+                {
+                    IsPositionRotationChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionRotationText));
             }
@@ -201,9 +209,13 @@ namespace DialogBeamProperties.ViewModel
                     return;
 
                 _positionHorizontalText = value.ToString();
-                if (!string.IsNullOrEmpty(PositionHorizontalText))
+                if (!string.IsNullOrEmpty(PositionHorizontalText) && !IsPositionHorizontalChecked)
                 {
-                    IsPositionHorizontalChecked = Convert.ToDouble(PositionHorizontalText) > 0;
+                    IsPositionHorizontalChecked = PositionHorizontalText.Trim().Length > 0;
+                }
+                else if (PositionHorizontalText.Trim().Length == 0)
+                {
+                    IsPositionHorizontalChecked = false;
                 }
                 OnPropertyChangedAsync(nameof(PositionHorizontalText));
             }
